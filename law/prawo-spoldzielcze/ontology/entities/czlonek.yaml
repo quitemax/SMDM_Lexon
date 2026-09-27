@@ -1,0 +1,16 @@
+entity: "Członek"
+description: "Rola, jaką Osoba pełni wobec konkretnej Spółdzielni po przyjęciu w poczet członków. Nie jest tożsamy z Osoba - ta sama Osoba może (teoretycznie) być Członkiem różnych spółdzielni; stan i relacja do konkretnej Spółdzielni żyją w relacji MEMBER_OF, nie jako właściwości tej encji (patrz PROJECT_CONCEPT.md sekcja 8)."
+properties:
+  - name: person
+    type: "-> Osoba"
+    description: "Osoba pełniąca rolę członka."
+    source: "PS-ART-015 §2, §4"
+  - name: declared_shares_count
+    type: Integer
+    description: "Liczba zadeklarowanych udziałów. Domyślnie 1, chyba że statut wymaga więcej."
+    source: "PS-ART-016 §1, PS-ART-020 §1"
+  - name: death_beneficiary
+    type: "-> Osoba (opcjonalnie)"
+    description: "Osoba wskazana do wypłaty udziałów po śmierci członka. Prawo z tego tytułu nie wchodzi do spadku."
+    source: "PS-ART-016 §4"
+formalization_status: STRUCTURAL

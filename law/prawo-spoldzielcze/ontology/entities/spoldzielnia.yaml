@@ -1,0 +1,15 @@
+entity: "Spółdzielnia"
+description: "Podmiot, którego dotyczy Prawo spółdzielcze. Właściwości ograniczone do zakresu Art. 15-28 (członkostwo) - nie modelujemy tu pełnego ustroju (organy, majątek, likwidacja) spoza tego fragmentu."
+properties:
+  - name: member_type
+    type: "Enum(ONLY_NATURAL_PERSONS, ONLY_LEGAL_PERSONS, MIXED)"
+    description: "Czy statut ogranicza członkostwo do osób fizycznych lub prawnych. Wpływa na wymaganą minimalną liczbę członków."
+    source: "PS-ART-015 §4, §5"
+  - name: minimum_member_count
+    type: Integer
+    description: "10 dla spółdzielni ogólnej, 5 dla spółdzielni produkcji rolnej / art. 6 §2a, 3 gdy członkami są wyłącznie osoby prawne - chyba że statut wymaga liczby większej."
+    source: "PS-ART-015 §1, §5"
+relations:
+  - "MEMBER_OF (odwrotność) - Członkowie tej Spółdzielni"
+  - "ORGAN_OF (odwrotność) - Zarząd, RadaNadzorcza, WalneZgromadzenie tej Spółdzielni"
+formalization_status: STRUCTURAL

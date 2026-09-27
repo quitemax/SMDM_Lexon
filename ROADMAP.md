@@ -105,11 +105,16 @@ ich prawa i obowiązki**, **Art. 15–28** (14 artykułów).
 
 ## Phase 1 — ontology (w toku)
 
-- [ ] Zdefiniować encje: `Spółdzielnia`, `Osoba`, `Członek`, `Udział`,
+- [x] Zdefiniować encje: `Spółdzielnia`, `Osoba`, `Członek`, `Udział`,
       `Deklaracja`, `Zarząd`, `RadaNadzorcza`, `WalneZgromadzenie` (w zakresie
-      potrzebnym dla Art. 15–28) w `law/prawo-spoldzielcze/ontology/`.
-- [ ] Zdefiniować relacje: `MEMBER_OF`, `DECLARES`, `ADMITTED_BY`,
-      `EXCLUDED_BY`.
+      potrzebnym dla Art. 15–28) w `law/prawo-spoldzielcze/ontology/entities/`.
+- [x] Zdefiniować relacje: `MEMBER_OF`, `ORGAN_OF`, `DECLARES`, `ADMITTED_BY`,
+      `EXCLUDED_BY`, `INHERITS_SHARES_FROM`, `BENEFICIARY_OF` w
+      `law/prawo-spoldzielcze/ontology/relations/`. `EXCLUDED_BY` niesie
+      `SCOPE_NOTE` do OBS-0001 (w praktyce wyparte dla spółdzielni
+      mieszkaniowych). Organ właściwy do `ADMITTED_BY`/`EXCLUDED_BY` celowo
+      nie jest zakodowany na sztywno — Art. 17 §4 i Art. 24 §4 pozostawiają
+      to statutowi.
 - [ ] Zdefiniować stany: cykl życia członkostwa —
       `DECLARED -> PENDING -> ACTIVE -> (WITHDRAWN | EXCLUDED | EXPELLED | DECEASED)`
       — na podstawie Art. 16-17 (wejście) i Art. 22, 24-25 (wyjście).

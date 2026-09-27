@@ -1,0 +1,7 @@
+entity: "Zarząd"
+description: "Organ spółdzielni. Modelowany tu wyłącznie jako podmiot (SUBJECT/POWER) występujący w Art. 15-28 - pełny ustrój Zarządu (skład, kadencja, kompetencje ogólne) jest poza zakresem tego fragmentu i nie jest tu odtwarzany."
+properties: []
+relations:
+  - "ORGAN_OF -> Spółdzielnia"
+formalization_status: STRUCTURAL
+note: "Występuje w PS-ART-017 §2 (potwierdzanie przyjęcia deklaracji) jako przykładowy, nie jedyny możliwy organ przyjmujący (Art. 17 §4 pozostawia to statutowi)."

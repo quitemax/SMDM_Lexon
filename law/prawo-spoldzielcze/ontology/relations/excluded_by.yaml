@@ -1,0 +1,14 @@
+relation: "EXCLUDED_BY"
+from: "Członek"
+to: "RadaNadzorcza | WalneZgromadzenie"
+description: "Organ, który podjął uchwałę o wykluczeniu albo wykreśleniu członka. Który organ jest właściwy, ustawa pozostawia statutowi - patrz PS-ART-024 §4."
+attributes:
+  - name: resolution_type
+    type: "Enum(WYKLUCZENIE, WYKREŚLENIE)"
+    source: "PS-ART-024 §1"
+  - name: resolution_date
+    type: Date
+    source: "PS-ART-024 §5"
+source: "PS-ART-024"
+formalization_status: STRUCTURAL
+note: "SCOPE_NOTE: dla spółdzielni mieszkaniowych ta relacja jest w praktyce wyparta przez USM - patrz ../../interpretations/OBS-0001-lex-specialis-usm-membership.md. Nie zakładać, że każda spółdzielnia mieszkaniowa faktycznie korzysta z tego mechanizmu."

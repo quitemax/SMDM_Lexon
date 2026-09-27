@@ -1,0 +1,6 @@
+entity: "WalneZgromadzenie"
+description: "Organ spółdzielni. Modelowany tu wyłącznie jako podmiot (POWER) właściwy - stosownie do statutu - do przyjmowania członków (Art. 17 §4, jeśli statut nie wskazuje innego organu), do wykluczenia/wykreślenia (Art. 24 §4), oraz jako organ odwoławczy od uchwał Rady Nadzorczej w tych sprawach (Art. 24 §6 pkt 1). Pełny ustrój poza zakresem tego fragmentu."
+properties: []
+relations:
+  - "ORGAN_OF -> Spółdzielnia"
+formalization_status: STRUCTURAL

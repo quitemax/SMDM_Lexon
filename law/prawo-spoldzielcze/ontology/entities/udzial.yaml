@@ -1,0 +1,19 @@
+entity: "Udział"
+description: "Zadeklarowany przez członka udział kapitałowy w spółdzielni. Modelowany minimalnie - tylko właściwości potrzebne dla Art. 19-21 (obowiązek wniesienia, udział w pokrywaniu strat, ograniczenia zwrotu), bez pełnej księgowości."
+properties:
+  - name: member
+    type: "-> Członek"
+    source: "PS-ART-019 §1"
+  - name: count
+    type: Integer
+    description: "Liczba zadeklarowanych udziałów (domyślnie 1 - patrz Członek.declared_shares_count, tu odrębnie jako przedmiot obowiązku wniesienia)."
+    source: "PS-ART-020 §1"
+  - name: paid_in
+    type: Boolean
+    description: "Czy wpisowe i zadeklarowane udziały zostały wniesione."
+    source: "PS-ART-019 §1"
+  - name: contributed_to_losses
+    type: Boolean
+    description: "Czy ten udział został przeznaczony na pokrycie strat spółdzielni - wpływa na ograniczenia zwrotu z Art. 21."
+    source: "PS-ART-019 §2, PS-ART-021"
+formalization_status: STRUCTURAL

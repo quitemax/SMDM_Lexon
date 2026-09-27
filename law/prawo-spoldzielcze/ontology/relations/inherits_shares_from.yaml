@@ -1,0 +1,6 @@
+relation: "INHERITS_SHARES_FROM"
+from: "Osoba"
+to: "Członek"
+description: "Spadkobierca dziedziczy udziały zmarłego członka, o ile sam jest członkiem spółdzielni lub złożył deklarację przystąpienia. Przy więcej niż jednym spadkobiercy - wskazują jednego uprawnionego albo dzielą udziały między tych, którzy złożyli deklarację."
+source: "PS-ART-016A"
+formalization_status: DIRECT

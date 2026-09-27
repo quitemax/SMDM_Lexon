@@ -1,0 +1,22 @@
+entity: "Deklaracja"
+description: "Dokument (papierowy lub elektroniczny) będący warunkiem przyjęcia na członka. Modelowana jako osobna encja (a nie tylko event), bo ustawa nakłada na nią wymogi formy i treści niezależnie od aktu jej złożenia."
+properties:
+  - name: form
+    type: "Enum(PAPER, ELECTRONIC, DOCUMENTARY)"
+    description: "Papierowa (podpis własnoręczny), elektroniczna (adres do doręczeń elektronicznych + podpis kwalifikowany/osobisty/zaufany), albo dokumentowa (tylko gdy spółdzielnia jest instytucją obowiązaną wg ustawy AML)."
+    source: "PS-ART-016 §1, §2"
+  - name: applicant_name_and_address
+    type: String
+    description: "Imię i nazwisko oraz miejsce zamieszkania (lub nazwa i siedziba dla osoby prawnej)."
+    source: "PS-ART-016 §1"
+  - name: declared_shares_count
+    type: Integer
+    source: "PS-ART-016 §1"
+  - name: submitted_at
+    type: Date
+    source: "PS-ART-016 §1"
+  - name: void_if_form_invalid
+    type: Boolean
+    description: "Deklaracja jest nieważna, jeżeli nie zachowano wymaganej formy (rygor nieważności)."
+    source: "PS-ART-016 §1"
+formalization_status: STRUCTURAL

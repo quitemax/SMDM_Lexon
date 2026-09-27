@@ -1,0 +1,6 @@
+relation: "ORGAN_OF"
+from: "Zarząd | RadaNadzorcza | WalneZgromadzenie"
+to: "Spółdzielnia"
+description: "Generyczna relacja przynależności organu do spółdzielni. Nie niesie tu dodatkowych atrybutów - pełny ustrój organów jest poza zakresem Art. 15-28."
+attributes: []
+formalization_status: STRUCTURAL

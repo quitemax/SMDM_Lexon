@@ -1,0 +1,11 @@
+relation: "DECLARES"
+from: "Osoba"
+to: "Spółdzielnia"
+description: "Złożenie deklaracji członkowskiej przez Osobę do Spółdzielni. Produkuje encję Deklaracja."
+attributes:
+  - name: declaration
+    type: "-> Deklaracja"
+  - name: submitted_at
+    type: Date
+source: "PS-ART-016 §1"
+formalization_status: DIRECT

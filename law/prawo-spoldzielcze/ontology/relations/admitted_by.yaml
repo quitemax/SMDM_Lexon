@@ -1,0 +1,11 @@
+relation: "ADMITTED_BY"
+from: "Członek"
+to: "Zarząd | RadaNadzorcza | WalneZgromadzenie"
+description: "Organ, którego uchwała potwierdziła (deklaratywnie) lub ustanowiła (konstytutywnie) przyjęcie danego Członka. Który konkretnie organ jest właściwy, ustawa pozostawia statutowi - patrz PS-ART-017 §4."
+attributes:
+  - name: resolution_date
+    type: Date
+    source: "PS-ART-017 §2, §3"
+source: "PS-ART-017"
+formalization_status: STRUCTURAL
+note: "Organ właściwy nie jest tu zakodowany na sztywno (nie jest nim domyślnie Zarząd) - to zależy od statutu konkretnej spółdzielni, zgodnie z PS-ART-017 §4."

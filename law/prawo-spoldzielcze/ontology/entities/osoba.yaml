@@ -1,0 +1,12 @@
+entity: "Osoba"
+description: "Osoba fizyczna lub prawna - potencjalny lub obecny członek spółdzielni. Wspólna dla wielu aktów, tu zawężona do właściwości potrzebnych przy Art. 15-28."
+properties:
+  - name: is_legal_person
+    type: Boolean
+    description: "Czy Osoba jest osobą prawną (a nie fizyczną)."
+    source: "PS-ART-015 §4, §5"
+  - name: has_full_legal_capacity
+    type: Boolean
+    description: "Pełna zdolność do czynności prawnych. Dotyczy tylko osób fizycznych. Wymagana domyślnie, chyba że statut dopuszcza wyjątek."
+    source: "PS-ART-015 §2, §3"
+formalization_status: DIRECT

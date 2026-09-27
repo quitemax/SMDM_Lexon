@@ -1,0 +1,14 @@
+relation: "MEMBER_OF"
+from: "Członek"
+to: "Spółdzielnia"
+description: "Rdzeniowa relacja domeny. Nosi stan cyklu życia członkostwa (patrz ../states/membership_status.yaml) oraz daty jego powstania/ustania - to tu, nie na encji Członek, żyje 'bycie w danej Spółdzielni' (patrz PROJECT_CONCEPT.md sekcja 8: relacje jako pierwszorzędne obywatele modelu)."
+attributes:
+  - name: status
+    type: "-> MembershipStatus (patrz ../states/membership_status.yaml)"
+  - name: became_member_at
+    type: Date
+    source: "PS-ART-017 §1"
+  - name: ceased_at
+    type: "Date (opcjonalnie)"
+cardinality: "wiele Członek : jedna Spółdzielnia (na relację); ta sama Osoba może mieć osobne instancje Członek/MEMBER_OF w różnych spółdzielniach"
+formalization_status: STRUCTURAL

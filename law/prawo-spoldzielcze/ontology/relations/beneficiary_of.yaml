@@ -1,0 +1,6 @@
+relation: "BENEFICIARY_OF"
+from: "Osoba"
+to: "Członek"
+description: "Osoba wskazana przez członka (w deklaracji lub odrębnym oświadczeniu na piśmie) do otrzymania wypłaty udziałów po jego śmierci. Odrębne od dziedziczenia - prawo z tego tytułu nie wchodzi do spadku."
+source: "PS-ART-016 §4"
+formalization_status: DIRECT

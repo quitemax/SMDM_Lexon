@@ -1,0 +1,6 @@
+entity: "RadaNadzorcza"
+description: "Organ spółdzielni. Modelowany tu wyłącznie jako podmiot (POWER) właściwy - stosownie do statutu - do wykluczenia/wykreślenia członka (Art. 24 §4) i jako organ odwoławczy w niektórych trybach. Pełny ustrój poza zakresem tego fragmentu."
+properties: []
+relations:
+  - "ORGAN_OF -> Spółdzielnia"
+formalization_status: STRUCTURAL
