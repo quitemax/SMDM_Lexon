@@ -1,0 +1,3 @@
+[submodule "external/SMDM_Knowledge_Base"]
+	path = external/SMDM_Knowledge_Base
+	url = https://github.com/quitemax/SMDM_Knowledge_Base.git

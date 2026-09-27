@@ -1,0 +1,3 @@
+# tests/legal/
+
+Pusty.
