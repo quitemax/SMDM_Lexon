@@ -1,0 +1,13 @@
+event: "MemberDied"
+description: "Śmierć członka będącego osobą fizyczną, lub ustanie członka będącego osobą prawną."
+payload:
+  - name: member
+    type: "-> Członek"
+  - name: date_of_death_or_cessation
+    type: Date
+  - name: heir_count
+    type: Integer
+    description: "Jeżeli > 1, spadkobiercy muszą wskazać wspólnego pełnomocnika albo zarządcę sądowego (PS-ART-025 §2)."
+triggers_transition: "ACTIVE -> DECEASED"
+source: "PS-ART-025 §1, §2"
+formalization_status: DIRECT

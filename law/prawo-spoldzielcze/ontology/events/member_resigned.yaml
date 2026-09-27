@@ -1,0 +1,13 @@
+event: "MemberResigned"
+description: "Członek wystąpił ze spółdzielni za wypowiedzeniem."
+payload:
+  - name: member
+    type: "-> Członek"
+  - name: notice_given_at
+    type: Date
+  - name: effective_at
+    type: Date
+    description: "Następny dzień po upływie okresu wypowiedzenia określonego w statucie."
+triggers_transition: "ACTIVE -> WITHDRAWN"
+source: "PS-ART-022"
+formalization_status: DIRECT

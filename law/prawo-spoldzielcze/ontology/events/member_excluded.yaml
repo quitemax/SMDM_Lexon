@@ -1,0 +1,15 @@
+event: "MemberExcluded"
+description: "Członek został wykluczony (wina umyślna lub rażące niedbalstwo)."
+payload:
+  - name: member
+    type: "-> Członek"
+  - name: excluded_by
+    type: "-> RadaNadzorcza | WalneZgromadzenie (zależnie od statutu, patrz PS-ART-024 §4)"
+  - name: resolution_date
+    type: Date
+  - name: justification
+    type: String
+triggers_transition: "ACTIVE -> EXCLUDED"
+source: "PS-ART-024 §1, §2, §4, §5"
+formalization_status: STRUCTURAL
+note: "SCOPE_NOTE: patrz OBS-0001 - w praktyce wyparte dla spółdzielni mieszkaniowych."

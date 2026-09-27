@@ -1,0 +1,51 @@
+state_machine: "MembershipStatus"
+attached_to: "atrybut `status` relacji MEMBER_OF (nie encji Członek - patrz ../relations/member_of.yaml)"
+states:
+  - name: DECLARED
+    description: "Deklaracja złożona, uchwała o przyjęciu jeszcze niepodjęta."
+    source: "PS-ART-016 §1, PS-ART-017 §3"
+  - name: ACTIVE
+    description: "Członkostwo powstało."
+    source: "PS-ART-017 §1"
+  - name: REJECTED
+    description: "Odmowa przyjęcia - stan terminalny tej deklaracji (członkostwo nigdy nie powstało)."
+    source: "PS-ART-017 §3"
+  - name: WITHDRAWN
+    description: "Wystąpienie za wypowiedzeniem."
+    source: "PS-ART-022"
+  - name: EXCLUDED
+    description: "Wykluczenie (wina umyślna lub rażące niedbalstwo, niedające się pogodzić ze statutem/dobrymi obyczajami)."
+    source: "PS-ART-024 §2"
+  - name: STRUCK_OFF
+    description: "Wykreślenie (niewykonywanie obowiązków statutowych z przyczyn niezawinionych)."
+    source: "PS-ART-024 §3"
+  - name: DECEASED
+    description: "Śmierć członka będącego osobą fizyczną, lub ustanie członka będącego osobą prawną."
+    source: "PS-ART-025 §1"
+transitions:
+  - from: null
+    to: DECLARED
+    event: "DeclarationSubmitted"
+  - from: DECLARED
+    to: ACTIVE
+    event: "MemberAdmitted"
+  - from: DECLARED
+    to: REJECTED
+    event: "AdmissionRejected"
+  - from: ACTIVE
+    to: WITHDRAWN
+    event: "MemberResigned"
+  - from: ACTIVE
+    to: EXCLUDED
+    event: "MemberExcluded"
+  - from: ACTIVE
+    to: STRUCK_OFF
+    event: "MemberStruckOff"
+  - from: ACTIVE
+    to: DECEASED
+    event: "MemberDied"
+notes:
+  - "Poza zakresem: przejście `null -> ACTIVE` dla założycieli spółdzielni z chwilą jej rejestracji (PS-ART-017 §1 zdanie pierwsze) - proces zakładania spółdzielni (Dział II) nie jest częścią sformalizowanego fragmentu Art. 15-28."
+  - "Uproszczenie świadome: skuteczność wykluczenia/wykreślenia (PS-ART-024 §10) jest w rzeczywistości odroczona względem uchwały - do bezskutecznego upływu terminów odwołania/zaskarżenia albo prawomocnego oddalenia powództwa. Ten automat modeluje `ACTIVE -> EXCLUDED/STRUCK_OFF` jako jedno przejście; pośredni stan oczekiwania na skuteczność to zadanie Phase 2 (procedury), nie Phase 1 (ontologia) - nie zgadujemy tu szczegółu, którego jeszcze nie sformalizowaliśmy."
+  - "SCOPE_NOTE: dla spółdzielni mieszkaniowych stan EXCLUDED/STRUCK_OFF osiągany tą ścieżką jest w praktyce wyparty przez USM - patrz ../../interpretations/OBS-0001-lex-specialis-usm-membership.md. Ustanie członkostwa w takiej spółdzielni przebiega innym torem (utrata prawa do lokalu)."
+formalization_status: STRUCTURAL

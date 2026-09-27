@@ -1,0 +1,13 @@
+event: "MemberAdmitted"
+description: "Organ właściwy podjął uchwałę o przyjęciu w poczet członków."
+payload:
+  - name: member
+    type: "-> Członek"
+  - name: admitted_by
+    type: "-> Zarząd | RadaNadzorcza | WalneZgromadzenie (zależnie od statutu, patrz PS-ART-017 §4)"
+  - name: resolution_date
+    type: Date
+triggers_transition: "DECLARED -> ACTIVE"
+source: "PS-ART-017 §1, §2, §3"
+deadline_context: "Uchwała powinna być podjęta w ciągu miesiąca od złożenia deklaracji, chyba że statut stanowi inaczej (PS-ART-017 §3). Zapisane tu jako kontekst - formalny DEADLINE zostanie zdefiniowany w Phase 2 przy regule dla Art. 17, nie na samym evencie."
+formalization_status: STRUCTURAL

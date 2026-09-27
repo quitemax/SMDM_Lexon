@@ -1,0 +1,15 @@
+event: "AdmissionRejected"
+description: "Organ właściwy odmówił przyjęcia w poczet członków."
+payload:
+  - name: applicant
+    type: "-> Osoba"
+  - name: cooperative
+    type: "-> Spółdzielnia"
+  - name: resolution_date
+    type: Date
+  - name: justification
+    type: String
+    description: "Uzasadnienie odmowy - ustawowo obowiązkowe."
+triggers_transition: "DECLARED -> REJECTED"
+source: "PS-ART-017 §3"
+formalization_status: DIRECT

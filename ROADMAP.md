@@ -5,7 +5,7 @@
 > tu są rozbite na konkretne, sprawdzalne zadania osadzone w realnym materiale
 > źródłowym z `external/SMDM_Knowledge_Base`.
 
-Status ogólny: **Phase 0 zamknięta.** W toku: **Phase 1 — ontology.**
+Status ogólny: **Phase 0 i Phase 1 zamknięte.** W toku: **Phase 2 — rules.**
 
 ------------------------------------------------------------------------
 
@@ -115,12 +115,21 @@ ich prawa i obowiązki**, **Art. 15–28** (14 artykułów).
       mieszkaniowych). Organ właściwy do `ADMITTED_BY`/`EXCLUDED_BY` celowo
       nie jest zakodowany na sztywno — Art. 17 §4 i Art. 24 §4 pozostawiają
       to statutowi.
-- [ ] Zdefiniować stany: cykl życia członkostwa —
-      `DECLARED -> PENDING -> ACTIVE -> (WITHDRAWN | EXCLUDED | EXPELLED | DECEASED)`
-      — na podstawie Art. 16-17 (wejście) i Art. 22, 24-25 (wyjście).
-- [ ] Zdefiniować zdarzenia: `DeclarationSubmitted`, `MemberAdmitted`,
+- [x] Zdefiniować stany: cykl życia członkostwa (atrybut `status` na relacji
+      `MEMBER_OF`) — `DECLARED -> ACTIVE -> (WITHDRAWN | EXCLUDED |
+      STRUCK_OFF | DECEASED)`, plus `DECLARED -> REJECTED`. Nazwa `EXPELLED`
+      z pierwotnego szkicu zamieniona na `STRUCK_OFF` (wykreślenie) dla
+      jasności wobec `EXCLUDED` (wykluczenie) — patrz
+      `law/prawo-spoldzielcze/ontology/states/membership_status.yaml`.
+      Świadomie uproszczone: odroczona skuteczność wykluczenia/wykreślenia
+      (Art. 24 §10) nie jest tu jeszcze modelowana - to zadanie Phase 2.
+- [x] Zdefiniować zdarzenia: `DeclarationSubmitted`, `MemberAdmitted`,
       `AdmissionRejected`, `MemberResigned`, `MemberExcluded`,
-      `MemberStruckOff`, `MemberDied`.
+      `MemberStruckOff`, `MemberDied` w
+      `law/prawo-spoldzielcze/ontology/events/` — zweryfikowano skryptem, że
+      każde przejście stanu ma odpowiadający mu event 1:1.
+
+**Phase 1 zamknięta.**
 
 ## Phase 2 — rules
 

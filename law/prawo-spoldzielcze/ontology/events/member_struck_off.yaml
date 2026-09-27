@@ -1,0 +1,15 @@
+event: "MemberStruckOff"
+description: "Członek został wykreślony (niewykonywanie obowiązków statutowych z przyczyn niezawinionych)."
+payload:
+  - name: member
+    type: "-> Członek"
+  - name: excluded_by
+    type: "-> RadaNadzorcza | WalneZgromadzenie (zależnie od statutu, patrz PS-ART-024 §4)"
+  - name: resolution_date
+    type: Date
+  - name: justification
+    type: String
+triggers_transition: "ACTIVE -> STRUCK_OFF"
+source: "PS-ART-024 §1, §3, §4, §5"
+formalization_status: STRUCTURAL
+note: "SCOPE_NOTE: patrz OBS-0001 - w praktyce wyparte dla spółdzielni mieszkaniowych."

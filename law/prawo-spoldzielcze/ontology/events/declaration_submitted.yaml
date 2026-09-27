@@ -1,0 +1,14 @@
+event: "DeclarationSubmitted"
+description: "Osoba złożyła deklarację członkowską."
+payload:
+  - name: person
+    type: "-> Osoba"
+  - name: cooperative
+    type: "-> Spółdzielnia"
+  - name: declaration
+    type: "-> Deklaracja"
+  - name: date
+    type: Date
+triggers_transition: "null -> DECLARED"
+source: "PS-ART-016 §1"
+formalization_status: DIRECT
