@@ -73,15 +73,26 @@ ich prawa i obowiązki**, **Art. 15–28** (14 artykułów).
       (`external/SMDM_Knowledge_Base`).
 - [x] Zaprojektować i utworzyć szkielet struktury repozytorium
       (`law/`, `model/`, `engine/`, `tests/`, `agents/`, `docs/`, `examples/`).
-- [ ] Ustalić i zapisać wersję/datę stanu prawnego ustawy Prawo spółdzielcze
-      używaną jako punkt odniesienia (`law/prawo-spoldzielcze/source/README.md`
-      obecnie oznaczony `SOURCE_VERIFICATION_PENDING`).
-- [ ] Opracować i zapisać w `docs/dsl.md` minimalną, ale realną konwencję ID
-      (patrz AGENTS.md sekcja 38: `R-PS-0001`, `E-PS-0001`, ...) — potwierdzić
-      lub zmodyfikować propozycję z PROJECT_CONCEPT.md.
-- [ ] Przeczytać `zrodla/md/statut.md` w zakresie członkostwa i porównać z
-      Art. 15–28, zanotować rozbieżności/konkretyzacje jako materiał wejściowy
-      do `interpretations/`.
+- [x] Ustalić i zapisać wersję/datę stanu prawnego ustawy Prawo spółdzielcze
+      używaną jako punkt odniesienia: **Dz.U. 2026 poz. 521, tekst jednolity,
+      stan na 2026-03-23** (patrz `law/prawo-spoldzielcze/source/README.md`).
+- [x] Przeczytać `zrodla/md/statut.md` w zakresie członkostwa i porównać z
+      Art. 15–28. **Wynik jest istotny i nieoczywisty** — patrz
+      `law/prawo-spoldzielcze/interpretations/OBS-0001-lex-specialis-usm-membership.md`:
+      dla tej (i każdej) spółdzielni mieszkaniowej Ustawa o spółdzielniach
+      mieszkaniowych (USM) działa jako lex specialis wobec Art. 16-17
+      (powstanie członkostwa) i Art. 24 (wykluczenie/wykreślenie) Prawa
+      spółdzielczego — członkostwo powstaje/ustaje ex lege wraz z prawem do
+      lokalu (USM Art. 15, 24¹, 26), a statut tej spółdzielni ma nawet
+      formalnie skreślone §§ 18-24 (tryb wykluczenia). Organem właściwym do
+      uchwał członkowskich jest Zarząd, odwoławczym — Rada Nadzorcza (statut
+      § 10 ust. 2). **Konsekwencja:** reguły dla Art. 16, 16a, 17, 24 muszą
+      mieć `SCOPE_NOTE` odsyłający do OBS-0001; USM Art. 15/24¹/26 to osobne,
+      przyszłe zadanie formalizacyjne (dodane niżej), nie robimy go teraz.
+- [x] Opracować i zapisać w `docs/dsl.md` minimalną, ale realną konwencję ID
+      (patrz AGENTS.md sekcja 38: `R-PS-0001`, `E-PS-0001`, ...) — potwierdzona
+      bez zmian względem AGENTS.md, dodano skrót aktu `PS`/`USM` oraz osobny
+      klucz dla jednostek `normalized/` (`PS-ART-015`, ...).
 
 ## Phase 1 — ontology (następne)
 
@@ -154,6 +165,13 @@ fragmencie Art. 15–28.
 - **Nie formalizować na razie** `Ustawa o spółdzielniach mieszkaniowych` ani
   pozostałych aktów w `przepisy-prawne/md/` — zgodnie z AGENTS.md sekcja 3,
   jeden mały fragment na raz.
+- **Przyszłe zadanie (po zamknięciu Art. 15-28):** formalizacja Ustawy o
+  spółdzielniach mieszkaniowych Art. 15 (powstanie członkostwa), Art. 24¹
+  ust. 1 i Art. 26 (ustanie członkostwa) jako `law/ustawa-o-spoldzielniach-mieszkaniowych/`,
+  z jawną relacją `lex_specialis` do `R-PS-*` reguł z Art. 16-17 i 24 —
+  patrz `law/prawo-spoldzielcze/interpretations/OBS-0001-lex-specialis-usm-membership.md`.
+  To pierwszy kandydat na test mechanizmu `CONFLICT`/`lex specialis` z
+  PROJECT_CONCEPT.md sekcja 27 na realnym przykładzie, a nie tylko w teorii.
 
 ------------------------------------------------------------------------
 
