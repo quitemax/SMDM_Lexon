@@ -1,0 +1,13 @@
+event: "ExclusionBecameEffective"
+description: "Wykluczenie stało się skuteczne wskutek jednej z przesłanek z Art. 24 §10 (bezskuteczny upływ terminu zaskarżenia/odwołania, albo prawomocne oddalenie powództwa)."
+payload:
+  - name: member
+    type: "-> Członek"
+  - name: effective_reason
+    type: "Enum(SĄD_TERMIN_BEZSKUTECZNY, WZ_TERMIN_BEZSKUTECZNY, WZ_UCHWAŁA_TERMIN_BEZSKUTECZNY, POWÓDZTWO_ODDALONE_PRAWOMOCNIE)"
+    source: "PS-ART-024 §10 pkt 1-4"
+  - name: effective_date
+    type: Date
+triggers_transition: "PENDING_EXCLUSION -> EXCLUDED"
+source: "PS-ART-024 §10"
+formalization_status: STRUCTURAL

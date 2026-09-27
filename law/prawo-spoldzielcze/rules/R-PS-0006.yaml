@@ -1,0 +1,22 @@
+id: R-PS-0006
+norm_type: OBLIGATION
+title: "Obowiązki członka spółdzielni"
+source:
+  act: "Prawo spółdzielcze"
+  article: "18"
+  paragraph: "5, 6"
+  normalized_ref: "PS-ART-018"
+subject: "Osoba"
+holder: "Członek"
+condition: "Membership.status = ACTIVE"
+items:
+  - id: O1
+    text: "przestrzeganie przepisów prawa, postanowień statutu i opartych na nich regulaminów"
+  - id: O2
+    text: "dbanie o dobro i rozwój spółdzielni oraz uczestniczenie w realizacji jej zadań statutowych"
+    open_textured_terms:
+      - "dbanie o dobro i rozwój spółdzielni"
+residual_clause: "Członek wykonuje również inne obowiązki określone w ustawie lub w statucie (§6) - odesłanie otwarte, nie rozstrzygane tutaj."
+formalization_status: DIRECT
+tests: []
+note: "O2 zawiera sformułowanie o niskiej precyzji ('dbanie o dobro i rozwój') - w praktyce operacjonalizowane głównie negatywnie, przez R-PS-0016 (wykluczenie za rażące niedbalstwo/sprzeczność z dobrymi obyczajami), nie przez bezpośrednie egzekwowanie tego obowiązku."

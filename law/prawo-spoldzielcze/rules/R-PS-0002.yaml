@@ -1,0 +1,25 @@
+id: R-PS-0002
+norm_type: CONDITION
+title: "Minimalna liczba członków spółdzielni"
+source:
+  act: "Prawo spółdzielcze"
+  article: "15"
+  paragraph: "1, 5"
+  normalized_ref: "PS-ART-015"
+subject: "Spółdzielnia"
+statement: >-
+  Spółdzielnia liczy co najmniej dziesięciu członków, chyba że statut wymaga
+  liczby większej.
+conditions:
+  - "member_count >= 10 (przypadek ogólny)"
+exceptions:
+  - id: "R-PS-0002-E1"
+    text: "Spółdzielnia produkcji rolnej oraz spółdzielnia, o której mowa w art. 6 § 2a - co najmniej pięciu członków."
+    source: "PS-ART-015 §1"
+  - id: "R-PS-0002-E2"
+    text: "Spółdzielnia, której członkami w myśl statutu są wyłącznie osoby prawne - co najmniej trzech członków."
+    source: "PS-ART-015 §5"
+effect: "Warunek bytu spółdzielni jako takiej, nie warunek pojedynczej czynności przyjęcia/wykluczenia - poza zakresem eventów z ontology/events/ (te dotyczą pojedynczego członka)."
+formalization_status: DIRECT
+tests: []
+note: "Ta reguła dotyczy Spółdzielni jako całości (agregat), nie pojedynczego Członka - inny SUBJECT niż większość pozostałych reguł w tym fragmencie."

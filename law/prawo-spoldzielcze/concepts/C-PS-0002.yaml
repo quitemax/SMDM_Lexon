@@ -1,0 +1,22 @@
+id: C-PS-0002
+concept: "dobre obyczaje"
+type: OPEN_TEXTURED
+source:
+  act: "Prawo spółdzielcze"
+  article: "24"
+  paragraph: "2"
+  normalized_ref: "PS-ART-024"
+requires: INTERPRETATION
+possible_sources:
+  - statute
+  - case_law
+  - doctrine
+  - factual_context
+note: >-
+  Klauzula generalna - alternatywna (obok "postanowień statutu spółdzielni")
+  podstawa niedającego się pogodzić dalszego pozostawania w spółdzielni.
+  Klasyczna klauzula generalna prawa cywilnego/handlowego, celowo
+  niedookreślona przez ustawodawcę - nie próbujemy jej tu zamykać w
+  wyczerpującej liście kryteriów.
+formalization_status: UNCERTAIN
+resolution_status: UNRESOLVED

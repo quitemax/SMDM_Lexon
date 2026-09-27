@@ -1,0 +1,58 @@
+id: R-PS-0003
+norm_type: PROCEDURE
+name: "MembershipAdmission"
+title: "Przyjęcie w poczet członków"
+source:
+  act: "Prawo spółdzielcze"
+  article: ["16", "17"]
+  normalized_ref: ["PS-ART-016", "PS-ART-017"]
+actors:
+  applicant: "Osoba"
+  admitting_body: "organ wskazany w statucie (Art. 17 §4 nie przesądza który - domyślnie brak, nie zakładamy Zarządu)"
+steps:
+  - step: 1
+    name: "submit_declaration"
+    actor: applicant
+    action: "Złożenie deklaracji członkowskiej pod rygorem nieważności (papierowo z podpisem własnoręcznym, elektronicznie z kwalifikowanym podpisem/podpisem osobistym/zaufanym, albo - jeśli spółdzielnia jest instytucją obowiązaną wg ustawy AML - w formie dokumentowej)."
+    precondition: null
+    postcondition: "Membership.status = DECLARED"
+    triggers_event: "DeclarationSubmitted"
+    void_if: "deklaracja złożona z naruszeniem wymaganej formy"
+    source: "PS-ART-016 §1, §2"
+  - step: 2
+    name: "resolve_admission"
+    actor: admitting_body
+    action: "Podjęcie uchwały o przyjęciu albo o odmowie przyjęcia."
+    precondition: "Membership.status = DECLARED"
+    deadline:
+      duration: 1
+      unit: MONTHS
+      start_event: "DeclarationSubmitted"
+      type: STATUTORY_DEFAULT
+      overridable_by_statute: true
+    postcondition: "Membership.status = ACTIVE (przyjęcie) | REJECTED (odmowa)"
+    triggers_event: "MemberAdmitted | AdmissionRejected"
+    source: "PS-ART-017 §3"
+  - step: 3
+    name: "notify_applicant"
+    actor: admitting_body
+    action: "Pisemne zawiadomienie zainteresowanego o uchwale."
+    deadline:
+      duration: 2
+      unit: WEEKS
+      start_event: "uchwała z kroku 2"
+      type: STATUTORY_DEFAULT
+    condition: "jeżeli uchwała odmawia przyjęcia, zawiadomienie musi zawierać uzasadnienie"
+    source: "PS-ART-017 §3"
+formalization_status: STRUCTURAL
+scope_note: >-
+  Patrz law/prawo-spoldzielcze/interpretations/OBS-0001-lex-specialis-usm-membership.md.
+  Dla spółdzielni mieszkaniowej ta procedura NIE jest głównym trybem
+  powstania członkostwa - większość przypadków (nabycie prawa do lokalu)
+  przebiega ex lege wg Ustawy o spółdzielniach mieszkaniowych Art. 15, a
+  Zarząd jedynie potwierdza uchwałą deklaratywną już powstałe członkostwo.
+  Ta procedura (deklaracja + uchwała konstytutywna) stosuje się w takiej
+  spółdzielni w praktyce tylko do przypadku właściciela lokalu, który nie
+  jest jeszcze członkiem (analogicznie, ale to odrębna podstawa - USM, nie
+  Art. 16-17 wprost).
+tests: []

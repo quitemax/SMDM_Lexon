@@ -1,0 +1,23 @@
+id: R-PS-0001
+norm_type: CONDITION
+title: "Kto może być członkiem spółdzielni"
+source:
+  act: "Prawo spółdzielcze"
+  article: "15"
+  paragraph: "2, 3, 4"
+  normalized_ref: "PS-ART-015"
+subject: "Osoba"
+statement: >-
+  Członkiem spółdzielni może być: (a) osoba fizyczna o pełnej zdolności do
+  czynności prawnych, odpowiadająca wymaganiom statutu, chyba że ustawa
+  stanowi inaczej; (b) osoba prawna, o ile statut nie stanowi inaczej.
+conditions:
+  - "has_full_legal_capacity = true (dla osoby fizycznej), chyba że statut dopuszcza wyjątek (patrz exceptions)"
+  - "spełnia wymagania statutu (odesłanie otwarte - treść wymagań zależy od konkretnego statutu, nie jest tu rozstrzygana)"
+exceptions:
+  - id: "R-PS-0001-E1"
+    text: "Statut może dopuścić członkostwo osób o ograniczonej zdolności do czynności prawnych lub jej nieposiadających. Takie osoby nie mogą być członkami organów spółdzielni; w walnym zgromadzeniu biorą udział przez przedstawicieli ustawowych."
+    source: "PS-ART-015 §3"
+effect: "Osoba spełniająca warunki jest zdolna do uzyskania członkostwa (nie oznacza to automatycznego jego powstania - do tego potrzebna jest procedura z R-PS-0003)."
+formalization_status: DIRECT
+tests: []

@@ -5,7 +5,9 @@
 > tu są rozbite na konkretne, sprawdzalne zadania osadzone w realnym materiale
 > źródłowym z `external/SMDM_Knowledge_Base`.
 
-Status ogólny: **Phase 0 i Phase 1 zamknięte.** W toku: **Phase 2 — rules.**
+Status ogólny: **Phase 0, 1 i 2 (zaplanowany zakres) zamknięte.** Następne:
+**Phase 3 — execution** (minimalny evaluator) albo dalsze pokrycie Art.
+19-23/25-28 w Phase 2 — do decyzji.
 
 ------------------------------------------------------------------------
 
@@ -131,19 +133,46 @@ ich prawa i obowiązki**, **Art. 15–28** (14 artykułów).
 
 **Phase 1 zamknięta.**
 
+> **Aktualizacja z Phase 2:** uproszczenie odnotowane wyżej (odroczona
+> skuteczność wykluczenia/wykreślenia) zostało domknięte przy okazji
+> formalizowania procedury dla Art. 24 — dodano stany `PENDING_EXCLUSION`/
+> `PENDING_STRUCK_OFF` i 4 nowe eventy (`ExclusionBecameEffective`,
+> `ExclusionOverturned`, `StruckOffBecameEffective`, `StruckOffOverturned`)
+> w `ontology/states/` i `ontology/events/`. `MemberExcluded`/
+> `MemberStruckOff` teraz oznaczają moment uchwały, nie moment skuteczności.
+
 ## Phase 2 — rules
 
-- [ ] Sformalizować Art. 15 jako `RULE` typu `DEFINITION`/`CONDITION`
-      (status: DIRECT).
-- [ ] Sformalizować Art. 16–17 jako `PROCEDURE` (złożenie deklaracji →
+- [x] Sformalizować Art. 15 jako `RULE` typu `CONDITION` (status: DIRECT) —
+      `rules/R-PS-0001.yaml` (kto może być członkiem) i `rules/R-PS-0002.yaml`
+      (minimalna liczba członków, SUBJECT: Spółdzielnia, nie Członek).
+- [x] Sformalizować Art. 16–17 jako `PROCEDURE` (złożenie deklaracji →
       uchwała o przyjęciu w terminie miesiąca → zawiadomienie w terminie
-      dwóch tygodni) z jawnymi `DEADLINE`.
-- [ ] Sformalizować Art. 18 jako zestaw `RIGHT`/`OBLIGATION`.
-- [ ] Sformalizować Art. 24 jako `PROCEDURE` z rozgałęzieniem (wykluczenie
+      dwóch tygodni) z jawnymi `DEADLINE` —
+      `procedures/R-PS-0003-membership-admission.yaml`.
+- [x] Sformalizować Art. 18 jako zestaw `RIGHT`/`OBLIGATION` —
+      `rules/R-PS-0004.yaml` (6 praw), `rules/R-PS-0006.yaml` (2 obowiązki).
+      Dodatkowo `rules/R-PS-0005.yaml` (§3, PROHIBITION/ograniczenie prawa
+      wglądu do umów) — status INTERPRETATIVE, 3 przesłanki ocenne
+      zidentyfikowane jako open_textured_terms, ale CONCEPT dla nich jeszcze
+      nie utworzony (nieblokujące, odnotowane w `concepts/README.md`).
+- [x] Sformalizować Art. 24 jako `PROCEDURE` z rozgałęzieniem (wykluczenie
       vs. wykreślenie), `DEADLINE` na odwołanie/zaskarżenie, oraz jawnie
       oznaczyć "rażące niedbalstwo" i "dobre obyczaje" jako `CONCEPT` typu
-      `OPEN_TEXTURED` w `concepts/`.
-- [ ] Każda reguła: provenance do artykułu/paragrafu, `formalization_status`.
+      `OPEN_TEXTURED` w `concepts/` —
+      `procedures/R-PS-0016-exclusion-or-strike-off.yaml`, `C-PS-0001`,
+      `C-PS-0002`. Przy tej okazji domknięto uproszczenie z Phase 1
+      (odroczona skuteczność, §10) — patrz wyżej.
+- [x] Każda reguła: provenance do artykułu/paragrafu, `formalization_status`
+      — sprawdzone, wszystkie 7 rekordów (`R-PS-0001,0002,0003,0004,0005,0006,0016`)
+      mają oba pola.
+
+**Phase 2 zamknięta dla zaplanowanego zakresu.** Świadomie NIE
+sformalizowano jeszcze Art. 19-23, 25-28 (udziały, wystąpienie, śmierć,
+wypłata udziałów) — to nie było częścią pierwotnie ustalonego minimalnego
+zakresu Phase 2 (patrz wyżej), tylko naturalne rozszerzenie na później, gdy
+przyjdzie czas na Phase 3 (evaluator) i trzeba będzie zdecydować, czy
+poszerzać pokrycie przed czy po pierwszym działającym silniku.
 
 ## Phase 3 — execution
 

@@ -1,0 +1,25 @@
+id: R-PS-0005
+norm_type: PROHIBITION
+title: "Ograniczenie prawa wglądu do umów z osobami trzecimi"
+source:
+  act: "Prawo spółdzielcze"
+  article: "18"
+  paragraph: "3"
+  normalized_ref: "PS-ART-018"
+subject: "Spółdzielnia"
+statement: >-
+  Spółdzielnia może odmówić członkowi wglądu do umów zawieranych z osobami
+  trzecimi.
+conditions:
+  - "naruszałoby to prawa tych osób trzecich, LUB"
+  - "istnieje uzasadniona obawa, że członek wykorzysta informacje w celach sprzecznych z interesem spółdzielni i wyrządzi jej przez to znaczną szkodę"
+open_textured_terms:
+  - "uzasadniona obawa"
+  - "cele sprzeczne z interesem spółdzielni"
+  - "znaczna szkoda"
+procedure_on_refusal:
+  - "Odmowa musi być wyrażona na piśmie."
+  - "Członek może złożyć wniosek do sądu rejestrowego o zobowiązanie spółdzielni do udostępnienia umów, w terminie 7 dni od doręczenia odmowy na piśmie."
+formalization_status: INTERPRETATIVE
+note: "Trzy przesłanki oznaczone jako open_textured_terms wymagają oceny okoliczności faktycznych - nie są tu (i nie powinny być) sprowadzone do prostego warunku boolowskiego. Odpowiadające im CONCEPT jeszcze nie utworzone w concepts/ - do zrobienia, gdy ta reguła będzie testowana (nie blokuje reszty Phase 2)."
+tests: []

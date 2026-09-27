@@ -1,5 +1,5 @@
 event: "MemberExcluded"
-description: "Członek został wykluczony (wina umyślna lub rażące niedbalstwo)."
+description: "Organ właściwy podjął uchwałę o wykluczeniu członka (wina umyślna lub rażące niedbalstwo). Skuteczność jest odroczona - patrz ExclusionBecameEffective."
 payload:
   - name: member
     type: "-> Członek"
@@ -9,7 +9,7 @@ payload:
     type: Date
   - name: justification
     type: String
-triggers_transition: "ACTIVE -> EXCLUDED"
+triggers_transition: "ACTIVE -> PENDING_EXCLUSION"
 source: "PS-ART-024 §1, §2, §4, §5"
 formalization_status: STRUCTURAL
-note: "SCOPE_NOTE: patrz OBS-0001 - w praktyce wyparte dla spółdzielni mieszkaniowych."
+note: "SCOPE_NOTE: patrz OBS-0001 - w praktyce wyparte dla spółdzielni mieszkaniowych. Rewizja Phase 2: nazwa sugeruje wykluczenie dokonane, ale ustawowo oznacza tylko podjęcie uchwały - patrz ../states/membership_status.yaml i ../../procedures/R-PS-0016-exclusion-or-strike-off.yaml."

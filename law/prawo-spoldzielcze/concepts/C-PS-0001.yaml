@@ -1,0 +1,23 @@
+id: C-PS-0001
+concept: "rażące niedbalstwo"
+type: OPEN_TEXTURED
+source:
+  act: "Prawo spółdzielcze"
+  article: "24"
+  paragraph: "2"
+  normalized_ref: "PS-ART-024"
+requires: INTERPRETATION
+possible_sources:
+  - statute
+  - case_law
+  - doctrine
+  - factual_context
+note: >-
+  Przesłanka wykluczenia obok winy umyślnej. Ustawa nie definiuje progu
+  "rażącego" niedbalstwa - odróżnienie od zwykłego niedbalstwa (które
+  uzasadnia co najwyżej wykreślenie z Art. 24 §3, nie wykluczenie) wymaga
+  oceny konkretnego zachowania członka. Statut określa przyczyny
+  wykluczenia (§2 zdanie drugie) - może, ale nie musi, doprecyzowywać ten
+  próg.
+formalization_status: UNCERTAIN
+resolution_status: UNRESOLVED

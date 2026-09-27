@@ -13,12 +13,18 @@ states:
   - name: WITHDRAWN
     description: "Wystąpienie za wypowiedzeniem."
     source: "PS-ART-022"
+  - name: PENDING_EXCLUSION
+    description: "Uchwała o wykluczeniu podjęta, ale jeszcze nieskuteczna - biegną terminy odwołania/zaskarżenia (PS-ART-024 §10)."
+    source: "PS-ART-024 §2, §10"
   - name: EXCLUDED
-    description: "Wykluczenie (wina umyślna lub rażące niedbalstwo, niedające się pogodzić ze statutem/dobrymi obyczajami)."
-    source: "PS-ART-024 §2"
+    description: "Wykluczenie stało się skuteczne (wina umyślna lub rażące niedbalstwo, niedające się pogodzić ze statutem/dobrymi obyczajami)."
+    source: "PS-ART-024 §2, §10"
+  - name: PENDING_STRUCK_OFF
+    description: "Uchwała o wykreśleniu podjęta, ale jeszcze nieskuteczna - biegną terminy odwołania/zaskarżenia (PS-ART-024 §10)."
+    source: "PS-ART-024 §3, §10"
   - name: STRUCK_OFF
-    description: "Wykreślenie (niewykonywanie obowiązków statutowych z przyczyn niezawinionych)."
-    source: "PS-ART-024 §3"
+    description: "Wykreślenie stało się skuteczne (niewykonywanie obowiązków statutowych z przyczyn niezawinionych)."
+    source: "PS-ART-024 §3, §10"
   - name: DECEASED
     description: "Śmierć członka będącego osobą fizyczną, lub ustanie członka będącego osobą prawną."
     source: "PS-ART-025 §1"
@@ -36,16 +42,28 @@ transitions:
     to: WITHDRAWN
     event: "MemberResigned"
   - from: ACTIVE
-    to: EXCLUDED
+    to: PENDING_EXCLUSION
     event: "MemberExcluded"
+  - from: PENDING_EXCLUSION
+    to: EXCLUDED
+    event: "ExclusionBecameEffective"
+  - from: PENDING_EXCLUSION
+    to: ACTIVE
+    event: "ExclusionOverturned"
   - from: ACTIVE
-    to: STRUCK_OFF
+    to: PENDING_STRUCK_OFF
     event: "MemberStruckOff"
+  - from: PENDING_STRUCK_OFF
+    to: STRUCK_OFF
+    event: "StruckOffBecameEffective"
+  - from: PENDING_STRUCK_OFF
+    to: ACTIVE
+    event: "StruckOffOverturned"
   - from: ACTIVE
     to: DECEASED
     event: "MemberDied"
 notes:
   - "Poza zakresem: przejście `null -> ACTIVE` dla założycieli spółdzielni z chwilą jej rejestracji (PS-ART-017 §1 zdanie pierwsze) - proces zakładania spółdzielni (Dział II) nie jest częścią sformalizowanego fragmentu Art. 15-28."
-  - "Uproszczenie świadome: skuteczność wykluczenia/wykreślenia (PS-ART-024 §10) jest w rzeczywistości odroczona względem uchwały - do bezskutecznego upływu terminów odwołania/zaskarżenia albo prawomocnego oddalenia powództwa. Ten automat modeluje `ACTIVE -> EXCLUDED/STRUCK_OFF` jako jedno przejście; pośredni stan oczekiwania na skuteczność to zadanie Phase 2 (procedury), nie Phase 1 (ontologia) - nie zgadujemy tu szczegółu, którego jeszcze nie sformalizowaliśmy."
+  - "Rewizja Phase 2: pierwotna wersja tego automatu (Phase 1) modelowała `ACTIVE -> EXCLUDED/STRUCK_OFF` jako jedno przejście i zapowiadała dodanie stanu pośredniego dla odroczonej skuteczności (PS-ART-024 §10) - zrobione tutaj przez PENDING_EXCLUSION/PENDING_STRUCK_OFF. `MemberExcluded`/`MemberStruckOff` oznaczają teraz moment podjęcia uchwały, nie moment skuteczności - patrz procedura `../../procedures/R-PS-0016-exclusion-or-strike-off.yaml` po pełny opis warunków skuteczności i ścieżek odwołania."
   - "SCOPE_NOTE: dla spółdzielni mieszkaniowych stan EXCLUDED/STRUCK_OFF osiągany tą ścieżką jest w praktyce wyparty przez USM - patrz ../../interpretations/OBS-0001-lex-specialis-usm-membership.md. Ustanie członkostwa w takiej spółdzielni przebiega innym torem (utrata prawa do lokalu)."
 formalization_status: STRUCTURAL

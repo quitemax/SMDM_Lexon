@@ -1,0 +1,29 @@
+id: R-PS-0004
+norm_type: RIGHT
+title: "Prawa członka spółdzielni"
+source:
+  act: "Prawo spółdzielcze"
+  article: "18"
+  paragraph: "1, 2, 4"
+  normalized_ref: "PS-ART-018"
+subject: "Osoba"
+holder: "Członek"
+condition: "Membership.status = ACTIVE"
+statement: "Prawa i obowiązki wynikające z członkostwa są dla wszystkich członków równe (§1). Członek ma prawo do:"
+items:
+  - id: R1
+    text: "uczestniczenia w walnym zgromadzeniu lub zebraniu grupy członkowskiej"
+  - id: R2
+    text: "wybierania i bycia wybieranym do organów spółdzielni"
+  - id: R3
+    text: "otrzymania odpisu statutu i regulaminów, zaznajamiania się z uchwałami organów, protokołami obrad, protokołami lustracji, rocznymi sprawozdaniami finansowymi, umowami z osobami trzecimi"
+    limited_by: "R-PS-0005 (wyjątek dot. umów z osobami trzecimi)"
+  - id: R4
+    text: "żądania rozpatrzenia przez właściwe organy wniosków dotyczących działalności spółdzielni"
+  - id: R5
+    text: "udziału w nadwyżce bilansowej"
+  - id: R6
+    text: "świadczeń spółdzielni w zakresie jej statutowej działalności"
+residual_clause: "Członkowi przysługują również inne prawa określone w ustawie lub w statucie (§4) - odesłanie otwarte, nie rozstrzygane tutaj."
+formalization_status: DIRECT
+tests: []

@@ -1,0 +1,96 @@
+id: R-PS-0016
+norm_type: PROCEDURE
+name: "ExclusionOrStrikeOff"
+title: "Wykluczenie albo wykreślenie członka"
+source:
+  act: "Prawo spółdzielcze"
+  article: "24"
+  normalized_ref: "PS-ART-024"
+actors:
+  member: "Członek"
+  competent_body: "RadaNadzorcza | WalneZgromadzenie (który z nich, wskazuje statut - PS-ART-024 §4)"
+grounds:
+  wykluczenie:
+    condition: "wina umyślna LUB rażące niedbalstwo (C-PS-0001), skutkujące tym, że dalsze pozostawanie w spółdzielni nie da się pogodzić z postanowieniami statutu LUB dobrymi obyczajami (C-PS-0002)"
+    source: "PS-ART-024 §2"
+    open_textured: ["C-PS-0001", "C-PS-0002"]
+  wykreślenie:
+    condition: "niewykonywanie obowiązków statutowych z przyczyn przez członka niezawinionych"
+    source: "PS-ART-024 §3"
+steps:
+  - step: 1
+    name: "hear_member"
+    actor: competent_body
+    action: "Wysłuchanie wyjaśnień zainteresowanego członka przed podjęciem uchwały."
+    mandatory: true
+    source: "PS-ART-024 §4 zdanie 2"
+  - step: 2
+    name: "resolve"
+    actor: competent_body
+    action: "Podjęcie uchwały o wykluczeniu albo o wykreśleniu."
+    precondition: "Membership.status = ACTIVE, oraz spełniona jedna z podstaw z `grounds`"
+    postcondition: "Membership.status = PENDING_EXCLUSION | PENDING_STRUCK_OFF"
+    triggers_event: "MemberExcluded | MemberStruckOff"
+    source: "PS-ART-024 §1, §2, §3, §4"
+  - step: 3
+    name: "notify_member"
+    actor: competent_body
+    action: "Pisemne zawiadomienie członka o uchwale wraz z uzasadnieniem, przedstawiającym motywy uznania, że zachowanie wyczerpuje przesłanki z `grounds`."
+    deadline:
+      duration: 2
+      unit: WEEKS
+      start_event: "uchwała z kroku 2"
+      type: STATUTORY_DEFAULT
+    fallback: "Zawiadomienie zwrócone z powodu niezgłoszenia przez członka zmiany adresu ma moc prawną doręczenia."
+    source: "PS-ART-024 §5"
+  - step: 4
+    name: "appeal"
+    actor: member
+    action: "Jeżeli organem właściwym była RadaNadzorcza, członek może: (a) odwołać się do WalnegoZgromadzenia w terminie ze statutu, albo (b) zaskarżyć uchwałę RadyNadzorczej do sądu w terminie 6 tygodni od doręczenia uchwały z uzasadnieniem."
+    applies_only_if: "competent_body = RadaNadzorcza"
+    branches:
+      - path: "odwołanie do WalnegoZgromadzenia"
+        deadline_if_no_internal_procedure_in_statute:
+          duration: 1
+          unit: MONTHS
+          start_event: "doręczenie zawiadomienia z kroku 3"
+          type: STATUTORY_DEFAULT
+        member_rights: "być obecny przy rozpatrywaniu odwołania i je popierać"
+        wz_must_resolve_by:
+          rule: "na najbliższym Walnym Zgromadzeniu, nie później niż 12 miesięcy od wniesienia odwołania"
+        wz_notice_deadline:
+          duration: 3
+          unit: WEEKS
+          before: "termin Walnego Zgromadzenia"
+        on_timeout: "termin do zaskarżenia uchwały RadyNadzorczej do sądu biegnie od dnia, w którym odwołanie powinno być najpóźniej rozpatrzone"
+        source: "PS-ART-024 §6 pkt 1, §7, §8, §9"
+      - path: "zaskarżenie do sądu"
+        deadline:
+          duration: 6
+          unit: WEEKS
+          start_event: "doręczenie uchwały RadyNadzorczej z uzasadnieniem"
+          type: STATUTORY
+        source: "PS-ART-024 §6 pkt 2"
+    note: "Jeżeli organem właściwym jest WalneZgromadzenie (nie RadaNadzorcza), ten krok (§6) nie ma zastosowania wprost - zaskarżenie takiej uchwały WZ do sądu odbywa się na zasadach ogólnych, nieopisanych w tym fragmencie ustawy (poza Art. 15-28)."
+  - step: 5
+    name: "effectiveness"
+    action: "Wykluczenie albo wykreślenie staje się skuteczne z chwilą jednej z czterech przesłanek."
+    postcondition: "Membership.status = EXCLUDED | STRUCK_OFF"
+    triggers_event: "ExclusionBecameEffective | StruckOffBecameEffective"
+    conditions_any_of:
+      - "bezskuteczny upływ terminu zaskarżenia do sądu uchwały RadyNadzorczej, chyba że członek przed jego upływem wniósł odwołanie do WalnegoZgromadzenia"
+      - "bezskuteczny upływ terminu wniesienia odwołania do WalnegoZgromadzenia, jeżeli jest on dłuższy niż termin zaskarżenia do sądu uchwały RadyNadzorczej"
+      - "bezskuteczny upływ terminu zaskarżenia do sądu uchwały WalnegoZgromadzenia"
+      - "prawomocne oddalenie przez sąd powództwa o uchylenie uchwały RadyNadzorczej albo WalnegoZgromadzenia"
+    else: "jeżeli odwołanie/powództwo zostanie uwzględnione - Membership.status wraca do ACTIVE, triggers_event: ExclusionOverturned | StruckOffOverturned (patrz PS-ART-024 §10, wnioskowanie a contrario - INFERRED, nie DIRECT)"
+    source: "PS-ART-024 §10"
+formalization_status: STRUCTURAL
+scope_note: >-
+  Patrz law/prawo-spoldzielcze/interpretations/OBS-0001-lex-specialis-usm-membership.md.
+  Ta procedura jest zapisana wiernie wg tekstu ustawy, ale dla realnej
+  spółdzielni mieszkaniowej z Knowledge Base jest NIEUŻYWANA - jej statut ma
+  odpowiadające paragrafy (§§18-24 dot. ustania członkostwa) formalnie
+  skreślone, a ustanie członkostwa przebiega wyłącznie wg USM (utrata prawa
+  do lokalu, USM Art. 24[1], 26). Nie oznacza to błędu w tej formalizacji -
+  to legalny, choć w tym konkretnym przypadku martwy, przepis ustawy ogólnej.
+tests: []
