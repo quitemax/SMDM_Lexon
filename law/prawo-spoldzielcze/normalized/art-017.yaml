@@ -1,0 +1,22 @@
+id: PS-ART-017
+act: "Prawo spółdzielcze"
+source:
+  dz_u: "Dz.U. 2026 poz. 521"
+  consolidated_text_as_of: "2026-03-23"
+structure:
+  part: "Część I. Spółdzielnie"
+  title: "Tytuł I. Przepisy wspólne"
+  division: "Dział III. Członkowie, ich prawa i obowiązki"
+article: "17"
+paragraphs:
+  - number: "1"
+    text: "Założyciele spółdzielni, którzy podpisali statut, stają się członkami spółdzielni z chwilą jej zarejestrowania. Przystępujący do spółdzielni po jej zarejestrowaniu stają się członkami spółdzielni z chwilą przyjęcia ich przez spółdzielnię."
+  - number: "2"
+    text: "Przyjęcie deklaracji w przypadku deklaracji utrwalonej w postaci papierowej powinno być potwierdzone na deklaracji podpisem dwóch członków zarządu lub osób do tego przez zarząd upoważnionych. W przypadku deklaracji utrwalonej w postaci elektronicznej potwierdzenie przyjęcia deklaracji wydaje się niezwłocznie w odrębnym dokumencie na piśmie. W potwierdzeniu przyjęcia deklaracji podaje się datę uchwały o przyjęciu. Obowiązuje to również przy zmianie danych dotyczących zadeklarowanych udziałów lub wkładów."
+  - number: "3"
+    text: "Jeżeli statut nie stanowi inaczej, uchwała w sprawie przyjęcia powinna być podjęta w ciągu miesiąca od dnia złożenia deklaracji. O uchwale o przyjęciu w poczet członków oraz o uchwale odmawiającej przyjęcia zainteresowany powinien być zawiadomiony na piśmie w ciągu dwóch tygodni od dnia jej powzięcia. Zawiadomienie o odmowie przyjęcia powinno zawierać uzasadnienie."
+  - number: "4"
+    text: "Statut spółdzielni powinien wskazywać organ spółdzielni właściwy do przyjmowania członków. Jeżeli organem tym nie jest walne zgromadzenie, statut powinien wskazywać także organ, do którego służy odwołanie od decyzji odmawiającej przyjęcia, oraz określać terminy wniesienia i rozpatrzenia tego odwołania."
+layer: normalized_source_text
+verbatim: true
+note: "Segmentacja źródłowa, bez interpretacji semantycznej. Patrz OBS-0001 (zakres stosowania dla spółdzielni mieszkaniowych)."

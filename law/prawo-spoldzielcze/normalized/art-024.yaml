@@ -1,0 +1,59 @@
+id: PS-ART-024
+act: "Prawo spółdzielcze"
+source:
+  dz_u: "Dz.U. 2026 poz. 521"
+  consolidated_text_as_of: "2026-03-23"
+structure:
+  part: "Część I. Spółdzielnie"
+  title: "Tytuł I. Przepisy wspólne"
+  division: "Dział III. Członkowie, ich prawa i obowiązki"
+article: "24"
+paragraphs:
+  - number: "1"
+    text: "Spółdzielnia może rozwiązać stosunek członkostwa tylko przez wykluczenie albo wykreślenie członka."
+  - number: "2"
+    text: "Wykluczenie członka ze spółdzielni może nastąpić w wypadku, gdy z jego winy umyślnej lub z powodu rażącego niedbalstwa dalsze pozostawanie w spółdzielni nie da się pogodzić z postanowieniami statutu spółdzielni lub dobrymi obyczajami. Statut określa przyczyny wykluczenia."
+    open_textured_terms:
+      - "rażącego niedbalstwa"
+      - "dobrymi obyczajami"
+    note_on_scope: >-
+      "wina umyślna" celowo pominięta na liście open_textured_terms:
+      to ugruntowana doktrynalnie kategoria (dolus, przeciwstawiona
+      niedbalstwu), nie ocenna klauzula generalna jak pozostałe dwa
+      zwroty - decyzja projektowa do rewizji w Phase 2 (AGENTS.md
+      sekcja 57).
+  - number: "3"
+    text: "Członek niewykonujący obowiązków statutowych z przyczyn przez niego niezawinionych może być wykreślony z rejestru członków spółdzielni. Statut określa przyczyny wykreślenia."
+  - number: "4"
+    text: "Wykluczenia albo wykreślenia może dokonać, stosownie do postanowień statutu, rada nadzorcza albo walne zgromadzenie spółdzielni. Organ, do którego kompetencji należy podejmowanie uchwał w sprawie wykluczenia albo wykreślenia, ma obowiązek wysłuchać wyjaśnień zainteresowanego członka spółdzielni."
+  - number: "5"
+    text: "Organ, który podjął uchwałę w sprawie wykreślenia albo wykluczenia, ma obowiązek zawiadomić członka na piśmie wraz z uzasadnieniem o wykreśleniu albo wykluczeniu ze spółdzielni w terminie dwóch tygodni od dnia podjęcia uchwały. Uzasadnienie powinno w szczególności przedstawiać motywy, którymi kierował się organ spółdzielni uznając, że zachowanie członka wyczerpuje przesłanki wykluczenia albo wykreślenia określone w statucie. Zawiadomienie zwrócone z powodu niezgłoszenia przez członka zmiany podanego przez niego adresu ma moc prawną doręczenia."
+  - number: "6"
+    text: "Jeżeli organem właściwym w sprawie wykluczenia albo wykreślenia członka ze spółdzielni jest, zgodnie z postanowieniami statutu, rada nadzorcza, członek spółdzielni ma prawo:"
+    points:
+      - number: "1"
+        text: "odwołać się od uchwały o wykluczeniu albo wykreśleniu do walnego zgromadzenia, w terminie określonym w statucie, albo"
+      - number: "2"
+        text: "zaskarżyć uchwałę rady nadzorczej do sądu w terminie sześciu tygodni od dnia doręczenia członkowi uchwały z uzasadnieniem; przepisy art. 42 stosuje się odpowiednio."
+  - number: "6a"
+    text: "W przypadku doręczenia członkowi uchwały o wykluczeniu albo wykreśleniu wraz z uzasadnieniem z wykorzystaniem usługi rejestrowanego doręczenia elektronicznego do ustalenia dnia doręczenia stosuje się przepis art. 42 ustawy z dnia 18 listopada 2020 r. o doręczeniach elektronicznych."
+  - number: "7"
+    text: "W wypadku bezskutecznego upływu terminu do rozpatrzenia odwołania przez walne zgromadzenie, termin do zaskarżenia do sądu uchwały rady nadzorczej, o którym mowa w § 6 pkt 2, biegnie od dnia, w którym odwołanie powinno być najpóźniej rozpatrzone."
+  - number: "8"
+    text: "W wypadku wniesienia do walnego zgromadzenia odwołania od uchwały rady nadzorczej w sprawie wykluczenia albo wykreślenia członek spółdzielni ma prawo być obecny przy rozpatrywaniu odwołania i popierać je. Do wniesienia odwołania i jego rozpatrzenia stosuje się postanowienia statutu o postępowaniu wewnątrzspółdzielczym."
+  - number: "9"
+    text: "Jeżeli statut nie przewiduje postępowania wewnątrzspółdzielczego, termin do wniesienia odwołania, o którym mowa w § 6 pkt 1, wynosi miesiąc od dnia doręczenia zawiadomienia o wykluczeniu albo wykreśleniu wraz z uzasadnieniem. Odwołanie powinno być rozpatrzone na najbliższym walnym zgromadzeniu, nie później jednak niż w ciągu dwunastu miesięcy od dnia wniesienia odwołania. Odwołujący się członek spółdzielni powinien być zawiadomiony o terminie walnego zgromadzenia co najmniej trzy tygodnie przed tym terminem."
+  - number: "10"
+    text: "Wykluczenie albo wykreślenie staje się skuteczne z chwilą:"
+    points:
+      - number: "1"
+        text: "bezskutecznego upływu terminu do zaskarżenia do sądu uchwały rady nadzorczej, chyba że członek przed upływem tego terminu wniósł odwołanie od uchwały rady do walnego zgromadzenia;"
+      - number: "2"
+        text: "bezskutecznego upływu terminu do wniesienia do walnego zgromadzenia odwołania od uchwały rady nadzorczej, jeżeli termin ten jest dłuższy od terminu do zaskarżenia do sądu uchwały rady;"
+      - number: "3"
+        text: "bezskutecznego upływu terminu do zaskarżenia do sądu uchwały walnego zgromadzenia;"
+      - number: "4"
+        text: "prawomocnego oddalenia przez sąd powództwa o uchylenie uchwały rady nadzorczej albo walnego zgromadzenia."
+layer: normalized_source_text
+verbatim: true
+note: "Segmentacja źródłowa, bez interpretacji semantycznej. §2 zawiera trzy pojęcia nieostre (patrz open_textured_terms) - kandydaci do concepts/. Patrz OBS-0001: dla tej spółdzielni mieszkaniowej cały ten artykuł jest w praktyce wyparty przez USM (statut ma odpowiadające paragrafy skreślone)."

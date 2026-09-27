@@ -1,0 +1,16 @@
+id: PS-ART-028
+act: "Prawo spółdzielcze"
+source:
+  dz_u: "Dz.U. 2026 poz. 521"
+  consolidated_text_as_of: "2026-03-23"
+structure:
+  part: "Część I. Spółdzielnie"
+  title: "Tytuł I. Przepisy wspólne"
+  division: "Dział III. Członkowie, ich prawa i obowiązki"
+article: "28"
+paragraphs:
+  - number: null
+    text: "W razie otwarcia likwidacji w ciągu sześciu miesięcy lub wszczęcia postępowania upadłościowego w ciągu roku od dnia, w którym członek przestał należeć do spółdzielni, obowiązany jest on wobec spółdzielni do uczestniczenia w pokrywaniu jej strat tak, jak gdyby był nadal członkiem."
+layer: normalized_source_text
+verbatim: true
+note: "Segmentacja źródłowa, bez interpretacji semantycznej. Ostatni artykuł Działu III (Dział IV zaczyna się dalej)."

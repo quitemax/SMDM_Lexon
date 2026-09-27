@@ -1,0 +1,18 @@
+id: PS-ART-025
+act: "Prawo spółdzielcze"
+source:
+  dz_u: "Dz.U. 2026 poz. 521"
+  consolidated_text_as_of: "2026-03-23"
+structure:
+  part: "Część I. Spółdzielnie"
+  title: "Tytuł I. Przepisy wspólne"
+  division: "Dział III. Członkowie, ich prawa i obowiązki"
+article: "25"
+paragraphs:
+  - number: "1"
+    text: "Członka zmarłego skreśla się z rejestru członków spółdzielni ze skutkiem od dnia, w którym nastąpiła śmierć. Osobę prawną będącą członkiem spółdzielni skreśla się z rejestru członków ze skutkiem od dnia jej ustania."
+  - number: "2"
+    text: "Jeżeli zmarły członek pozostawił więcej niż jednego spadkobiercę, spadkobiercy powinni w celu wykonywania przechodzących na nich praw majątkowych zmarłego ustanowić wspólnego pełnomocnika lub wskazać zarządcę ustanowionego przez sąd przy odpowiednim zastosowaniu przepisów Kodeksu cywilnego o zarządzie rzeczą wspólną."
+layer: normalized_source_text
+verbatim: true
+note: "Segmentacja źródłowa, bez interpretacji semantycznej."

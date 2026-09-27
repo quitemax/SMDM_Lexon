@@ -1,0 +1,22 @@
+id: PS-ART-016
+act: "Prawo spółdzielcze"
+source:
+  dz_u: "Dz.U. 2026 poz. 521"
+  consolidated_text_as_of: "2026-03-23"
+structure:
+  part: "Część I. Spółdzielnie"
+  title: "Tytuł I. Przepisy wspólne"
+  division: "Dział III. Członkowie, ich prawa i obowiązki"
+article: "16"
+paragraphs:
+  - number: "1"
+    text: "Warunkiem przyjęcia na członka jest złożenie deklaracji. Deklaracja powinna być złożona pod nieważnością na piśmie utrwalonym w postaci papierowej lub elektronicznej. Pisma utrwalone w postaci elektronicznej przesyła się na adres do doręczeń elektronicznych spółdzielni, o którym mowa w art. 2 pkt 1 ustawy z dnia 18 listopada 2020 r. o doręczeniach elektronicznych (Dz. U. z 2026 r. poz. 3), i opatruje się kwalifikowanym podpisem elektronicznym, podpisem osobistym lub podpisem zaufanym. Pismo utrwalone w postaci papierowej opatruje się podpisem własnoręcznym. Podpisana przez przystępującego do spółdzielni deklaracja powinna zawierać jego imię i nazwisko oraz miejsce zamieszkania, a jeżeli przystępujący jest osobą prawną – jej nazwę i siedzibę, ilość zadeklarowanych udziałów, dane dotyczące wkładów, jeżeli statut ich wnoszenie przewiduje, a także adres do doręczeń elektronicznych, o którym mowa w art. 2 pkt 1 ustawy z dnia 18 listopada 2020 r. o doręczeniach elektronicznych, wpisany do bazy adresów elektronicznych, o której mowa w art. 25 tej ustawy, o ile przystępujący taki posiada, oraz inne dane przewidziane w statucie."
+  - number: "2"
+    text: "Jeżeli spółdzielnia jest jednocześnie instytucją obowiązaną w rozumieniu ustawy z dnia 1 marca 2018 r. o przeciwdziałaniu praniu pieniędzy oraz finansowaniu terroryzmu (Dz. U. z 2025 r. poz. 644 i 1669), deklaracja, o której mowa w § 1, może być również złożona pod nieważnością w formie dokumentowej w rozumieniu art. 77[2] Kodeksu cywilnego. W takim przypadku do identyfikacji i weryfikacji tożsamości osoby, która ubiega się o przyjęcie na członka, stosuje się przepisy ustawy, o której mowa w zdaniu pierwszym."
+  - number: "3"
+    text: "Dalsze udziały, jak i wszelkie zmiany danych zawartych w deklaracji deklaruje się na piśmie."
+  - number: "4"
+    text: "Członek może w deklaracji lub w odrębnym oświadczeniu złożonym na piśmie wskazać spółdzielni osobę, której spółdzielnia obowiązana jest po jego śmierci wypłacić udziały. Prawo z tego tytułu nie należy do spadku."
+layer: normalized_source_text
+verbatim: true
+note: "Segmentacja źródłowa, bez interpretacji semantycznej. Patrz OBS-0001 (zakres stosowania dla spółdzielni mieszkaniowych)."

@@ -5,8 +5,7 @@
 > tu są rozbite na konkretne, sprawdzalne zadania osadzone w realnym materiale
 > źródłowym z `external/SMDM_Knowledge_Base`.
 
-Status ogólny: **Phase 0 — research**, zadanie 0 w toku (wybór fragmentu
-zamknięty, patrz niżej).
+Status ogólny: **Phase 0 zamknięta.** W toku: **Phase 1 — ontology.**
 
 ------------------------------------------------------------------------
 
@@ -93,8 +92,18 @@ ich prawa i obowiązki**, **Art. 15–28** (14 artykułów).
       (patrz AGENTS.md sekcja 38: `R-PS-0001`, `E-PS-0001`, ...) — potwierdzona
       bez zmian względem AGENTS.md, dodano skrót aktu `PS`/`USM` oraz osobny
       klucz dla jednostek `normalized/` (`PS-ART-015`, ...).
+- [x] Znormalizować tekst Art. 15–28 — 15 plików w
+      `law/prawo-spoldzielcze/normalized/` (14 artykułów + Art. 16a, plus
+      pusta jednostka-tombstone dla Art. 23, oznaczonego w ustawie jako
+      `(uchylony)`, żeby luka w numeracji była jawna). Segmentacja czysto
+      strukturalna (paragrafy, punkty), bez formalizacji semantycznej.
+      Zidentyfikowano przy okazji 2 pojęcia nieostre w Art. 24 §2 ("rażące
+      niedbalstwo", "dobre obyczaje") — otagowane `open_textured_terms` jako
+      materiał wejściowy do Phase 2/`concepts/`. "Wina umyślna" świadomie
+      pominięta na tej liście (ugruntowana doktrynalnie kategoria, nie
+      klauzula generalna) — decyzja odnotowana w `art-024.yaml`.
 
-## Phase 1 — ontology (następne)
+## Phase 1 — ontology (w toku)
 
 - [ ] Zdefiniować encje: `Spółdzielnia`, `Osoba`, `Członek`, `Udział`,
       `Deklaracja`, `Zarząd`, `RadaNadzorcza`, `WalneZgromadzenie` (w zakresie

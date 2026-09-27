@@ -1,0 +1,18 @@
+id: PS-ART-020
+act: "Prawo spółdzielcze"
+source:
+  dz_u: "Dz.U. 2026 poz. 521"
+  consolidated_text_as_of: "2026-03-23"
+structure:
+  part: "Część I. Spółdzielnie"
+  title: "Tytuł I. Przepisy wspólne"
+  division: "Dział III. Członkowie, ich prawa i obowiązki"
+article: "20"
+paragraphs:
+  - number: "1"
+    text: "Członek spółdzielni obowiązany jest zadeklarować jeden udział, jeżeli statut nie zobowiązuje członków do zadeklarowania większej ilości udziałów."
+  - number: "2"
+    text: "Statut może przewidywać wnoszenie przez członków wkładów na własność spółdzielni lub do korzystania z nich przez spółdzielnię na podstawie innego stosunku prawnego. W tym wypadku statut powinien określać charakter i zakres przysługującego spółdzielni prawa do wkładów, wysokość wkładów oraz ich rodzaj, jeżeli są to wkłady niepieniężne, terminy ich wnoszenia, zasady wyceny i zwrotu w wypadku likwidacji spółdzielni, wystąpienia członka lub ustania członkostwa z innych przyczyn, a także w innych wypadkach przewidzianych w statucie."
+layer: normalized_source_text
+verbatim: true
+note: "Segmentacja źródłowa, bez interpretacji semantycznej."

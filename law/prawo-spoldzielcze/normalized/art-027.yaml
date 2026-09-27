@@ -1,0 +1,24 @@
+id: PS-ART-027
+act: "Prawo spółdzielcze"
+source:
+  dz_u: "Dz.U. 2026 poz. 521"
+  consolidated_text_as_of: "2026-03-23"
+structure:
+  part: "Część I. Spółdzielnie"
+  title: "Tytuł I. Przepisy wspólne"
+  division: "Dział III. Członkowie, ich prawa i obowiązki"
+article: "27"
+paragraphs:
+  - number: "1"
+    text: "Członek może rozporządzać swoimi roszczeniami do spółdzielni o wypłatę udziałów oraz o zwrot wkładów lub o wypłatę ich równowartości ze skutecznością od dnia, w którym roszczenia te stały się wymagalne."
+  - number: "2"
+    text: "Wierzyciel członka może uzyskać zaspokojenie z jego udziałów dopiero z chwilą ustania członkostwa."
+  - number: "3"
+    text: "Jeżeli egzekucja z innego majątku członka okaże się bezskuteczna, a przepis szczególny nie stanowi inaczej, wierzyciel członka może skierować egzekucję do wniesionych przez członka wkładów. W takim wypadku roszczenie członka o zwrot wkładów lub ich równowartości staje się wymagalne po upływie sześciu miesięcy od dnia zajęcia wkładów, chyba że wymagalność tego roszczenia nastąpiła wcześniej na podstawie innych przepisów."
+  - number: "4"
+    text: "W razie zajęcia przez wierzyciela członka wkładów stanowiących środki produkcji, spółdzielni służy prawo pierwszeństwa ich nabycia w postępowaniu egzekucyjnym."
+  - number: "5"
+    text: "Wierzytelności spółdzielni do członka z tytułu wpłat na udziały nie podlegają zajęciu na rzecz wierzycieli spółdzielni."
+layer: normalized_source_text
+verbatim: true
+note: "Segmentacja źródłowa, bez interpretacji semantycznej."

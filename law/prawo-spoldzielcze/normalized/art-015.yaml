@@ -1,0 +1,24 @@
+id: PS-ART-015
+act: "Prawo spółdzielcze"
+source:
+  dz_u: "Dz.U. 2026 poz. 521"
+  consolidated_text_as_of: "2026-03-23"
+structure:
+  part: "Część I. Spółdzielnie"
+  title: "Tytuł I. Przepisy wspólne"
+  division: "Dział III. Członkowie, ich prawa i obowiązki"
+article: "15"
+paragraphs:
+  - number: "1"
+    text: "Spółdzielnia liczy co najmniej dziesięciu członków, a spółdzielnia produkcji rolnej oraz spółdzielnia, o której mowa w art. 6 § 2a, co najmniej pięciu członków, o ile statut nie wymaga liczby większej."
+  - number: "2"
+    text: "Członkiem spółdzielni może być każda osoba fizyczna o pełnej zdolności do czynności prawnych, która odpowiada wymaganiom określonym w statucie, chyba że ustawa stanowi inaczej."
+  - number: "3"
+    text: "Ponadto statut może określać wypadki, w których dopuszczalne jest członkostwo osób o ograniczonej zdolności do czynności prawnych lub niemających tej zdolności. Osoby takie nie mogą być członkami organów spółdzielni. W walnym zgromadzeniu biorą one udział przez swoich przedstawicieli ustawowych."
+  - number: "4"
+    text: "Członkami spółdzielni mogą być również osoby prawne, o ile statut nie stanowi inaczej."
+  - number: "5"
+    text: "Spółdzielnia, której członkami w myśl statutu są wyłącznie osoby prawne, musi liczyć co najmniej trzech członków."
+layer: normalized_source_text
+verbatim: true
+note: "Segmentacja źródłowa, bez interpretacji semantycznej."

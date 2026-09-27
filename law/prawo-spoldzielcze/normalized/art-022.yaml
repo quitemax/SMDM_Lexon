@@ -1,0 +1,16 @@
+id: PS-ART-022
+act: "Prawo spółdzielcze"
+source:
+  dz_u: "Dz.U. 2026 poz. 521"
+  consolidated_text_as_of: "2026-03-23"
+structure:
+  part: "Część I. Spółdzielnie"
+  title: "Tytuł I. Przepisy wspólne"
+  division: "Dział III. Członkowie, ich prawa i obowiązki"
+article: "22"
+paragraphs:
+  - number: null
+    text: "Członek spółdzielni może wystąpić z niej za wypowiedzeniem. Wypowiedzenie powinno być dokonane pod nieważnością na piśmie. Termin i okres wypowiedzenia określa statut. Za datę wystąpienia uważa się następny dzień po upływie okresu wypowiedzenia."
+layer: normalized_source_text
+verbatim: true
+note: "Segmentacja źródłowa, bez interpretacji semantycznej."

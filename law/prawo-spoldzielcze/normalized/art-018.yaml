@@ -1,0 +1,46 @@
+id: PS-ART-018
+act: "Prawo spółdzielcze"
+source:
+  dz_u: "Dz.U. 2026 poz. 521"
+  consolidated_text_as_of: "2026-03-23"
+structure:
+  part: "Część I. Spółdzielnie"
+  title: "Tytuł I. Przepisy wspólne"
+  division: "Dział III. Członkowie, ich prawa i obowiązki"
+article: "18"
+paragraphs:
+  - number: "1"
+    text: "Prawa i obowiązki wynikające z członkostwa w spółdzielni są dla wszystkich członków równe."
+  - number: "2"
+    text: "Członek spółdzielni ma prawo:"
+    points:
+      - number: "1"
+        text: "uczestniczenia w walnym zgromadzeniu lub zebraniu grupy członkowskiej;"
+      - number: "2"
+        text: "wybierania i bycia wybieranym do organów spółdzielni;"
+      - number: "3"
+        text: "otrzymania odpisu statutu i regulaminów, zaznajamiania się z uchwałami organów spółdzielni, protokołami obrad organów spółdzielni, protokołami lustracji, rocznymi sprawozdaniami finansowymi, umowami zawieranymi przez spółdzielnię z osobami trzecimi, z zastrzeżeniem art. 8[1] ust. 1 ustawy z dnia 15 grudnia 2000 r. o spółdzielniach mieszkaniowych (Dz. U. z 2024 r. poz. 558, z 2025 r. poz. 1077 oraz z 2026 r. poz. 39);"
+      - number: "4"
+        text: "żądania rozpatrzenia przez właściwe organy spółdzielni wniosków dotyczących jej działalności;"
+      - number: "5"
+        text: "udziału w nadwyżce bilansowej;"
+      - number: "6"
+        text: "do świadczeń spółdzielni w zakresie jej statutowej działalności."
+  - number: "3"
+    text: "Spółdzielnia może odmówić członkowi wglądu do umów zawieranych z osobami trzecimi, jeżeli naruszałoby to prawa tych osób lub jeżeli istnieje uzasadniona obawa, że członek wykorzysta pozyskane informacje w celach sprzecznych z interesem spółdzielni i przez to wyrządzi spółdzielni znaczną szkodę. Odmowa powinna być wyrażona na piśmie. Członek, któremu odmówiono wglądu do umów zawieranych przez spółdzielnie z osobami trzecimi, może złożyć wniosek do sądu rejestrowego o zobowiązanie spółdzielni do udostępnienia tych umów. Wniosek należy złożyć w terminie siedmiu dni od dnia doręczenia członkowi odmowy na piśmie. W przypadku odmowy doręczonej z wykorzystaniem usługi rejestrowanego doręczenia elektronicznego do ustalenia dnia doręczenia stosuje się przepis art. 42 ustawy z dnia 18 listopada 2020 r. o doręczeniach elektronicznych."
+  - number: "4"
+    text: "Członkowi spółdzielni przysługują również inne prawa określone w ustawie lub w statucie."
+  - number: "5"
+    text: "Członek spółdzielni ma obowiązek:"
+    points:
+      - number: "1"
+        text: "przestrzegania przepisów prawa, postanowień statutu i opartych na nich regulaminów;"
+      - number: "2"
+        text: "dbania o dobro i rozwój spółdzielni oraz uczestniczenia w realizacji jej zadań statutowych."
+  - number: "6"
+    text: "Członek spółdzielni wykonuje również inne obowiązki określone w ustawie lub w statucie."
+  - number: "7"
+    text: "Przepisy ustawy, statut oraz umowy zawierane przez spółdzielnię z jej członkami określają prawa i obowiązki członków wynikające ze stosunków prawnych pochodnych od członkostwa w spółdzielni."
+layer: normalized_source_text
+verbatim: true
+note: "Segmentacja źródłowa, bez interpretacji semantycznej."

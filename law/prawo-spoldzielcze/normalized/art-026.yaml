@@ -1,0 +1,18 @@
+id: PS-ART-026
+act: "Prawo spółdzielcze"
+source:
+  dz_u: "Dz.U. 2026 poz. 521"
+  consolidated_text_as_of: "2026-03-23"
+structure:
+  part: "Część I. Spółdzielnie"
+  title: "Tytuł I. Przepisy wspólne"
+  division: "Dział III. Członkowie, ich prawa i obowiązki"
+article: "26"
+paragraphs:
+  - number: "1"
+    text: "Udział byłego członka wypłaca się na podstawie zatwierdzonego sprawozdania finansowego za rok, w którym członek przestał należeć do spółdzielni. Sposób i terminy wypłaty określa statut."
+  - number: "2"
+    text: "Byłemu członkowi nie przysługuje prawo do funduszu zasobowego oraz do innego majątku spółdzielni, z zastrzeżeniem art. 125 § 5a."
+layer: normalized_source_text
+verbatim: true
+note: "Segmentacja źródłowa, bez interpretacji semantycznej."
