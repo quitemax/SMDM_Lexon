@@ -8,11 +8,18 @@
 Status ogólny: **normalizacja kompletna — cała ustawa, 249 artykułów**,
 w formacie Akoma Ntoso XML (`normalized/akoma-ntoso/prawo-spoldzielcze.xml`,
 patrz `docs/decisions/ADR-0001-akoma-ntoso-eli.md` i sekcję "NORMALIZACJA
-KOMPLETNA" niżej). **Reguły/procedury sformalizowane tylko dla Art. 1-3,
-5-7, 11, 12a, 14-18, 24** (Art. 4, 8-10, 12, 13, 33, 34 uchylone) — to
-mały fragment całości; cała reszta znormalizowanego materiału jest
-**wyłącznie znormalizowana, bez żadnych reguł**. **Żadna reguła nie ma
-jeszcze testu.**
+KOMPLETNA" niżej). **Reguły/procedury: Dział III (Art. 15-34) w pełni
+sformalizowany (2026-09-29)** — 40 reguł/procedur (`R-PS-0001..0040`),
+plus kontekst z Tytułu I (Art. 1-3, 5, 14). Poza Art. 23, 33, 34
+(w całości uchylone) i poza tym działem, cała reszta znormalizowanego
+materiału (Art. 35-281) jest **wyłącznie znormalizowana, bez żadnych
+reguł** — poza zakresem pierwszego wybranego fragmentu (patrz niżej).
+**Żadna reguła nie ma jeszcze testu.**
+
+**Kolejność ustalona z użytkownikiem (2026-09-29):** dokończyć pisanie
+reguł (Dział III — ZROBIONE) → formalizacja USM (Ustawa o
+spółdzielniach mieszkaniowych, następny krok) → Phase 3 (silnik,
+`engine/`, na bazie ADR-0003).
 
 **Przystanek analityczny (2026-09-28):** przed powrotem do pisania reguł
 zrobiono audyt repo (skrypty walidujące, nie wrażenia) — patrz
@@ -60,14 +67,13 @@ Ustalenia i decyzje:
    ontologicznej — nasz słownik (RIGHT/OBLIGATION/PROHIBITION/PERMISSION/
    POWER) już jest blisko, bez formalnej analizy.
 
-Kolejność ustalona z użytkownikiem: **dokumentacja (zrobione) → encje
-(zrobione) → schemat/LegalRuleML (zrobione, 2026-09-28) → spike Catala
-(zrobione, 2026-09-28).** Cała ustalona sekwencja zamknięta. Następny
-krok do ustalenia z użytkownikiem: albo Phase 3 (silnik, `engine/`) na
-bazie ADR-0003, albo powrót do pisania reguł dla kolejnych artykułów wg
-nowego schematu (ADR-0002), albo formalizacja USM (odłożona, ale
-zidentyfikowana w OBS-0001 jako faktycznie rządząca realną
-spółdzielnią mieszkaniową).
+Kolejność ustalona z użytkownikiem (2026-09-28): **dokumentacja
+(zrobione) → encje (zrobione) → schemat/LegalRuleML (zrobione,
+2026-09-28) → spike Catala (zrobione, 2026-09-28).** Cała ta sekwencja
+zamknięta. Nowa kolejność ustalona z użytkownikiem (2026-09-29):
+**dokończyć pisanie reguł dla Dział III (ZROBIONE, 2026-09-29, patrz
+sekcja "Dokończenie pisania reguł" niżej) → formalizacja USM (następny
+krok) → Phase 3 (silnik, na bazie ADR-0003).**
 
 **Zwrot architektoniczny (2026-09-28):** patrz `docs/LEXON_CONTEXT.md` i
 `docs/decisions/ADR-0001-akoma-ntoso-eli.md`. Warstwa dokumentowa
@@ -206,21 +212,71 @@ dziale" — dociągnięto ich normalizację, zanim przejdziemy do Działu IV.
       znormalizowany (Art. 15-34), tak jak Dział I i II wcześniej.
 - [x] Walidacja YAML — OK (37 plików razem w `normalized/`).
 
-**Zawartość, do wykorzystania przy pisaniu reguł (nie zrobione jeszcze):**
+**Zawartość — sformalizowana 2026-09-29, patrz sekcja "Dokończenie
+pisania reguł: Dział III" niżej:**
 
-- Art. 29 — przedawnienie roszczeń o wypłatę udziałów/nadwyżki/wkładów (3
-  lata), wyjątek dla roszczeń o zwrot nieruchomości. DEADLINE dla reguł
-  już sformalizowanych (Art. 25-28), ale jeszcze niesformalizowanych.
-- Art. 30 — obowiązek Zarządu prowadzenia rejestru członków. Odpowiada
-  niemal dosłownie statutowemu § 11 realnej spółdzielni mieszkaniowej.
-- Art. 31 — obowiązek Zarządu wydania odpisu statutu/regulaminów na
-  żądanie członka. **To druga strona prawa już sformalizowanego jako
-  R-PS-0004 item R3** (Art. 18 §2 pkt 3) - kandydat do połączenia przy
-  formalizacji reguł.
-- Art. 32 — fakultatywna podstawa "postępowania wewnątrzspółdzielczego", do
-  którego już odsyła sformalizowana procedura R-PS-0016 (Art. 24 §8-§9).
-  Kolejny przykład normy złożonej z kilku artykułów (AGENTS.md sekcja 13).
+- Art. 29 — przedawnienie roszczeń (3 lata), wyjątek dla nieruchomości →
+  `R-PS-0034`.
+- Art. 30 — obowiązek Zarządu prowadzenia rejestru członków → `R-PS-0035`
+  (obowiązek) + `R-PS-0036` (prawo wglądu, 4 kategorie uprawnionych).
+  Odpowiada niemal dosłownie statutowemu § 11 realnej spółdzielni
+  mieszkaniowej.
+- Art. 31 — obowiązek Zarządu wydania odpisu statutu/regulaminów →
+  `R-PS-0037`, jawnie powiązane z `R-PS-0004` item R3 (Art. 18 §2 pkt 3)
+  jako jego odpowiednik po stronie obowiązku, nie połączone w jeden plik
+  - inny SUBJECT (Zarząd vs Członek), inny norm_type.
+- Art. 32 — fakultatywna podstawa "postępowania wewnątrzspółdzielczego" →
+  `R-PS-0038` (permission) + `R-PS-0039` (zawieszenie przedawnienia) +
+  `R-PS-0040` (zakaz ograniczenia drogi sądowej). **Korekta względem
+  wcześniejszej notatki w tym pliku:** R-PS-0016 (Art. 24 §6-9) nie
+  "odsyła" do Art. 32 - to własna, ustawowa ścieżka odwołania wpisana
+  bezpośrednio w Art. 24, odrębna od fakultatywnego, statutowego
+  postępowania z Art. 32. Nie są tożsame, mimo powierzchownego
+  podobieństwa (obie to "odwołanie od uchwały organu") - nie połączone
+  jawnym odesłaniem bez potwierdzenia w tekście (AGENTS.md sekcja 50).
 - Art. 33, 34 — uchylone, brak treści.
+
+------------------------------------------------------------------------
+
+## Dokończenie pisania reguł: Dział III (2026-09-29)
+
+**Decyzja użytkownika:** dokończyć pisanie reguł, potem formalizacja
+USM, na końcu Phase 3 - patrz status ogólny na początku tego pliku.
+"Dokończyć" ustalone jako: sformalizować resztę pierwszego wybranego
+fragmentu (Dział III, Art. 15-34, patrz "Decyzja: pierwszy fragment do
+formalizacji" niżej), nie całą ustawę (249 artykułów) - to nigdy nie
+było celem Phase 2, patrz PROJECT_CONCEPT.md sekcja 3 (kilkanaście-
+kilkadziesiąt artykułów jako rozsądny zakres pierwszego fragmentu).
+
+**Zrobione:** 25 nowych reguł (`R-PS-0015`, `R-PS-0017..0040` - `0016`
+zajęte przez procedurę Art. 24) dla Art. 16a, 19-22, 25-32. Pełna lista
+z norm_type i artykułem źródłowym: `law/prawo-spoldzielcze/rules/README.md`.
+Wszystkie od razu w schemacie ADR-0002 (z `validity`, nie retrofitowane
+później). `py schema/validate_rules.py`: 0 błędów, 0 ostrzeżeń na 40
+plikach.
+
+Dwa przypadki domykają zidentyfikowane wcześniej luki:
+
+- Art. 16a miał `RELATION` (`inherits_shares_from`) bez `RULE` niosącej
+  faktyczną treść normatywną (AGENTS.md sekcja 16 vs 19) - teraz
+  `R-PS-0015` + `R-PS-0017`.
+- Art. 22 i Art. 25 §1 miały już zdarzenia (`MemberResigned`,
+  `MemberDied`) w `ontology/events/`, ale żadna `RULE` nie niosła normy,
+  która je faktycznie wywołuje (AGENTS.md sekcja 18: EVENT != RULE) -
+  teraz `R-PS-0023`, `R-PS-0024`.
+
+**Dział III jest teraz w pełni sformalizowany** - jedyne niesformalizowane
+artykuły w tym dziale (23, 33, 34) są w całości uchylone.
+
+**Świadomie poza zakresem tego kroku:**
+
+- Art. 26 §2 odsyła do Art. 125 §5a (poza Działem III) - zachowane jako
+  nierozwinięte odesłanie w `R-PS-0027`, nie sformalizowane teraz.
+- Testy (`T-PS-*`) - wciąż żadna reguła w całym repo ich nie ma. Zgodnie
+  z wcześniejszą decyzją (Przystanek analityczny, punkt 2) czekają na
+  ustabilizowanie schematu, który teraz jest gotowy - **test-writing to
+  naturalny kandydat na pierwszy krok formalizacji USM albo osobny krok
+  przed nią, do ustalenia z użytkownikiem.**
 
 ------------------------------------------------------------------------
 
