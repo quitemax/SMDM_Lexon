@@ -1,0 +1,11 @@
+id: T-PS-0014-02
+rule: R-PS-0014
+title: "Ogłoszenie na podstawie odrębnych przepisów nie publikuje się w Monitorze Spółdzielczym"
+category: NEGATIVE
+status: SPECIFIED
+given:
+  - "ogłoszenie zamieszczane jest na podstawie odrębnych przepisów (wyjątek E1)"
+when: "wskazanie miejsca publikacji wg R-PS-0014"
+then:
+  result: "Monitor Sądowy i Gospodarczy"
+  because: "wyjątek E1 zastępuje ogólną zasadę - takie ogłoszenie NIE publikuje się w Monitorze Spółdzielczym"

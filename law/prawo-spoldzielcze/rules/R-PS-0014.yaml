@@ -14,5 +14,5 @@ exceptions:
   - id: "R-PS-0014-E1"
     text: "Ogłoszenia zamieszczane na podstawie odrębnych przepisów - w Monitorze Sądowym i Gospodarczym."
 formalization_status: DIRECT
-tests: []
+tests: ["T-PS-0014-01", "T-PS-0014-02"]
 note: "Wąska, techniczna norma proceduralna - dotyczy formy/miejsca publikacji, nie treści merytorycznych. Nie tworzymy osobnej encji 'Monitor Spółdzielczy' ani 'KrajowaRadaSpoldzielcza' - poza potrzebą tego fragmentu (AGENTS.md sekcja 15: nie twórz modelu ponad potrzebę)."

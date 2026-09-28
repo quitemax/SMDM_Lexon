@@ -15,5 +15,5 @@ beneficiaries:
   - "swoi członkowie"
   - "środowisko członków"
 formalization_status: DIRECT
-tests: []
+tests: ["T-PS-0008-01", "T-PS-0008-02"]
 note: "PERMISSION, nie OBLIGATION - świadoma decyzja modelująca (AGENTS.md sekcja 20, 57). Tekst używa 'może', nie 'jest obowiązana' - to rozróżnienie jest tu istotne (AGENTS.md sekcja 55: 'może' vs 'musi')."

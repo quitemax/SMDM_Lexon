@@ -21,5 +21,5 @@ items:
       - "dbanie o dobro i rozwój spółdzielni"
 residual_clause: "Członek wykonuje również inne obowiązki określone w ustawie lub w statucie (§6) - odesłanie otwarte, nie rozstrzygane tutaj."
 formalization_status: DIRECT
-tests: []
+tests: ["T-PS-0006-01", "T-PS-0006-02"]
 note: "O2 zawiera sformułowanie o niskiej precyzji ('dbanie o dobro i rozwój') - w praktyce operacjonalizowane głównie negatywnie, przez R-PS-0016 (wykluczenie za rażące niedbalstwo/sprzeczność z dobrymi obyczajami), nie przez bezpośrednie egzekwowanie tego obowiązku."

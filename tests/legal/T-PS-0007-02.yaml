@@ -1,0 +1,13 @@
+id: T-PS-0007-02
+rule: R-PS-0007
+title: "Podmiot o stałym, zamkniętym składzie osobowym nie jest Spółdzielnią w rozumieniu Art. 1 §1"
+category: NEGATIVE
+status: SPECIFIED
+given:
+  - "podmiot jest dobrowolnym zrzeszeniem osób"
+  - "podmiot ma stały, ograniczony skład osobowy (np. spółka kapitałowa)"
+  - "celem podmiotu jest wspólna działalność gospodarcza w interesie jego członków"
+when: "kwalifikacja podmiotu wg definicji R-PS-0007"
+then:
+  result: false
+  because: "brak elementu `o_zmiennym_składzie_osobowym` z `asserts` - to właśnie ta cecha odróżnia spółdzielnię od spółek kapitałowych (patrz `effect` reguły)"

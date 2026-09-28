@@ -1,0 +1,12 @@
+id: T-PS-0008-02
+rule: R-PS-0008
+title: "Działalność na rzecz osób trzecich niezwiązanych z członkami nie jest objęta tym dozwoleniem"
+category: NEGATIVE
+status: SPECIFIED
+given:
+  - "działalność jest społeczna albo oświatowo-kulturalna"
+  - "beneficjentem jest ogół publiczności, niezwiązany z członkami spółdzielni ani ich środowiskiem"
+when: "sprawdzenie, czy działalność jest objęta dozwoleniem R-PS-0008"
+then:
+  result: false
+  because: "beneficjent nie należy do żadnej z dwóch kategorii z `beneficiaries' - PERMISSION nie obejmuje tego przypadku (co nie znaczy, że jest zakazany na innej podstawie - PERMISSION != PROHIBITION, AGENTS.md sekcja 20)"

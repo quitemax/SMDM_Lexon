@@ -1,0 +1,12 @@
+id: T-PS-0014-01
+rule: R-PS-0014
+title: "Zwykłe ogłoszenie spółdzielcze publikuje się w Monitorze Spółdzielczym"
+category: POSITIVE
+status: SPECIFIED
+given:
+  - "ogłoszenie jest przewidziane przepisami prawa dla spółdzielni"
+  - "brak odrębnych przepisów wskazujących inne miejsce publikacji (wyjątek E1 nie zachodzi)"
+when: "wskazanie miejsca publikacji wg R-PS-0014"
+then:
+  result: "Monitor Spółdzielczy"
+  because: "przypadek ogólny PS-ART-014, brak zastosowania wyjątku E1"

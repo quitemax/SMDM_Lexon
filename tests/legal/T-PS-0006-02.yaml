@@ -1,0 +1,11 @@
+id: T-PS-0006-02
+rule: R-PS-0006
+title: "Osoba, której członkostwo ustało, nie jest już obowiązana z Art. 18 §5-6"
+category: NEGATIVE
+status: SPECIFIED
+given:
+  - "Membership.status = EXCLUDED"
+when: "zapytanie o obowiązki członka (items O1-O2)"
+then:
+  result: false
+  because: "warunek `condition: Membership.status = ACTIVE` niespełniony - osoba nie jest już związana obowiązkami z tego artykułu (inne, przedłużone obowiązki finansowe mogą wynikać z R-PS-0033, to inna reguła)"

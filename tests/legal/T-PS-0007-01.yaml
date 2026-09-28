@@ -1,0 +1,14 @@
+id: T-PS-0007-01
+rule: R-PS-0007
+title: "Podmiot spełniający wszystkie cechy konstytutywne jest Spółdzielnią"
+category: POSITIVE
+status: SPECIFIED
+given:
+  - "podmiot jest dobrowolnym zrzeszeniem osób"
+  - "podmiot ma nieograniczoną liczbę i zmienny skład osobowy"
+  - "podmiot ma zmienny fundusz udziałowy"
+  - "celem podmiotu jest wspólna działalność gospodarcza w interesie jego członków"
+when: "kwalifikacja podmiotu wg definicji R-PS-0007"
+then:
+  result: true
+  because: "wszystkie elementy `asserts` i `purpose` są spełnione"

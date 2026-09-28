@@ -1,0 +1,11 @@
+id: T-PS-0010-01
+rule: R-PS-0010
+title: "Majątek spółdzielni jest prywatną własnością jej członków"
+category: POSITIVE
+status: SPECIFIED
+given:
+  - "podmiot jest spółdzielnią w rozumieniu R-PS-0007"
+when: "kwalifikacja własności majątku tego podmiotu"
+then:
+  result: true
+  because: "PS-ART-003 stanowi to bezwarunkowo dla każdej spółdzielni - norma ramowa/kwalifikacyjna bez własnych przesłanek do sprawdzenia (patrz `note` reguły), stąd brak naturalnego testu NEGATIVE dla tej reguły w izolacji"

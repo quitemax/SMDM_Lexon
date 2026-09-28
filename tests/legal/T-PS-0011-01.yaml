@@ -1,0 +1,11 @@
+id: T-PS-0011-01
+rule: R-PS-0011
+title: "Statut zawierający wszystkie osiem wymaganych pozycji spełnia Art. 5 §1"
+category: POSITIVE
+status: SPECIFIED
+given:
+  - "statut zawiera postanowienia odpowiadające pozycjom R1-R8"
+when: "sprawdzenie wymaganej treści statutu wg R-PS-0011"
+then:
+  result: true
+  because: "wszystkie osiem pozycji `items` obecne w statucie"

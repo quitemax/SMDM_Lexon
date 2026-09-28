@@ -20,5 +20,5 @@ purpose:
   text: "wspólna_działalność_gospodarcza w_interesie_swoich_członków"
 effect: "Ustanawia konstytutywne cechy odróżniające spółdzielnię od innych form prawnych (np. brak stałego, ograniczonego składu osobowego i stałego kapitału - w przeciwieństwie do spółek kapitałowych)."
 formalization_status: DIRECT
-tests: []
+tests: ["T-PS-0007-01", "T-PS-0007-02"]
 note: "Ta reguła jest bezpośrednim odwzorowaniem przykładu z PROJECT_CONCEPT.md sekcja 40 (RULE R-PS-001 dla Art. 1) - świadomie zachowano tę samą strukturę ASSERTS/PURPOSE, tylko z ID zgodnym z faktyczną sekwencją nadawaną w tym repozytorium (R-PS-0001 był już zajęty przez regułę dla Art. 15, formalizowaną wcześniej). Zsynchronizowane też z ontology/entities/spoldzielnia.yaml (blok `definition`)."

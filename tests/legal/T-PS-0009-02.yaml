@@ -1,0 +1,12 @@
+id: T-PS-0009-02
+rule: R-PS-0009
+title: "Wewnętrzny zwyczaj nieujęty w statucie ani ustawach nie jest podstawą działania"
+category: NEGATIVE
+status: SPECIFIED
+given:
+  - "spółdzielnia opiera decyzję wyłącznie na niepisanym zwyczaju organizacyjnym"
+  - "zwyczaj ten nie jest odnotowany w statucie, tej ustawie ani w innej ustawie"
+when: "sprawdzenie, czy podstawa działania jest jedną z wyliczonych w R-PS-0009"
+then:
+  result: false
+  because: "nie odpowiada żadnej z trzech podstaw w `legal_basis_hierarchy' - artykuł nie przewiduje czwartej, otwartej kategorii"

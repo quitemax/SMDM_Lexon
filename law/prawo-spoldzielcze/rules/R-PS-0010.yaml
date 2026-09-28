@@ -11,5 +11,5 @@ validity:
 subject: "Spółdzielnia"
 statement: "Majątek spółdzielni jest prywatną własnością jej członków."
 formalization_status: DIRECT
-tests: []
+tests: ["T-PS-0010-01"]
 note: "Krótki, ale doniosły przepis - odróżnia to od majątku np. jednostki samorządu terytorialnego czy majątku 'wspólnego' w znaczeniu innym niż suma udziałów członków. Nie rozstrzyga sam z siebie mechaniki podziału (patrz Art. 19-21, 25-28, już sformalizowane w Phase 2 dla Art. 15-28) - to jest norma ramowa/kwalifikacyjna, nie proceduralna."

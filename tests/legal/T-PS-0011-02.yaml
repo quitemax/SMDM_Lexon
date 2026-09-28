@@ -1,0 +1,12 @@
+id: T-PS-0011-02
+rule: R-PS-0011
+title: "Statut pomijający zasady przyjmowania/wykluczania członków (R5) nie spełnia Art. 5 §1"
+category: NEGATIVE
+status: SPECIFIED
+given:
+  - "statut zawiera postanowienia odpowiadające pozycjom R1-R4, R6-R8"
+  - "statut nie zawiera postanowień o zasadach i trybie przyjmowania, wypowiadania, wykreślania i wykluczania członków (R5)"
+when: "sprawdzenie wymaganej treści statutu wg R-PS-0011"
+then:
+  result: false
+  because: "pozycja R5 wymagana przez §1 pkt 5 jest nieobecna - to właśnie ta pozycja jest podstawą, dla której ustawa pozostawia tryb przyjęcia/wykluczenia statutowi (patrz `note` reguły, R-PS-0003, R-PS-0016)"

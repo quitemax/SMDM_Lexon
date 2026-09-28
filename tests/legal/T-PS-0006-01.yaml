@@ -1,0 +1,11 @@
+id: T-PS-0006-01
+rule: R-PS-0006
+title: "Aktywny członek jest obowiązany do O1 i O2"
+category: POSITIVE
+status: SPECIFIED
+given:
+  - "Membership.status = ACTIVE"
+when: "zapytanie o obowiązki członka (items O1-O2)"
+then:
+  result: true
+  because: "warunek `condition: Membership.status = ACTIVE` spełniony - oba obowiązki obowiązują"

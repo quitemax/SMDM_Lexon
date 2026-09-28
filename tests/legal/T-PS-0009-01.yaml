@@ -1,0 +1,11 @@
+id: T-PS-0009-01
+rule: R-PS-0009
+title: "Postanowienie zarejestrowanego statutu jest prawidłową podstawą działania"
+category: POSITIVE
+status: SPECIFIED
+given:
+  - "spółdzielnia opiera decyzję na postanowieniu swojego zarejestrowanego statutu"
+when: "sprawdzenie, czy podstawa działania jest jedną z wyliczonych w R-PS-0009"
+then:
+  result: true
+  because: "zarejestrowany statut jest trzecią z trzech wyliczonych podstaw w `legal_basis_hierarchy`"

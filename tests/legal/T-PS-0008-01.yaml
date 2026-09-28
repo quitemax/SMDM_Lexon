@@ -1,0 +1,12 @@
+id: T-PS-0008-01
+rule: R-PS-0008
+title: "Spółdzielnia może prowadzić działalność oświatowo-kulturalną na rzecz członków"
+category: POSITIVE
+status: SPECIFIED
+given:
+  - "działalność jest społeczna albo oświatowo-kulturalna"
+  - "beneficjentem są członkowie spółdzielni"
+when: "sprawdzenie, czy działalność jest objęta dozwoleniem R-PS-0008"
+then:
+  result: true
+  because: "beneficjent (członkowie) jest jedną z dwóch kategorii wyliczonych w `beneficiaries`"
