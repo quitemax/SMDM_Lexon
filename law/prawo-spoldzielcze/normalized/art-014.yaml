@@ -1,0 +1,16 @@
+id: PS-ART-014
+act: "Prawo spółdzielcze"
+source:
+  dz_u: "Dz.U. 2026 poz. 521"
+  consolidated_text_as_of: "2026-03-23"
+structure:
+  part: "Część I. Spółdzielnie"
+  title: "Tytuł I. Przepisy wspólne"
+  division: "Dział II. Tryb zakładania i rejestrowania spółdzielni"
+article: "14"
+paragraphs:
+  - number: null
+    text: "Organem właściwym do publikowania ogłoszeń spółdzielczych przewidzianych w przepisach prawa jest „Monitor Spółdzielczy” wydawany przez Krajową Radę Spółdzielczą, z wyjątkiem ogłoszeń zamieszczanych na podstawie odrębnych przepisów w Monitorze Sądowym i Gospodarczym."
+layer: normalized_source_text
+verbatim: true
+note: "Segmentacja źródłowa, bez interpretacji semantycznej. Ostatni artykuł Działu II - Dział III (Art. 15, już znormalizowany) zaczyna się bezpośrednio dalej."

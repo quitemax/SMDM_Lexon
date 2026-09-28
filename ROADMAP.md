@@ -5,9 +5,12 @@
 > tu są rozbite na konkretne, sprawdzalne zadania osadzone w realnym materiale
 > źródłowym z `external/SMDM_Knowledge_Base`.
 
-Status ogólny: **Phase 0, 1 i 2 (zaplanowany zakres) zamknięte.** Następne:
-**Phase 3 — execution** (minimalny evaluator) albo dalsze pokrycie Art.
-19-23/25-28 w Phase 2 — do decyzji.
+Status ogólny: **Phase 0, 1 i 2 (zaplanowany zakres na Art. 15-28) zamknięte.**
+**Decyzja (2026-09-28):** zamiast normalizować całą ustawę (249 artykułów) na
+raz, rozszerzono normalizację o Art. 1-14 (Dział I i II — definicja
+spółdzielni, statut, zakładanie i rejestracja), bezpośrednio poprzedzające
+już gotowy Dział III. Reguły (Phase 2) dla Art. 1-14 jeszcze nie napisane —
+patrz nowa sekcja niżej.
 
 ------------------------------------------------------------------------
 
@@ -64,6 +67,37 @@ ich prawa i obowiązki**, **Art. 15–28** (14 artykułów).
 - Czy `zrodla/md/statut.md` tej konkretnej spółdzielni faktycznie wskazuje
   Zarząd czy Radę Nadzorczą jako organ właściwy do przyjęcia — art. 17 §4
   pozostawia to statutowi.
+
+------------------------------------------------------------------------
+
+## Rozszerzenie normalizacji: Art. 1-14 (Dział I i II)
+
+**Decyzja (2026-09-28):** na prośbę o normalizację "od początku" ustawy,
+zamiast całych 249 artykułów naraz (co kłóciłoby się z AGENTS.md sekcja 3),
+uzgodniono węższy, wciąż sensowny krok: dociągnąć normalizację do Art. 1
+wstecz, czyli objąć całe Działy I-II, bezpośrednio poprzedzające już
+sformalizowany Dział III.
+
+**Zrobione:**
+
+- [x] Znormalizowano Art. 1–14 (16 plików: 1,2,3,4,5,6,7,8,8a,9,10,11,12,12a,
+      13,14 — w tym 7 artykułów/paragrafów uchylonych, zachowanych jako
+      tombstone) w `law/prawo-spoldzielcze/normalized/`. Razem z Art. 15-28
+      daje to pełne, ciągłe pokrycie normalizacyjne Art. 1-28.
+- [ ] Walidacja YAML tych 16 plików skryptem (jak dla Art. 15-28) — **w
+      toku, zablokowana przejściową awarią narzędzi shell (Bash/PowerShell)
+      w tej sesji**. Do dokończenia przed commitem.
+
+**Nie zrobione jeszcze (świadomie, poza zakresem tego kroku):**
+
+- Reguły (Phase 2) dla Art. 1-14. Art. 1 §1 zawiera definicję legalną
+  Spółdzielni - to bezpośredni kandydat do wzbogacenia
+  `ontology/entities/spoldzielnia.yaml` (obecnie ta encja ma tylko
+  właściwości potrzebne dla Art. 15-28, nie pełną definicję ustawową).
+  Art. 5 (wymagana treść statutu) i Art. 6/11/12a (zakładanie, rejestracja,
+  zmiana statutu) też się nadają na reguły, ale to następny krok, nie ten.
+- Normalizacja Działu IV i dalszych (Organy spółdzielni, Art. 29 i dalej) —
+  możliwy naturalny kolejny krok "do tyłu do przodu", ale nie ustalony.
 
 ------------------------------------------------------------------------
 

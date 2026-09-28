@@ -1,0 +1,18 @@
+id: PS-ART-001
+act: "Prawo spółdzielcze"
+source:
+  dz_u: "Dz.U. 2026 poz. 521"
+  consolidated_text_as_of: "2026-03-23"
+structure:
+  part: "Część I. Spółdzielnie"
+  title: "Tytuł I. Przepisy wspólne"
+  division: "Dział I. Spółdzielnia i jej statut"
+article: "1"
+paragraphs:
+  - number: "1"
+    text: "Spółdzielnia jest dobrowolnym zrzeszeniem nieograniczonej liczby osób, o zmiennym składzie osobowym i zmiennym funduszu udziałowym, które w interesie swoich członków prowadzi wspólną działalność gospodarczą."
+  - number: "2"
+    text: "Spółdzielnia może prowadzić działalność społeczną i oświatowo-kulturalną na rzecz swoich członków i ich środowiska."
+layer: normalized_source_text
+verbatim: true
+note: "Segmentacja źródłowa, bez interpretacji semantycznej. §1 zawiera definicję legalną Spółdzielni - kandydat do wzbogacenia ontology/entities/spoldzielnia.yaml o pełną formalizację definicyjną w Phase 2 (obecnie ta encja ma tylko właściwości potrzebne dla Art. 15-28)."

@@ -1,0 +1,35 @@
+id: PS-ART-005
+act: "Prawo spółdzielcze"
+source:
+  dz_u: "Dz.U. 2026 poz. 521"
+  consolidated_text_as_of: "2026-03-23"
+structure:
+  part: "Część I. Spółdzielnie"
+  title: "Tytuł I. Przepisy wspólne"
+  division: "Dział I. Spółdzielnia i jej statut"
+article: "5"
+paragraphs:
+  - number: "1"
+    text: "Statut spółdzielni powinien określać:"
+    points:
+      - number: "1"
+        text: "oznaczenie nazwy z dodatkiem „spółdzielnia” lub „spółdzielczy” i podaniem jej siedziby;"
+      - number: "2"
+        text: "przedmiot działalności spółdzielni oraz czas trwania, o ile założono ją na czas określony;"
+      - number: "3"
+        text: "wysokość wpisowego oraz wysokość i ilość udziałów, które członek obowiązany jest zadeklarować, terminy wnoszenia i zwrotu oraz skutki niewniesienia udziału w terminie; jeżeli statut przewiduje wnoszenie więcej niż jednego udziału, może określać ich górną granicę;"
+      - number: "4"
+        text: "prawa i obowiązki członków;"
+      - number: "5"
+        text: "zasady i tryb przyjmowania członków, wypowiadania członkostwa, wykreślania i wykluczania członków;"
+      - number: "6"
+        text: "zasady zwoływania walnych zgromadzeń, obradowania na nich i podejmowania uchwał;"
+      - number: "7"
+        text: "zasady i tryb wyboru oraz odwoływania członków organów spółdzielni;"
+      - number: "8"
+        text: "zasady podziału nadwyżki bilansowej (dochodu ogólnego) oraz pokrywania strat spółdzielni."
+  - number: "2"
+    text: "Statut ponadto powinien zawierać postanowienia, których wprowadzenia wymagają przepisy niniejszej ustawy, oraz może zawierać inne postanowienia."
+layer: normalized_source_text
+verbatim: true
+note: "Segmentacja źródłowa, bez interpretacji semantycznej. §1 pkt 5 wprost odsyła do materii sformalizowanej w Art. 15-28 (przyjmowanie/wypowiadanie/wykreślanie/wykluczanie członków) - to jest źródłowa podstawa tego, że ustawa pozostawia szczegóły trybu statutowi (patrz PS-ART-017 §4, PS-ART-024 §4 i OBS-0001)."

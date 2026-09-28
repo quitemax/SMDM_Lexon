@@ -1,0 +1,15 @@
+id: PS-ART-012
+act: "Prawo spółdzielcze"
+source:
+  dz_u: "Dz.U. 2026 poz. 521"
+  consolidated_text_as_of: "2026-03-23"
+structure:
+  part: "Część I. Spółdzielnie"
+  title: "Tytuł I. Przepisy wspólne"
+  division: "Dział II. Tryb zakładania i rejestrowania spółdzielni"
+article: "12"
+repealed: true
+paragraphs: []
+layer: normalized_source_text
+verbatim: true
+note: "(uchylony) w tekście źródłowym. Zachowany jako pusta jednostka, żeby luka w numeracji była jawna, a nie milcząca."

@@ -1,0 +1,37 @@
+id: PS-ART-006
+act: "Prawo spółdzielcze"
+source:
+  dz_u: "Dz.U. 2026 poz. 521"
+  consolidated_text_as_of: "2026-03-23"
+structure:
+  part: "Część I. Spółdzielnie"
+  title: "Tytuł I. Przepisy wspólne"
+  division: "Dział II. Tryb zakładania i rejestrowania spółdzielni"
+article: "6"
+paragraphs:
+  - number: "1"
+    text: "Osoby zamierzające założyć spółdzielnię (założyciele) uchwalają statut spółdzielni, potwierdzając jego przyjęcie przez złożenie pod nim swoich podpisów, oraz dokonują wyboru organów spółdzielni, których wybór należy w myśl statutu do kompetencji walnego zgromadzenia, lub komisji organizacyjnej w składzie co najmniej trzech osób."
+  - number: "2"
+    text: "Liczba założycieli spółdzielni nie może być mniejsza od dziesięciu, jeżeli założycielami są osoby fizyczne, i trzech, jeżeli założycielami są osoby prawne. W spółdzielniach produkcji rolnej liczba założycieli – osób fizycznych nie może być mniejsza od pięciu."
+  - number: "2a"
+    text: "Osoby fizyczne oraz osoby prawne prowadzące gospodarstwo rolne w rozumieniu przepisów o podatku rolnym lub prowadzące działalność rolniczą w zakresie działów specjalnych produkcji rolnej wyłącznie w celu organizowania się:"
+    points:
+      - number: "1"
+        text: "w grupy producentów rolnych w rozumieniu ustawy z dnia 15 września 2000 r. o grupach producentów rolnych i ich związkach oraz o zmianie innych ustaw (Dz. U. z 2023 r. poz. 1145),"
+      - number: "2"
+        text: "we wstępnie uznane grupy producentów owoców i warzyw oraz uznane organizacje producentów owoców i warzyw w rozumieniu ustawy z dnia 19 grudnia 2003 r. o organizacji rynków owoców i warzyw oraz rynku chmielu (Dz. U. z 2023 r. poz. 1318) – mogą założyć spółdzielnię, której liczba założycieli nie może być mniejsza od pięciu."
+  - number: "3"
+    repealed: true
+    text: "(uchylony)"
+  - number: "4"
+    repealed: true
+    text: "(uchylony)"
+  - number: "5"
+    repealed: true
+    text: "(uchylony)"
+  - number: "6"
+    repealed: true
+    text: "(uchylony)"
+layer: normalized_source_text
+verbatim: true
+note: "Segmentacja źródłowa, bez interpretacji semantycznej. §2a jest tu istotny wyłącznie jako odesłanie z PS-ART-015 §1 (minimalna liczba członków) - poza tym poza zakresem członkostwa w spółdzielni mieszkaniowej (dotyczy grup producentów rolnych)."
