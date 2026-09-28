@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/quitemax/SMDM_Lexon/schema/legal-test.schema.json",
+  "title": "LEXON legal test (GIVEN/WHEN/THEN)",
+  "description": "tests/legal/*.yaml - per AGENTS.md sekcje 26-29 (GIVEN/WHEN/THEN, testy negatywne, testy graniczne). Patrz tests/README.md. Jeden plik = jeden test T-<AKT>-NNNN-MM, gdzie NNNN wskazuje regule/procedure w polu `rule`.",
+  "type": "object",
+  "required": ["id", "rule", "title", "category", "status"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^T-PS-[0-9]{4}-[0-9]{2}$"
+    },
+    "rule": {
+      "type": "string",
+      "pattern": "^R-PS-[0-9]{4}$",
+      "description": "Reguła/procedura, ktorej dotyczy ten test. Walidator sprawdza, ze taki plik istnieje w rules/ albo procedures/."
+    },
+    "title": { "type": "string", "minLength": 1 },
+    "category": {
+      "type": "string",
+      "enum": ["POSITIVE", "NEGATIVE", "BOUNDARY"],
+      "description": "AGENTS.md sekcje 26 (POSITIVE), 27 (NEGATIVE), 28 (BOUNDARY)."
+    },
+    "status": {
+      "type": "string",
+      "enum": ["SPECIFIED", "EXECUTED_PASS", "EXECUTED_FAIL"],
+      "description": "SPECIFIED = opisany, nie wykonany zadnym silnikiem (engine/evaluator/ jest puste, ADR-0003 - Phase 3 nierozpoczeta). EXECUTED_* zarezerwowane na czas, gdy silnik faktycznie istnieje - nie uzywac przedwczesnie (AGENTS.md sekcja 51, nie udawaj ze zweryfikowano)."
+    },
+    "given": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1
+    },
+    "when": { "type": "string", "minLength": 1 },
+    "then": {
+      "type": "object",
+      "required": ["result", "because"],
+      "properties": {
+        "result": {},
+        "because": { "type": "string", "minLength": 1 }
+      }
+    },
+    "cases": {
+      "type": "array",
+      "description": "Dla testow granicznych obejmujacych kilka powiazanych punktow (np. n = minimum-1, minimum, minimum+1) - zestaw pod jednym ID, zamiast rozbijania na osobne pliki (AGENTS.md sekcja 28 przedstawia je jako jeden zestaw).",
+      "minItems": 2,
+      "items": {
+        "type": "object",
+        "required": ["label", "given", "when", "then"],
+        "properties": {
+          "label": { "type": "string", "minLength": 1 },
+          "given": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+          "when": { "type": "string", "minLength": 1 },
+          "then": {
+            "type": "object",
+            "required": ["result", "because"],
+            "properties": {
+              "result": {},
+              "because": { "type": "string", "minLength": 1 }
+            }
+          }
+        }
+      }
+    }
+  },
+  "oneOf": [
+    { "required": ["given", "when", "then"] },
+    { "required": ["cases"] }
+  ],
+  "additionalProperties": true
+}
