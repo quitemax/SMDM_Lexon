@@ -14,6 +14,42 @@ mały fragment całości; cała reszta znormalizowanego materiału jest
 **wyłącznie znormalizowana, bez żadnych reguł**. **Żadna reguła nie ma
 jeszcze testu.**
 
+**Przystanek analityczny (2026-09-28):** przed powrotem do pisania reguł
+zrobiono audyt repo (skrypty walidujące, nie wrażenia) — patrz
+`docs/architecture.md`, `docs/legal-model.md`, `docs/versioning.md`.
+Ustalenia i decyzje:
+
+1. **Zero błędów integralności** (martwe referencje, kolizje ID,
+   osierocone encje/pojęcia) — fundament jest solidny.
+2. **Brak wymuszonego schematu** `rules/`/`procedures/` — każdy plik ma
+   inny zestaw pól. To jest właściwy powód, dla którego pisanie testów
+   "na samym YAML" nie ma sensu — potrzeba najpierw jednolitego,
+   wymuszonego Legal IR. **Decyzja: zaprojektować go, inspirując się
+   realnie przeczytanym LegalRuleML** (deontyka, defeasibility,
+   temporalność, provenance), ale zapisywać nadal w przyjaznym YAML, nie
+   w XML LegalRuleML. Priorytet: zrobić to jako **następny krok**.
+3. **0/15 reguł/procedur ma pole `validity`** mimo że AGENTS.md sekcja 23
+   je dokumentuje — do naprawienia przy retrofit do nowego schematu.
+4. **Decyzja podjęta i wykonana:** encje/relacje współdzielone z
+   przyszłymi aktami (Osoba, Spółdzielnia, Członek, Zarząd,
+   RadaNadzorcza, WalneZgromadzenie, Statut, MEMBER_OF, ORGAN_OF,
+   HAS_STATUTE) przeniesione z `law/prawo-spoldzielcze/ontology/` do
+   `model/` — zanim przybędzie więcej reguł wskazujących na stare
+   miejsce. Stany/zdarzenia (`MembershipStatus` i 12 eventów) zostają
+   przy akcie — to mechanizm specyficzny dla Prawa spółdzielczego,
+   wyparty w praktyce przez USM dla SM (OBS-0001). Uzasadnienie pełne:
+   `docs/architecture.md`.
+5. **Zaplanowane, po punkcie 2:** przed Phase 3 (silnik) zrobić mały
+   spike porównawczy — ręcznie przepisać jedną gotową procedurę (kandydat:
+   `R-PS-0003`) do składni Catala, sprawdzić dopasowanie, zanim
+   zdecydujemy między własnym evaluatorem a Catalą jako backendem.
+6. **Świadomie odłożone (niski priorytet):** ocena LKIF jako inspiracji
+   ontologicznej — nasz słownik (RIGHT/OBLIGATION/PROHIBITION/PERMISSION/
+   POWER) już jest blisko, bez formalnej analizy.
+
+Kolejność ustalona z użytkownikiem: **dokumentacja (zrobione) → encje
+(zrobione) → schemat/LegalRuleML (teraz) → na końcu spike Catala.**
+
 **Zwrot architektoniczny (2026-09-28):** patrz `docs/LEXON_CONTEXT.md` i
 `docs/decisions/ADR-0001-akoma-ntoso-eli.md`. Warstwa dokumentowa
 (`normalized/`) przeszła z ad-hoc YAML na Akoma Ntoso + wzorzec ELI, żeby
