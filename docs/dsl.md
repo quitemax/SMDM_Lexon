@@ -51,7 +51,16 @@ powyższych ID reguł:
 ```
 
 Przykłady: `PS-ART-015`, `PS-ART-016`, `PS-ART-016A` (Art. 16a).
-Plik: `law/<akt>/normalized/art-<numer><litera>.yaml` (np. `art-016a.yaml`).
+
+**Aktualizacja (2026-09-28):** format pliku pod tym kluczem zmienił się z
+ad-hoc YAML (jeden plik na artykuł) na **Akoma Ntoso XML** (jeden plik na
+cały akt) — patrz `docs/decisions/ADR-0001-akoma-ntoso-eli.md` i
+`law/prawo-spoldzielcze/normalized/akoma-ntoso/README.md`. Sam klucz
+`PS-ART-NNN` się nie zmienił - teraz odpowiada 1:1 atrybutowi
+`eId="art_{numer}"` w pliku `normalized/akoma-ntoso/<akt>.xml`, zamiast
+osobnemu plikowi `art-<numer>.yaml`. Żaden z ~60 istniejących plików w
+`rules/`, `procedures/`, `ontology/` nie wymagał zmiany dzięki temu, że
+klucz cytowania pozostał stabilny (AGENTS.md sekcja 38).
 
 ## Minimalna propozycja składni docelowej (Phase 3+)
 

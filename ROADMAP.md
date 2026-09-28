@@ -6,16 +6,26 @@
 > źródłowym z `external/SMDM_Knowledge_Base`.
 
 Status ogólny: **Art. 1-34 znormalizowane w całości** (cały Dział I, II, III
-- koniec Tytułu I przed Działem IV). **Reguły/procedury sformalizowane dla
-Art. 1-3, 5-7, 11, 12a, 14-18, 24** (Art. 4, 8-10, 12, 13, 33, 34 uchylone).
-Brakuje jeszcze reguł dla Art. 6 §2a (poza zakresem SM), 19-23, 25-32.
-**Żadna reguła nie ma jeszcze testu** — to następna, ogólna zaległość
-(patrz `tests/` w strukturze repo, wciąż puste).
+- koniec Tytułu I przed Działem IV), **od 2026-09-28 w formacie Akoma
+Ntoso XML** (`normalized/akoma-ntoso/prawo-spoldzielcze.xml`), nie YAML —
+patrz `docs/decisions/ADR-0001-akoma-ntoso-eli.md`. **Reguły/procedury
+sformalizowane dla Art. 1-3, 5-7, 11, 12a, 14-18, 24** (Art. 4, 8-10, 12,
+13, 33, 34 uchylone). Brakuje jeszcze reguł dla Art. 6 §2a (poza zakresem
+SM), 19-23, 25-32. **Żadna reguła nie ma jeszcze testu** — to następna,
+ogólna zaległość (patrz `tests/` w strukturze repo, wciąż puste).
 
-**Ustalone tempo (2026-09-28):** normalizacja idzie teraz dział po dziale
-(jeden Dział na raz), zanim wrócimy do pisania reguł, żeby nie mieszać
-dwóch rodzajów pracy naraz. Następny w kolejce: Dział IV (Organy
-spółdzielni, Art. 35 i dalej) - patrz sekcja niżej.
+**Ustalone tempo (2026-09-28):** normalizacja idzie dział po dziale (jeden
+Dział na raz), zanim wrócimy do pisania reguł. Następny w kolejce: Dział IV
+(Organy spółdzielni, Art. 35 i dalej) - do dodania jako rozszerzenie tego
+samego pliku XML, nie nowe pliki YAML.
+
+**Zwrot architektoniczny (2026-09-28):** patrz `docs/LEXON_CONTEXT.md` i
+`docs/decisions/ADR-0001-akoma-ntoso-eli.md`. Warstwa dokumentowa
+(`normalized/`) przeszła z ad-hoc YAML na Akoma Ntoso + wzorzec ELI, żeby
+nie wymyślać od nowa istniejących standardów. Warstwa semantyczna
+(`ontology/`, `rules/`, `procedures/`, `concepts/`) na razie **bez zmian**
+- to osobna, nierozstrzygnięta jeszcze decyzja (LegalRuleML jako możliwy
+przyszły punkt odniesienia, nie przyjęty).
 
 ------------------------------------------------------------------------
 
@@ -160,6 +170,53 @@ dziale" — dociągnięto ich normalizację, zanim przejdziemy do Działu IV.
   którego już odsyła sformalizowana procedura R-PS-0016 (Art. 24 §8-§9).
   Kolejny przykład normy złożonej z kilku artykułów (AGENTS.md sekcja 13).
 - Art. 33, 34 — uchylone, brak treści.
+
+------------------------------------------------------------------------
+
+## Zwrot architektoniczny: Akoma Ntoso + ELI (2026-09-28)
+
+**Kontekst:** użytkownik przekazał konspekt z rozmowy o architekturze
+projektu "Lexon" (zapisany w `docs/LEXON_CONTEXT.md`), który stawia tezę:
+nie wymyślać od nowa standardów formalizacji prawa (Akoma Ntoso, ELI, LKIF,
+LegalRuleML, Catala), tylko integrować się z nimi tam, gdzie już dobrze
+rozwiązują dany problem. Zamiast małego eksperymentu porównawczego
+rekomendowanego w tym dokumencie (sekcja 18), zdecydowano od razu
+przekonwertować całą dotychczasową normalizację (Art. 1-34).
+
+**Zrobione:**
+
+- [x] Zapisano `docs/LEXON_CONTEXT.md` (kontekst źródłowy, werbatim).
+- [x] `docs/decisions/ADR-0001-akoma-ntoso-eli.md` — decyzja, alternatywy,
+      konsekwencje.
+- [x] `law/prawo-spoldzielcze/normalized/akoma-ntoso/prawo-spoldzielcze.xml`
+      — Art. 1-34 w jednym pliku Akoma Ntoso XML (37 artykułów, w tym 10
+      uchylonych), z metadanymi FRBR/ELI. Zweryfikowano skryptem 1:1
+      przeciwko poprzednim 37 plikom YAML przed ich usunięciem: 111
+      jednostek tekstu, 0 rozbieżności.
+- [x] Usunięto `normalized/art-*.yaml` (37 plików) - zastąpione jednym
+      plikiem XML.
+- [x] Zaktualizowano `normalized/README.md`, `docs/dsl.md` — klucz
+      `PS-ART-NNN` pozostał niezmieniony, teraz odpowiada `eId="art_N"` w
+      XML. **Żaden z ~60 istniejących plików w `rules/`, `procedures/`,
+      `ontology/` nie wymagał edycji** dzięki stabilności tego klucza.
+
+**Świadomie NIE zrobione / otwarte:**
+
+- Mapowanie polskiej struktury (Część/Tytuł/Dział/Rozdział) na elementy
+  AKN (`part`/`hcontainer[tytul]`/`hcontainer[dzial]`) jest naszą własną
+  decyzją, nie potwierdzonym oficjalnym polskim profilem AKN - do rewizji,
+  jeśli taki profil się znajdzie.
+- ELI URI (`https://eli.gov.pl/eli/DU/2026/521`) są CONSTRUCTED wg wzorca,
+  nie zweryfikowane wywołaniem sieciowym względem `eli.gov.pl`/ISAP.
+  Numer pozycji z pierwotnego uchwalenia (1982 r.) jest UNKNOWN.
+- Walidacja tylko dobrej formy XML (`xml.etree.ElementTree`), nie
+  względem oficjalnego schematu XSD Akoma Ntoso 3.0 (brak zainstalowanego
+  narzędzia w tym środowisku).
+- Warstwa semantyczna (`ontology/`, `rules/`, `procedures/`, `concepts/`)
+  pozostaje ad-hoc YAML - ten zwrot dotyczył wyłącznie warstwy dokumentowej.
+  LegalRuleML jako ewentualny przyszły punkt odniesienia - nierozstrzygnięte.
+- Dział IV i dalsze będą rozszerzać ten sam plik XML (nowe `hcontainer`),
+  nie tworzyć nowych plików.
 
 ------------------------------------------------------------------------
 

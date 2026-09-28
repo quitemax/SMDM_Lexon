@@ -1,0 +1,619 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+  <act name="ustawa" contains="singleVersion">
+    <meta>
+      <identification source="#lexon-agent">
+        <FRBRWork>
+          <FRBRthis value="/akn/pl/act/du/2026/521/main"/>
+          <FRBRuri value="https://eli.gov.pl/eli/DU/2026/521"/>
+          <FRBRalias value="Prawo spółdzielcze" name="skrót"/>
+          <FRBRdate date="1982-09-16" name="Generation"/>
+          <FRBRauthor href="#sejm-rp"/>
+          <FRBRcountry value="pl"/>
+        </FRBRWork>
+        <FRBRExpression>
+          <FRBRthis value="/akn/pl/act/du/2026/521/pol@2026-03-23/main"/>
+          <FRBRuri value="https://eli.gov.pl/eli/DU/2026/521/pol@2026-03-23"/>
+          <FRBRdate date="2026-03-23" name="ConsolidationDate"/>
+          <FRBRauthor href="#sejm-rp"/>
+          <FRBRlanguage language="pol"/>
+        </FRBRExpression>
+        <FRBRManifestation>
+          <FRBRthis value="/akn/pl/act/du/2026/521/pol@2026-03-23/main.xml"/>
+          <FRBRuri value="https://eli.gov.pl/eli/DU/2026/521/pol@2026-03-23/main.xml"/>
+          <FRBRdate date="2026-09-28" name="XMLEncoding"/>
+          <FRBRauthor href="#lexon-agent"/>
+        </FRBRManifestation>
+      </identification>
+      <references source="#lexon-agent">
+        <TLCOrganization eId="sejm-rp" href="https://www.sejm.gov.pl" showAs="Sejm Rzeczypospolitej Polskiej"/>
+        <TLCOrganization eId="lexon-agent" href="https://github.com/quitemax/SMDM_Lexon" showAs="Projekt LEXON (SMDM_Lexon)"/>
+      </references>
+      <proprietary source="#lexon-agent">
+        <lexon:meta xmlns:lexon="https://github.com/quitemax/SMDM_Lexon/ns/lexon-meta/1.0">
+          <lexon:sourceDocument>external/SMDM_Knowledge_Base/przepisy-prawne/md/ustawa-prawo-spoldzielcze.md</lexon:sourceDocument>
+          <lexon:sourceCommit>7fcaed372cbe56f58c3ee4aa1d5fb6eee15b83ee</lexon:sourceCommit>
+          <lexon:dzU>Dz.U. 2026 poz. 521</lexon:dzU>
+          <lexon:textType>tekst jednolity</lexon:textType>
+          <lexon:coverage>Art. 1-34 (Dział I, II, III w całości - Tytuł I, Część I). Art. 35 i dalej (Dział IV i kolejne) jeszcze nie skonwertowane.</lexon:coverage>
+          <lexon:eliStatus>CONSTRUCTED - wzorzec URI zgodny ze standardowym schematem polskiego ELI (https://eli.gov.pl/eli/DU/{rok}/{pozycja}), NIE zweryfikowany wywołaniem na żywo względem eli.gov.pl/isap.sejm.gov.pl w tej sesji. Numer pozycji Dziennika Ustaw z pierwotnego uchwalenia (1982 r., przed ujednoliceniem) jest UNKNOWN - nieustalony w naszych źródłach, dlatego FRBRWork ponownie używa pozycji tekstu jednolitego (2026 poz. 521) jako zastępczego kotwiczenia identyfikatora, co jest uproszczeniem do skorygowania, jeśli oryginalny numer zostanie kiedyś potwierdzony.</lexon:eliStatus>
+          <lexon:mappingNote>Mapowanie struktury polskiej ustawy na elementy Akoma Ntoso jest własną decyzją projektową (brak potwierdzonego oficjalnego polskiego profilu AKN w naszych źródłach): Część→part, Tytuł→hcontainer[name=tytul], Dział→hcontainer[name=dzial], Artykuł→article, §→paragraph, punkt→point (w list). Patrz normalized/akoma-ntoso/README.md.</lexon:mappingNote>
+          <lexon:citationKey pattern="PS-ART-{numer}">Klucz cytowania używany w law/prawo-spoldzielcze/rules,procedures,ontology (np. "PS-ART-015") odpowiada 1:1 elementowi eId="art_{numer}" w tym pliku (np. eId="art_15"). Patrz docs/dsl.md.</lexon:citationKey>
+        </lexon:meta>
+      </proprietary>
+    </meta>
+    <preface>
+      <p>Ustawa z dnia 16 września 1982 r.</p>
+      <p>Prawo spółdzielcze</p>
+    </preface>
+    <body>
+      <part eId="czesc_I">
+        <num>Część I</num>
+        <heading>Spółdzielnie</heading>
+        <hcontainer name="tytul" eId="czesc_I__tyt_I">
+          <num>Tytuł I</num>
+          <heading>Przepisy wspólne</heading>
+
+          <hcontainer name="dzial" eId="czesc_I__tyt_I__dzial_I">
+            <num>Dział I</num>
+            <heading>Spółdzielnia i jej statut</heading>
+
+            <article eId="art_1">
+              <num>Art. 1.</num>
+              <paragraph eId="art_1__par_1">
+                <num>§ 1.</num>
+                <content><p>Spółdzielnia jest dobrowolnym zrzeszeniem nieograniczonej liczby osób, o zmiennym składzie osobowym i zmiennym funduszu udziałowym, które w interesie swoich członków prowadzi wspólną działalność gospodarczą.</p></content>
+              </paragraph>
+              <paragraph eId="art_1__par_2">
+                <num>§ 2.</num>
+                <content><p>Spółdzielnia może prowadzić działalność społeczną i oświatowo-kulturalną na rzecz swoich członków i ich środowiska.</p></content>
+              </paragraph>
+            </article>
+
+            <article eId="art_2">
+              <num>Art. 2.</num>
+              <content><p>Spółdzielnia prowadzi działalność na podstawie niniejszej ustawy, innych ustaw oraz zarejestrowanego statutu.</p></content>
+            </article>
+
+            <article eId="art_3">
+              <num>Art. 3.</num>
+              <content><p>Majątek spółdzielni jest prywatną własnością jej członków.</p></content>
+            </article>
+
+            <article eId="art_4" status="repealed">
+              <num>Art. 4.</num>
+              <content><p>(uchylony)</p></content>
+            </article>
+
+            <article eId="art_5">
+              <num>Art. 5.</num>
+              <paragraph eId="art_5__par_1">
+                <num>§ 1.</num>
+                <content><p>Statut spółdzielni powinien określać:</p></content>
+                <list eId="art_5__par_1__lst">
+                  <point eId="art_5__par_1__pkt_1">
+                    <num>1)</num>
+                    <content><p>oznaczenie nazwy z dodatkiem „spółdzielnia” lub „spółdzielczy” i podaniem jej siedziby;</p></content>
+                  </point>
+                  <point eId="art_5__par_1__pkt_2">
+                    <num>2)</num>
+                    <content><p>przedmiot działalności spółdzielni oraz czas trwania, o ile założono ją na czas określony;</p></content>
+                  </point>
+                  <point eId="art_5__par_1__pkt_3">
+                    <num>3)</num>
+                    <content><p>wysokość wpisowego oraz wysokość i ilość udziałów, które członek obowiązany jest zadeklarować, terminy wnoszenia i zwrotu oraz skutki niewniesienia udziału w terminie; jeżeli statut przewiduje wnoszenie więcej niż jednego udziału, może określać ich górną granicę;</p></content>
+                  </point>
+                  <point eId="art_5__par_1__pkt_4">
+                    <num>4)</num>
+                    <content><p>prawa i obowiązki członków;</p></content>
+                  </point>
+                  <point eId="art_5__par_1__pkt_5">
+                    <num>5)</num>
+                    <content><p>zasady i tryb przyjmowania członków, wypowiadania członkostwa, wykreślania i wykluczania członków;</p></content>
+                  </point>
+                  <point eId="art_5__par_1__pkt_6">
+                    <num>6)</num>
+                    <content><p>zasady zwoływania walnych zgromadzeń, obradowania na nich i podejmowania uchwał;</p></content>
+                  </point>
+                  <point eId="art_5__par_1__pkt_7">
+                    <num>7)</num>
+                    <content><p>zasady i tryb wyboru oraz odwoływania członków organów spółdzielni;</p></content>
+                  </point>
+                  <point eId="art_5__par_1__pkt_8">
+                    <num>8)</num>
+                    <content><p>zasady podziału nadwyżki bilansowej (dochodu ogólnego) oraz pokrywania strat spółdzielni.</p></content>
+                  </point>
+                </list>
+              </paragraph>
+              <paragraph eId="art_5__par_2">
+                <num>§ 2.</num>
+                <content><p>Statut ponadto powinien zawierać postanowienia, których wprowadzenia wymagają przepisy niniejszej ustawy, oraz może zawierać inne postanowienia.</p></content>
+              </paragraph>
+            </article>
+          </hcontainer>
+
+          <hcontainer name="dzial" eId="czesc_I__tyt_I__dzial_II">
+            <num>Dział II</num>
+            <heading>Tryb zakładania i rejestrowania spółdzielni</heading>
+
+            <article eId="art_6">
+              <num>Art. 6.</num>
+              <paragraph eId="art_6__par_1">
+                <num>§ 1.</num>
+                <content><p>Osoby zamierzające założyć spółdzielnię (założyciele) uchwalają statut spółdzielni, potwierdzając jego przyjęcie przez złożenie pod nim swoich podpisów, oraz dokonują wyboru organów spółdzielni, których wybór należy w myśl statutu do kompetencji walnego zgromadzenia, lub komisji organizacyjnej w składzie co najmniej trzech osób.</p></content>
+              </paragraph>
+              <paragraph eId="art_6__par_2">
+                <num>§ 2.</num>
+                <content><p>Liczba założycieli spółdzielni nie może być mniejsza od dziesięciu, jeżeli założycielami są osoby fizyczne, i trzech, jeżeli założycielami są osoby prawne. W spółdzielniach produkcji rolnej liczba założycieli – osób fizycznych nie może być mniejsza od pięciu.</p></content>
+              </paragraph>
+              <paragraph eId="art_6__par_2a">
+                <num>§ 2a.</num>
+                <content><p>Osoby fizyczne oraz osoby prawne prowadzące gospodarstwo rolne w rozumieniu przepisów o podatku rolnym lub prowadzące działalność rolniczą w zakresie działów specjalnych produkcji rolnej wyłącznie w celu organizowania się:</p></content>
+                <list eId="art_6__par_2a__lst">
+                  <point eId="art_6__par_2a__pkt_1">
+                    <num>1)</num>
+                    <content><p>w grupy producentów rolnych w rozumieniu ustawy z dnia 15 września 2000 r. o grupach producentów rolnych i ich związkach oraz o zmianie innych ustaw (Dz. U. z 2023 r. poz. 1145),</p></content>
+                  </point>
+                  <point eId="art_6__par_2a__pkt_2">
+                    <num>2)</num>
+                    <content><p>we wstępnie uznane grupy producentów owoców i warzyw oraz uznane organizacje producentów owoców i warzyw w rozumieniu ustawy z dnia 19 grudnia 2003 r. o organizacji rynków owoców i warzyw oraz rynku chmielu (Dz. U. z 2023 r. poz. 1318) – mogą założyć spółdzielnię, której liczba założycieli nie może być mniejsza od pięciu.</p></content>
+                  </point>
+                </list>
+              </paragraph>
+              <paragraph eId="art_6__par_3" status="repealed">
+                <num>§ 3.</num>
+                <content><p>(uchylony)</p></content>
+              </paragraph>
+              <paragraph eId="art_6__par_4" status="repealed">
+                <num>§ 4.</num>
+                <content><p>(uchylony)</p></content>
+              </paragraph>
+              <paragraph eId="art_6__par_5" status="repealed">
+                <num>§ 5.</num>
+                <content><p>(uchylony)</p></content>
+              </paragraph>
+              <paragraph eId="art_6__par_6" status="repealed">
+                <num>§ 6.</num>
+                <content><p>(uchylony)</p></content>
+              </paragraph>
+            </article>
+
+            <article eId="art_7">
+              <num>Art. 7.</num>
+              <content><p>Spółdzielnia podlega obowiązkowi wpisu do Krajowego Rejestru Sądowego.</p></content>
+            </article>
+
+            <article eId="art_8" status="repealed">
+              <num>Art. 8.</num>
+              <content><p>(uchylony)</p></content>
+            </article>
+
+            <article eId="art_8a" status="repealed">
+              <num>Art. 8a.</num>
+              <content><p>(uchylony)</p></content>
+            </article>
+
+            <article eId="art_9" status="repealed">
+              <num>Art. 9.</num>
+              <content><p>(uchylony)</p></content>
+            </article>
+
+            <article eId="art_10" status="repealed">
+              <num>Art. 10.</num>
+              <content><p>(uchylony)</p></content>
+            </article>
+
+            <article eId="art_11">
+              <num>Art. 11.</num>
+              <paragraph eId="art_11__par_1">
+                <num>§ 1.</num>
+                <content><p>Spółdzielnia nabywa osobowość prawną z chwilą wpisania jej do Krajowego Rejestru Sądowego.</p></content>
+              </paragraph>
+              <paragraph eId="art_11__par_2">
+                <num>§ 2.</num>
+                <content><p>Za czynności dokonane w interesie spółdzielni przed zarejestrowaniem osoby działające do chwili zarejestrowania spółdzielni odpowiadają wobec osób trzecich solidarnie. Za zobowiązania wynikające z tych czynności spółdzielnia odpowiada po jej zarejestrowaniu tak jak za zaciągnięte przez siebie. Jednakże osoby działające przed zarejestrowaniem spółdzielni odpowiadają wobec niej według przepisów prawa cywilnego.</p></content>
+              </paragraph>
+            </article>
+
+            <article eId="art_12" status="repealed">
+              <num>Art. 12.</num>
+              <content><p>(uchylony)</p></content>
+            </article>
+
+            <article eId="art_12a">
+              <num>Art. 12a.</num>
+              <paragraph eId="art_12a__par_1">
+                <num>§ 1.</num>
+                <content><p>Zmiana statutu spółdzielni wymaga uchwały walnego zgromadzenia podjętej większością 2/3 głosów.</p></content>
+              </paragraph>
+              <paragraph eId="art_12a__par_2">
+                <num>§ 2.</num>
+                <content><p>Zarząd jest obowiązany uchwałę o zmianie statutu zgłosić w ciągu trzydziestu dni od daty jej podjęcia do sądu rejestrowego, załączając dwa odpisy protokołu walnego zgromadzenia.</p></content>
+              </paragraph>
+              <paragraph eId="art_12a__par_3">
+                <num>§ 3.</num>
+                <content><p>Zmiana statutu nie wywołuje skutków prawnych przed jej wpisaniem do Krajowego Rejestru Sądowego.</p></content>
+              </paragraph>
+            </article>
+
+            <article eId="art_13" status="repealed">
+              <num>Art. 13.</num>
+              <content><p>(uchylony)</p></content>
+            </article>
+
+            <article eId="art_14">
+              <num>Art. 14.</num>
+              <content><p>Organem właściwym do publikowania ogłoszeń spółdzielczych przewidzianych w przepisach prawa jest „Monitor Spółdzielczy” wydawany przez Krajową Radę Spółdzielczą, z wyjątkiem ogłoszeń zamieszczanych na podstawie odrębnych przepisów w Monitorze Sądowym i Gospodarczym.</p></content>
+            </article>
+          </hcontainer>
+
+          <hcontainer name="dzial" eId="czesc_I__tyt_I__dzial_III">
+            <num>Dział III</num>
+            <heading>Członkowie, ich prawa i obowiązki</heading>
+
+            <article eId="art_15">
+              <num>Art. 15.</num>
+              <paragraph eId="art_15__par_1">
+                <num>§ 1.</num>
+                <content><p>Spółdzielnia liczy co najmniej dziesięciu członków, a spółdzielnia produkcji rolnej oraz spółdzielnia, o której mowa w art. 6 § 2a, co najmniej pięciu członków, o ile statut nie wymaga liczby większej.</p></content>
+              </paragraph>
+              <paragraph eId="art_15__par_2">
+                <num>§ 2.</num>
+                <content><p>Członkiem spółdzielni może być każda osoba fizyczna o pełnej zdolności do czynności prawnych, która odpowiada wymaganiom określonym w statucie, chyba że ustawa stanowi inaczej.</p></content>
+              </paragraph>
+              <paragraph eId="art_15__par_3">
+                <num>§ 3.</num>
+                <content><p>Ponadto statut może określać wypadki, w których dopuszczalne jest członkostwo osób o ograniczonej zdolności do czynności prawnych lub niemających tej zdolności. Osoby takie nie mogą być członkami organów spółdzielni. W walnym zgromadzeniu biorą one udział przez swoich przedstawicieli ustawowych.</p></content>
+              </paragraph>
+              <paragraph eId="art_15__par_4">
+                <num>§ 4.</num>
+                <content><p>Członkami spółdzielni mogą być również osoby prawne, o ile statut nie stanowi inaczej.</p></content>
+              </paragraph>
+              <paragraph eId="art_15__par_5">
+                <num>§ 5.</num>
+                <content><p>Spółdzielnia, której członkami w myśl statutu są wyłącznie osoby prawne, musi liczyć co najmniej trzech członków.</p></content>
+              </paragraph>
+            </article>
+
+            <article eId="art_16">
+              <num>Art. 16.</num>
+              <paragraph eId="art_16__par_1">
+                <num>§ 1.</num>
+                <content><p>Warunkiem przyjęcia na członka jest złożenie deklaracji. Deklaracja powinna być złożona pod nieważnością na piśmie utrwalonym w postaci papierowej lub elektronicznej. Pisma utrwalone w postaci elektronicznej przesyła się na adres do doręczeń elektronicznych spółdzielni, o którym mowa w art. 2 pkt 1 ustawy z dnia 18 listopada 2020 r. o doręczeniach elektronicznych (Dz. U. z 2026 r. poz. 3), i opatruje się kwalifikowanym podpisem elektronicznym, podpisem osobistym lub podpisem zaufanym. Pismo utrwalone w postaci papierowej opatruje się podpisem własnoręcznym. Podpisana przez przystępującego do spółdzielni deklaracja powinna zawierać jego imię i nazwisko oraz miejsce zamieszkania, a jeżeli przystępujący jest osobą prawną – jej nazwę i siedzibę, ilość zadeklarowanych udziałów, dane dotyczące wkładów, jeżeli statut ich wnoszenie przewiduje, a także adres do doręczeń elektronicznych, o którym mowa w art. 2 pkt 1 ustawy z dnia 18 listopada 2020 r. o doręczeniach elektronicznych, wpisany do bazy adresów elektronicznych, o której mowa w art. 25 tej ustawy, o ile przystępujący taki posiada, oraz inne dane przewidziane w statucie.</p></content>
+              </paragraph>
+              <paragraph eId="art_16__par_2">
+                <num>§ 2.</num>
+                <content><p>Jeżeli spółdzielnia jest jednocześnie instytucją obowiązaną w rozumieniu ustawy z dnia 1 marca 2018 r. o przeciwdziałaniu praniu pieniędzy oraz finansowaniu terroryzmu (Dz. U. z 2025 r. poz. 644 i 1669), deklaracja, o której mowa w § 1, może być również złożona pod nieważnością w formie dokumentowej w rozumieniu art. 77[2] Kodeksu cywilnego. W takim przypadku do identyfikacji i weryfikacji tożsamości osoby, która ubiega się o przyjęcie na członka, stosuje się przepisy ustawy, o której mowa w zdaniu pierwszym.</p></content>
+              </paragraph>
+              <paragraph eId="art_16__par_3">
+                <num>§ 3.</num>
+                <content><p>Dalsze udziały, jak i wszelkie zmiany danych zawartych w deklaracji deklaruje się na piśmie.</p></content>
+              </paragraph>
+              <paragraph eId="art_16__par_4">
+                <num>§ 4.</num>
+                <content><p>Członek może w deklaracji lub w odrębnym oświadczeniu złożonym na piśmie wskazać spółdzielni osobę, której spółdzielnia obowiązana jest po jego śmierci wypłacić udziały. Prawo z tego tytułu nie należy do spadku.</p></content>
+              </paragraph>
+            </article>
+
+            <article eId="art_16a">
+              <num>Art. 16a.</num>
+              <content><p>Spadkobierca zmarłego członka spółdzielni dziedziczy udziały, jeżeli jest członkiem spółdzielni lub złożył deklarację przystąpienia do spółdzielni. Jeżeli spadkobierców jest więcej niż jeden, powinni oni wskazać jednego spośród siebie, który uzyskuje prawo do udziałów, chyba że podzielą oni udziały między tych spadkobierców, którzy złożyli deklarację przystąpienia do spółdzielni. Spółdzielnia nie może odmówić przyjęcia w poczet członków spadkobierców dziedziczących udziały, jeżeli odpowiadają oni wymogom określonym w statucie.</p></content>
+            </article>
+
+            <article eId="art_17">
+              <num>Art. 17.</num>
+              <paragraph eId="art_17__par_1">
+                <num>§ 1.</num>
+                <content><p>Założyciele spółdzielni, którzy podpisali statut, stają się członkami spółdzielni z chwilą jej zarejestrowania. Przystępujący do spółdzielni po jej zarejestrowaniu stają się członkami spółdzielni z chwilą przyjęcia ich przez spółdzielnię.</p></content>
+              </paragraph>
+              <paragraph eId="art_17__par_2">
+                <num>§ 2.</num>
+                <content><p>Przyjęcie deklaracji w przypadku deklaracji utrwalonej w postaci papierowej powinno być potwierdzone na deklaracji podpisem dwóch członków zarządu lub osób do tego przez zarząd upoważnionych. W przypadku deklaracji utrwalonej w postaci elektronicznej potwierdzenie przyjęcia deklaracji wydaje się niezwłocznie w odrębnym dokumencie na piśmie. W potwierdzeniu przyjęcia deklaracji podaje się datę uchwały o przyjęciu. Obowiązuje to również przy zmianie danych dotyczących zadeklarowanych udziałów lub wkładów.</p></content>
+              </paragraph>
+              <paragraph eId="art_17__par_3">
+                <num>§ 3.</num>
+                <content><p>Jeżeli statut nie stanowi inaczej, uchwała w sprawie przyjęcia powinna być podjęta w ciągu miesiąca od dnia złożenia deklaracji. O uchwale o przyjęciu w poczet członków oraz o uchwale odmawiającej przyjęcia zainteresowany powinien być zawiadomiony na piśmie w ciągu dwóch tygodni od dnia jej powzięcia. Zawiadomienie o odmowie przyjęcia powinno zawierać uzasadnienie.</p></content>
+              </paragraph>
+              <paragraph eId="art_17__par_4">
+                <num>§ 4.</num>
+                <content><p>Statut spółdzielni powinien wskazywać organ spółdzielni właściwy do przyjmowania członków. Jeżeli organem tym nie jest walne zgromadzenie, statut powinien wskazywać także organ, do którego służy odwołanie od decyzji odmawiającej przyjęcia, oraz określać terminy wniesienia i rozpatrzenia tego odwołania.</p></content>
+              </paragraph>
+            </article>
+
+            <article eId="art_18">
+              <num>Art. 18.</num>
+              <paragraph eId="art_18__par_1">
+                <num>§ 1.</num>
+                <content><p>Prawa i obowiązki wynikające z członkostwa w spółdzielni są dla wszystkich członków równe.</p></content>
+              </paragraph>
+              <paragraph eId="art_18__par_2">
+                <num>§ 2.</num>
+                <content><p>Członek spółdzielni ma prawo:</p></content>
+                <list eId="art_18__par_2__lst">
+                  <point eId="art_18__par_2__pkt_1">
+                    <num>1)</num>
+                    <content><p>uczestniczenia w walnym zgromadzeniu lub zebraniu grupy członkowskiej;</p></content>
+                  </point>
+                  <point eId="art_18__par_2__pkt_2">
+                    <num>2)</num>
+                    <content><p>wybierania i bycia wybieranym do organów spółdzielni;</p></content>
+                  </point>
+                  <point eId="art_18__par_2__pkt_3">
+                    <num>3)</num>
+                    <content><p>otrzymania odpisu statutu i regulaminów, zaznajamiania się z uchwałami organów spółdzielni, protokołami obrad organów spółdzielni, protokołami lustracji, rocznymi sprawozdaniami finansowymi, umowami zawieranymi przez spółdzielnię z osobami trzecimi, z zastrzeżeniem art. 8[1] ust. 1 ustawy z dnia 15 grudnia 2000 r. o spółdzielniach mieszkaniowych (Dz. U. z 2024 r. poz. 558, z 2025 r. poz. 1077 oraz z 2026 r. poz. 39);</p></content>
+                  </point>
+                  <point eId="art_18__par_2__pkt_4">
+                    <num>4)</num>
+                    <content><p>żądania rozpatrzenia przez właściwe organy spółdzielni wniosków dotyczących jej działalności;</p></content>
+                  </point>
+                  <point eId="art_18__par_2__pkt_5">
+                    <num>5)</num>
+                    <content><p>udziału w nadwyżce bilansowej;</p></content>
+                  </point>
+                  <point eId="art_18__par_2__pkt_6">
+                    <num>6)</num>
+                    <content><p>do świadczeń spółdzielni w zakresie jej statutowej działalności.</p></content>
+                  </point>
+                </list>
+              </paragraph>
+              <paragraph eId="art_18__par_3">
+                <num>§ 3.</num>
+                <content><p>Spółdzielnia może odmówić członkowi wglądu do umów zawieranych z osobami trzecimi, jeżeli naruszałoby to prawa tych osób lub jeżeli istnieje uzasadniona obawa, że członek wykorzysta pozyskane informacje w celach sprzecznych z interesem spółdzielni i przez to wyrządzi spółdzielni znaczną szkodę. Odmowa powinna być wyrażona na piśmie. Członek, któremu odmówiono wglądu do umów zawieranych przez spółdzielnie z osobami trzecimi, może złożyć wniosek do sądu rejestrowego o zobowiązanie spółdzielni do udostępnienia tych umów. Wniosek należy złożyć w terminie siedmiu dni od dnia doręczenia członkowi odmowy na piśmie. W przypadku odmowy doręczonej z wykorzystaniem usługi rejestrowanego doręczenia elektronicznego do ustalenia dnia doręczenia stosuje się przepis art. 42 ustawy z dnia 18 listopada 2020 r. o doręczeniach elektronicznych.</p></content>
+              </paragraph>
+              <paragraph eId="art_18__par_4">
+                <num>§ 4.</num>
+                <content><p>Członkowi spółdzielni przysługują również inne prawa określone w ustawie lub w statucie.</p></content>
+              </paragraph>
+              <paragraph eId="art_18__par_5">
+                <num>§ 5.</num>
+                <content><p>Członek spółdzielni ma obowiązek:</p></content>
+                <list eId="art_18__par_5__lst">
+                  <point eId="art_18__par_5__pkt_1">
+                    <num>1)</num>
+                    <content><p>przestrzegania przepisów prawa, postanowień statutu i opartych na nich regulaminów;</p></content>
+                  </point>
+                  <point eId="art_18__par_5__pkt_2">
+                    <num>2)</num>
+                    <content><p>dbania o dobro i rozwój spółdzielni oraz uczestniczenia w realizacji jej zadań statutowych.</p></content>
+                  </point>
+                </list>
+              </paragraph>
+              <paragraph eId="art_18__par_6">
+                <num>§ 6.</num>
+                <content><p>Członek spółdzielni wykonuje również inne obowiązki określone w ustawie lub w statucie.</p></content>
+              </paragraph>
+              <paragraph eId="art_18__par_7">
+                <num>§ 7.</num>
+                <content><p>Przepisy ustawy, statut oraz umowy zawierane przez spółdzielnię z jej członkami określają prawa i obowiązki członków wynikające ze stosunków prawnych pochodnych od członkostwa w spółdzielni.</p></content>
+              </paragraph>
+            </article>
+
+            <article eId="art_19">
+              <num>Art. 19.</num>
+              <paragraph eId="art_19__par_1">
+                <num>§ 1.</num>
+                <content><p>Członek spółdzielni obowiązany jest do wniesienia wpisowego oraz zadeklarowanych udziałów stosownie do postanowień statutu.</p></content>
+              </paragraph>
+              <paragraph eId="art_19__par_2">
+                <num>§ 2.</num>
+                <content><p>Członek spółdzielni uczestniczy w pokrywaniu jej strat do wysokości zadeklarowanych udziałów.</p></content>
+              </paragraph>
+              <paragraph eId="art_19__par_3">
+                <num>§ 3.</num>
+                <content><p>Członek spółdzielni nie odpowiada wobec wierzycieli spółdzielni za jej zobowiązania.</p></content>
+              </paragraph>
+            </article>
+
+            <article eId="art_20">
+              <num>Art. 20.</num>
+              <paragraph eId="art_20__par_1">
+                <num>§ 1.</num>
+                <content><p>Członek spółdzielni obowiązany jest zadeklarować jeden udział, jeżeli statut nie zobowiązuje członków do zadeklarowania większej ilości udziałów.</p></content>
+              </paragraph>
+              <paragraph eId="art_20__par_2">
+                <num>§ 2.</num>
+                <content><p>Statut może przewidywać wnoszenie przez członków wkładów na własność spółdzielni lub do korzystania z nich przez spółdzielnię na podstawie innego stosunku prawnego. W tym wypadku statut powinien określać charakter i zakres przysługującego spółdzielni prawa do wkładów, wysokość wkładów oraz ich rodzaj, jeżeli są to wkłady niepieniężne, terminy ich wnoszenia, zasady wyceny i zwrotu w wypadku likwidacji spółdzielni, wystąpienia członka lub ustania członkostwa z innych przyczyn, a także w innych wypadkach przewidzianych w statucie.</p></content>
+              </paragraph>
+            </article>
+
+            <article eId="art_21">
+              <num>Art. 21.</num>
+              <content><p>Członek spółdzielni nie może przed ustaniem członkostwa żądać zwrotu wpłat dokonanych na udziały (nie dotyczy to jednak wpłat przekraczających ilość udziałów, których zadeklarowania wymaga statut obowiązujący w chwili żądania zwrotu). Zwrot tych wpłat nie może nastąpić przed zatwierdzeniem sprawozdania finansowego za rok, w którym członek wystąpił z żądaniem oraz w wypadku, gdy jego udziały zostały przeznaczone na pokrycie strat spółdzielni (art. 19 § 2). Sposób i termin zwrotu określa statut.</p></content>
+            </article>
+
+            <article eId="art_22">
+              <num>Art. 22.</num>
+              <content><p>Członek spółdzielni może wystąpić z niej za wypowiedzeniem. Wypowiedzenie powinno być dokonane pod nieważnością na piśmie. Termin i okres wypowiedzenia określa statut. Za datę wystąpienia uważa się następny dzień po upływie okresu wypowiedzenia.</p></content>
+            </article>
+
+            <article eId="art_23" status="repealed">
+              <num>Art. 23.</num>
+              <content><p>(uchylony)</p></content>
+            </article>
+
+            <article eId="art_24">
+              <num>Art. 24.</num>
+              <paragraph eId="art_24__par_1">
+                <num>§ 1.</num>
+                <content><p>Spółdzielnia może rozwiązać stosunek członkostwa tylko przez wykluczenie albo wykreślenie członka.</p></content>
+              </paragraph>
+              <paragraph eId="art_24__par_2">
+                <num>§ 2.</num>
+                <content><p>Wykluczenie członka ze spółdzielni może nastąpić w wypadku, gdy z jego winy umyślnej lub z powodu rażącego niedbalstwa dalsze pozostawanie w spółdzielni nie da się pogodzić z postanowieniami statutu spółdzielni lub dobrymi obyczajami. Statut określa przyczyny wykluczenia.</p></content>
+              </paragraph>
+              <paragraph eId="art_24__par_3">
+                <num>§ 3.</num>
+                <content><p>Członek niewykonujący obowiązków statutowych z przyczyn przez niego niezawinionych może być wykreślony z rejestru członków spółdzielni. Statut określa przyczyny wykreślenia.</p></content>
+              </paragraph>
+              <paragraph eId="art_24__par_4">
+                <num>§ 4.</num>
+                <content><p>Wykluczenia albo wykreślenia może dokonać, stosownie do postanowień statutu, rada nadzorcza albo walne zgromadzenie spółdzielni. Organ, do którego kompetencji należy podejmowanie uchwał w sprawie wykluczenia albo wykreślenia, ma obowiązek wysłuchać wyjaśnień zainteresowanego członka spółdzielni.</p></content>
+              </paragraph>
+              <paragraph eId="art_24__par_5">
+                <num>§ 5.</num>
+                <content><p>Organ, który podjął uchwałę w sprawie wykreślenia albo wykluczenia, ma obowiązek zawiadomić członka na piśmie wraz z uzasadnieniem o wykreśleniu albo wykluczeniu ze spółdzielni w terminie dwóch tygodni od dnia podjęcia uchwały. Uzasadnienie powinno w szczególności przedstawiać motywy, którymi kierował się organ spółdzielni uznając, że zachowanie członka wyczerpuje przesłanki wykluczenia albo wykreślenia określone w statucie. Zawiadomienie zwrócone z powodu niezgłoszenia przez członka zmiany podanego przez niego adresu ma moc prawną doręczenia.</p></content>
+              </paragraph>
+              <paragraph eId="art_24__par_6">
+                <num>§ 6.</num>
+                <content><p>Jeżeli organem właściwym w sprawie wykluczenia albo wykreślenia członka ze spółdzielni jest, zgodnie z postanowieniami statutu, rada nadzorcza, członek spółdzielni ma prawo:</p></content>
+                <list eId="art_24__par_6__lst">
+                  <point eId="art_24__par_6__pkt_1">
+                    <num>1)</num>
+                    <content><p>odwołać się od uchwały o wykluczeniu albo wykreśleniu do walnego zgromadzenia, w terminie określonym w statucie, albo</p></content>
+                  </point>
+                  <point eId="art_24__par_6__pkt_2">
+                    <num>2)</num>
+                    <content><p>zaskarżyć uchwałę rady nadzorczej do sądu w terminie sześciu tygodni od dnia doręczenia członkowi uchwały z uzasadnieniem; przepisy art. 42 stosuje się odpowiednio.</p></content>
+                  </point>
+                </list>
+              </paragraph>
+              <paragraph eId="art_24__par_6a">
+                <num>§ 6a.</num>
+                <content><p>W przypadku doręczenia członkowi uchwały o wykluczeniu albo wykreśleniu wraz z uzasadnieniem z wykorzystaniem usługi rejestrowanego doręczenia elektronicznego do ustalenia dnia doręczenia stosuje się przepis art. 42 ustawy z dnia 18 listopada 2020 r. o doręczeniach elektronicznych.</p></content>
+              </paragraph>
+              <paragraph eId="art_24__par_7">
+                <num>§ 7.</num>
+                <content><p>W wypadku bezskutecznego upływu terminu do rozpatrzenia odwołania przez walne zgromadzenie, termin do zaskarżenia do sądu uchwały rady nadzorczej, o którym mowa w § 6 pkt 2, biegnie od dnia, w którym odwołanie powinno być najpóźniej rozpatrzone.</p></content>
+              </paragraph>
+              <paragraph eId="art_24__par_8">
+                <num>§ 8.</num>
+                <content><p>W wypadku wniesienia do walnego zgromadzenia odwołania od uchwały rady nadzorczej w sprawie wykluczenia albo wykreślenia członek spółdzielni ma prawo być obecny przy rozpatrywaniu odwołania i popierać je. Do wniesienia odwołania i jego rozpatrzenia stosuje się postanowienia statutu o postępowaniu wewnątrzspółdzielczym.</p></content>
+              </paragraph>
+              <paragraph eId="art_24__par_9">
+                <num>§ 9.</num>
+                <content><p>Jeżeli statut nie przewiduje postępowania wewnątrzspółdzielczego, termin do wniesienia odwołania, o którym mowa w § 6 pkt 1, wynosi miesiąc od dnia doręczenia zawiadomienia o wykluczeniu albo wykreśleniu wraz z uzasadnieniem. Odwołanie powinno być rozpatrzone na najbliższym walnym zgromadzeniu, nie później jednak niż w ciągu dwunastu miesięcy od dnia wniesienia odwołania. Odwołujący się członek spółdzielni powinien być zawiadomiony o terminie walnego zgromadzenia co najmniej trzy tygodnie przed tym terminem.</p></content>
+              </paragraph>
+              <paragraph eId="art_24__par_10">
+                <num>§ 10.</num>
+                <content><p>Wykluczenie albo wykreślenie staje się skuteczne z chwilą:</p></content>
+                <list eId="art_24__par_10__lst">
+                  <point eId="art_24__par_10__pkt_1">
+                    <num>1)</num>
+                    <content><p>bezskutecznego upływu terminu do zaskarżenia do sądu uchwały rady nadzorczej, chyba że członek przed upływem tego terminu wniósł odwołanie od uchwały rady do walnego zgromadzenia;</p></content>
+                  </point>
+                  <point eId="art_24__par_10__pkt_2">
+                    <num>2)</num>
+                    <content><p>bezskutecznego upływu terminu do wniesienia do walnego zgromadzenia odwołania od uchwały rady nadzorczej, jeżeli termin ten jest dłuższy od terminu do zaskarżenia do sądu uchwały rady;</p></content>
+                  </point>
+                  <point eId="art_24__par_10__pkt_3">
+                    <num>3)</num>
+                    <content><p>bezskutecznego upływu terminu do zaskarżenia do sądu uchwały walnego zgromadzenia;</p></content>
+                  </point>
+                  <point eId="art_24__par_10__pkt_4">
+                    <num>4)</num>
+                    <content><p>prawomocnego oddalenia przez sąd powództwa o uchylenie uchwały rady nadzorczej albo walnego zgromadzenia.</p></content>
+                  </point>
+                </list>
+              </paragraph>
+            </article>
+
+            <article eId="art_25">
+              <num>Art. 25.</num>
+              <paragraph eId="art_25__par_1">
+                <num>§ 1.</num>
+                <content><p>Członka zmarłego skreśla się z rejestru członków spółdzielni ze skutkiem od dnia, w którym nastąpiła śmierć. Osobę prawną będącą członkiem spółdzielni skreśla się z rejestru członków ze skutkiem od dnia jej ustania.</p></content>
+              </paragraph>
+              <paragraph eId="art_25__par_2">
+                <num>§ 2.</num>
+                <content><p>Jeżeli zmarły członek pozostawił więcej niż jednego spadkobiercę, spadkobiercy powinni w celu wykonywania przechodzących na nich praw majątkowych zmarłego ustanowić wspólnego pełnomocnika lub wskazać zarządcę ustanowionego przez sąd przy odpowiednim zastosowaniu przepisów Kodeksu cywilnego o zarządzie rzeczą wspólną.</p></content>
+              </paragraph>
+            </article>
+
+            <article eId="art_26">
+              <num>Art. 26.</num>
+              <paragraph eId="art_26__par_1">
+                <num>§ 1.</num>
+                <content><p>Udział byłego członka wypłaca się na podstawie zatwierdzonego sprawozdania finansowego za rok, w którym członek przestał należeć do spółdzielni. Sposób i terminy wypłaty określa statut.</p></content>
+              </paragraph>
+              <paragraph eId="art_26__par_2">
+                <num>§ 2.</num>
+                <content><p>Byłemu członkowi nie przysługuje prawo do funduszu zasobowego oraz do innego majątku spółdzielni, z zastrzeżeniem art. 125 § 5a.</p></content>
+              </paragraph>
+            </article>
+
+            <article eId="art_27">
+              <num>Art. 27.</num>
+              <paragraph eId="art_27__par_1">
+                <num>§ 1.</num>
+                <content><p>Członek może rozporządzać swoimi roszczeniami do spółdzielni o wypłatę udziałów oraz o zwrot wkładów lub o wypłatę ich równowartości ze skutecznością od dnia, w którym roszczenia te stały się wymagalne.</p></content>
+              </paragraph>
+              <paragraph eId="art_27__par_2">
+                <num>§ 2.</num>
+                <content><p>Wierzyciel członka może uzyskać zaspokojenie z jego udziałów dopiero z chwilą ustania członkostwa.</p></content>
+              </paragraph>
+              <paragraph eId="art_27__par_3">
+                <num>§ 3.</num>
+                <content><p>Jeżeli egzekucja z innego majątku członka okaże się bezskuteczna, a przepis szczególny nie stanowi inaczej, wierzyciel członka może skierować egzekucję do wniesionych przez członka wkładów. W takim wypadku roszczenie członka o zwrot wkładów lub ich równowartości staje się wymagalne po upływie sześciu miesięcy od dnia zajęcia wkładów, chyba że wymagalność tego roszczenia nastąpiła wcześniej na podstawie innych przepisów.</p></content>
+              </paragraph>
+              <paragraph eId="art_27__par_4">
+                <num>§ 4.</num>
+                <content><p>W razie zajęcia przez wierzyciela członka wkładów stanowiących środki produkcji, spółdzielni służy prawo pierwszeństwa ich nabycia w postępowaniu egzekucyjnym.</p></content>
+              </paragraph>
+              <paragraph eId="art_27__par_5">
+                <num>§ 5.</num>
+                <content><p>Wierzytelności spółdzielni do członka z tytułu wpłat na udziały nie podlegają zajęciu na rzecz wierzycieli spółdzielni.</p></content>
+              </paragraph>
+            </article>
+
+            <article eId="art_28">
+              <num>Art. 28.</num>
+              <content><p>W razie otwarcia likwidacji w ciągu sześciu miesięcy lub wszczęcia postępowania upadłościowego w ciągu roku od dnia, w którym członek przestał należeć do spółdzielni, obowiązany jest on wobec spółdzielni do uczestniczenia w pokrywaniu jej strat tak, jak gdyby był nadal członkiem.</p></content>
+            </article>
+
+            <article eId="art_29">
+              <num>Art. 29.</num>
+              <paragraph eId="art_29__par_1">
+                <num>§ 1.</num>
+                <content><p>Roszczenia o wypłatę udziałów, udziału w nadwyżce bilansowej oraz z tytułu zwrotu wkładów albo ich równowartości pieniężnej ulegają przedawnieniu z upływem trzech lat.</p></content>
+              </paragraph>
+              <paragraph eId="art_29__par_2" status="repealed">
+                <num>§ 2.</num>
+                <content><p>(uchylony)</p></content>
+              </paragraph>
+              <paragraph eId="art_29__par_3">
+                <num>§ 3.</num>
+                <content><p>Przepis § 1 nie ma zastosowania do roszczeń o zwrot nieruchomości.</p></content>
+              </paragraph>
+            </article>
+
+            <article eId="art_30">
+              <num>Art. 30.</num>
+              <content><p>Zarząd spółdzielni prowadzi rejestr członków zawierający ich imiona i nazwiska oraz miejsce zamieszkania (w odniesieniu do członków będących osobami prawnymi – ich nazwę i siedzibę), wysokość zadeklarowanych i wniesionych udziałów, wysokość wniesionych wkładów, ich rodzaj, jeżeli są to wkłady niepieniężne, zmiany tych danych, datę przyjęcia w poczet członków, datę wypowiedzenia członkostwa i jego ustania, a także inne dane przewidziane w statucie. Członek spółdzielni, jego małżonek i wierzyciel członka lub spółdzielni ma prawo przeglądać rejestr.</p></content>
+            </article>
+
+            <article eId="art_31">
+              <num>Art. 31.</num>
+              <content><p>Zarząd spółdzielni powinien wydać każdemu członkowi na jego żądanie odpis statutu oraz regulaminów wydanych na podstawie tego statutu.</p></content>
+            </article>
+
+            <article eId="art_32">
+              <num>Art. 32.</num>
+              <paragraph eId="art_32__par_1">
+                <num>§ 1.</num>
+                <content><p>Statut może stanowić, że w określonych w nim sprawach między członkiem a spółdzielnią, członkowi przysługuje prawo odwołania się od uchwały organu spółdzielni do innego wskazanego w statucie organu spółdzielni w postępowaniu wewnątrzspółdzielczym. W tym wypadku statut powinien określać zasady i tryb postępowania wewnątrzspółdzielczego, a w szczególności terminy wniesienia i rozpatrzenia odwołania.</p></content>
+              </paragraph>
+              <paragraph eId="art_32__par_2">
+                <num>§ 2.</num>
+                <content><p>W wypadku wniesienia przez członka odwołania w postępowaniu wewnątrzspółdzielczym bieg przedawnienia i terminów zawitych ulega zawieszeniu do dnia zakończenia tego postępowania, jednakże przez okres nie dłuższy niż rok od dnia, w którym organ odwoławczy powinien rozpatrzyć odwołanie.</p></content>
+              </paragraph>
+              <paragraph eId="art_32__par_3">
+                <num>§ 3.</num>
+                <content><p>Postanowienia statutu o postępowaniu wewnątrzspółdzielczym nie mogą ograniczać dochodzenia przez członków ich praw na drodze sądowej. W wypadku zaskarżenia przez członka uchwały w postępowaniu wewnątrzspółdzielczym i sądowym, postępowanie wewnątrzspółdzielcze ulega umorzeniu.</p></content>
+              </paragraph>
+            </article>
+
+            <article eId="art_33" status="repealed">
+              <num>Art. 33.</num>
+              <content><p>(uchylony)</p></content>
+            </article>
+
+            <article eId="art_34" status="repealed">
+              <num>Art. 34.</num>
+              <content><p>(uchylony)</p></content>
+            </article>
+          </hcontainer>
+        </hcontainer>
+      </part>
+    </body>
+  </act>
+</akomaNtoso>
