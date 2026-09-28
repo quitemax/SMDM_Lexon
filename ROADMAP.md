@@ -5,20 +5,25 @@
 > tu są rozbite na konkretne, sprawdzalne zadania osadzone w realnym materiale
 > źródłowym z `external/SMDM_Knowledge_Base`.
 
-Status ogólny: **Art. 1-112 znormalizowane w całości** (Dział I-XI), w
+Status ogólny: **Art. 1-137 znormalizowane w całości — CAŁY TYTUŁ I**
+(Dział I-XIII, wszystkie przepisy wspólne dla każdej spółdzielni), w
 formacie Akoma Ntoso XML (`normalized/akoma-ntoso/prawo-spoldzielcze.xml`)
 — patrz `docs/decisions/ADR-0001-akoma-ntoso-eli.md`. **Reguły/procedury
 sformalizowane tylko dla Art. 1-3, 5-7, 11, 12a, 14-18, 24** (Art. 4, 8-10,
-12, 13, 33, 34 uchylone) — Działy IV, VII, VIII, IX, XI są na razie
-**wyłącznie znormalizowane, bez żadnych reguł**. Brakuje też reguł dla
-Art. 6 §2a (poza zakresem SM), 19-23, 25-32. **Żadna reguła nie ma jeszcze
-testu** — to następna, ogólna zaległość (patrz `tests/` w strukturze
-repo, wciąż puste).
+12, 13, 33, 34 uchylone) — Działy IV, VII, VIII, IX, XI, XII, XIII są na
+razie **wyłącznie znormalizowane, bez żadnych reguł**. Brakuje też reguł
+dla Art. 6 §2a (poza zakresem SM), 19-23, 25-32. **Żadna reguła nie ma
+jeszcze testu** — to następna, ogólna zaległość (patrz `tests/` w
+strukturze repo, wciąż puste).
 
-**Ustalone tempo:** normalizacja idzie po dwa działy naraz, zanim wrócimy
-do pisania reguł. Następny w kolejce: Dział XII (Likwidacja spółdzielni)
-i Dział XIII (Upadłość spółdzielni, Art. 113 i dalej) - do dodania jako
-rozszerzenie tego samego pliku XML.
+**Normalizacja Tytułu I zakończona.** Tytuł II (Art. 138 i dalej:
+spółdzielnie produkcji rolnej, kółek rolniczych, pracy) jest celowo poza
+zakresem — nierelewantny dla spółdzielni mieszkaniowej, tak jak ustalono
+przy wyborze pierwszego fragmentu (ROADMAP.md, sekcja "Decyzja..."). To
+naturalny punkt, żeby zdecydować, co dalej: normalizować Część II/III
+(związki spółdzielcze, KRS, przepisy przejściowe — też raczej
+nierelewantne dla SM), czy wrócić do pisania reguł dla już
+znormalizowanych Działów IV-XIII.
 
 **Zwrot architektoniczny (2026-09-28):** patrz `docs/LEXON_CONTEXT.md` i
 `docs/decisions/ADR-0001-akoma-ntoso-eli.md`. Warstwa dokumentowa
@@ -275,6 +280,31 @@ tekstu, 23 identyczne, 5 różniących się usuniętym linkiem Markdown — 0
 rzeczywistych rozbieżności treści. Reguły dla Działu XI jeszcze nie
 napisane. Łączne pokrycie normalizacyjne: Art. 1-112 (Dział I-XI), 110
 artykułów w pliku XML.
+
+**Aktualizacja — Dział XII, XIII dodane: cały Tytuł I gotowy (2026-09-28):**
+rozszerzono plik XML o Art. 113-137: Dział XII — Likwidacja spółdzielni
+(17 artykułów: 113-129) i Dział XIII — Upadłość spółdzielni (8 artykułów:
+130-137). **Dwa kolejne przypisy znalezione i zachowane:** Art. 126 §3
+(`lexon:note`, marker `4)`) — drugie zdanie tego paragrafu uchylono
+nowelizacją z 2025-11-29 (ustawa o KRS), obecny tekst pokazuje już tylko
+pozostałe zdanie; Art. 129 (`authorialNote`, marker `5)`, tym razem
+prawdziwy element AKN, bo przypis dotyczy jednego wyrażenia w zdaniu, nie
+całej jednostki) — nazwa „Minister Edukacji Narodowej” z 1982 r. odpowiada
+dziś innemu ministerstwu. **Niepewność jawnie odnotowana, nie zgadywana:**
+Art. 125 §1 pkt 2 zapisuje odesłanie jako „art. 272” bez spacji/nawiasu —
+niejasne, czy to dosłownie art. 272, czy nierozdzielony zapis art. 27[2]
+(wstawiony artykuł) - zachowany verbatim, niepewność opisana w
+`lexon:note`, nie rozstrzygnięta na siłę (AGENTS.md sekcja 50).
+Zweryfikowano skryptem: 65 jednostek tekstu, 58 wprost identycznych, 7
+różniących się wyłącznie usuniętymi linkami/przeniesionymi markerami
+przypisów/poprawnie wydzielonym `authorialNote` (każde zweryfikowane
+ręcznie) — 0 rzeczywistych rozbieżności treści.
+
+**To domyka normalizację całego Tytułu I (Art. 1-137)** — wszystkich
+przepisów wspólnych dla każdej spółdzielni. Łączne pokrycie: 135
+artykułów w pliku XML. Tytuł II (spółdzielnie produkcji rolnej/kółek
+rolniczych/pracy) i Część II-III świadomie poza zakresem - patrz decyzja
+o wyborze fragmentu na początku tego pliku.
 
 ------------------------------------------------------------------------
 

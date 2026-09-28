@@ -35,7 +35,7 @@
           <lexon:sourceCommit>7fcaed372cbe56f58c3ee4aa1d5fb6eee15b83ee</lexon:sourceCommit>
           <lexon:dzU>Dz.U. 2026 poz. 521</lexon:dzU>
           <lexon:textType>tekst jednolity</lexon:textType>
-          <lexon:coverage>Art. 1-112 (Dział I-XI w całości - Dział V, VI, X w pełni uchylone bez treści). Art. 113 i dalej (Dział XII Likwidacja spółdzielni i kolejne) jeszcze nie skonwertowane.</lexon:coverage>
+          <lexon:coverage>Art. 1-137 - CAŁY TYTUŁ I (Część I. Spółdzielnie, Przepisy wspólne) w całości, Dział I-XIII (Dział V, VI, X w pełni uchylone bez treści). Tytuł II (Art. 138 i dalej, przepisy szczególne dla spółdzielni produkcji rolnej/kółek rolniczych/pracy - nierelewantne dla spółdzielni mieszkaniowej) oraz Część II, III jeszcze nie skonwertowane.</lexon:coverage>
           <lexon:eliStatus>CONSTRUCTED - wzorzec URI zgodny ze standardowym schematem polskiego ELI (https://eli.gov.pl/eli/DU/{rok}/{pozycja}), NIE zweryfikowany wywołaniem na żywo względem eli.gov.pl/isap.sejm.gov.pl w tej sesji. Numer pozycji Dziennika Ustaw z pierwotnego uchwalenia (1982 r., przed ujednoliceniem) jest UNKNOWN - nieustalony w naszych źródłach, dlatego FRBRWork ponownie używa pozycji tekstu jednolitego (2026 poz. 521) jako zastępczego kotwiczenia identyfikatora, co jest uproszczeniem do skorygowania, jeśli oryginalny numer zostanie kiedyś potwierdzony.</lexon:eliStatus>
           <lexon:mappingNote>Mapowanie struktury polskiej ustawy na elementy Akoma Ntoso jest własną decyzją projektową (brak potwierdzonego oficjalnego polskiego profilu AKN w naszych źródłach): Część→part, Tytuł→hcontainer[name=tytul], Dział→hcontainer[name=dzial], Artykuł→article, §→paragraph, punkt→point (w list). Patrz normalized/akoma-ntoso/README.md.</lexon:mappingNote>
           <lexon:citationKey pattern="PS-ART-{numer}">Klucz cytowania używany w law/prawo-spoldzielcze/rules,procedures,ontology (np. "PS-ART-015") odpowiada 1:1 elementowi eId="art_{numer}" w tym pliku (np. eId="art_15"). Patrz docs/dsl.md.</lexon:citationKey>
@@ -1861,6 +1861,344 @@
             <article eId="art_112">
               <num>Art. 112.</num>
               <content><p>Do podziału spółdzielni stosuje się odpowiednio przepisy art. 98 § 1 i art. 100.</p></content>
+            </article>
+          </hcontainer>
+
+          <hcontainer name="dzial" eId="czesc_I__tyt_I__dzial_XII">
+            <num>Dział XII</num>
+            <heading>Likwidacja spółdzielni</heading>
+
+            <article eId="art_113">
+              <num>Art. 113.</num>
+              <paragraph eId="art_113__par_1">
+                <num>§ 1.</num>
+                <content><p>Spółdzielnia przechodzi w stan likwidacji:</p></content>
+                <list eId="art_113__par_1__lst">
+                  <point eId="art_113__par_1__pkt_1">
+                    <num>1)</num>
+                    <content><p>z upływem okresu, na który, w myśl statutu, spółdzielnię utworzono;</p></content>
+                  </point>
+                  <point eId="art_113__par_1__pkt_2">
+                    <num>2)</num>
+                    <content><p>wskutek zmniejszenia się liczby członków poniżej wskazanej w statucie lub w ustawie, jeżeli spółdzielnia w terminie jednego roku nie zwiększy liczby członków do wymaganej wielkości;</p></content>
+                  </point>
+                  <point eId="art_113__par_1__pkt_3">
+                    <num>3)</num>
+                    <content><p>wskutek zgodnych uchwał walnych zgromadzeń zapadłych większością 3/4 głosów na dwóch kolejno po sobie następujących walnych zgromadzeniach, w odstępie co najmniej dwóch tygodni.</p></content>
+                  </point>
+                </list>
+              </paragraph>
+              <paragraph eId="art_113__par_2">
+                <num>§ 2.</num>
+                <content><p>W wypadkach przewidzianych w § 1 zarząd spółdzielni (likwidator) zgłosi do Krajowego Rejestru Sądowego otwarcie likwidacji spółdzielni i zawiadomi o tym właściwy związek rewizyjny. Jeżeli zarząd (likwidator) tego nie uczyni, zgłoszenia dokona związek rewizyjny, w którym spółdzielnia jest zrzeszona.</p></content>
+              </paragraph>
+            </article>
+
+            <article eId="art_114">
+              <num>Art. 114.</num>
+              <paragraph eId="art_114__par_1">
+                <num>§ 1.</num>
+                <content><p>Związek rewizyjny, w którym spółdzielnia jest zrzeszona, może podjąć uchwałę o postawieniu spółdzielni w stan likwidacji, jeżeli:</p></content>
+                <list eId="art_114__par_1__lst">
+                  <point eId="art_114__par_1__pkt_1">
+                    <num>1)</num>
+                    <content><p>działalność spółdzielni wykazuje rażące i uporczywe naruszenia prawa lub postanowień statutu;</p></content>
+                  </point>
+                  <point eId="art_114__par_1__pkt_2">
+                    <num>2)</num>
+                    <content><p>spółdzielnia została zarejestrowana z naruszeniem prawa;</p></content>
+                  </point>
+                  <point eId="art_114__par_1__pkt_3">
+                    <num>3)</num>
+                    <content><p>spółdzielnia co najmniej od roku nie prowadzi działalności gospodarczej.</p></content>
+                  </point>
+                </list>
+              </paragraph>
+              <paragraph eId="art_114__par_2">
+                <num>§ 2.</num>
+                <content><p>Uchwałę związku rewizyjnego, o której mowa w § 1, spółdzielnia może zaskarżyć do sądu w ciągu sześciu tygodni od dnia jej doręczenia wraz z uzasadnieniem. W razie niezaskarżenia uchwały w ustawowym terminie lub uprawomocnienia się orzeczenia oddalającego powództwo albo umarzającego postępowanie w sprawie, związek rewizyjny zgłasza do Krajowego Rejestru Sądowego wniosek o otwarcie likwidacji, wyznaczając jednocześnie likwidatora.</p></content>
+              </paragraph>
+            </article>
+
+            <article eId="art_115">
+              <num>Art. 115.</num>
+              <content><p>Jeżeli spółdzielnia nie rozpoczęła działalności gospodarczej w ciągu roku od dnia jej zarejestrowania i nie posiada majątku, może ulec wykreśleniu z Krajowego Rejestru Sądowego na wniosek związku rewizyjnego.</p></content>
+            </article>
+
+            <article eId="art_116">
+              <num>Art. 116.</num>
+              <paragraph eId="art_116__par_1">
+                <num>§ 1.</num>
+                <content><p>Spółdzielnia postawiona w stan likwidacji na podstawie art. 113 § 1 pkt 3 może przed upływem roku od dnia podjęcia drugiej uchwały walnego zgromadzenia o likwidacji przywrócić swoją działalność na podstawie uchwały walnego zgromadzenia podjętej większością 3/4 głosów.</p></content>
+              </paragraph>
+              <paragraph eId="art_116__par_2">
+                <num>§ 2.</num>
+                <content><p>Zarząd lub likwidator powinni uchwałę o przywróceniu działalności spółdzielni zgłosić niezwłocznie do Krajowego Rejestru Sądowego, dołączając odpis protokołu walnego zgromadzenia. Dokonany wpis sąd ogłosi w Monitorze Spółdzielczym.</p></content>
+              </paragraph>
+            </article>
+
+            <article eId="art_117">
+              <num>Art. 117.</num>
+              <content><p>Spółdzielnia w stanie likwidacji może połączyć się z inną spółdzielnią według zasad przewidzianych w art. 96–102.</p></content>
+            </article>
+
+            <article eId="art_118">
+              <num>Art. 118.</num>
+              <paragraph eId="art_118__par_1">
+                <num>§ 1.</num>
+                <content><p>Likwidatorami spółdzielni mogą być członkowie ostatniego zarządu lub osoby wybrane przez walne zgromadzenie, jeżeli ustawa nie stanowi inaczej.</p></content>
+              </paragraph>
+              <paragraph eId="art_118__par_2">
+                <num>§ 2.</num>
+                <content><p>Likwidator może nie być członkiem spółdzielni. Likwidatorem może być także osoba prawna.</p></content>
+              </paragraph>
+              <paragraph eId="art_118__par_3">
+                <num>§ 3.</num>
+                <content><p>Umowę z likwidatorem o wykonanie czynności likwidacyjnych zawiera rada spółdzielni. W wypadku gdy zwołanie rady napotyka poważne trudności albo gdy likwidatora wyznacza związek rewizyjny, umowę z likwidatorem zawiera ten związek, działając w imieniu spółdzielni.</p></content>
+              </paragraph>
+            </article>
+
+            <article eId="art_119">
+              <num>Art. 119.</num>
+              <paragraph eId="art_119__par_1">
+                <num>§ 1.</num>
+                <content><p>Do likwidatora stosuje się odpowiednio przepisy dotyczące zarządu spółdzielni i członków zarządu, jeżeli przepisy o likwidacji nie stanowią inaczej.</p></content>
+              </paragraph>
+              <paragraph eId="art_119__par_2">
+                <num>§ 2.</num>
+                <content><p>Likwidator nie może zawierać nowych umów, chyba że jest to konieczne do przeprowadzenia likwidacji spółdzielni. Dalej idące ograniczenia może ustanowić organ, który wyznaczył likwidatora. Ograniczenia takie powinny być niezwłocznie zgłoszone przez likwidatora do Krajowego Rejestru Sądowego.</p></content>
+              </paragraph>
+              <paragraph eId="art_119__par_3">
+                <num>§ 3.</num>
+                <content><p>Jeżeli zwołanie walnego zgromadzenia lub rady spółdzielni napotyka poważne trudności, związek rewizyjny, w którym spółdzielnia jest zrzeszona, może upoważnić likwidatora do dokonania czynności określonego rodzaju, które wymagają uchwały walnego zgromadzenia lub rady spółdzielni.</p></content>
+              </paragraph>
+              <paragraph eId="art_119__par_4">
+                <num>§ 4.</num>
+                <content><p>Likwidator może być odwołany w każdej chwili przez organ, który go wyznaczył. Ponadto likwidatora może odwołać z ważnych przyczyn związek rewizyjny, w którym spółdzielnia jest zrzeszona.</p></content>
+              </paragraph>
+              <paragraph eId="art_119__par_5">
+                <num>§ 5.</num>
+                <content><p>Organ, który odwołuje likwidatora, obowiązany jest równocześnie wyznaczyć innego.</p></content>
+              </paragraph>
+            </article>
+
+            <article eId="art_120">
+              <num>Art. 120.</num>
+              <content><p>Z dniem wpisania do Krajowego Rejestru Sądowego otwarcia likwidacji wygasają uprzednio udzielone pełnomocnictwa podlegające wpisowi do Krajowego Rejestru Sądowego.</p></content>
+            </article>
+
+            <article eId="art_121">
+              <num>Art. 121.</num>
+              <paragraph eId="art_121__par_1">
+                <num>§ 1.</num>
+                <content><p>Spółdzielnia w likwidacji zachowuje dotychczasową swoją nazwę z dodaniem wyrazów: „w likwidacji”.</p></content>
+              </paragraph>
+              <paragraph eId="art_121__par_2">
+                <num>§ 2.</num>
+                <content><p>Osoba prawna wyznaczona na likwidatora składa oświadczenia w imieniu spółdzielni z zachowaniem przepisów normujących składanie oświadczeń tej osoby.</p></content>
+              </paragraph>
+            </article>
+
+            <article eId="art_122">
+              <num>Art. 122.</num>
+              <content><p>Likwidator powinien niezwłocznie po wyznaczeniu go:</p></content>
+              <list eId="art_122__lst">
+                <point eId="art_122__pkt_1">
+                  <num>1)</num>
+                  <content><p>zgłosić do Krajowego Rejestru Sądowego wniosek o wpisanie otwarcia likwidacji spółdzielni, jeżeli nie zostało to jeszcze dokonane, i zawiadomić o tym związek rewizyjny, w którym spółdzielnia jest zrzeszona, oraz Krajową Radę Spółdzielczą;</p></content>
+                </point>
+                <point eId="art_122__pkt_2">
+                  <num>2)</num>
+                  <content><p>powiadomić banki finansujące spółdzielnię oraz organy finansowe o otwarciu likwidacji spółdzielni;</p></content>
+                </point>
+                <point eId="art_122__pkt_3">
+                  <num>3)</num>
+                  <content><p>ogłosić w Monitorze Spółdzielczym zawiadomienie o otwarciu likwidacji spółdzielni i wezwać wierzycieli do zgłoszenia wierzytelności w terminie trzech miesięcy od dnia tego ogłoszenia;</p></content>
+                </point>
+                <point eId="art_122__pkt_4">
+                  <num>4)</num>
+                  <content><p>przystąpić do sporządzenia sprawozdania finansowego na dzień otwarcia likwidacji oraz listy zobowiązań spółdzielni;</p></content>
+                </point>
+                <point eId="art_122__pkt_5">
+                  <num>5)</num>
+                  <content><p>sporządzić plan finansowy likwidacji i plan zaspokojenia zobowiązań.</p></content>
+                </point>
+              </list>
+            </article>
+
+            <article eId="art_123">
+              <num>Art. 123.</num>
+              <content><p>W czasie likwidacji nie stosuje się przepisu art. 90 § 1, w zakresie kolejności pokrywania strat bilansowych.</p></content>
+            </article>
+
+            <article eId="art_124">
+              <num>Art. 124.</num>
+              <paragraph eId="art_124__par_1">
+                <num>§ 1.</num>
+                <content><p>O odmowie zaspokojenia zgłoszonych wierzytelności likwidator powinien zawiadomić wierzyciela pisemnie w ciągu czterech tygodni od dnia zgłoszenia wierzytelności.</p></content>
+              </paragraph>
+              <paragraph eId="art_124__par_2">
+                <num>§ 2.</num>
+                <content><p>Na okres przewidziany w paragrafie poprzedzającym bieg przedawnienia lub terminu zawitego ulega zawieszeniu.</p></content>
+              </paragraph>
+              <paragraph eId="art_124__par_3">
+                <num>§ 3.</num>
+                <content><p>Uznanie przez likwidatora wierzytelności przerywa bieg przedawnienia i terminu zawitego, jeżeli zostało dokonane pisemnie.</p></content>
+              </paragraph>
+            </article>
+
+            <article eId="art_125">
+              <num>Art. 125.</num>
+              <paragraph eId="art_125__par_1">
+                <num>§ 1.</num>
+                <content><p>Należności przypadające od spółdzielni zaspokaja się w następującej kolejności:</p></content>
+                <list eId="art_125__par_1__lst">
+                  <point eId="art_125__par_1__pkt_1">
+                    <num>1)</num>
+                    <content><p>koszty prowadzenia likwidacji;</p></content>
+                  </point>
+                  <point eId="art_125__par_1__pkt_2">
+                    <num>2)</num>
+                    <content><p>należności ze stosunku pracy i należności, którym przepisy prawa przyznają taką samą ochronę jak należnościom ze stosunku pracy, oraz odszkodowanie z tytułu uszkodzenia ciała, wywołania rozstroju zdrowia lub pozbawienia życia, w tym również odszkodowanie z tytułu wypadków przy pracy i chorób zawodowych, należności Bankowego Funduszu Gwarancyjnego z tytułu finansowania z funduszu gwarancyjnego banków przymusowej restrukturyzacji, o którym mowa w art. 272 ust. 3 i 4 ustawy z dnia 10 czerwca 2016 r. o Bankowym Funduszu Gwarancyjnym, systemie gwarantowania depozytów oraz przymusowej restrukturyzacji (Dz. U. z 2025 r. poz. 643, 1069 i 1844 oraz z 2026 r. poz. 176, 331 i 340), oraz wsparcia, o którym mowa w art. 112 ust. 1 i 3 tej ustawy;</p></content>
+                    <lexon:note xmlns:lexon="https://github.com/quitemax/SMDM_Lexon/ns/lexon-meta/1.0" marker="3)" type="citation-history" appliesTo="ustawy o Bankowym Funduszu Gwarancyjnym (akt cytowany, nie ten artykuł Prawa spółdzielczego), ust. 4 przywołanego artykułu" note="UNKNOWN: źródło zapisuje przywoływany artykuł jako &quot;272&quot; bez spacji/nawiasu - niejednoznaczne, czy to dosłownie art. 272, czy zapis bez nawiasów kwadratowych art. 27[2] (wstawiony artykuł, notacja użyta gdzie indziej w tym akcie z nawiasami, np. art. 8[2]). Nie rozstrzygnięte - nie zgadywane (AGENTS.md sekcja 50).">Uchylony przez art. 16 pkt 39 lit. b ustawy z dnia 7 kwietnia 2022 r. o zmianie ustawy o listach zastawnych i bankach hipotecznych oraz niektórych innych ustaw (Dz. U. poz. 872 oraz z 2023 r. poz. 1843), która weszła w życie z dniem 8 lipca 2022 r.; weszła w życie z dniem 7 maja 2022 r.</lexon:note>
+                  </point>
+                  <point eId="art_125__par_1__pkt_3">
+                    <num>3)</num>
+                    <content><p>podatki i inne należności, do których stosuje się przepisy o zobowiązaniach podatkowych, oraz należności z tytułu kredytów bankowych;</p></content>
+                  </point>
+                  <point eId="art_125__par_1__pkt_4">
+                    <num>4)</num>
+                    <content><p>inne należności.</p></content>
+                  </point>
+                </list>
+              </paragraph>
+              <paragraph eId="art_125__par_2">
+                <num>§ 2.</num>
+                <content><p>O ile należności nie są jeszcze wymagalne lub są sporne, kwoty potrzebne na ich pokrycie powinny być złożone do depozytu sądowego.</p></content>
+              </paragraph>
+              <paragraph eId="art_125__par_3">
+                <num>§ 3.</num>
+                <content><p>Z kwot pozostałych po spłaceniu wszystkich należności i po złożeniu do depozytu sądowego sum całkowicie zabezpieczających należności sporne lub niewymagalne dokonuje się stosunkowej wypłaty udziałów. Wypłaty tej nie można jednak dokonać przed upływem sześciu miesięcy od dnia ogłoszenia wzywającego wierzycieli.</p></content>
+              </paragraph>
+              <paragraph eId="art_125__par_4">
+                <num>§ 4.</num>
+                <content><p>Wierzyciele, którzy zgłosili wierzytelności po upływie tego terminu, mogą ich dochodzić z nierozdzielonego jeszcze majątku spółdzielni.</p></content>
+              </paragraph>
+              <paragraph eId="art_125__par_5">
+                <num>§ 5.</num>
+                <content><p>Pozostały majątek zostaje przeznaczony na cele określone w uchwale ostatniego walnego zgromadzenia.</p></content>
+              </paragraph>
+              <paragraph eId="art_125__par_5a">
+                <num>§ 5a.</num>
+                <content><p>Jeżeli zgodnie z uchwałą, o której mowa w § 5, pozostały majątek ma być w całości lub części podzielony między członków, w podziale tym uwzględnia się byłych członków, którym do chwili przejścia albo postawienia spółdzielni w stan likwidacji nie wypłacono wszystkich udziałów.</p></content>
+              </paragraph>
+              <paragraph eId="art_125__par_5b">
+                <num>§ 5b.</num>
+                <content><p>Przepisu § 5a nie stosuje się do spółdzielni mieszkaniowych.</p></content>
+              </paragraph>
+              <paragraph eId="art_125__par_6">
+                <num>§ 6.</num>
+                <content><p>Jeżeli uchwała walnego zgromadzenia nie zawiera stosownego wskazania, likwidator przekazuje pozostały majątek nieodpłatnie na cele spółdzielcze lub społeczne.</p></content>
+              </paragraph>
+            </article>
+
+            <article eId="art_126">
+              <num>Art. 126.</num>
+              <paragraph eId="art_126__par_1">
+                <num>§ 1.</num>
+                <content><p>Po zakończeniu likwidacji likwidator przedstawia walnemu zgromadzeniu do zatwierdzenia sprawozdanie finansowe na dzień zakończenia likwidacji.</p></content>
+              </paragraph>
+              <paragraph eId="art_126__par_2">
+                <num>§ 2.</num>
+                <content><p>Jeżeli zwołanie walnego zgromadzenia napotyka poważne trudności, likwidator przedstawia sprawozdanie finansowe do zatwierdzenia związkowi rewizyjnemu, w którym spółdzielnia jest zrzeszona.</p></content>
+              </paragraph>
+              <paragraph eId="art_126__par_3">
+                <num>§ 3.</num>
+                <lexon:note xmlns:lexon="https://github.com/quitemax/SMDM_Lexon/ns/lexon-meta/1.0" marker="4)" type="legislative-history">Zdanie drugie uchylone przez art. 2 ustawy z dnia 26 września 2025 r. o zmianie ustawy o Krajowym Rejestrze Sądowym oraz niektórych innych ustaw (Dz. U. poz. 1556), która weszła w życie z dniem 29 listopada 2025 r.</lexon:note>
+                <content><p>Po zatwierdzeniu sprawozdania finansowego na dzień zakończenia likwidacji, likwidator zgłasza do Krajowego Rejestru Sądowego wniosek o wykreślenie spółdzielni z Krajowego Rejestru Sądowego oraz przekazuje księgi i dokumenty zlikwidowanej spółdzielni do przechowania.</p></content>
+              </paragraph>
+            </article>
+
+            <article eId="art_127">
+              <num>Art. 127.</num>
+              <content><p>W razie zaspokojenia wszelkich należności przypadających od spółdzielni i złożenia do depozytu sądowego kwot na zabezpieczenie należności spornych lub niewymagalnych, spółdzielnia może ulec wykreśleniu z Krajowego Rejestru Sądowego przed zakończeniem prowadzonych przez nią lub przeciwko niej sporów sądowych. W takim wypadku w miejsce spółdzielni wchodzi jako strona związek rewizyjny, w którym spółdzielnia jest zrzeszona. Związek rewizyjny obowiązany jest do przekazania kwot uzyskanych w wyniku sporu na cele określone stosownie do art. 125 § 5 i 6.</p></content>
+            </article>
+
+            <article eId="art_128">
+              <num>Art. 128.</num>
+              <paragraph eId="art_128__par_1">
+                <num>§ 1.</num>
+                <content><p>Po wykreśleniu spółdzielni z Krajowego Rejestru Sądowego likwidator odpowiada wobec wierzycieli spółdzielni za wyrządzone im szkody przez niedopełnienie swoich ustawowych obowiązków.</p></content>
+              </paragraph>
+              <paragraph eId="art_128__par_2">
+                <num>§ 2.</num>
+                <content><p>Przepis paragrafu poprzedzającego stosuje się odpowiednio do członków ostatniego zarządu spółdzielni wykreślonej z Krajowego Rejestru Sądowego w trybie określonym w art. 115.</p></content>
+              </paragraph>
+            </article>
+
+            <article eId="art_129">
+              <num>Art. 129.</num>
+              <content><p>Minister Sprawiedliwości, w porozumieniu z Ministrem Edukacji Narodowej<authorialNote marker="5)" xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0"><p xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">Obecnie minister właściwy do spraw kultury i ochrony dziedzictwa narodowego, na podstawie art. 4 ust. 1, art. 5 pkt 9 i art. 14 ustawy z dnia 4 września 1997 r. o działach administracji rządowej (Dz. U. z 2025 r. poz. 1275 i 1846 oraz z 2026 r. poz. 160 i 187), która weszła w życie z dniem 1 kwietnia 1999 r.</p></authorialNote> oraz po zasięgnięciu opinii Krajowej Rady Spółdzielczej, określi w drodze rozporządzenia sposób i czas przechowywania ksiąg i dokumentów zlikwidowanych spółdzielni oraz organizacji spółdzielczych.</p></content>
+            </article>
+          </hcontainer>
+
+          <hcontainer name="dzial" eId="czesc_I__tyt_I__dzial_XIII">
+            <num>Dział XIII</num>
+            <heading>Upadłość spółdzielni</heading>
+
+            <article eId="art_130">
+              <num>Art. 130.</num>
+              <paragraph eId="art_130__par_1">
+                <num>§ 1.</num>
+                <content><p>Ogłoszenie upadłości spółdzielni następuje w razie jej niewypłacalności.</p></content>
+              </paragraph>
+              <paragraph eId="art_130__par_2">
+                <num>§ 2.</num>
+                <content><p>Jeżeli według sprawozdania finansowego spółdzielni ogólna wartość jej aktywów nie wystarcza na zaspokojenie wszystkich zobowiązań, zarząd powinien niezwłocznie zwołać walne zgromadzenie, na którego porządku obrad zamieszcza sprawę dalszego istnienia spółdzielni.</p></content>
+              </paragraph>
+              <paragraph eId="art_130__par_3">
+                <num>§ 3.</num>
+                <content><p>Pomimo niewypłacalności spółdzielni walne zgromadzenie może podjąć uchwałę o dalszym istnieniu spółdzielni, jeżeli wskaże środki umożliwiające wyjście jej ze stanu niewypłacalności.</p></content>
+              </paragraph>
+              <paragraph eId="art_130__par_4">
+                <num>§ 4.</num>
+                <content><p>W razie podjęcia przez walne zgromadzenie uchwały o postawieniu spółdzielni w stan upadłości, zarząd spółdzielni obowiązany jest niezwłocznie zgłosić do sądu wniosek o ogłoszenie upadłości.</p></content>
+              </paragraph>
+            </article>
+
+            <article eId="art_131">
+              <num>Art. 131.</num>
+              <content><p>Z wnioskiem o ogłoszenie upadłości spółdzielni będącej w stanie likwidacji obowiązany jest wystąpić do sądu likwidator niezwłocznie po stwierdzeniu niewypłacalności spółdzielni.</p></content>
+            </article>
+
+            <article eId="art_132">
+              <num>Art. 132.</num>
+              <content><p>Na wniosek wierzyciela, który zgłosił wniosek o ogłoszenie upadłości spółdzielni, sąd może zarządzić postawienie jej w stan upadłości pomimo uchwały walnego zgromadzenia spółdzielni o dalszym jej istnieniu.</p></content>
+            </article>
+
+            <article eId="art_133">
+              <num>Art. 133.</num>
+              <content><p>Jeżeli ze sprawozdania finansowego sporządzonego przez zarząd lub przez likwidatora wynika, że majątek spółdzielni, która zaprzestała swej działalności, nie wystarcza na pokrycie kosztów postępowania upadłościowego, a wierzyciele nie wyrażą zgody na ich pokrycie, sąd na wniosek wierzycieli lub Krajowej Rady Spółdzielczej zarządzi wykreślenie spółdzielni z Krajowego Rejestru Sądowego, zawiadamiając o tym wierzycieli i Krajową Radę Spółdzielczą. W takim wypadku nie przeprowadza się postępowania upadłościowego.</p></content>
+            </article>
+
+            <article eId="art_134">
+              <num>Art. 134.</num>
+              <content><p>Przepisy o organach spółdzielni stosuje się także podczas postępowania upadłościowego, jeżeli z przepisów prawa upadłościowego nie wynika inaczej.</p></content>
+            </article>
+
+            <article eId="art_135">
+              <num>Art. 135.</num>
+              <content><p>Po ogłoszeniu upadłości członkowie spółdzielni, na żądanie syndyka upadłości, niezwłocznie uiszczają niewpłaconą jeszcze część udziału.</p></content>
+            </article>
+
+            <article eId="art_136">
+              <num>Art. 136.</num>
+              <content><p>Po ukończeniu postępowania upadłościowego syndyk upadłości zgłosi do sądu rejestrowego wniosek o wykreślenie spółdzielni z Krajowego Rejestru Sądowego.</p></content>
+            </article>
+
+            <article eId="art_137">
+              <num>Art. 137.</num>
+              <content><p>Do postępowania upadłościowego w sprawach nieuregulowanych niniejszą ustawą stosuje się przepisy prawa upadłościowego.</p></content>
             </article>
           </hcontainer>
         </hcontainer>
