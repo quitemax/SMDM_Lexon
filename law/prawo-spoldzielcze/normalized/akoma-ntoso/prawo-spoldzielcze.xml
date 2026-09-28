@@ -35,7 +35,7 @@
           <lexon:sourceCommit>7fcaed372cbe56f58c3ee4aa1d5fb6eee15b83ee</lexon:sourceCommit>
           <lexon:dzU>Dz.U. 2026 poz. 521</lexon:dzU>
           <lexon:textType>tekst jednolity</lexon:textType>
-          <lexon:coverage>Art. 1-59 (Dział I, II, III, IV w całości - koniec Tytułu I, Część I). Art. 60 i dalej (Dział V, VI uchylone; Dział VII i kolejne) jeszcze nie skonwertowane.</lexon:coverage>
+          <lexon:coverage>Art. 1-90 (Dział I-VII w całości - Dział V, VI w pełni uchylone bez treści; Dział VII kończy się na Art. 90). Art. 91 i dalej (Dział VIII - Lustracja - i kolejne) jeszcze nie skonwertowane.</lexon:coverage>
           <lexon:eliStatus>CONSTRUCTED - wzorzec URI zgodny ze standardowym schematem polskiego ELI (https://eli.gov.pl/eli/DU/{rok}/{pozycja}), NIE zweryfikowany wywołaniem na żywo względem eli.gov.pl/isap.sejm.gov.pl w tej sesji. Numer pozycji Dziennika Ustaw z pierwotnego uchwalenia (1982 r., przed ujednoliceniem) jest UNKNOWN - nieustalony w naszych źródłach, dlatego FRBRWork ponownie używa pozycji tekstu jednolitego (2026 poz. 521) jako zastępczego kotwiczenia identyfikatora, co jest uproszczeniem do skorygowania, jeśli oryginalny numer zostanie kiedyś potwierdzony.</lexon:eliStatus>
           <lexon:mappingNote>Mapowanie struktury polskiej ustawy na elementy Akoma Ntoso jest własną decyzją projektową (brak potwierdzonego oficjalnego polskiego profilu AKN w naszych źródłach): Część→part, Tytuł→hcontainer[name=tytul], Dział→hcontainer[name=dzial], Artykuł→article, §→paragraph, punkt→point (w list). Patrz normalized/akoma-ntoso/README.md.</lexon:mappingNote>
           <lexon:citationKey pattern="PS-ART-{numer}">Klucz cytowania używany w law/prawo-spoldzielcze/rules,procedures,ontology (np. "PS-ART-015") odpowiada 1:1 elementowi eId="art_{numer}" w tym pliku (np. eId="art_15"). Patrz docs/dsl.md.</lexon:citationKey>
@@ -1255,6 +1255,207 @@
                 </paragraph>
               </article>
             </hcontainer>
+          </hcontainer>
+
+          <hcontainer name="dzial" eId="czesc_I__tyt_I__dzial_V" status="repealed">
+            <num>Dział V</num>
+            <heading>(uchylony)</heading>
+          </hcontainer>
+
+          <hcontainer name="dzial" eId="czesc_I__tyt_I__dzial_VI" status="repealed">
+            <num>Dział VI</num>
+            <heading>(uchylony)</heading>
+          </hcontainer>
+
+          <hcontainer name="dzial" eId="czesc_I__tyt_I__dzial_VII">
+            <num>Dział VII</num>
+            <heading>Gospodarka spółdzielni</heading>
+
+            <article eId="art_67">
+              <num>Art. 67.</num>
+              <content><p>Spółdzielnia prowadzi działalność gospodarczą na zasadach rachunku ekonomicznego przy zapewnieniu korzyści członkom spółdzielni.</p></content>
+            </article>
+
+            <article eId="art_68">
+              <num>Art. 68.</num>
+              <content><p>Spółdzielnia odpowiada za swoje zobowiązania całym majątkiem.</p></content>
+            </article>
+
+            <article eId="art_69" status="repealed">
+              <num>Art. 69.</num>
+              <content><p>(uchylony)</p></content>
+            </article>
+
+            <article eId="art_70" status="repealed">
+              <num>Art. 70.</num>
+              <content><p>(uchylony)</p></content>
+            </article>
+
+            <article eId="art_71" status="repealed">
+              <num>Art. 71.</num>
+              <content><p>(uchylony)</p></content>
+            </article>
+
+            <article eId="art_72" status="repealed">
+              <num>Art. 72.</num>
+              <content><p>(uchylony)</p></content>
+            </article>
+
+            <article eId="art_73" status="repealed">
+              <num>Art. 73.</num>
+              <content><p>(uchylony)</p></content>
+            </article>
+
+            <article eId="art_74" status="repealed">
+              <num>Art. 74.</num>
+              <content><p>(uchylony)</p></content>
+            </article>
+
+            <article eId="art_75">
+              <num>Art. 75.</num>
+              <content><p>Zysk spółdzielni, po pomniejszeniu o podatek dochodowy i inne obciążenia obowiązkowe wynikające z odrębnych przepisów ustawowych, stanowi nadwyżkę bilansową.</p></content>
+            </article>
+
+            <article eId="art_76">
+              <num>Art. 76.</num>
+              <content><p>Nadwyżka bilansowa podlega podziałowi na podstawie uchwały walnego zgromadzenia. Co najmniej 5 % nadwyżki przeznacza się na zwiększenie funduszu zasobowego, jeżeli fundusz ten nie osiąga wysokości wniesionych udziałów obowiązkowych.</p></content>
+            </article>
+
+            <article eId="art_77">
+              <num>Art. 77.</num>
+              <paragraph eId="art_77__par_1">
+                <num>§ 1.</num>
+                <content><p>Część nadwyżki bilansowej pozostałej po dokonaniu odpisu, o którym mowa w art. 76, przeznacza się na cele określone w uchwale walnego zgromadzenia.</p></content>
+              </paragraph>
+              <paragraph eId="art_77__par_2">
+                <num>§ 2.</num>
+                <content><p>Zasady podziału nadwyżki bilansowej między członków spółdzielni określa statut.</p></content>
+              </paragraph>
+              <paragraph eId="art_77__par_3">
+                <num>§ 3.</num>
+                <content><p>Jeżeli zadeklarowane przez członka udziały nie zostały w pełni wniesione, kwoty przypadające członkowi z tytułu podziału nadwyżki bilansowej zalicza się na poczet jego niepełnych udziałów.</p></content>
+              </paragraph>
+              <paragraph eId="art_77__par_4">
+                <num>§ 4.</num>
+                <content><p>Jeżeli podział części nadwyżki bilansowej między członków ma nastąpić w formie oprocentowania udziałów, w podziale tym uwzględnia się byłych członków (ich spadkobierców), którym przysługują roszczenia o wypłatę udziałów.</p></content>
+              </paragraph>
+            </article>
+
+            <article eId="art_78">
+              <num>Art. 78.</num>
+              <paragraph eId="art_78__par_1">
+                <num>§ 1.</num>
+                <content><p>Zasadniczymi funduszami własnymi tworzonymi w spółdzielni są:</p></content>
+                <list eId="art_78__par_1__lst">
+                  <point eId="art_78__par_1__pkt_1">
+                    <num>1)</num>
+                    <content><p>fundusz udziałowy powstający z wpłat udziałów członkowskich, odpisów na udziały członkowskie z podziału nadwyżki bilansowej lub innych źródeł określonych w odrębnych przepisach;</p></content>
+                  </point>
+                  <point eId="art_78__par_1__pkt_2">
+                    <num>2)</num>
+                    <content><p>fundusz zasobowy powstający z wpłat przez członków wpisowego, części nadwyżki bilansowej lub innych źródeł określonych w odrębnych przepisach.</p></content>
+                  </point>
+                </list>
+              </paragraph>
+              <paragraph eId="art_78__par_2">
+                <num>§ 2.</num>
+                <content><p>Spółdzielnia tworzy także inne fundusze własne przewidziane w odrębnych przepisach oraz w jej statucie.</p></content>
+              </paragraph>
+            </article>
+
+            <article eId="art_79" status="repealed">
+              <num>Art. 79.</num>
+              <content><p>(uchylony)</p></content>
+            </article>
+
+            <article eId="art_80" status="repealed">
+              <num>Art. 80.</num>
+              <content><p>(uchylony)</p></content>
+            </article>
+
+            <article eId="art_81" status="repealed">
+              <num>Art. 81.</num>
+              <content><p>(uchylony)</p></content>
+            </article>
+
+            <article eId="art_82">
+              <num>Art. 82.</num>
+              <content><p>Oprocentowanie wkładów pieniężnych stanowi koszt uzyskania przychodów.</p></content>
+            </article>
+
+            <article eId="art_83" status="omitted">
+              <num>Art. 83.</num>
+              <content><p>(pominięty)</p></content>
+            </article>
+
+            <article eId="art_84" status="repealed">
+              <num>Art. 84.</num>
+              <content><p>(uchylony)</p></content>
+            </article>
+
+            <article eId="art_85" status="repealed">
+              <num>Art. 85.</num>
+              <content><p>(uchylony)</p></content>
+            </article>
+
+            <article eId="art_86" status="repealed">
+              <num>Art. 86.</num>
+              <content><p>(uchylony)</p></content>
+            </article>
+
+            <article eId="art_87">
+              <num>Art. 87.</num>
+              <content><p>Spółdzielnia prowadzi rachunkowość na zasadach określonych odrębnymi przepisami.</p></content>
+            </article>
+
+            <article eId="art_88" status="repealed">
+              <num>Art. 88.</num>
+              <content><p>(uchylony)</p></content>
+            </article>
+
+            <article eId="art_88a">
+              <num>Art. 88a.</num>
+              <paragraph eId="art_88a__par_1">
+                <num>§ 1.</num>
+                <content><p>Roczne sprawozdania finansowe spółdzielni podlegają badaniu pod względem rzetelności i prawidłowości. Uchwałę w tym zakresie podejmuje rada nadzorcza.</p></content>
+              </paragraph>
+              <paragraph eId="art_88a__par_2">
+                <num>§ 2.</num>
+                <content><p>Roczne sprawozdanie finansowe podlega badaniu w trybie i według zasad określonych w odrębnych przepisach.</p></content>
+              </paragraph>
+              <paragraph eId="art_88a__par_3">
+                <num>§ 3.</num>
+                <content><p>Przepis § 1 i § 2 stosuje się odpowiednio do sprawozdań finansowych stanowiących podstawę przy łączeniu i podziale spółdzielni.</p></content>
+              </paragraph>
+            </article>
+
+            <article eId="art_89">
+              <num>Art. 89.</num>
+              <paragraph eId="art_89__par_1">
+                <num>§ 1.</num>
+                <content><p>Roczne sprawozdanie z działalności spółdzielni, łącznie ze sprawozdaniem finansowym i sprawozdaniem z badania, jeżeli podlega ono obowiązkowemu badaniu, wykłada się w lokalu spółdzielni co najmniej na 14 dni przed terminem walnego zgromadzenia w celu umożliwienia członkom spółdzielni zapoznania się z nim.</p></content>
+              </paragraph>
+              <paragraph eId="art_89__par_2" status="repealed">
+                <num>§ 2.</num>
+                <content><p>(uchylony)</p></content>
+              </paragraph>
+            </article>
+
+            <article eId="art_90">
+              <num>Art. 90.</num>
+              <paragraph eId="art_90__par_1">
+                <num>§ 1.</num>
+                <content><p>Straty bilansowe spółdzielni pokrywa się z funduszu zasobowego, a w części przekraczającej fundusz zasobowy – z funduszu udziałowego i innych funduszów własnych spółdzielni według kolejności ustalonej przez statut. Straty pierwszego roku obrachunkowego po założeniu spółdzielni mogą być pokryte w roku następnym.</p></content>
+              </paragraph>
+              <paragraph eId="art_90__par_2">
+                <num>§ 2.</num>
+                <content><p>Gdyby fundusze własne nie wystarczyły na pokrycie strat, walne zgromadzenie może podjąć uchwałę zobowiązującą członków do wcześniejszego wpłacenia udziałów, niż to przewiduje statut.</p></content>
+              </paragraph>
+              <paragraph eId="art_90__par_3">
+                <num>§ 3.</num>
+                <content><p>Strata bilansowa w banku spółdzielczym pokrywana jest według zasad i w terminach określonych w programie postępowania naprawczego, o którym mowa w art. 142 ustawy z dnia 29 sierpnia 1997 r. – Prawo bankowe (Dz. U. z 2026 r. poz. 38, 176, 331 i 340).</p></content>
+              </paragraph>
+            </article>
           </hcontainer>
         </hcontainer>
       </part>

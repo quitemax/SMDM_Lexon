@@ -10,25 +10,29 @@ Tekst źródłowy ustawy w formacie [Akoma Ntoso](http://www.akomantoso.org/)
 
 `prawo-spoldzielcze.xml` — **jeden plik na cały akt** (zgodnie z typową
 praktyką AKN, w odróżnieniu od poprzedniego podejścia "jeden plik na
-artykuł"), obejmujący **Art. 1–59** (Dział I–IV w całości, czyli cały
-Tytuł I aż do końca Działu IV — Organy spółdzielni, z rozdziałami: Walne
-zgromadzenie, Rada nadzorcza, Zarząd, Przepisy wspólne dla rady i zarządu,
-Zebrania grup członkowskich).
+artykuł"), obejmujący **Art. 1–90** (Dział I–VII w całości — cały Tytuł I
+do końca Działu VII, Gospodarka spółdzielni).
 
-Weryfikacja tekstu:
+Weryfikacja tekstu (wszystkie partie zweryfikowane skryptem, 0 rzeczywistych
+rozbieżności treści):
 
-- Art. 1-34: zweryfikowano skryptem 1:1 przeciwko poprzednim 37 plikom
-  YAML przed ich usunięciem — 111 jednostek tekstu, 0 rozbieżności.
-- Art. 35-59 (Dział IV): zweryfikowano skryptem 1:1 bezpośrednio przeciwko
-  tekstowi źródłowemu z Knowledge Base (linia po linii, po usunięciu
-  nagłówków/kotwic) — 130 jednostek tekstu, 125 identycznych, 5 różniących
-  się wyłącznie usunięciem składni linków Markdown dodanych przez ostatni
-  commit KB (np. `[art. 6](#art-6)` → `art. 6`, zgodnie z tym samym
-  podejściem co przy Art. 1-34) — **0 rzeczywistych rozbieżności treści**.
-  Dział IV zawiera notację `§ 4[1]`-`§ 4[4]` (wstawione paragrafy, zapis
-  źródła z nawiasami kwadratowymi zamiast indeksu górnego) - zachowana
-  verbatim, eId: `art_35__par_4_1` itd. (podkreślnik zamiast nawiasu, bo
-  eId nie może zawierać nawiasów kwadratowych).
+- Art. 1-34: 1:1 przeciwko poprzednim 37 plikom YAML przed ich usunięciem
+  — 111 jednostek tekstu, 0 rozbieżności.
+- Art. 35-59 (Dział IV): 1:1 bezpośrednio przeciwko tekstowi źródłowemu z
+  Knowledge Base — 130 jednostek tekstu, 125 identycznych, 5 różniących
+  się wyłącznie usunięciem składni linków Markdown dodanych przez commit
+  KB (np. `[art. 6](#art-6)` → `art. 6`). Zawiera notację `§ 4[1]`-`§ 4[4]`
+  (wstawione paragrafy, zapis źródła z nawiasami kwadratowymi zamiast
+  indeksu górnego) zachowaną verbatim, eId: `art_35__par_4_1` itd.
+  (podkreślnik zamiast nawiasu, bo eId nie może zawierać nawiasów
+  kwadratowych).
+- Art. 60-90 (Dział V, VI — uchylone w całości, bez artykułów; Dział VII):
+  1:1 przeciwko źródłu — 36 jednostek tekstu, 35 identycznych, 1 różniąca
+  się tym samym wzorcem usuniętego linku Markdown. Zawiera jeden artykuł
+  ze statusem innym niż "uchylony": **Art. 83 = `status="omitted"`**
+  (źródło: "(pominięty)", nie "(uchylony)") — świadomie odróżnione, bo to
+  inne pojęcie prawne (numer pominięty przy numeracji, nie przepis
+  uchylony) - patrz sekcja "Decyzje mapowania" niżej.
 
 ## Decyzje mapowania (własne, nie zweryfikowane wobec oficjalnego polskiego profilu AKN)
 
@@ -47,6 +51,8 @@ istniejącego standardu:
 | §               | `<paragraph>`                     | kanoniczny |
 | punkt (1), 2)…) | `<point>` w `<list>`               | kanoniczny |
 | (uchylony)      | atrybut `status="repealed"` + zachowany tekst `(uchylony)` w `<p>` | AKN's standardowy atrybut statusu; tekst zachowany dla wierności źródłu (AGENTS.md sekcja 30) |
+| (pominięty)     | atrybut `status="omitted"` (Art. 83) | Odróżnione od "uchylony" - to inne pojęcie (numer pominięty w numeracji, nie przepis, który obowiązywał i został uchylony). Wartość własna, `status` w AKN jest słownikiem otwartym. |
+| dział w całości uchylony (Dział V, VI) | `<hcontainer status="repealed">` bez żadnych `<article>` | Wierne odwzorowanie źródła - w tekście źródłowym Art. 60-66 nie istnieją nawet jako pojedyncze jednostki "(uchylony)" (inaczej niż np. Art. 4, 8, 9...) - tekst przechodzi wprost z Art. 59 (koniec Działu IV) do nagłówków "Dział V. (uchylony)" / "Dział VI. (uchylony)" bez treści, po czym Dział VII zaczyna się od Art. 67. Luka w numeracji (60-66) jest więc odwzorowana na poziomie działu, nie artykułu - zgodnie z tym, jak faktycznie wygląda źródło, a nie wg naszej własnej konwencji z innych działów. |
 
 `eId` używa schematu `art_{numer}[__par_{numer}[__pkt_{numer}]]`, np.
 `art_24__par_10__pkt_2`.
@@ -76,9 +82,10 @@ jednolitego (2026 poz. 521) jako zastępczego zakotwiczenia identyfikatora.
 
 ## Czego tu nie ma (jeszcze)
 
-- Art. 60 i dalej (Dział V, VI — uchylone w całości; Dział VII — Gospodarka
-  spółdzielni, i dalsze) — do dodania jako kolejne `<hcontainer name="dzial">`
-  w tym samym pliku, dział po dziale, zgodnie z ustalonym tempem.
+- Art. 91 i dalej (Dział VIII — Lustracja, IX — Łączenie się spółdzielni,
+  X — uchylony, XI — Podział spółdzielni, XII — Likwidacja, XIII —
+  Upadłość, i dalej Tytuł II oraz Część II, III) — do dodania jako kolejne
+  `<hcontainer name="dzial">` w tym samym pliku, dział po dziale.
 - Walidacja względem oficjalnego schematu XSD Akoma Ntoso 3.0 — zrobiono
   tylko walidację dobrej formy XML (`xml.etree.ElementTree`) i ręczną
   weryfikację 1:1 przeciwko poprzedniej wersji YAML. Brak zainstalowanego

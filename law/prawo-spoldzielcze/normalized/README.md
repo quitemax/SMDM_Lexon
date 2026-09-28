@@ -7,7 +7,7 @@ semantycznej — czysta segmentacja.
 poprzednie ad-hoc pliki YAML (jeden na artykuł) — decyzja udokumentowana w
 `docs/decisions/ADR-0001-akoma-ntoso-eli.md` i `docs/LEXON_CONTEXT.md`.
 
-Zawiera Art. 1–59 (Dział I, II, III, IV w całości). Klucz cytowania `PS-ART-NNN`
+Zawiera Art. 1–90 (Dział I–VII w całości). Klucz cytowania `PS-ART-NNN`
 używany w `../rules/`, `../procedures/`, `../ontology/` nie zmienił się —
 odpowiada `eId="art_{numer}"` w `akoma-ntoso/prawo-spoldzielcze.xml` (patrz
 `docs/dsl.md`).
