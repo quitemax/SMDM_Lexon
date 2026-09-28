@@ -1,0 +1,11 @@
+relation: "HAS_STATUTE"
+from: "Spółdzielnia"
+to: "Statut"
+description: "Każda spółdzielnia działa na podstawie jednego, zarejestrowanego statutu."
+attributes:
+  - name: last_amended_at
+    type: "Date (opcjonalnie)"
+    source: "PS-ART-012A §1, §3"
+cardinality: "1 Spółdzielnia : 1 aktualny Statut (historia poprzednich wersji nie jest tu modelowana - poza zakresem Art. 1-28)"
+source: "PS-ART-002"
+formalization_status: STRUCTURAL

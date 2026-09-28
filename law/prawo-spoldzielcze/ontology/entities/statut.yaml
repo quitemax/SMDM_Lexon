@@ -1,0 +1,19 @@
+entity: "Statut"
+description: "Akt wewnętrzny spółdzielni konkretyzujący ustawę (patrz PROJECT_CONCEPT.md sekcja 29 - 'statut jako konfiguracja'). Modelowany tu minimalnie, jako podmiot odesłań ('statut powinien/może określać X'), nie jako pełny dokument z treścią - treść realnego statutu żyje w external/SMDM_Knowledge_Base/zrodla/md/statut.md, nie jest tu duplikowana."
+properties:
+  - name: required_content_items
+    type: "List<String>"
+    description: "8 obowiązkowych elementów treści: nazwa/siedziba, przedmiot działalności/czas trwania, wpisowe i udziały, prawa i obowiązki członków, tryb przyjmowania/wypowiadania/wykreślania/wykluczania członków, zasady walnego zgromadzenia, wybór/odwoływanie organów, podział nadwyżki/pokrywanie strat."
+    source: "PS-ART-005 §1"
+  - name: may_contain_additional_provisions
+    type: Boolean
+    description: "Statut może zawierać także inne postanowienia, poza obowiązkową treścią i poza tym, czego wprost wymaga ustawa."
+    source: "PS-ART-005 §2"
+  - name: registered_in_krs
+    type: Boolean
+    description: "Zmiana statutu nie wywołuje skutków prawnych przed jej wpisaniem do Krajowego Rejestru Sądowego."
+    source: "PS-ART-012A §3"
+relations:
+  - "HAS_STATUTE (odwrotność) -> Spółdzielnia"
+formalization_status: STRUCTURAL
+note: "PS-ART-005 §1 pkt 5 wprost odsyła do trybu przyjmowania/wypowiadania/wykreślania/wykluczania członków sformalizowanego w law/prawo-spoldzielcze/procedures/ (R-PS-0003, R-PS-0016) - to jest źródłowa podstawa tego, że ustawa pozostawia szczegóły trybu statutowi. Nie modelujemy tu historii wersji statutu (kolejne zmiany) - tylko aktualny stan, zgodnie z zakresem Art. 1-28."

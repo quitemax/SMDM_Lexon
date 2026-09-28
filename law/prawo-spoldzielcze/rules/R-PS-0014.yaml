@@ -1,0 +1,15 @@
+id: R-PS-0014
+norm_type: OBLIGATION
+title: "Organ właściwy do publikowania ogłoszeń spółdzielczych"
+source:
+  act: "Prawo spółdzielcze"
+  article: "14"
+  normalized_ref: "PS-ART-014"
+subject: "Spółdzielnia"
+statement: "Ogłoszenia spółdzielcze przewidziane w przepisach prawa publikuje się w „Monitorze Spółdzielczym”, wydawanym przez Krajową Radę Spółdzielczą."
+exceptions:
+  - id: "R-PS-0014-E1"
+    text: "Ogłoszenia zamieszczane na podstawie odrębnych przepisów - w Monitorze Sądowym i Gospodarczym."
+formalization_status: DIRECT
+tests: []
+note: "Wąska, techniczna norma proceduralna - dotyczy formy/miejsca publikacji, nie treści merytorycznych. Nie tworzymy osobnej encji 'Monitor Spółdzielczy' ani 'KrajowaRadaSpoldzielcza' - poza potrzebą tego fragmentu (AGENTS.md sekcja 15: nie twórz modelu ponad potrzebę)."

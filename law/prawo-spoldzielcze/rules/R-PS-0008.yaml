@@ -1,0 +1,16 @@
+id: R-PS-0008
+norm_type: PERMISSION
+title: "Dozwolona działalność społeczna i oświatowo-kulturalna"
+source:
+  act: "Prawo spółdzielcze"
+  article: "1"
+  paragraph: "2"
+  normalized_ref: "PS-ART-001"
+subject: "Spółdzielnia"
+statement: "Spółdzielnia może prowadzić działalność społeczną i oświatowo-kulturalną na rzecz swoich członków i ich środowiska."
+beneficiaries:
+  - "swoi członkowie"
+  - "środowisko członków"
+formalization_status: DIRECT
+tests: []
+note: "PERMISSION, nie OBLIGATION - świadoma decyzja modelująca (AGENTS.md sekcja 20, 57). Tekst używa 'może', nie 'jest obowiązana' - to rozróżnienie jest tu istotne (AGENTS.md sekcja 55: 'może' vs 'musi')."

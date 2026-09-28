@@ -5,12 +5,11 @@
 > tu są rozbite na konkretne, sprawdzalne zadania osadzone w realnym materiale
 > źródłowym z `external/SMDM_Knowledge_Base`.
 
-Status ogólny: **Phase 0, 1 i 2 (zaplanowany zakres na Art. 15-28) zamknięte.**
-**Decyzja (2026-09-28):** zamiast normalizować całą ustawę (249 artykułów) na
-raz, rozszerzono normalizację o Art. 1-14 (Dział I i II — definicja
-spółdzielni, statut, zakładanie i rejestracja), bezpośrednio poprzedzające
-już gotowy Dział III. Reguły (Phase 2) dla Art. 1-14 jeszcze nie napisane —
-patrz nowa sekcja niżej.
+Status ogólny: **Art. 1-28 znormalizowane w całości; reguły/procedury
+sformalizowane dla Art. 1-3, 5-7, 11, 12a, 14-18, 24 (Art. 4, 8-10, 12, 13
+uchylone).** Brakuje jeszcze reguł dla Art. 6 §2a (poza zakresem SM), 19-23,
+25-28. **Żadna reguła nie ma jeszcze testu** — to następna, ogólna
+zaległość (patrz `tests/` w strukturze repo, wciąż puste).
 
 ------------------------------------------------------------------------
 
@@ -84,18 +83,39 @@ sformalizowany Dział III.
       13,14 — w tym 7 artykułów/paragrafów uchylonych, zachowanych jako
       tombstone) w `law/prawo-spoldzielcze/normalized/`. Razem z Art. 15-28
       daje to pełne, ciągłe pokrycie normalizacyjne Art. 1-28.
-- [ ] Walidacja YAML tych 16 plików skryptem (jak dla Art. 15-28) — **w
-      toku, zablokowana przejściową awarią narzędzi shell (Bash/PowerShell)
-      w tej sesji**. Do dokończenia przed commitem.
+- [x] Walidacja YAML tych 16 plików skryptem (jak dla Art. 15-28) — OK.
+- [x] Zaktualizowano submoduł `external/SMDM_Knowledge_Base` do najnowszej
+      wersji (18 commitów) — zweryfikowano `git diff`, że dotyczące
+      Prawa spółdzielczego i USM zmiany to wyłącznie spis treści i linki
+      międzyartykułowe, bez zmian merytorycznych w Art. 1-28.
+- [x] Reguły (Phase 2) dla Art. 1-14:
+      - `ontology/entities/spoldzielnia.yaml` wzbogacona o pełną definicję
+        z Art. 1 §1 (blok `definition`, w formacie zgodnym z przykładem
+        z PROJECT_CONCEPT.md sekcja 40) oraz o Art. 2, 3, 7, 11.
+      - Nowa encja `ontology/entities/statut.yaml` i relacja
+        `ontology/relations/has_statute.yaml`.
+      - `rules/R-PS-0007..0011` (Art. 1 §1 DEFINITION, Art. 1 §2 PERMISSION,
+        Art. 2 STRUCTURAL, Art. 3 STRUCTURAL, Art. 5 OBLIGATION z jawnymi
+        odesłaniami do R-PS-0003/0004/0006/0016).
+      - `procedures/R-PS-0012-cooperative-founding.yaml` (Art. 6, 7, 11) i
+        `R-PS-0013-statute-amendment.yaml` (Art. 12a).
+      - `rules/R-PS-0014.yaml` (Art. 14, Monitor Spółdzielczy).
+      - Nowy event `CooperativeRegistered` + przejście `null -> ACTIVE` w
+        `ontology/states/membership_status.yaml` — **domyka lukę z Phase 1**
+        ("poza zakresem: założyciele stają się członkami z rejestracją").
+      - Weryfikacja skryptem: 12 eventów, 9 stanów, każde przejście pokryte
+        (jak przy Art. 15-28).
 
 **Nie zrobione jeszcze (świadomie, poza zakresem tego kroku):**
 
-- Reguły (Phase 2) dla Art. 1-14. Art. 1 §1 zawiera definicję legalną
-  Spółdzielni - to bezpośredni kandydat do wzbogacenia
-  `ontology/entities/spoldzielnia.yaml` (obecnie ta encja ma tylko
-  właściwości potrzebne dla Art. 15-28, nie pełną definicję ustawową).
-  Art. 5 (wymagana treść statutu) i Art. 6/11/12a (zakładanie, rejestracja,
-  zmiana statutu) też się nadają na reguły, ale to następny krok, nie ten.
+- Art. 4, 6 §3-§6, 8, 8a, 9, 10, 12, 13 — uchylone, brak treści do
+  formalizacji (celowo pominięte).
+- Art. 6 §2a (grupy producentów rolnych) sformalizowane tylko jako próg
+  liczbowy w `founder_count_thresholds` procedury R-PS-0012, bez pełnej
+  formalizacji tej poddomeny (nierelewantna dla spółdzielni mieszkaniowej).
+- Testy (GIVEN/WHEN/THEN) dla nowych reguł/procedur — jeszcze żadna reguła
+  w całym repo (Art. 1-28) nie ma testu; to zaległość ogólna, nie tylko
+  tego kroku.
 - Normalizacja Działu IV i dalszych (Organy spółdzielni, Art. 29 i dalej) —
   możliwy naturalny kolejny krok "do tyłu do przodu", ale nie ustalony.
 

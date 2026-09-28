@@ -1,0 +1,16 @@
+id: R-PS-0009
+norm_type: STRUCTURAL
+title: "Podstawa prawna działania spółdzielni"
+source:
+  act: "Prawo spółdzielcze"
+  article: "2"
+  normalized_ref: "PS-ART-002"
+subject: "Spółdzielnia"
+statement: "Spółdzielnia prowadzi działalność na podstawie niniejszej ustawy, innych ustaw oraz zarejestrowanego statutu."
+legal_basis_hierarchy:
+  - "Prawo spółdzielcze (ta ustawa)"
+  - "inne ustawy"
+  - "zarejestrowany statut"
+formalization_status: DIRECT
+tests: []
+note: "Norma nie precyzuje kolejności pierwszeństwa między tymi trzema źródłami w razie kolizji (to inne zagadnienie niż PROJECT_CONCEPT.md sekcja 28 hierarchia prawa - tu chodzi o wyliczenie podstaw, nie o rozstrzyganie konfliktów między nimi). 'Zarejestrowany' jest tu istotnym warunkiem - patrz PS-ART-012A §3 (zmiana statutu nieskuteczna przed wpisem do KRS) i R-PS-0013."

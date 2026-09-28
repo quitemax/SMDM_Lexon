@@ -1,0 +1,35 @@
+id: R-PS-0011
+norm_type: OBLIGATION
+title: "Wymagana treść statutu"
+source:
+  act: "Prawo spółdzielcze"
+  article: "5"
+  paragraph: "1"
+  normalized_ref: "PS-ART-005"
+subject: "Statut"
+holder: "Spółdzielnia (za pośrednictwem statutu)"
+statement: "Statut spółdzielni powinien określać:"
+items:
+  - id: R1
+    text: "oznaczenie nazwy z dodatkiem „spółdzielnia” lub „spółdzielczy” i podaniem jej siedziby"
+  - id: R2
+    text: "przedmiot działalności spółdzielni oraz czas trwania, o ile założono ją na czas określony"
+  - id: R3
+    text: "wysokość wpisowego oraz wysokość i ilość udziałów, które członek obowiązany jest zadeklarować, terminy wnoszenia i zwrotu oraz skutki niewniesienia udziału w terminie"
+    related_rules: ["R-PS-0011-note: patrz też R-PS-0013 (Art. 20 §1, jeden udział domyślnie)"]
+  - id: R4
+    text: "prawa i obowiązki członków"
+    related_rules: ["R-PS-0004", "R-PS-0006"]
+  - id: R5
+    text: "zasady i tryb przyjmowania członków, wypowiadania członkostwa, wykreślania i wykluczania członków"
+    related_rules: ["R-PS-0003 (procedura przyjęcia)", "R-PS-0016 (procedura wykluczenia/wykreślenia)"]
+  - id: R6
+    text: "zasady zwoływania walnych zgromadzeń, obradowania na nich i podejmowania uchwał"
+  - id: R7
+    text: "zasady i tryb wyboru oraz odwoływania członków organów spółdzielni"
+  - id: R8
+    text: "zasady podziału nadwyżki bilansowej (dochodu ogólnego) oraz pokrywania strat spółdzielni"
+residual_clause: "Statut ponadto powinien zawierać postanowienia, których wprowadzenia wymagają inne przepisy tej ustawy, oraz może zawierać inne postanowienia (§2) - odesłanie otwarte, nie rozstrzygane tutaj."
+formalization_status: DIRECT
+tests: []
+note: "R5 jest źródłową podstawą tego, że Prawo spółdzielcze samo w sobie NIE rozstrzyga trybu przyjęcia/wykluczenia w sposób wyczerpujący - pozostawia to statutowi (patrz R-PS-0003 §4, R-PS-0016 §4, i OBS-0001 dla przypadku spółdzielni mieszkaniowej). Pola 'related_rules' łączą wymóg treściowy z już sformalizowanymi regułami dla Art. 15-28 - to pierwszy przykład jawnego odesłania między dwoma niezależnie sformalizowanymi fragmentami tej samej ustawy (AGENTS.md sekcja 14)."

@@ -1,0 +1,14 @@
+event: "CooperativeRegistered"
+description: "Spółdzielnia została wpisana do Krajowego Rejestru Sądowego. Nabywa osobowość prawną, a założyciele, którzy podpisali statut, stają się jej członkami."
+payload:
+  - name: cooperative
+    type: "-> Spółdzielnia"
+  - name: founders
+    type: "List<-> Osoba>"
+    description: "Założyciele, którzy podpisali statut (patrz PS-ART-006 §1) - stają się członkami tym samym zdarzeniem."
+  - name: registration_date
+    type: Date
+triggers_transition: "dla Spółdzielnia: legal_personality_acquired = true (nie jest to przejście MembershipStatus); dla każdego z founders: null -> ACTIVE (MembershipStatus)"
+source: "PS-ART-011 §1, PS-ART-017 §1 zdanie pierwsze"
+formalization_status: STRUCTURAL
+note: "Jedyny event w tym fragmencie, który jednocześnie: (a) zmienia stan encji Spółdzielnia (nie objętej przez MembershipStatus), i (b) wywołuje N równoległych przejść null -> ACTIVE (po jednym na każdego founder), zamiast jednego przejścia dla jednego Członka jak pozostałe eventy w ontology/events/. To świadoma decyzja modelująca (AGENTS.md sekcja 57), nie przeoczenie - odróżnia to od DeclarationSubmitted/MemberAdmitted, które dotyczą przystąpienia PO rejestracji (PS-ART-017 §1 zdanie drugie, patrz procedures/R-PS-0003)."

@@ -1,0 +1,56 @@
+id: R-PS-0012
+norm_type: PROCEDURE
+name: "CooperativeFounding"
+title: "Założenie i zarejestrowanie spółdzielni"
+source:
+  act: "Prawo spółdzielcze"
+  article: ["6", "7", "11"]
+  normalized_ref: ["PS-ART-006", "PS-ART-007", "PS-ART-011"]
+actors:
+  founders: "List<Osoba> (założyciele)"
+steps:
+  - step: 1
+    name: "adopt_and_sign_statute"
+    actor: founders
+    action: "Uchwalenie statutu spółdzielni i potwierdzenie jego przyjęcia przez złożenie pod nim podpisów."
+    precondition: "liczba założycieli spełnia próg minimalny (patrz founder_count_thresholds)"
+    source: "PS-ART-006 §1"
+  - step: 2
+    name: "select_organizing_body"
+    actor: founders
+    action: "Dokonanie wyboru organów spółdzielni, których wybór należy w myśl statutu do kompetencji walnego zgromadzenia, albo wybór komisji organizacyjnej w składzie co najmniej trzech osób."
+    source: "PS-ART-006 §1"
+  - step: 3
+    name: "register_with_krs"
+    actor: "Spółdzielnia (w organizacji)"
+    action: "Wystąpienie o wpis do Krajowego Rejestru Sądowego."
+    postcondition: "Spółdzielnia.registered_in_krs = true"
+    source: "PS-ART-007"
+  - step: 4
+    name: "acquire_legal_personality"
+    action: "Nabycie osobowości prawnej i - równocześnie - powstanie członkostwa założycieli, którzy podpisali statut."
+    precondition: "krok 3 zakończony"
+    postcondition: "Spółdzielnia.legal_personality_acquired = true; dla każdego założyciela, który podpisał statut: Membership.status = ACTIVE"
+    triggers_event: "CooperativeRegistered"
+    source: "PS-ART-011 §1, PS-ART-017 §1 zdanie pierwsze"
+    note: "To domyka uproszczenie odnotowane w Phase 1 przy formalizacji Art. 15-28 (ontology/states/membership_status.yaml zawierał adnotację: 'poza zakresem: przejście null -> ACTIVE dla założycieli spółdzielni z chwilą jej rejestracji'). Teraz, gdy Dział II jest sformalizowany, ten przypadek jest opisany - patrz zaktualizowany plik stanu i nowy event CooperativeRegistered."
+founder_count_thresholds:
+  - condition: "założyciele - osoby fizyczne (przypadek ogólny)"
+    minimum: 10
+    source: "PS-ART-006 §2 zdanie 1"
+  - condition: "założyciele - osoby prawne"
+    minimum: 3
+    source: "PS-ART-006 §2 zdanie 1"
+  - condition: "spółdzielnia produkcji rolnej, założyciele - osoby fizyczne"
+    minimum: 5
+    source: "PS-ART-006 §2 zdanie 2"
+  - condition: "spółdzielnia, o której mowa w PS-ART-006 §2a (grupy producentów rolnych/owoców i warzyw)"
+    minimum: 5
+    source: "PS-ART-006 §2a"
+    note: "Poza głównym zakresem projektu (dotyczy rolnictwa, nie spółdzielni mieszkaniowej) - uwzględnione dla kompletności progu, bez dalszej formalizacji grup producentów rolnych jako osobnej domeny."
+liability_before_registration:
+  text: "Za czynności dokonane w interesie spółdzielni przed zarejestrowaniem osoby działające do chwili zarejestrowania odpowiadają wobec osób trzecich solidarnie. Po zarejestrowaniu spółdzielnia odpowiada za wynikające z nich zobowiązania tak, jak za zaciągnięte przez siebie. Jednakże osoby działające przed zarejestrowaniem odpowiadają wobec spółdzielni według przepisów prawa cywilnego."
+  source: "PS-ART-011 §2"
+  formalization_status: DIRECT
+formalization_status: STRUCTURAL
+tests: []

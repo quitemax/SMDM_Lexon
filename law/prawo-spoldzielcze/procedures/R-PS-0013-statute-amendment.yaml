@@ -1,0 +1,36 @@
+id: R-PS-0013
+norm_type: PROCEDURE
+name: "StatuteAmendment"
+title: "Zmiana statutu"
+source:
+  act: "Prawo spółdzielcze"
+  article: "12a"
+  normalized_ref: "PS-ART-012A"
+actors:
+  walne_zgromadzenie: "WalneZgromadzenie"
+  zarzad: "Zarząd"
+steps:
+  - step: 1
+    name: "resolve_amendment"
+    actor: walne_zgromadzenie
+    action: "Podjęcie uchwały o zmianie statutu."
+    required_majority: "2/3 głosów"
+    source: "PS-ART-012A §1"
+  - step: 2
+    name: "file_with_registry_court"
+    actor: zarzad
+    action: "Zgłoszenie uchwały o zmianie statutu do sądu rejestrowego wraz z dwoma odpisami protokołu walnego zgromadzenia."
+    deadline:
+      duration: 30
+      unit: DAYS
+      start_event: "uchwała z kroku 1"
+      type: STATUTORY
+    source: "PS-ART-012A §2"
+  - step: 3
+    name: "registration_effect"
+    action: "Zmiana statutu wywołuje skutki prawne dopiero z chwilą wpisania do Krajowego Rejestru Sądowego."
+    postcondition: "Statut.registered_in_krs = true"
+    source: "PS-ART-012A §3"
+formalization_status: DIRECT
+tests: []
+note: "Krótsza i prostsza procedura niż R-PS-0003/R-PS-0016 - brak rozgałęzień, jeden jasny termin ustawowy (30 dni), brak odwołań. Dobry kontrastowy przykład 'łatwej' procedury obok dwóch złożonych z Art. 15-28."

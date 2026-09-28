@@ -1,15 +1,19 @@
 # ontology/
 
 Encje, relacje, stany i zdarzenia domeny Prawa spółdzielczego w zakresie
-Art. 15–28 (członkostwo) — patrz PROJECT_CONCEPT.md sekcje 7–10.
+Art. 1–28 (definicja, zakładanie, statut, członkostwo) — patrz
+PROJECT_CONCEPT.md sekcje 7–10.
 
 ```
-entities/    ENTITY  - Osoba, Spółdzielnia, Członek, Deklaracja, Udział,
+entities/    ENTITY  - Osoba, Spółdzielnia (pełna definicja z Art. 1),
+                       Statut, Członek, Deklaracja, Udział,
                        Zarząd, RadaNadzorcza, WalneZgromadzenie
-relations/   RELATION - MEMBER_OF, ORGAN_OF, DECLARES, ADMITTED_BY,
-                        EXCLUDED_BY, INHERITS_SHARES_FROM, BENEFICIARY_OF
+relations/   RELATION - HAS_STATUTE, MEMBER_OF, ORGAN_OF, DECLARES,
+                        ADMITTED_BY, EXCLUDED_BY, INHERITS_SHARES_FROM,
+                        BENEFICIARY_OF
 states/      STATE   - cykl życia członkostwa (MembershipStatus)
-events/      EVENT   - DeclarationSubmitted, MemberAdmitted, ...
+events/      EVENT   - CooperativeRegistered, DeclarationSubmitted,
+                       MemberAdmitted, ... (12 razem, patrz plik stanu)
 ```
 
 Każdy plik niesie `source` (klucz jednostki z `../normalized/`) i

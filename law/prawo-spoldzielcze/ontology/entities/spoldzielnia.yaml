@@ -1,5 +1,23 @@
 entity: "Spółdzielnia"
-description: "Podmiot, którego dotyczy Prawo spółdzielcze. Właściwości ograniczone do zakresu Art. 15-28 (członkostwo) - nie modelujemy tu pełnego ustroju (organy, majątek, likwidacja) spoza tego fragmentu."
+description: "Podmiot, którego dotyczy Prawo spółdzielcze. Definicja ustawowa (Art. 1) i podstawy działania (Art. 2-3, 7, 11) są tu sformalizowane w pełni; wewnętrzny ustrój (organy w szczegółach, gospodarka, likwidacja) pozostaje poza zakresem Art. 1-28."
+definition:
+  source: "PS-ART-001 §1"
+  formalization_status: DIRECT
+  asserts:
+    - "dobrowolne_zrzeszenie"
+    - "osób"
+    - "o_nieograniczonej_liczbie"
+    - "o_zmiennym_składzie_osobowym"
+    - "o_zmiennym_funduszu_udziałowym"
+  purpose:
+    text: "prowadzi wspólną działalność gospodarczą w interesie swoich członków"
+    source: "PS-ART-001 §1"
+  note: "Ten blok jest bezpośrednim odwzorowaniem przykładu z PROJECT_CONCEPT.md sekcja 40 (RULE R-PS-001 dla Art. 1) - patrz też rules/R-PS-0007.yaml dla pełnej formalizacji jako RULE z provenance."
+additional_permitted_activity:
+  text: "może prowadzić działalność społeczną i oświatowo-kulturalną na rzecz swoich członków i ich środowiska"
+  norm_type: PERMISSION
+  source: "PS-ART-001 §2"
+  note: "PERMISSION, nie OBLIGATION - spółdzielnia nie musi prowadzić takiej działalności (AGENTS.md sekcja 20: PERMISSION != OBLIGATION). Patrz rules/R-PS-0008.yaml."
 properties:
   - name: member_type
     type: "Enum(ONLY_NATURAL_PERSONS, ONLY_LEGAL_PERSONS, MIXED)"
@@ -9,7 +27,24 @@ properties:
     type: Integer
     description: "10 dla spółdzielni ogólnej, 5 dla spółdzielni produkcji rolnej / art. 6 §2a, 3 gdy członkami są wyłącznie osoby prawne - chyba że statut wymaga liczby większej."
     source: "PS-ART-015 §1, §5"
+  - name: legal_personality_acquired
+    type: Boolean
+    description: "Spółdzielnia nabywa osobowość prawną z chwilą wpisania do Krajowego Rejestru Sądowego - przed tym momentem nie istnieje jako odrębny podmiot prawa (patrz PS-ART-011 §2 o odpowiedzialności za czynności sprzed rejestracji)."
+    source: "PS-ART-011 §1"
+  - name: registered_in_krs
+    type: Boolean
+    description: "Podlega obowiązkowi wpisu do Krajowego Rejestru Sądowego."
+    source: "PS-ART-007"
+  - name: legal_basis
+    type: "List<Enum(USTAWA_PRAWO_SPOLDZIELCZE, INNE_USTAWY, ZAREJESTROWANY_STATUT)>"
+    description: "Prowadzi działalność na podstawie niniejszej ustawy, innych ustaw oraz zarejestrowanego statutu."
+    source: "PS-ART-002"
+  - name: assets_ownership
+    type: "Enum(PRYWATNA_WLASNOSC_CZLONKOW)"
+    description: "Majątek spółdzielni jest prywatną własnością jej członków."
+    source: "PS-ART-003"
 relations:
   - "MEMBER_OF (odwrotność) - Członkowie tej Spółdzielni"
   - "ORGAN_OF (odwrotność) - Zarząd, RadaNadzorcza, WalneZgromadzenie tej Spółdzielni"
+  - "HAS_STATUTE -> Statut"
 formalization_status: STRUCTURAL
