@@ -35,7 +35,7 @@
           <lexon:sourceCommit>7fcaed372cbe56f58c3ee4aa1d5fb6eee15b83ee</lexon:sourceCommit>
           <lexon:dzU>Dz.U. 2026 poz. 521</lexon:dzU>
           <lexon:textType>tekst jednolity</lexon:textType>
-          <lexon:coverage>Art. 1-172 (Tytuł I w całości, Art. 1-137; Tytuł II Dział I - Spółdzielnie produkcji rolnej - Art. 138-172 i 178, w tym Rozdział/Oddział). Tytuł II Dział II i dalej (Art. 180 i kolejne) oraz Część II, III jeszcze nie skonwertowane.</lexon:coverage>
+          <lexon:coverage>Art. 1-203 - CAŁY TYTUŁ I I II (Część I w całości: przepisy wspólne + spółdzielnie produkcji rolnej/kółek rolniczych/pracy). Część II (Związki spółdzielcze i Krajowa Rada Spółdzielcza) i Część III (zmiany w przepisach, przepisy przejściowe) jeszcze nie skonwertowane.</lexon:coverage>
           <lexon:eliStatus>CONSTRUCTED - wzorzec URI zgodny ze standardowym schematem polskiego ELI (https://eli.gov.pl/eli/DU/{rok}/{pozycja}), NIE zweryfikowany wywołaniem na żywo względem eli.gov.pl/isap.sejm.gov.pl w tej sesji. Numer pozycji Dziennika Ustaw z pierwotnego uchwalenia (1982 r., przed ujednoliceniem) jest UNKNOWN - nieustalony w naszych źródłach, dlatego FRBRWork ponownie używa pozycji tekstu jednolitego (2026 poz. 521) jako zastępczego kotwiczenia identyfikatora, co jest uproszczeniem do skorygowania, jeśli oryginalny numer zostanie kiedyś potwierdzony.</lexon:eliStatus>
           <lexon:mappingNote>Mapowanie struktury polskiej ustawy na elementy Akoma Ntoso jest własną decyzją projektową (brak potwierdzonego oficjalnego polskiego profilu AKN w naszych źródłach): Część→part, Tytuł→hcontainer[name=tytul], Dział→hcontainer[name=dzial], Artykuł→article, §→paragraph, punkt→point (w list). Patrz normalized/akoma-ntoso/README.md.</lexon:mappingNote>
           <lexon:citationKey pattern="PS-ART-{numer}">Klucz cytowania używany w law/prawo-spoldzielcze/rules,procedures,ontology (np. "PS-ART-015") odpowiada 1:1 elementowi eId="art_{numer}" w tym pliku (np. eId="art_15"). Patrz docs/dsl.md.</lexon:citationKey>
@@ -2619,6 +2619,375 @@
               <num>Rozdział 4</num>
               <heading>(uchylony)</heading>
             </hcontainer>
+          </hcontainer>
+
+          <hcontainer name="dzial" eId="czesc_I__tyt_II__dzial_II">
+            <num>Dział II</num>
+            <heading>Spółdzielnie kółek rolniczych (usług rolniczych)</heading>
+
+            <article eId="art_180">
+              <num>Art. 180.</num>
+              <paragraph eId="art_180__par_1">
+                <num>§ 1.</num>
+                <content><p>Przedmiotem gospodarczej działalności spółdzielni kółek rolniczych (usług rolniczych) jest świadczenie usług dla rolnictwa i innych rodzajów usług wynikających z potrzeb środowiska wiejskiego.</p></content>
+              </paragraph>
+              <paragraph eId="art_180__par_2">
+                <num>§ 2.</num>
+                <content><p>Spółdzielnia może również zajmować się wytwarzaniem środków i materiałów dla rolnictwa, przetwórstwem rolnym i produkcją rolną (prowadzeniem gospodarstwa rolnego).</p></content>
+              </paragraph>
+              <paragraph eId="art_180__par_3">
+                <num>§ 3.</num>
+                <content><p>W wypadku gdy spółdzielnia zrzesza obok osób prawnych również osoby fizyczne i zajmuje się produkcją rolną (prowadzeniem gospodarstwa rolnego), a jej członkowie-osoby fizyczne mają według statutu wynikający z członkostwa obowiązek wnoszenia w całości lub części wkładów gruntowych i pieniężnych, to w braku odmiennych postanowień statutowych stosuje się do nich odpowiednio przepisy art. 142–145, 147–149, 151–154 i odpowiednie przepisy Kodeksu cywilnego dotyczące rolniczych spółdzielni produkcyjnych.</p></content>
+              </paragraph>
+            </article>
+          </hcontainer>
+
+          <hcontainer name="dzial" eId="czesc_I__tyt_II__dzial_III">
+            <num>Dział III</num>
+            <heading>Spółdzielnie pracy</heading>
+
+            <article eId="art_181">
+              <num>Art. 181.</num>
+              <content><p>Przedmiotem gospodarczej działalności spółdzielni pracy jest prowadzenie wspólnego przedsiębiorstwa w oparciu o osobistą pracę członków.</p></content>
+            </article>
+
+            <article eId="art_181a">
+              <num>Art. 181a.</num>
+              <paragraph eId="art_181a__par_1">
+                <num>§ 1.</num>
+                <content><p>Przedmiotem działalności spółdzielni inwalidów i spółdzielni niewidomych jest zawodowa i społeczna rehabilitacja inwalidów i niewidomych przez pracę w prowadzonym wspólnie przedsiębiorstwie.</p></content>
+              </paragraph>
+              <paragraph eId="art_181a__par_2">
+                <num>§ 2.</num>
+                <content><p>Spółdzielnie pracy rękodzieła ludowego i artystycznego tworzą nowe i kultywują tradycyjne wartości kultury materialnej, organizują i rozwijają rękodzieło ludowe i artystyczne, sztukę i przemysł artystyczny.</p></content>
+              </paragraph>
+              <paragraph eId="art_181a__par_3">
+                <num>§ 3.</num>
+                <content><p>W celu zapewnienia warunków wykonywania zadań statutowych, mających szczególny charakter społeczny, spółdzielnie, o których mowa w § 1 i 2, korzystają z wszechstronnej pomocy organów władzy państwowej oraz administracji rządowej i samorządowej oraz ze zwolnień i ulg w świadczeniach publicznoprawnych, określonych w odrębnych przepisach.</p></content>
+              </paragraph>
+              <paragraph eId="art_181a__par_4" status="repealed">
+                <num>§ 4.</num>
+                <content><p>(uchylony)</p></content>
+              </paragraph>
+            </article>
+
+            <article eId="art_182">
+              <num>Art. 182.</num>
+              <paragraph eId="art_182__par_1">
+                <num>§ 1.</num>
+                <content><p>Spółdzielnia i członek spółdzielni mają obowiązek pozostawania ze sobą w stosunku pracy. Poza wyjątkami przewidzianymi w przepisach ustawy odmowa nawiązania stosunku pracy lub pozostawania w takim stosunku stanowi naruszenie istotnych praw i obowiązków wynikających ze stosunku członkostwa.</p></content>
+              </paragraph>
+              <paragraph eId="art_182__par_2">
+                <num>§ 2.</num>
+                <content><p>Członek ma prawo do zatrudnienia stosownie do swoich kwalifikacji zawodowych i osobistych oraz aktualnych możliwości gospodarczych spółdzielni.</p></content>
+              </paragraph>
+              <paragraph eId="art_182__par_3">
+                <num>§ 3.</num>
+                <content><p>Stosunek pracy pomiędzy spółdzielnią a jej członkiem nawiązuje się przez spółdzielczą umowę o pracę.</p></content>
+              </paragraph>
+              <paragraph eId="art_182__par_4">
+                <num>§ 4.</num>
+                <content><p>W razie nienawiązania stosunku pracy z winy spółdzielni, członek może dochodzić przez cały czas trwania członkostwa zawarcia spółdzielczej umowy o pracę. Niezależnie od tego może on, w ciągu roku od dnia powstania członkostwa, dochodzić odszkodowania według przepisów prawa cywilnego.</p></content>
+              </paragraph>
+            </article>
+
+            <article eId="art_183">
+              <num>Art. 183.</num>
+              <paragraph eId="art_183__par_1">
+                <num>§ 1.</num>
+                <content><p>Za pracę w spółdzielni członek spółdzielni otrzymuje wynagrodzenie, na które składa się wynagrodzenie bieżące i udział w części nadwyżki bilansowej przeznaczonej do podziału między członków zgodnie z zasadami ustalonymi w statucie.</p></content>
+              </paragraph>
+              <paragraph eId="art_183__par_2">
+                <num>§ 2.</num>
+                <content><p>Wynagrodzenie bieżące członka i jego udział w nadwyżce bilansowej korzystają z ochrony, jaką prawo zapewnia wynagrodzeniu pracownika.</p></content>
+              </paragraph>
+            </article>
+
+            <article eId="art_184">
+              <num>Art. 184.</num>
+              <paragraph eId="art_184__par_1">
+                <num>§ 1.</num>
+                <content><p>Wypowiedzenie członkowi spółdzielni warunków pracy lub płacy jest dopuszczalne:</p></content>
+                <list eId="art_184__par_1__lst">
+                  <point eId="art_184__par_1__pkt_1">
+                    <num>1)</num>
+                    <content><p>gdy jest uzasadnione potrzebami gospodarczymi lub organizacyjnymi spółdzielni, a w szczególności wprowadzeniem nowych zasad wynagradzania, likwidacją działu pracy, w którym członek jest zatrudniony, likwidacją zajmowanego przez niego stanowiska pracy albo koniecznością zatrudnienia na danym stanowisku osoby o wyższych lub specjalnych kwalifikacjach;</p></content>
+                  </point>
+                  <point eId="art_184__par_1__pkt_2">
+                    <num>2)</num>
+                    <content><p>w razie utraty przez członka zdolności do wykonywania dotychczasowej pracy stwierdzonej orzeczeniem lekarskim albo niezawinionej przez niego utraty uprawnień koniecznych do jej wykonywania.</p></content>
+                  </point>
+                </list>
+              </paragraph>
+              <paragraph eId="art_184__par_2">
+                <num>§ 2.</num>
+                <content><p>Zaproponowane członkowi nowe warunki pracy lub płacy powinny odpowiadać jego kwalifikacjom i możliwościom gospodarczym spółdzielni.</p></content>
+              </paragraph>
+            </article>
+
+            <article eId="art_185">
+              <num>Art. 185.</num>
+              <content><p>W razie gospodarczej konieczności walne zgromadzenie, w celu zapewnienia pracy wszystkim członkom, może skrócić równomiernie czas pracy i zmniejszyć odpowiednio wynagrodzenie członków bez wypowiedzenia spółdzielczej umowy o pracę lub jej warunków. Uchwała walnego zgromadzenia powinna dotyczyć co najmniej jednego działu pracy lub wszystkich członków wykonujących pracę tego samego rodzaju.</p></content>
+            </article>
+
+            <article eId="art_186">
+              <num>Art. 186.</num>
+              <paragraph eId="art_186__par_1">
+                <num>§ 1.</num>
+                <content><p>Spółdzielcza umowa o pracę wygasa z ustaniem członkostwa oraz w wypadkach, w których przepisy prawa pracy przewidują wygaśnięcie umowy o pracę z mocy prawa.</p></content>
+              </paragraph>
+              <paragraph eId="art_186__par_2">
+                <num>§ 2.</num>
+                <content><p>Rozwiązanie spółdzielczej umowy o pracę w czasie trwania członkostwa jest niedopuszczalne, z wyjątkiem wypadków przewidzianych w art. 187 i 189 oraz rozwiązania tej umowy na skutek nieuzasadnionej odmowy przyjęcia nowych warunków pracy lub płacy, a także rozwiązania jej na mocy porozumienia stron przy jednoczesnym wypowiedzeniu przez członka członkostwa.</p></content>
+              </paragraph>
+            </article>
+
+            <article eId="art_187">
+              <num>Art. 187.</num>
+              <content><p>Spółdzielnia może rozwiązać z członkiem spółdzielczą umowę o pracę w czasie trwania członkostwa, z zachowaniem przewidzianego w Kodeksie pracy okresu wypowiedzenia, w razie:</p></content>
+              <list eId="art_187__lst">
+                <point eId="art_187__pkt_1">
+                  <num>1)</num>
+                  <content><p>zmniejszenia na podstawie uchwały rady spółdzielni stanu zatrudnienia podyktowanego gospodarczą koniecznością;</p></content>
+                </point>
+                <point eId="art_187__pkt_2">
+                  <num>2)</num>
+                  <content><p>przyznania członkowi prawa do emerytury.</p></content>
+                </point>
+              </list>
+            </article>
+
+            <article eId="art_188">
+              <num>Art. 188.</num>
+              <paragraph eId="art_188__par_1">
+                <num>§ 1.</num>
+                <content><p>W razie naruszenia przez spółdzielnię przepisów art. 184, art. 187 i art. 191, członkowi spółdzielni służy roszczenie o orzeczenie bezskuteczności wypowiedzenia spółdzielczej umowy o pracę lub jej warunków, a jeżeli spółdzielcza umowa o pracę uległa już rozwiązaniu – roszczenie o przywrócenie do pracy na poprzednich warunkach.</p></content>
+              </paragraph>
+              <paragraph eId="art_188__par_2">
+                <num>§ 2.</num>
+                <content><p>Członkowi spółdzielni, który podjął pracę w wyniku przywrócenia do pracy, przysługuje za czas pozostawania bez pracy, niedłuższy jednak niż sześć miesięcy, wynagrodzenie obliczone na podstawie przeciętnego wynagrodzenia bieżącego z ostatnich trzech miesięcy oraz odpowiedni udział w części nadwyżki bilansowej.</p></content>
+              </paragraph>
+              <paragraph eId="art_188__par_3">
+                <num>§ 3.</num>
+                <content><p>Przepis paragrafu poprzedzającego stosuje się odpowiednio do członka spółdzielni, który po wypowiedzeniu mu warunków pracy lub płacy z naruszeniem art. 184 przystąpił do pracy na warunkach określonych w tym wypowiedzeniu.</p></content>
+              </paragraph>
+            </article>
+
+            <article eId="art_189">
+              <num>Art. 189.</num>
+              <paragraph eId="art_189__par_1">
+                <num>§ 1.</num>
+                <content><p>W czasie trwania członkostwa spółdzielnia może rozwiązać spółdzielczą umowę o pracę bez wypowiedzenia tylko z przyczyn uzasadniających według przepisów Kodeksu pracy takie rozwiązanie umowy bez winy pracownika.</p></content>
+              </paragraph>
+              <paragraph eId="art_189__par_2">
+                <num>§ 2.</num>
+                <content><p>Członkowi, z którym rozwiązano spółdzielczą umowę o pracę bez wypowiedzenia mimo braku przyczyn, o których mowa w paragrafie poprzedzającym, lub z naruszeniem przepisu art. 191, służy roszczenie o przywrócenie do pracy na poprzednich warunkach.</p></content>
+              </paragraph>
+              <paragraph eId="art_189__par_3">
+                <num>§ 3.</num>
+                <content><p>Członkowi, który podjął pracę w wyniku przywrócenia do pracy, przysługuje wynagrodzenie za czas pozostawania bez pracy według zasad określonych w art. 188 § 2, niemniej jednak niż w wysokości jednomiesięcznego wynagrodzenia.</p></content>
+              </paragraph>
+            </article>
+
+            <article eId="art_190">
+              <num>Art. 190.</num>
+              <paragraph eId="art_190__par_1">
+                <num>§ 1.</num>
+                <content><p>Wypowiedzenie albo rozwiązanie spółdzielczej umowy o pracę, jak również wypowiedzenie warunków pracy lub płacy wymaga przewidzianego w Kodeksie pracy współdziałania z organami związku zawodowego, jeżeli związek taki działa w spółdzielni.</p></content>
+              </paragraph>
+              <paragraph eId="art_190__par_2">
+                <num>§ 2.</num>
+                <content><p>Przepisy art. 184 oraz art. 187–189 nie wyłączają stosowania korzystniejszych dla członków spółdzielni przepisów prawa pracy, zakazujących lub ograniczających wypowiedzenie umowy o pracę, wypowiedzenie przewidzianych tą umową warunków albo jej rozwiązanie bez wypowiedzenia.</p></content>
+              </paragraph>
+            </article>
+
+            <article eId="art_191">
+              <num>Art. 191.</num>
+              <content><p>Oświadczenie spółdzielni o wypowiedzeniu spółdzielczej umowy o pracę, o rozwiązaniu tej umowy bez wypowiedzenia albo o wypowiedzeniu warunków pracy lub płacy powinno być złożone w formie pisemnej z podaniem przyczyny uzasadniającej wypowiedzenie albo rozwiązanie.</p></content>
+            </article>
+
+            <article eId="art_192">
+              <num>Art. 192.</num>
+              <paragraph eId="art_192__par_1">
+                <num>§ 1.</num>
+                <content><p>Po ustaniu przyczyn, które uzasadniały wypowiedzenie albo rozwiązanie przez spółdzielnię spółdzielczej umowy o pracę bez wypowiedzenia w czasie trwania członkostwa, spółdzielnia i członek spółdzielni obowiązani są zawrzeć spółdzielczą umowę o pracę.</p></content>
+              </paragraph>
+              <paragraph eId="art_192__par_2">
+                <num>§ 2.</num>
+                <content><p>W razie naruszenia przez spółdzielnię obowiązku, o którym mowa w paragrafie poprzedzającym, członkowi spółdzielni służy roszczenie o nawiązaniu spółdzielczej umowy o pracę o treści odpowiadającej aktualnym możliwościom gospodarczym spółdzielni. Członkowi, który podjął pracę, przysługuje wynagrodzenie za czas pozostawania bez pracy na zasadach określonych w art. 188 § 2, z tym że za podstawę obliczenia wysokości przeciętnego wynagrodzenia przyjmuje się wynagrodzenie ustalone dla nowo podjętej pracy.</p></content>
+              </paragraph>
+            </article>
+
+            <article eId="art_193">
+              <num>Art. 193.</num>
+              <paragraph eId="art_193__par_1">
+                <num>§ 1.</num>
+                <content><p>Wykluczenie członka ze spółdzielni może nastąpić:</p></content>
+                <list eId="art_193__par_1__lst">
+                  <point eId="art_193__par_1__pkt_1">
+                    <num>1)</num>
+                    <content><p>z przyczyn uzasadniających według przepisów prawa pracy rozwiązanie umowy o pracę bez wypowiedzenia z winy pracownika;</p></content>
+                  </point>
+                  <point eId="art_193__par_1__pkt_2">
+                    <num>2)</num>
+                    <content><p>w razie ciężkiego naruszenia obowiązków członkowskich lub umyślnego działania na szkodę spółdzielni.</p></content>
+                  </point>
+                </list>
+              </paragraph>
+              <paragraph eId="art_193__par_2">
+                <num>§ 2.</num>
+                <content><p>Przepisy paragrafu poprzedzającego nie wyłączają stosowania art. 24 § 1.</p></content>
+              </paragraph>
+              <paragraph eId="art_193__par_3">
+                <num>§ 3.</num>
+                <content><p>Wykluczenie nie może nastąpić po upływie jednego miesiąca od uzyskania przez spółdzielnię wiadomości o okolicznościach je uzasadniających.</p></content>
+              </paragraph>
+              <paragraph eId="art_193__par_4">
+                <num>§ 4.</num>
+                <content><p>Wykluczenie członka, który był zatrudniony na podstawie spółdzielczej umowy o pracę, pociąga za sobą skutki, jakie przepisy prawa pracy wiążą z rozwiązaniem przez zakład pracy umowy o pracę bez wypowiedzenia z winy pracownika.</p></content>
+              </paragraph>
+            </article>
+
+            <article eId="art_194">
+              <num>Art. 194.</num>
+              <paragraph eId="art_194__par_1">
+                <num>§ 1.</num>
+                <content><p>Wykreślenie z rejestru członków spółdzielni może nastąpić tylko w wypadku, gdy:</p></content>
+                <list eId="art_194__par_1__lst">
+                  <point eId="art_194__par_1__pkt_1">
+                    <num>1)</num>
+                    <content><p>członek nie jest zatrudniony w spółdzielni przez okres dłuższy niż jeden rok z przyczyn niezawinionych przez spółdzielnię;</p></content>
+                  </point>
+                  <point eId="art_194__par_1__pkt_2">
+                    <num>2)</num>
+                    <content><p>członek utracił w znacznym stopniu lub całkowicie zdolność do pracy, a spółdzielnia nie może zatrudnić go na stanowisku odpowiadającym jego ograniczonej zdolności do pracy;</p></content>
+                  </point>
+                  <point eId="art_194__par_1__pkt_3">
+                    <num>3)</num>
+                    <content><p>członek utracił pełną zdolność do czynności prawnych, a statut nie przewiduje członkostwa osób niemających takiej zdolności.</p></content>
+                  </point>
+                </list>
+              </paragraph>
+              <paragraph eId="art_194__par_2">
+                <num>§ 2.</num>
+                <content><p>W wypadku wymienionym w § 1 pkt 2 wykreślenie staje się skuteczne po upływie okresu przewidzianego w Kodeksie pracy dla wypowiedzenia umowy o pracę.</p></content>
+              </paragraph>
+            </article>
+
+            <article eId="art_195">
+              <num>Art. 195.</num>
+              <content><p>Jeżeli w spółdzielni działa związek zawodowy, spółdzielnia podejmuje uchwałę o wykluczeniu członka ze spółdzielni albo o wykreśleniu go z rejestru członków po zasięgnięciu opinii właściwego organu związku zawodowego.</p></content>
+            </article>
+
+            <article eId="art_196">
+              <num>Art. 196.</num>
+              <paragraph eId="art_196__par_1">
+                <num>§ 1.</num>
+                <content><p>Członkowi spółdzielni zatrudnionemu na podstawie spółdzielczej umowy o pracę, którego spółdzielnia wykluczyła lub wykreśliła z rejestru członków z naruszeniem przepisów art. 193–195, przysługują roszczenia przewidziane w przepisach art. 188 § 1 i 2 lub, jeżeli jest to dla członka korzystniejsze, w przepisach prawa pracy dotyczących uprawnienia pracownika w razie niezgodnego z prawem rozwiązania przez zakład pracy umowy o pracę bez wypowiedzenia.</p></content>
+              </paragraph>
+              <paragraph eId="art_196__par_2">
+                <num>§ 2.</num>
+                <content><p>Roszczeń, o których mowa w paragrafie poprzedzającym, członek może dochodzić tylko wtedy, gdy dochodzi uchylenia uchwały o wykluczeniu albo wykreśleniu.</p></content>
+              </paragraph>
+              <paragraph eId="art_196__par_3">
+                <num>§ 3.</num>
+                <content><p>Jeżeli wykluczenie albo wykreślenie było uzasadnione, lecz nastąpiło z naruszeniem przepisu art. 193 § 3 lub art. 195, powództwo członka o uchylenie uchwały o wykluczeniu albo o wykreśleniu i o przywrócenie do pracy może być oddalone, o ile dalsze pozostawanie członka w spółdzielni nie dałoby się pogodzić z zasadami współżycia społecznego.</p></content>
+              </paragraph>
+              <paragraph eId="art_196__par_4">
+                <num>§ 4.</num>
+                <content><p>Członkowi spółdzielni, który mimo bezzasadnego wykluczenia ze spółdzielni albo wykreślenia z rejestru członków nie dochodzi przywrócenia do pracy ani nawiązania członkostwa, przysługuje odszkodowanie odpowiadające wynagrodzeniu za okres wypowiedzenia.</p></content>
+              </paragraph>
+            </article>
+
+            <article eId="art_197">
+              <num>Art. 197.</num>
+              <paragraph eId="art_197__par_1">
+                <num>§ 1.</num>
+                <content><p>Termin do wszczęcia przez członka spółdzielni postępowania przed sądem w sprawach dotyczących wypowiedzenia spółdzielczej umowy o pracę, warunków pracy i płacy, rozwiązania oraz odmowy jej nawiązania wynosi czternaście dni i liczy się od dnia doręczenia pisemnego zawiadomienia członka o oświadczeniu spółdzielni w tych sprawach wraz z uzasadnieniem.</p></content>
+              </paragraph>
+              <paragraph eId="art_197__par_2">
+                <num>§ 2.</num>
+                <content><p>W wypadku wniesienia przez członka odwołania w postępowaniu wewnątrzspółdzielczym, termin określony w § 1 biegnie od dnia doręczenia członkowi spółdzielni zawiadomienia wraz z uzasadnieniem o uchwale organu odwoławczego lub od upływu terminu ustalonego w statucie do podjęcia uchwały przez ten organ.</p></content>
+              </paragraph>
+            </article>
+
+            <article eId="art_198">
+              <num>Art. 198.</num>
+              <paragraph eId="art_198__par_1">
+                <num>§ 1.</num>
+                <content><p>Sprawy o istnienie członkostwa, o wykluczenie ze spółdzielni albo o wykreślenie z rejestru członków, a także sprawy o roszczenia z tytułu niezgodnego z prawem wykluczenia ze spółdzielni albo wykreślenia z rejestru członków rozpoznają sądy właściwe dla spraw o prawa niemajątkowe.</p></content>
+              </paragraph>
+              <paragraph eId="art_198__par_2">
+                <num>§ 2.</num>
+                <content><p>Członek może dochodzić w drodze sądowej uchylenia uchwały rady spółdzielni o wykluczeniu lub wykreśleniu bez wyczerpania postępowania wewnątrzspółdzielczego. W takim wypadku zaskarżeniu przez członka podlega uchwała rady spółdzielni; termin do wniesienia powództwa o uchylenie tej uchwały wynosi sześć tygodni i liczy się od dnia doręczenia członkowi zawiadomienia o wykluczeniu albo wykreśleniu wraz z uzasadnieniem.</p></content>
+              </paragraph>
+              <paragraph eId="art_198__par_3">
+                <num>§ 3.</num>
+                <content><p>Termin określony w paragrafie poprzedzającym dotyczy również dochodzenia przez członka roszczenia o odszkodowanie z tytułu bezzasadnego wykluczenia lub wykreślenia.</p></content>
+              </paragraph>
+            </article>
+
+            <article eId="art_199">
+              <num>Art. 199.</num>
+              <content><p>W sprawach nieuregulowanych przepisami art. 182–198 do spółdzielczej umowy o pracę stosuje się odpowiednio przepisy prawa pracy, z wyjątkiem przepisów Kodeksu pracy o zawieraniu umów o pracę na okres próbny.</p></content>
+            </article>
+
+            <article eId="art_200">
+              <num>Art. 200.</num>
+              <paragraph eId="art_200__par_1">
+                <num>§ 1.</num>
+                <content><p>Statut spółdzielni może uzależnić przyjęcie na członka od odbycia okresu kandydackiego. W takim wypadku statut powinien wskazywać organ spółdzielni uprawniony do przyjmowania kandydatów i określać czas trwania okresu kandydackiego.</p></content>
+              </paragraph>
+              <paragraph eId="art_200__par_2">
+                <num>§ 2.</num>
+                <content><p>W stosunku do kandydatów na członków spółdzielni termin przewidziany w art. 17 § 3 biegnie od dnia zakończenia okresu kandydackiego.</p></content>
+              </paragraph>
+              <paragraph eId="art_200__par_3">
+                <num>§ 3.</num>
+                <content><p>Do kandydatów na członków spółdzielni stosuje się przepisy Kodeksu pracy dotyczące osób zatrudnionych na podstawie umowy o pracę zawartej na czas określony, jednakże stosunek pracy między kandydatem a spółdzielnią może być rozwiązany wcześniej, z zachowaniem terminów i zasad przewidzianych w przepisach Kodeksu pracy dla rozwiązania umowy zawartej na czas nieokreślony.</p></content>
+              </paragraph>
+              <paragraph eId="art_200__par_4">
+                <num>§ 4.</num>
+                <content><p>Statut może przyznać kandydatom niektóre prawa i obowiązki członków spółdzielni.</p></content>
+              </paragraph>
+              <paragraph eId="art_200__par_5">
+                <num>§ 5.</num>
+                <content><p>Pracownicy spółdzielni zatrudnieni co najmniej dwanaście miesięcy na podstawie umowy o pracę zawartej na czas nieokreślony, ubiegający się o przyjęcie na członków spółdzielni, są zwolnieni od odbycia okresu kandydackiego. Spółdzielnia nie może odmówić przyjęcia takiego pracownika na członka, jeżeli spełnia on wymagania statutowe, a spółdzielnia ma możność dalszego jego zatrudnienia.</p></content>
+              </paragraph>
+            </article>
+
+            <article eId="art_201">
+              <num>Art. 201.</num>
+              <paragraph eId="art_201__par_1">
+                <num>§ 1.</num>
+                <content><p>Statut może przewidywać zatrudnienie wszystkich lub niektórych członków nie na podstawie spółdzielczej umowy o pracę, lecz na podstawie umowy o pracę nakładczą, umowy zlecenia lub umowy o dzieło, jeżeli jest to uzasadnione rodzajem działalności spółdzielni. Spółdzielnia ma obowiązek równomiernie rozdzielać pracę między tych członków, z uwzględnieniem ich kwalifikacji.</p></content>
+              </paragraph>
+              <paragraph eId="art_201__par_1a">
+                <num>§ 1a.</num>
+                <content><p>Statut może przewidywać także zatrudnienie wszystkich lub niektórych członków na podstawie umowy o pracę.</p></content>
+              </paragraph>
+              <paragraph eId="art_201__par_2">
+                <num>§ 2.</num>
+                <content><p>Do członków spółdzielni, o których mowa w § 1, stosuje się odpowiednio przepisy art. 182 § 1, 2 i 4, art. 183 oraz art. 186 § 1.</p></content>
+              </paragraph>
+            </article>
+
+            <article eId="art_202">
+              <num>Art. 202.</num>
+              <paragraph eId="art_202__par_1">
+                <num>§ 1.</num>
+                <content><p>Do członków zatrudnionych na podstawie umowy o pracę nakładczą, poza przepisami, o których mowa w art. 201 § 2, stosuje się odpowiednio także przepisy art. 184, 185, 187–198 i 200.</p></content>
+              </paragraph>
+              <paragraph eId="art_202__par_2">
+                <num>§ 2.</num>
+                <content><p>W sprawach nieuregulowanych w art. 201 oraz w paragrafie poprzedzającym stosuje się w zakresie wypowiedzenia umowy o pracę nakładczą, jej rozwiązania bez wypowiedzenia i jej wygaśnięcia odpowiednie przepisy prawa pracy dotyczące umowy o pracę. W pozostałym zakresie stosuje się przepisy tego prawa dotyczące umowy o pracę nakładczą.</p></content>
+              </paragraph>
+            </article>
+
+            <article eId="art_203">
+              <num>Art. 203.</num>
+              <content><p>Statut spółdzielni powinien określać szczegółowe prawa i obowiązki członków zatrudnionych na podstawie umowy zlecenia albo umowy o dzieło oraz przyczyny uzasadniające wykluczenie tych członków ze spółdzielni lub wykreślenie ich z rejestru członków.</p></content>
+            </article>
           </hcontainer>
         </hcontainer>
       </part>

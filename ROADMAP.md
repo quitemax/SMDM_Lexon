@@ -318,6 +318,17 @@ linkami Markdown — 0 rzeczywistych rozbieżności. Reguły nie napisane
 pokrycie: 172 artykuły. Dalej: Dział II (Spółdzielnie kółek rolniczych)
 i Dział III (Spółdzielnie pracy) tego samego Tytułu.
 
+**Aktualizacja — Tytuł II dokończony: Dział II, III dodane (2026-09-28):**
+rozszerzono plik XML o Art. 180 (Dział II, 1 artykuł) i Art. 181-203
+(Dział III — Spółdzielnie pracy, 24 artykuły, w tym własny mini-kodeks
+pracy spółdzielczej: wypowiedzenie, rozwiązanie umowy, wykluczenie z
+naruszeniem prawa pracy). Zweryfikowano skryptem: 68 jednostek tekstu,
+54 identyczne, 14 różniących się usuniętymi linkami Markdown (Dział III
+ma dużo krzyżowych odesłań) — 0 rzeczywistych rozbieżności. **To domyka
+cały Tytuł II i całą Część I ustawy.** Łączne pokrycie: 197 artykułów.
+Dalej: Część II (Związki spółdzielcze, Krajowa Rada Spółdzielcza) i
+Część III (zmiany w przepisach, przepisy przejściowe).
+
 ------------------------------------------------------------------------
 
 ## Phase 0 — research (w toku)

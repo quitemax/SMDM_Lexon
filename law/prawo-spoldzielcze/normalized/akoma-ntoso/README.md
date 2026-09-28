@@ -96,6 +96,15 @@ rozbieżności treści):
   tabela mapowania niżej. Rozdział 2 i 4 tego działu są w całości
   uchylone (bez artykułów, jak Dział V/VI/X wcześniej) - stąd luka w
   numeracji Art. 173-177.
+- **Tytuł II, Dział II — Spółdzielnie kółek rolniczych** (Art. 180, 1
+  artykuł) **i Dział III — Spółdzielnie pracy** (Art. 181-203, 24
+  artykuły; **kończy cały Tytuł II**): 1:1 przeciwko źródłu — 68 jednostek
+  tekstu, 54 identyczne, 14 różniących się usuniętymi linkami Markdown
+  (Dział III ma szczególnie dużo krzyżowych odesłań między artykułami
+  własnego spółdzielczego prawa pracy) — 0 rzeczywistych rozbieżności
+  treści. Od teraz aktualny zasięg dokumentowany wyłącznie w
+  `lexon:coverage` (patrz sekcja "Zawartość" wyżej) - nie duplikowany tu
+  za każdym razem.
 
 ## Decyzje mapowania (własne, nie zweryfikowane wobec oficjalnego polskiego profilu AKN)
 
@@ -150,9 +159,10 @@ jednolitego (2026 poz. 521) jako zastępczego zakotwiczenia identyfikatora.
 
 ## Czego tu nie ma (jeszcze)
 
-- Reszta Tytułu II (Dział II - Spółdzielnie kółek rolniczych, Dział III -
-  Spółdzielnie pracy) i Część II, III — w toku konwersji, patrz
-  `lexon:coverage` w pliku XML po aktualny zasięg.
+- Część II (Związki spółdzielcze, Krajowa Rada Spółdzielcza) i Część III
+  (zmiany w przepisach, przepisy przejściowe) — w toku konwersji, patrz
+  `lexon:coverage` w pliku XML po aktualny zasięg. Cały Tytuł I i II
+  (Część I w całości) jest już kompletny.
 - Walidacja względem oficjalnego schematu XSD Akoma Ntoso 3.0 — zrobiono
   tylko walidację dobrej formy XML (`xml.etree.ElementTree`) i ręczną
   weryfikację 1:1 przeciwko poprzedniej wersji YAML. Brak zainstalowanego
