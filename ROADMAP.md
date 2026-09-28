@@ -5,19 +5,22 @@
 > tu są rozbite na konkretne, sprawdzalne zadania osadzone w realnym materiale
 > źródłowym z `external/SMDM_Knowledge_Base`.
 
-Status ogólny: **Art. 1-34 znormalizowane w całości** (cały Dział I, II, III
-- koniec Tytułu I przed Działem IV), **od 2026-09-28 w formacie Akoma
-Ntoso XML** (`normalized/akoma-ntoso/prawo-spoldzielcze.xml`), nie YAML —
-patrz `docs/decisions/ADR-0001-akoma-ntoso-eli.md`. **Reguły/procedury
-sformalizowane dla Art. 1-3, 5-7, 11, 12a, 14-18, 24** (Art. 4, 8-10, 12,
-13, 33, 34 uchylone). Brakuje jeszcze reguł dla Art. 6 §2a (poza zakresem
-SM), 19-23, 25-32. **Żadna reguła nie ma jeszcze testu** — to następna,
-ogólna zaległość (patrz `tests/` w strukturze repo, wciąż puste).
+Status ogólny: **Art. 1-59 znormalizowane w całości** (Dział I, II, III, IV
+- koniec Tytułu I), w formacie Akoma Ntoso XML
+(`normalized/akoma-ntoso/prawo-spoldzielcze.xml`) — patrz
+`docs/decisions/ADR-0001-akoma-ntoso-eli.md`. **Reguły/procedury
+sformalizowane tylko dla Art. 1-3, 5-7, 11, 12a, 14-18, 24** (Art. 4, 8-10,
+12, 13, 33, 34 uchylone) — czyli Dział IV (Art. 35-59, organy spółdzielni)
+jest na razie **wyłącznie znormalizowany, bez żadnych reguł**. Brakuje też
+reguł dla Art. 6 §2a (poza zakresem SM), 19-23, 25-32. **Żadna reguła nie
+ma jeszcze testu** — to następna, ogólna zaległość (patrz `tests/` w
+strukturze repo, wciąż puste).
 
 **Ustalone tempo (2026-09-28):** normalizacja idzie dział po dziale (jeden
-Dział na raz), zanim wrócimy do pisania reguł. Następny w kolejce: Dział IV
-(Organy spółdzielni, Art. 35 i dalej) - do dodania jako rozszerzenie tego
-samego pliku XML, nie nowe pliki YAML.
+Dział na raz), zanim wrócimy do pisania reguł. Następny w kolejce: Dział V
+i VI (oba w całości uchylone - szybki krok) i Dział VII (Gospodarka
+spółdzielni, Art. 67 i dalej) - do dodania jako rozszerzenie tego samego
+pliku XML.
 
 **Zwrot architektoniczny (2026-09-28):** patrz `docs/LEXON_CONTEXT.md` i
 `docs/decisions/ADR-0001-akoma-ntoso-eli.md`. Warstwa dokumentowa
@@ -217,6 +220,19 @@ przekonwertować całą dotychczasową normalizację (Art. 1-34).
   LegalRuleML jako ewentualny przyszły punkt odniesienia - nierozstrzygnięte.
 - Dział IV i dalsze będą rozszerzać ten sam plik XML (nowe `hcontainer`),
   nie tworzyć nowych plików.
+
+**Aktualizacja — Dział IV dodany (2026-09-28, ten sam dzień):** rozszerzono
+`normalized/akoma-ntoso/prawo-spoldzielcze.xml` o Art. 35-59 (Dział IV —
+Organy spółdzielni, 5 rozdziałów: Walne zgromadzenie, Rada nadzorcza,
+Zarząd, Przepisy wspólne dla rady i zarządu, Zebrania grup członkowskich).
+26 artykułów (w tym 46a, 4 uchylone: 43, 47, 51, 53). Zweryfikowano
+skryptem bezpośrednio przeciwko źródłu (nie przez pośredni YAML, którego
+już nie ma) — 130 jednostek tekstu, 125 identycznych, 5 różniących się
+wyłącznie usuniętą składnią linków Markdown (ten sam, spójny wzorzec co
+przy Art. 1-34) — 0 rzeczywistych rozbieżności. Art. 35 zawiera notację
+`§ 4[1]`-`§ 4[4]` (wstawione paragrafy) zachowaną verbatim. Reguły dla
+Działu IV jeszcze nie napisane (sam Dział jest teraz "kandydatem" do
+Phase 2, podobnie jak wcześniej Art. 19-23/25-32).
 
 ------------------------------------------------------------------------
 

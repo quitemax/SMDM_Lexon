@@ -10,10 +10,25 @@ Tekst źródłowy ustawy w formacie [Akoma Ntoso](http://www.akomantoso.org/)
 
 `prawo-spoldzielcze.xml` — **jeden plik na cały akt** (zgodnie z typową
 praktyką AKN, w odróżnieniu od poprzedniego podejścia "jeden plik na
-artykuł"), obejmujący Art. 1–34 (Dział I, II, III w całości — koniec
-Tytułu I przed Działem IV). Zweryfikowano skryptem 1:1 przeciwko
-poprzednim 37 plikom YAML przed ich usunięciem — 111 jednostek tekstu
-(artykuły/paragrafy/punkty), 0 rozbieżności.
+artykuł"), obejmujący **Art. 1–59** (Dział I–IV w całości, czyli cały
+Tytuł I aż do końca Działu IV — Organy spółdzielni, z rozdziałami: Walne
+zgromadzenie, Rada nadzorcza, Zarząd, Przepisy wspólne dla rady i zarządu,
+Zebrania grup członkowskich).
+
+Weryfikacja tekstu:
+
+- Art. 1-34: zweryfikowano skryptem 1:1 przeciwko poprzednim 37 plikom
+  YAML przed ich usunięciem — 111 jednostek tekstu, 0 rozbieżności.
+- Art. 35-59 (Dział IV): zweryfikowano skryptem 1:1 bezpośrednio przeciwko
+  tekstowi źródłowemu z Knowledge Base (linia po linii, po usunięciu
+  nagłówków/kotwic) — 130 jednostek tekstu, 125 identycznych, 5 różniących
+  się wyłącznie usunięciem składni linków Markdown dodanych przez ostatni
+  commit KB (np. `[art. 6](#art-6)` → `art. 6`, zgodnie z tym samym
+  podejściem co przy Art. 1-34) — **0 rzeczywistych rozbieżności treści**.
+  Dział IV zawiera notację `§ 4[1]`-`§ 4[4]` (wstawione paragrafy, zapis
+  źródła z nawiasami kwadratowymi zamiast indeksu górnego) - zachowana
+  verbatim, eId: `art_35__par_4_1` itd. (podkreślnik zamiast nawiasu, bo
+  eId nie może zawierać nawiasów kwadratowych).
 
 ## Decyzje mapowania (własne, nie zweryfikowane wobec oficjalnego polskiego profilu AKN)
 
@@ -61,9 +76,9 @@ jednolitego (2026 poz. 521) jako zastępczego zakotwiczenia identyfikatora.
 
 ## Czego tu nie ma (jeszcze)
 
-- Art. 35 i dalej (Dział IV — Organy spółdzielni) — do dodania jako
-  kolejne `<hcontainer name="dzial">` w tym samym pliku, dział po dziale,
-  zgodnie z ustalonym tempem.
+- Art. 60 i dalej (Dział V, VI — uchylone w całości; Dział VII — Gospodarka
+  spółdzielni, i dalsze) — do dodania jako kolejne `<hcontainer name="dzial">`
+  w tym samym pliku, dział po dziale, zgodnie z ustalonym tempem.
 - Walidacja względem oficjalnego schematu XSD Akoma Ntoso 3.0 — zrobiono
   tylko walidację dobrej formy XML (`xml.etree.ElementTree`) i ręczną
   weryfikację 1:1 przeciwko poprzedniej wersji YAML. Brak zainstalowanego

@@ -35,7 +35,7 @@
           <lexon:sourceCommit>7fcaed372cbe56f58c3ee4aa1d5fb6eee15b83ee</lexon:sourceCommit>
           <lexon:dzU>Dz.U. 2026 poz. 521</lexon:dzU>
           <lexon:textType>tekst jednolity</lexon:textType>
-          <lexon:coverage>Art. 1-34 (Dział I, II, III w całości - Tytuł I, Część I). Art. 35 i dalej (Dział IV i kolejne) jeszcze nie skonwertowane.</lexon:coverage>
+          <lexon:coverage>Art. 1-59 (Dział I, II, III, IV w całości - koniec Tytułu I, Część I). Art. 60 i dalej (Dział V, VI uchylone; Dział VII i kolejne) jeszcze nie skonwertowane.</lexon:coverage>
           <lexon:eliStatus>CONSTRUCTED - wzorzec URI zgodny ze standardowym schematem polskiego ELI (https://eli.gov.pl/eli/DU/{rok}/{pozycja}), NIE zweryfikowany wywołaniem na żywo względem eli.gov.pl/isap.sejm.gov.pl w tej sesji. Numer pozycji Dziennika Ustaw z pierwotnego uchwalenia (1982 r., przed ujednoliceniem) jest UNKNOWN - nieustalony w naszych źródłach, dlatego FRBRWork ponownie używa pozycji tekstu jednolitego (2026 poz. 521) jako zastępczego kotwiczenia identyfikatora, co jest uproszczeniem do skorygowania, jeśli oryginalny numer zostanie kiedyś potwierdzony.</lexon:eliStatus>
           <lexon:mappingNote>Mapowanie struktury polskiej ustawy na elementy Akoma Ntoso jest własną decyzją projektową (brak potwierdzonego oficjalnego polskiego profilu AKN w naszych źródłach): Część→part, Tytuł→hcontainer[name=tytul], Dział→hcontainer[name=dzial], Artykuł→article, §→paragraph, punkt→point (w list). Patrz normalized/akoma-ntoso/README.md.</lexon:mappingNote>
           <lexon:citationKey pattern="PS-ART-{numer}">Klucz cytowania używany w law/prawo-spoldzielcze/rules,procedures,ontology (np. "PS-ART-015") odpowiada 1:1 elementowi eId="art_{numer}" w tym pliku (np. eId="art_15"). Patrz docs/dsl.md.</lexon:citationKey>
@@ -611,6 +611,650 @@
               <num>Art. 34.</num>
               <content><p>(uchylony)</p></content>
             </article>
+          </hcontainer>
+
+          <hcontainer name="dzial" eId="czesc_I__tyt_I__dzial_IV">
+            <num>Dział IV</num>
+            <heading>Organy spółdzielni</heading>
+
+            <article eId="art_35">
+              <num>Art. 35.</num>
+              <paragraph eId="art_35__par_1">
+                <num>§ 1.</num>
+                <content><p>Organami spółdzielni są:</p></content>
+                <list eId="art_35__par_1__lst">
+                  <point eId="art_35__par_1__pkt_1">
+                    <num>1)</num>
+                    <content><p>walne zgromadzenie;</p></content>
+                  </point>
+                  <point eId="art_35__par_1__pkt_2">
+                    <num>2)</num>
+                    <content><p>rada nadzorcza, zwana dalej „radą”;</p></content>
+                  </point>
+                  <point eId="art_35__par_1__pkt_3">
+                    <num>3)</num>
+                    <content><p>zarząd;</p></content>
+                  </point>
+                  <point eId="art_35__par_1__pkt_4">
+                    <num>4)</num>
+                    <content><p>w spółdzielniach, w których walne zgromadzenie jest zastąpione przez zebranie przedstawicieli – zebrania grup członkowskich (art. 59).</p></content>
+                  </point>
+                </list>
+              </paragraph>
+              <paragraph eId="art_35__par_2">
+                <num>§ 2.</num>
+                <content><p>Wybory do organów spółdzielni, o których mowa w paragrafie poprzedzającym, dokonywane są w głosowaniu tajnym spośród nieograniczonej liczby kandydatów. Odwołanie członka organu następuje także w głosowaniu tajnym.</p></content>
+              </paragraph>
+              <paragraph eId="art_35__par_3">
+                <num>§ 3.</num>
+                <content><p>Statut może przewidywać powołanie także innych organów niż wymienione w § 1, składających się z członków spółdzielni. W takim przypadku statut określa zakres uprawnień tych organów oraz zasady wyboru i odwoływania ich członków. Do zwoływania posiedzeń tych organów i warunków podejmowania przez nie uchwał przepisy § 4[1]–4[4] stosuje się odpowiednio.</p></content>
+              </paragraph>
+              <paragraph eId="art_35__par_4">
+                <num>§ 4.</num>
+                <content><p>Jeżeli statut nie stanowi inaczej, przy obliczaniu wymaganej większości głosów dla podjęcia uchwały przez organ spółdzielni uwzględnia się tylko głosy oddane za i przeciw uchwale.</p></content>
+              </paragraph>
+              <paragraph eId="art_35__par_4_1">
+                <num>§ 4[1].</num>
+                <content><p>Członek rady nadzorczej lub członek zarządu mogą żądać zwołania posiedzenia rady nadzorczej albo zarządu, podając proponowany porządek obrad, lub podjęcia określonej uchwały na piśmie albo przy wykorzystaniu środków bezpośredniego porozumiewania się na odległość.</p></content>
+              </paragraph>
+              <paragraph eId="art_35__par_4_2">
+                <num>§ 4[2].</num>
+                <content><p>Jeżeli przewodniczący rady nadzorczej albo prezes zarządu nie zwoła posiedzenia albo nie zarządzi głosowania na piśmie albo przy wykorzystaniu środków bezpośredniego porozumiewania się na odległość na dzień przypadający w terminie tygodnia od dnia otrzymania żądania, wnioskodawca może samodzielnie zwołać posiedzenie, podając jego datę i miejsce albo zarządzić głosowanie na piśmie albo przy wykorzystaniu środków bezpośredniego porozumiewania się na odległość.</p></content>
+              </paragraph>
+              <paragraph eId="art_35__par_4_3">
+                <num>§ 4[3].</num>
+                <content><p>Uchwała organu może być podjęta, jeżeli wszyscy członkowie organu zostali prawidłowo zawiadomieni o posiedzeniu organu albo głosowaniu na piśmie albo przy wykorzystaniu środków bezpośredniego porozumiewania się na odległość. Uchwała może być również wynikiem głosów częściowo oddanych na posiedzeniu, częściowo na piśmie lub przy wykorzystaniu środków bezpośredniego porozumiewania się na odległość.</p></content>
+              </paragraph>
+              <paragraph eId="art_35__par_4_4">
+                <num>§ 4[4].</num>
+                <content><p>Przy obliczaniu kworum uwzględnia się członków organów uczestniczących przez oddanie głosu na piśmie lub przy wykorzystaniu środków bezpośredniego porozumiewania się na odległość.</p></content>
+              </paragraph>
+              <paragraph eId="art_35__par_5">
+                <num>§ 5.</num>
+                <content><p>Szczegółowy tryb zwoływania posiedzeń organów, o których mowa w § 1 pkt 2–4 i § 3, oraz sposób i warunki podejmowania uchwał przez te organy określa statut lub przewidziane w nim regulaminy tych organów.</p></content>
+              </paragraph>
+            </article>
+
+            <hcontainer name="rozdzial" eId="czesc_I__tyt_I__dzial_IV__rozdz_1">
+              <num>Rozdział 1</num>
+              <heading>Walne zgromadzenie</heading>
+
+              <article eId="art_36">
+                <num>Art. 36.</num>
+                <paragraph eId="art_36__par_1">
+                  <num>§ 1.</num>
+                  <content><p>Walne zgromadzenie jest najwyższym organem spółdzielni.</p></content>
+                </paragraph>
+                <paragraph eId="art_36__par_2">
+                  <num>§ 2.</num>
+                  <content><p>Każdy członek ma jeden głos bez względu na ilość posiadanych udziałów. Statut spółdzielni, której członkami mogą być wyłącznie osoby prawne, może określać inną zasadę ustalania liczby głosów przysługujących członkom.</p></content>
+                </paragraph>
+                <paragraph eId="art_36__par_3">
+                  <num>§ 3.</num>
+                  <content><p>Członek może uczestniczyć w walnym zgromadzeniu przez pełnomocnika, jeżeli ustawa lub statut nie stanowią inaczej. Osoby prawne będące członkami spółdzielni biorą udział w walnym zgromadzeniu przez ustanowionego w tym celu pełnomocnika.</p></content>
+                </paragraph>
+                <paragraph eId="art_36__par_4">
+                  <num>§ 4.</num>
+                  <content><p>Pełnomocnik nie może zastępować więcej niż jednego członka. Pełnomocnictwo powinno być udzielone na piśmie pod rygorem nieważności i dołączone do protokołu walnego zgromadzenia.</p></content>
+                </paragraph>
+                <paragraph eId="art_36__par_5">
+                  <num>§ 5.</num>
+                  <content><p>Członek zarządu spółdzielni nie może być pełnomocnikiem na walnym zgromadzeniu. Nie dotyczy to spółdzielni liczących niewięcej niż dziesięciu członków, o ile statut nie stanowi inaczej.</p></content>
+                </paragraph>
+                <paragraph eId="art_36__par_6">
+                  <num>§ 6.</num>
+                  <content><p>Pracownik spółdzielni może być pełnomocnikiem na walnym zgromadzeniu, tylko jeżeli jest również członkiem spółdzielni zatrudnionym na podstawie spółdzielczej umowy o pracę.</p></content>
+                </paragraph>
+                <paragraph eId="art_36__par_7">
+                  <num>§ 7.</num>
+                  <content><p>Członek ma prawo korzystania na własny koszt z pomocy prawnej lub pomocy eksperta. Osoby, z których pomocy korzysta członek, nie są uprawnione do zabierania głosu.</p></content>
+                </paragraph>
+                <paragraph eId="art_36__par_8">
+                  <num>§ 8.</num>
+                  <content><p>W walnym zgromadzeniu mają prawo uczestniczyć z głosem doradczym przedstawiciele związku rewizyjnego, w którym spółdzielnia jest zrzeszona, oraz przedstawiciele Krajowej Rady Spółdzielczej.</p></content>
+                </paragraph>
+                <paragraph eId="art_36__par_9">
+                  <num>§ 9.</num>
+                  <content><p>Zarząd lub Rada Nadzorcza może zarządzić podjęcie określonej uchwały przez walne zgromadzenie na piśmie albo przy wykorzystaniu środków bezpośredniego porozumiewania się na odległość.</p></content>
+                </paragraph>
+                <paragraph eId="art_36__par_10">
+                  <num>§ 10.</num>
+                  <content><p>Uchwała walnego zgromadzenia może być podjęta, jeżeli wszyscy członkowie zostali zawiadomieni o głosowaniu na piśmie albo przy wykorzystaniu środków bezpośredniego porozumiewania się na odległość. Uchwała może być również wynikiem głosów częściowo oddanych na piśmie lub przy wykorzystaniu środków bezpośredniego porozumiewania się na odległość.</p></content>
+                </paragraph>
+                <paragraph eId="art_36__par_11">
+                  <num>§ 11.</num>
+                  <content><p>Przy obliczaniu kworum uwzględnia się członków uczestniczących przez oddanie głosu na piśmie lub przy wykorzystaniu środków bezpośredniego porozumiewania się na odległość.</p></content>
+                </paragraph>
+                <paragraph eId="art_36__par_12">
+                  <num>§ 12.</num>
+                  <content><p>Głosowanie w trybie określonym w § 9–11 może być przeprowadzone niezależnie od postanowień statutu spółdzielni.</p></content>
+                </paragraph>
+                <paragraph eId="art_36__par_13">
+                  <num>§ 13.</num>
+                  <content><p>Rozwiązania, o których mowa w § 9–12, stosuje się w czasie wprowadzenia stanu zagrożenia epidemicznego lub stanu epidemii, o których mowa w ustawie z dnia 5 grudnia 2008 r. o zapobieganiu oraz zwalczaniu zakażeń i chorób zakaźnych u ludzi (Dz. U. z 2025 r. poz. 1675 oraz z 2026 r. poz. 26).</p></content>
+                </paragraph>
+              </article>
+
+              <article eId="art_37">
+                <num>Art. 37.</num>
+                <paragraph eId="art_37__par_1">
+                  <num>§ 1.</num>
+                  <content><p>Statut może postanowić, że jeżeli ilość członków przekroczy liczbę w nim określoną, walne zgromadzenie członków zostaje zastąpione przez zebranie przedstawicieli. W takim wypadku statut powinien określać zasady ustalania liczby przedstawicieli i ich wyboru oraz czas trwania przedstawicielstwa.</p></content>
+                </paragraph>
+                <paragraph eId="art_37__par_2">
+                  <num>§ 2.</num>
+                  <content><p>Do zebrania przedstawicieli stosuje się odpowiednio przepisy niniejszej ustawy i statutu o walnych zgromadzeniach.</p></content>
+                </paragraph>
+                <paragraph eId="art_37__par_3">
+                  <num>§ 3.</num>
+                  <content><p>O czasie, miejscu i porządku obrad zebrania przedstawicieli należy zawiadomić wszystkich członków spółdzielni w sposób wskazany w statucie.</p></content>
+                </paragraph>
+                <paragraph eId="art_37__par_4">
+                  <num>§ 4.</num>
+                  <content><p>Członek spółdzielni niebędący przedstawicielem może uczestniczyć w zebraniu przedstawicieli bez prawa głosu.</p></content>
+                </paragraph>
+                <paragraph eId="art_37__par_5">
+                  <num>§ 5.</num>
+                  <content><p>Przepisy art. 36 § 10–12 stosuje się odpowiednio.</p></content>
+                </paragraph>
+              </article>
+
+              <article eId="art_38">
+                <num>Art. 38.</num>
+                <paragraph eId="art_38__par_1">
+                  <num>§ 1.</num>
+                  <content><p>Do wyłącznej właściwości walnego zgromadzenia należy:</p></content>
+                  <list eId="art_38__par_1__lst">
+                    <point eId="art_38__par_1__pkt_1">
+                      <num>1)</num>
+                      <content><p>uchwalanie kierunków rozwoju działalności gospodarczej oraz społecznej i kulturalnej;</p></content>
+                    </point>
+                    <point eId="art_38__par_1__pkt_2">
+                      <num>2)</num>
+                      <content><p>rozpatrywanie sprawozdań rady, zatwierdzanie sprawozdań rocznych i sprawozdań finansowych oraz podejmowanie uchwał co do wniosków członków spółdzielni, rady lub zarządu w tych sprawach i udzielanie absolutorium członkom zarządu;</p></content>
+                    </point>
+                    <point eId="art_38__par_1__pkt_3">
+                      <num>3)</num>
+                      <content><p>rozpatrywanie wniosków wynikających z przedstawionego protokołu polustracyjnego z działalności spółdzielni oraz podejmowanie uchwał w tym zakresie;</p></content>
+                    </point>
+                    <point eId="art_38__par_1__pkt_4">
+                      <num>4)</num>
+                      <content><p>podejmowanie uchwał w sprawie podziału nadwyżki bilansowej (dochodu ogólnego) lub sposobu pokrycia strat;</p></content>
+                    </point>
+                    <point eId="art_38__par_1__pkt_5">
+                      <num>5)</num>
+                      <content><p>podejmowanie uchwał w sprawie zbycia nieruchomości, zbycia zakładu lub innej wyodrębnionej jednostki organizacyjnej;</p></content>
+                    </point>
+                    <point eId="art_38__par_1__pkt_6">
+                      <num>6)</num>
+                      <content><p>podejmowanie uchwał w sprawie przystępowania do innych organizacji gospodarczych oraz występowania z nich;</p></content>
+                    </point>
+                    <point eId="art_38__par_1__pkt_7">
+                      <num>7)</num>
+                      <content><p>oznaczanie najwyższej sumy zobowiązań, jaką spółdzielnia może zaciągnąć;</p></content>
+                    </point>
+                    <point eId="art_38__par_1__pkt_8">
+                      <num>8)</num>
+                      <content><p>podejmowanie uchwał w sprawie połączenia się spółdzielni, podziału spółdzielni oraz likwidacji spółdzielni;</p></content>
+                    </point>
+                    <point eId="art_38__par_1__pkt_9">
+                      <num>9)</num>
+                      <content><p>rozpatrywanie w postępowaniu wewnątrzspółdzielczym odwołań od uchwał rady;</p></content>
+                    </point>
+                    <point eId="art_38__par_1__pkt_10">
+                      <num>10)</num>
+                      <content><p>uchwalanie zmian statutu;</p></content>
+                    </point>
+                    <point eId="art_38__par_1__pkt_11">
+                      <num>11)</num>
+                      <content><p>podejmowanie uchwał w sprawie przystąpienia lub wystąpienia spółdzielni ze związku oraz upoważnienie zarządu do podejmowania działań w tym zakresie;</p></content>
+                    </point>
+                    <point eId="art_38__par_1__pkt_12">
+                      <num>12)</num>
+                      <content><p>wybór delegatów na zjazd związku, w którym spółdzielnia jest zrzeszona.</p></content>
+                    </point>
+                  </list>
+                </paragraph>
+                <paragraph eId="art_38__par_2">
+                  <num>§ 2.</num>
+                  <content><p>Statut może zastrzec do wyłącznej właściwości walnego zgromadzenia podejmowanie uchwał również w innych sprawach.</p></content>
+                </paragraph>
+              </article>
+
+              <article eId="art_39">
+                <num>Art. 39.</num>
+                <paragraph eId="art_39__par_1">
+                  <num>§ 1.</num>
+                  <content><p>Walne zgromadzenie zwołuje zarząd przynajmniej raz w roku w ciągu sześciu miesięcy po upływie roku obrachunkowego.</p></content>
+                </paragraph>
+                <paragraph eId="art_39__par_2">
+                  <num>§ 2.</num>
+                  <content><p>Zarząd zwołuje walne zgromadzenie także na żądanie:</p></content>
+                  <list eId="art_39__par_2__lst">
+                    <point eId="art_39__par_2__pkt_1">
+                      <num>1)</num>
+                      <content><p>rady;</p></content>
+                    </point>
+                    <point eId="art_39__par_2__pkt_2">
+                      <num>2)</num>
+                      <content><p>przynajmniej jednej dziesiątej, niemniej jednak niż trzech członków, jeżeli uprawnienia tego nie zastrzeżono w statucie dla większej liczby członków.</p></content>
+                    </point>
+                  </list>
+                </paragraph>
+                <paragraph eId="art_39__par_3">
+                  <num>§ 3.</num>
+                  <content><p>W spółdzielniach, w których walne zgromadzenie jest zastąpione przez zebranie przedstawicieli, zarząd zwołuje je także na żądanie:</p></content>
+                  <list eId="art_39__par_3__lst">
+                    <point eId="art_39__par_3__pkt_1">
+                      <num>1)</num>
+                      <content><p>1/3 przedstawicieli na zebranie przedstawicieli;</p></content>
+                    </point>
+                    <point eId="art_39__par_3__pkt_2">
+                      <num>2)</num>
+                      <content><p>zebrań grup członkowskich obejmujących co najmniej 1/5 ogólnej liczby członków spółdzielni.</p></content>
+                    </point>
+                  </list>
+                </paragraph>
+                <paragraph eId="art_39__par_4">
+                  <num>§ 4.</num>
+                  <content><p>Żądanie zwołania walnego zgromadzenia powinno być złożone pisemnie z podaniem celu jego zwołania.</p></content>
+                </paragraph>
+                <paragraph eId="art_39__par_5">
+                  <num>§ 5.</num>
+                  <content><p>W wypadkach wskazanych w § 2 i 3 walne zgromadzenie (zebranie przedstawicieli) zwołuje się w takim terminie, aby mogło się ono odbyć w ciągu sześciu tygodni od dnia wniesienia żądania. Jeżeli to nie nastąpi, zwołuje je rada nadzorcza, związek rewizyjny, w którym spółdzielnia jest zrzeszona, lub Krajowa Rada Spółdzielcza, na koszt spółdzielni.</p></content>
+                </paragraph>
+              </article>
+
+              <article eId="art_40">
+                <num>Art. 40.</num>
+                <paragraph eId="art_40__par_1">
+                  <num>§ 1.</num>
+                  <content><p>O czasie, miejscu i porządku obrad walnego zgromadzenia zawiadamia się członków, związek rewizyjny, w którym spółdzielnia jest zrzeszona, oraz Krajową Radę Spółdzielczą w sposób i w terminach określonych w statucie.</p></content>
+                </paragraph>
+                <paragraph eId="art_40__par_2">
+                  <num>§ 2.</num>
+                  <content><p>Uprawnieni do żądania zwołania walnego zgromadzenia (zebrania przedstawicieli), w myśl art. 39 § 2 i 3, mogą również żądać zamieszczenia oznaczonych spraw na porządku jego obrad, pod warunkiem wystąpienia z tym żądaniem w terminie przez statut określonym.</p></content>
+                </paragraph>
+                <paragraph eId="art_40__par_3">
+                  <num>§ 3.</num>
+                  <content><p>Zawiadomienia, o których mowa w § 1, albo zgłoszenia żądań, o których mowa w § 2, mogą zostać dokonane przy wykorzystaniu środków bezpośredniego porozumiewania się na odległość.</p></content>
+                </paragraph>
+              </article>
+
+              <article eId="art_41">
+                <num>Art. 41.</num>
+                <paragraph eId="art_41__par_1">
+                  <num>§ 1.</num>
+                  <content><p>Walne zgromadzenie może podejmować uchwały jedynie w sprawach objętych porządkiem obrad podanych do wiadomości członków w terminach i w sposób określonych w statucie.</p></content>
+                </paragraph>
+                <paragraph eId="art_41__par_2">
+                  <num>§ 2.</num>
+                  <content><p>Uchwały podejmowane są zwykłą większością głosów w obecności co najmniej połowy uprawnionych do głosowania, chyba że ustawa lub statut stanowią inaczej.</p></content>
+                </paragraph>
+                <paragraph eId="art_41__par_3">
+                  <num>§ 3.</num>
+                  <content><p>Z obrad walnego zgromadzenia sporządza się protokół, który powinien być podpisany przez przewodniczącego walnego zgromadzenia oraz przez inne osoby wskazane w statucie.</p></content>
+                </paragraph>
+                <paragraph eId="art_41__par_4">
+                  <num>§ 4.</num>
+                  <content><p>Protokoły są jawne dla członków spółdzielni, przedstawicieli związku rewizyjnego, w którym spółdzielnia jest zrzeszona, oraz dla Krajowej Rady Spółdzielczej.</p></content>
+                </paragraph>
+                <paragraph eId="art_41__par_5">
+                  <num>§ 5.</num>
+                  <content><p>Protokoły przechowuje zarząd spółdzielni co najmniej przez dziesięć lat, o ile przepisy w sprawie przechowywania akt nie przewidują terminu dłuższego.</p></content>
+                </paragraph>
+              </article>
+
+              <article eId="art_42">
+                <num>Art. 42.</num>
+                <paragraph eId="art_42__par_1">
+                  <num>§ 1.</num>
+                  <content><p>Uchwały walnego zgromadzenia obowiązują wszystkich członków spółdzielni oraz wszystkie jej organy.</p></content>
+                </paragraph>
+                <paragraph eId="art_42__par_2">
+                  <num>§ 2.</num>
+                  <content><p>Uchwała sprzeczna z ustawą jest nieważna.</p></content>
+                </paragraph>
+                <paragraph eId="art_42__par_3">
+                  <num>§ 3.</num>
+                  <content><p>Uchwała sprzeczna z postanowieniami statutu bądź dobrymi obyczajami lub godząca w interesy spółdzielni albo mająca na celu pokrzywdzenie jej członka może być zaskarżona do sądu.</p></content>
+                </paragraph>
+                <paragraph eId="art_42__par_4">
+                  <num>§ 4.</num>
+                  <content><p>Każdy członek spółdzielni lub zarząd może wytoczyć powództwo o uchylenie uchwały. Jednakże prawo zaskarżenia uchwały w sprawie wykluczenia albo wykreślenia członka przysługuje wyłącznie członkowi wykluczonemu albo wykreślonemu.</p></content>
+                </paragraph>
+                <paragraph eId="art_42__par_5">
+                  <num>§ 5.</num>
+                  <content><p>Jeżeli zarząd wytacza powództwo, spółdzielnię reprezentuje pełnomocnik ustanowiony przez radę nadzorczą, a spółdzielnię, w której nie powołuje się rady nadzorczej, pełnomocnik ustanowiony przez walne zgromadzenie. W wypadku nieustanowienia pełnomocnika sąd właściwy do rozpoznania sprawy ustanawia kuratora dla spółdzielni.</p></content>
+                </paragraph>
+                <paragraph eId="art_42__par_6">
+                  <num>§ 6.</num>
+                  <content><p>Powództwo o uchylenie uchwały walnego zgromadzenia powinno być wniesione w ciągu sześciu tygodni od dnia odbycia walnego zgromadzenia, jeżeli zaś powództwo wnosi członek nieobecny na walnym zgromadzeniu na skutek jego wadliwego zwołania – w ciągu sześciu tygodni od dnia powzięcia wiadomości przez tego członka o uchwale, niepóźniej jednak niż przed upływem roku od dnia odbycia walnego zgromadzenia.</p></content>
+                </paragraph>
+                <paragraph eId="art_42__par_7">
+                  <num>§ 7.</num>
+                  <content><p>Jeżeli ustawa lub statut wymagają zawiadomienia członka o uchwale, termin sześciotygodniowy wskazany w § 6 biegnie od dnia tego zawiadomienia dokonanego w sposób wskazany w statucie.</p></content>
+                </paragraph>
+                <paragraph eId="art_42__par_8">
+                  <num>§ 8.</num>
+                  <content><p>Sąd może nie uwzględnić upływu terminu, o którym mowa w § 6, jeżeli utrzymanie uchwały walnego zgromadzenia w mocy wywołałoby dla członka szczególnie dotkliwe skutki, a opóźnienie w zaskarżeniu tej uchwały jest usprawiedliwione wyjątkowymi okolicznościami i nie jest nadmierne.</p></content>
+                </paragraph>
+                <paragraph eId="art_42__par_9">
+                  <num>§ 9.</num>
+                  <content><p>Orzeczenie sądu ustalające nieistnienie albo nieważność uchwały walnego zgromadzenia bądź uchylające uchwałę ma moc prawną względem wszystkich członków spółdzielni oraz wszystkich jej organów.</p></content>
+                </paragraph>
+              </article>
+
+              <article eId="art_43" status="repealed">
+                <num>Art. 43.</num>
+                <content><p>(uchylony)</p></content>
+              </article>
+            </hcontainer>
+
+            <hcontainer name="rozdzial" eId="czesc_I__tyt_I__dzial_IV__rozdz_2">
+              <num>Rozdział 2</num>
+              <heading>Rada nadzorcza</heading>
+
+              <article eId="art_44">
+                <num>Art. 44.</num>
+                <content><p>Rada sprawuje kontrolę i nadzór nad działalnością spółdzielni.</p></content>
+              </article>
+
+              <article eId="art_45">
+                <num>Art. 45.</num>
+                <paragraph eId="art_45__par_1">
+                  <num>§ 1.</num>
+                  <content><p>Rada składa się co najmniej z trzech członków wybranych stosownie do postanowień statutu przez walne zgromadzenie, zebranie przedstawicieli lub zebrania grup członkowskich.</p></content>
+                </paragraph>
+                <paragraph eId="art_45__par_2">
+                  <num>§ 2.</num>
+                  <content><p>Do rady mogą być wybierani wyłącznie członkowie spółdzielni. Jeżeli członkiem spółdzielni jest osoba prawna, do rady może być wybrana osoba niebędąca członkiem spółdzielni, wskazana przez osobę prawną.</p></content>
+                </paragraph>
+                <paragraph eId="art_45__par_3" status="repealed">
+                  <num>§ 3.</num>
+                  <content><p>(uchylony)</p></content>
+                </paragraph>
+                <paragraph eId="art_45__par_4">
+                  <num>§ 4.</num>
+                  <content><p>Kadencję rady określa statut, z zastrzeżeniem art. 8[2] ust. 4 ustawy z dnia 15 grudnia 2000 r. o spółdzielniach mieszkaniowych.</p></content>
+                </paragraph>
+                <paragraph eId="art_45__par_5">
+                  <num>§ 5.</num>
+                  <content><p>Przed upływem kadencji członek rady może być odwołany większością 2/3 głosów przez organ, który go wybrał.</p></content>
+                </paragraph>
+                <paragraph eId="art_45__par_6">
+                  <num>§ 6.</num>
+                  <content><p>Członkowi rady spółdzielni można wypowiedzieć umowę o pracę albo warunki pracy lub płacy tylko w wypadkach, w których Kodeks pracy dopuszcza dokonanie takiej czynności w stosunku do członka zakładowego organu związku zawodowego. Przepis ten stosuje się odpowiednio do członków rady świadczących pracę na innej podstawie niż umowa o pracę.</p></content>
+                </paragraph>
+              </article>
+
+              <article eId="art_46">
+                <num>Art. 46.</num>
+                <paragraph eId="art_46__par_1">
+                  <num>§ 1.</num>
+                  <content><p>Do zakresu działania rady należy:</p></content>
+                  <list eId="art_46__par_1__lst">
+                    <point eId="art_46__par_1__pkt_1">
+                      <num>1)</num>
+                      <content><p>uchwalanie planów gospodarczych i programów działalności społecznej i kulturalnej;</p></content>
+                    </point>
+                    <point eId="art_46__par_1__pkt_2">
+                      <num>2)</num>
+                      <content><p>nadzór i kontrola działalności spółdzielni poprzez:</p></content>
+                      <list eId="art_46__par_1__pkt_2__lst">
+                        <point eId="art_46__par_1__pkt_2__lit_a">
+                          <num>a)</num>
+                          <content><p>badanie okresowych sprawozdań oraz sprawozdań finansowych,</p></content>
+                        </point>
+                        <point eId="art_46__par_1__pkt_2__lit_b">
+                          <num>b)</num>
+                          <content><p>dokonywanie okresowych ocen wykonania przez spółdzielnię jej zadań gospodarczych, ze szczególnym uwzględnieniem przestrzegania przez spółdzielnię praw jej członków,</p></content>
+                        </point>
+                        <point eId="art_46__par_1__pkt_2__lit_c">
+                          <num>c)</num>
+                          <content><p>przeprowadzanie kontroli nad sposobem załatwiania przez zarząd wniosków organów spółdzielni i jej członków;</p></content>
+                        </point>
+                      </list>
+                    </point>
+                    <point eId="art_46__par_1__pkt_3">
+                      <num>3)</num>
+                      <content><p>podejmowanie uchwał w sprawie nabycia i obciążenia nieruchomości oraz nabycia zakładu lub innej jednostki organizacyjnej;</p></content>
+                    </point>
+                    <point eId="art_46__par_1__pkt_4">
+                      <num>4)</num>
+                      <content><p>podejmowanie uchwał w sprawie przystępowania do organizacji społecznych oraz występowania z nich;</p></content>
+                    </point>
+                    <point eId="art_46__par_1__pkt_5">
+                      <num>5)</num>
+                      <content><p>zatwierdzanie struktury organizacyjnej spółdzielni;</p></content>
+                    </point>
+                    <point eId="art_46__par_1__pkt_6">
+                      <num>6)</num>
+                      <content><p>rozpatrywanie skarg na działalność zarządu;</p></content>
+                    </point>
+                    <point eId="art_46__par_1__pkt_7">
+                      <num>7)</num>
+                      <content><p>składanie walnemu zgromadzeniu sprawozdań zawierających w szczególności wyniki kontroli i ocenę sprawozdań finansowych;</p></content>
+                    </point>
+                    <point eId="art_46__par_1__pkt_8">
+                      <num>8)</num>
+                      <content><p>podejmowanie uchwał w sprawach czynności prawnych dokonywanych między spółdzielnią a członkiem zarządu lub dokonywanych przez spółdzielnię w interesie członka zarządu oraz reprezentowanie spółdzielni przy tych czynnościach; do reprezentowania spółdzielni wystarczy dwóch członków rady przez nią upoważnionych.</p></content>
+                    </point>
+                  </list>
+                </paragraph>
+                <paragraph eId="art_46__par_2">
+                  <num>§ 2.</num>
+                  <content><p>Statut może zastrzec do zakresu działania rady jeszcze inne uprawnienia. Statut może również przekazać do wyłącznej właściwości walnego zgromadzenia podejmowanie uchwał we wszystkich lub niektórych sprawach wymienionych w § 1 pkt 1, 3 oraz 5; w takim wypadku statut może przyjąć dla rady nazwę komisji rewizyjnej.</p></content>
+                </paragraph>
+                <paragraph eId="art_46__par_3">
+                  <num>§ 3.</num>
+                  <content><p>Statut może przewidywać wybór przez radę jej prezydium z zadaniem organizowania pracy rady.</p></content>
+                </paragraph>
+                <paragraph eId="art_46__par_4">
+                  <num>§ 4.</num>
+                  <content><p>W celu wykonania swoich zadań rada może żądać od zarządu, członków i pracowników spółdzielni wszelkich sprawozdań i wyjaśnień, przeglądać księgi i dokumenty oraz sprawdzać bezpośrednio stan majątku spółdzielni.</p></content>
+                </paragraph>
+              </article>
+
+              <article eId="art_46a">
+                <num>Art. 46a.</num>
+                <content><p>W spółdzielni, o której mowa w art. 6 § 2a, oraz w spółdzielni produkcji rolnej, w której liczba członków nie przekracza dziesięciu, nie powołuje się rady, o ile statut nie stanowi inaczej. W tym przypadku kompetencje rady wykonuje walne zgromadzenie członków. Przepisy art. 35 § 4[1]–5 stosuje się odpowiednio.</p></content>
+              </article>
+
+              <article eId="art_47" status="repealed">
+                <num>Art. 47.</num>
+                <content><p>(uchylony)</p></content>
+              </article>
+            </hcontainer>
+
+            <hcontainer name="rozdzial" eId="czesc_I__tyt_I__dzial_IV__rozdz_3">
+              <num>Rozdział 3</num>
+              <heading>Zarząd</heading>
+
+              <article eId="art_48">
+                <num>Art. 48.</num>
+                <paragraph eId="art_48__par_1">
+                  <num>§ 1.</num>
+                  <content><p>Zarząd kieruje działalnością spółdzielni oraz reprezentuje ją na zewnątrz.</p></content>
+                </paragraph>
+                <paragraph eId="art_48__par_2">
+                  <num>§ 2.</num>
+                  <content><p>Podejmowanie decyzji niezastrzeżonych w ustawie lub statucie innym organom należy do zarządu.</p></content>
+                </paragraph>
+              </article>
+
+              <article eId="art_49">
+                <num>Art. 49.</num>
+                <paragraph eId="art_49__par_1">
+                  <num>§ 1.</num>
+                  <content><p>Skład i liczbę członków zarządu określa statut. Statut może przewidywać zarząd jednoosobowy, którym jest prezes, i ustalać wymagania, jakie powinna spełniać osoba wchodząca w skład zarządu lub prezes w zarządzie jednoosobowym.</p></content>
+                </paragraph>
+                <paragraph eId="art_49__par_2">
+                  <num>§ 2.</num>
+                  <content><p>Członków zarządu, w tym prezesa i jego zastępców, wybiera i odwołuje, stosownie do postanowień statutu, rada lub walne zgromadzenie.</p></content>
+                </paragraph>
+                <paragraph eId="art_49__par_3">
+                  <num>§ 3.</num>
+                  <content><p>Spółdzielnie, których członkami są wyłącznie osoby prawne, wybierają zarząd spośród kandydatów będących osobami fizycznymi wskazanymi przez te osoby prawne. W spółdzielniach, w których członkami są osoby fizyczne i osoby prawne, członków zarządu wybiera się również spośród kandydatów wskazanych przez osoby prawne.</p></content>
+                </paragraph>
+                <paragraph eId="art_49__par_4">
+                  <num>§ 4.</num>
+                  <content><p>Walne zgromadzenie może odwołać tych członków zarządu, którym nie udzieliło absolutorium (art. 38 § 1 pkt 2), niezależnie od tego, który organ stosownie do postanowień statutu wybiera członków zarządu. W tym wypadku nie stosuje się przepisu art. 41 § 1.</p></content>
+                </paragraph>
+                <paragraph eId="art_49__par_5">
+                  <num>§ 5.</num>
+                  <content><p>Zarząd jednoosobowy nie może dokonywać czynności w sprawach wynikających ze stosunku członkostwa. Czynności takie są dokonywane przez radę nadzorczą, chyba że statut przewiduje właściwość walnego zgromadzenia.</p></content>
+                </paragraph>
+              </article>
+
+              <article eId="art_50">
+                <num>Art. 50.</num>
+                <paragraph eId="art_50__par_1">
+                  <num>§ 1.</num>
+                  <content><p>Jeżeli statut tak stanowi, członek zarządu wybierany przez walne zgromadzenie może być zawieszony w czynnościach przez radę, o ile jego działalność jest sprzeczna z przepisami prawa lub statutu.</p></content>
+                </paragraph>
+                <paragraph eId="art_50__par_2">
+                  <num>§ 2.</num>
+                  <content><p>Rada zawieszając w czynnościach członka zarządu podejmuje uchwały niezbędne do prawidłowego prowadzenia działalności spółdzielni oraz zwołuje niezwłocznie walne zgromadzenie.</p></content>
+                </paragraph>
+                <paragraph eId="art_50__par_3">
+                  <num>§ 3.</num>
+                  <content><p>Członka zawieszonego powiadamia się niezwłocznie na piśmie o jego zawieszeniu z podaniem przyczyn zawieszenia.</p></content>
+                </paragraph>
+              </article>
+
+              <article eId="art_51" status="repealed">
+                <num>Art. 51.</num>
+                <content><p>(uchylony)</p></content>
+              </article>
+
+              <article eId="art_52">
+                <num>Art. 52.</num>
+                <paragraph eId="art_52__par_1">
+                  <num>§ 1.</num>
+                  <content><p>Z członkami zarządu zatrudnianymi w spółdzielni rada spółdzielni nawiązuje stosunek pracy – w zależności od powierzonego stanowiska – na podstawie umowy o pracę albo powołania (art. 68 Kodeksu pracy). Nie dotyczy to spółdzielni pracy, w których zatrudnienie członków następuje bez względu na stanowisko na podstawie spółdzielczej umowy o pracę, oraz tych spółdzielni produkcji rolnej, w których podstawą świadczenia pracy przez członków jest stosunek członkostwa.</p></content>
+                </paragraph>
+                <paragraph eId="art_52__par_2">
+                  <num>§ 2.</num>
+                  <content><p>Odwołanie członka zarządu lub zawieszenie go w czynnościach nie narusza jego uprawnień wynikających ze stosunku pracy lub innego stosunku prawnego, którego przedmiotem jest świadczenie pracy.</p></content>
+                </paragraph>
+                <paragraph eId="art_52__par_3">
+                  <num>§ 3.</num>
+                  <content><p>W razie odwołania członka zarządu zatrudnionego w spółdzielni na podstawie powołania, prawo odwołania go ze stanowiska pracy przysługuje zarządowi spółdzielni.</p></content>
+                </paragraph>
+              </article>
+
+              <article eId="art_53" status="repealed">
+                <num>Art. 53.</num>
+                <content><p>(uchylony)</p></content>
+              </article>
+
+              <article eId="art_54">
+                <num>Art. 54.</num>
+                <paragraph eId="art_54__par_1">
+                  <num>§ 1.</num>
+                  <content><p>Oświadczenia woli za spółdzielnię składają dwaj członkowie zarządu lub jeden członek zarządu i pełnomocnik. W spółdzielniach o zarządzie jednoosobowym oświadczenie woli mogą składać również dwaj pełnomocnicy.</p></content>
+                </paragraph>
+                <paragraph eId="art_54__par_2">
+                  <num>§ 2.</num>
+                  <content><p>Oświadczenia, o których mowa w § 1, składa się w ten sposób, że pod nazwą spółdzielni osoby upoważnione do ich składania zamieszczają swoje podpisy.</p></content>
+                </paragraph>
+                <paragraph eId="art_54__par_3">
+                  <num>§ 3.</num>
+                  <content><p>Oświadczenia skierowane do spółdzielni na piśmie, a złożone w jej lokalu albo jednemu z członków zarządu lub pełnomocnikowi, mają skutek prawny względem spółdzielni.</p></content>
+                </paragraph>
+              </article>
+
+              <article eId="art_55">
+                <num>Art. 55.</num>
+                <paragraph eId="art_55__par_1">
+                  <num>§ 1.</num>
+                  <content><p>Zarząd może udzielić jednemu z członków zarządu lub innej osobie pełnomocnictwa do dokonywania czynności prawnych związanych z kierowaniem bieżącą działalnością gospodarczą spółdzielni lub jej wyodrębnionej organizacyjnie i gospodarczo jednostki, a także pełnomocnictwa do dokonywania czynności określonego rodzaju lub czynności szczególnych.</p></content>
+                </paragraph>
+                <paragraph eId="art_55__par_2">
+                  <num>§ 2.</num>
+                  <content><p>Statut spółdzielni może uzależnić udzielenie pełnomocnictwa przez zarząd od uprzedniej zgody rady.</p></content>
+                </paragraph>
+              </article>
+            </hcontainer>
+
+            <hcontainer name="rozdzial" eId="czesc_I__tyt_I__dzial_IV__rozdz_4">
+              <num>Rozdział 4</num>
+              <heading>Przepisy wspólne dla rady i zarządu</heading>
+
+              <article eId="art_56">
+                <num>Art. 56.</num>
+                <paragraph eId="art_56__par_1">
+                  <num>§ 1.</num>
+                  <content><p>Nie można być jednocześnie członkiem zarządu i przedstawicielem na zebranie przedstawicieli tej samej spółdzielni. Nie można być jednocześnie członkiem rady i zarządu tej samej spółdzielni. W razie konieczności rada może wyznaczyć jednego lub kilku ze swoich członków do czasowego pełnienia funkcji członka (członków) zarządu.</p></content>
+                </paragraph>
+                <paragraph eId="art_56__par_2">
+                  <num>§ 2.</num>
+                  <content><p>Członkowie zarządu i rady nie mogą brać udziału w głosowaniu w sprawach wyłącznie ich dotyczących.</p></content>
+                </paragraph>
+                <paragraph eId="art_56__par_3">
+                  <num>§ 3.</num>
+                  <content><p>Członkowie rady i zarządu nie mogą zajmować się interesami konkurencyjnymi wobec spółdzielni, a w szczególności uczestniczyć jako wspólnicy lub członkowie władz przedsiębiorców prowadzących działalność konkurencyjną wobec spółdzielni. Naruszenie zakazu konkurencji stanowi podstawę odwołania członka rady lub zarządu oraz powoduje inne skutki prawne przewidziane w odrębnych przepisach.</p></content>
+                </paragraph>
+                <paragraph eId="art_56__par_4">
+                  <num>§ 4.</num>
+                  <content><p>W wypadku naruszenia przez członka rady nadzorczej zakazu konkurencji określonego w § 3 – rada może podjąć uchwałę o zawieszeniu członka tego organu w pełnieniu czynności. Statut określa termin zwołania posiedzenia organu, który dokonał wyboru zawieszonego członka rady. Powyższy organ rozstrzyga o uchyleniu zawieszenia bądź odwołaniu zawieszonego członka rady.</p></content>
+                </paragraph>
+              </article>
+
+              <article eId="art_57">
+                <num>Art. 57.</num>
+                <content><p>W skład rady nie mogą wchodzić osoby będące kierownikami bieżącej działalności gospodarczej spółdzielni lub pełnomocnikami zarządu oraz osoby pozostające z członkami zarządu lub kierownikami bieżącej działalności gospodarczej spółdzielni w związku małżeńskim albo w stosunku pokrewieństwa lub powinowactwa w linii prostej i w drugim stopniu linii bocznej.</p></content>
+              </article>
+
+              <article eId="art_58">
+                <num>Art. 58.</num>
+                <content><p>Członek zarządu, rady oraz likwidator odpowiada wobec spółdzielni za szkodę wyrządzoną działaniem lub zaniechaniem sprzecznym z prawem lub postanowieniami statutu spółdzielni, chyba że nie ponosi winy.</p></content>
+              </article>
+            </hcontainer>
+
+            <hcontainer name="rozdzial" eId="czesc_I__tyt_I__dzial_IV__rozdz_5">
+              <num>Rozdział 5</num>
+              <heading>Zebrania grup członkowskich</heading>
+
+              <article eId="art_59">
+                <num>Art. 59.</num>
+                <paragraph eId="art_59__par_1">
+                  <num>§ 1.</num>
+                  <content><p>W spółdzielniach, w których walne zgromadzenie zostaje zastąpione przez zebranie przedstawicieli, z zastrzeżeniem art. 8[3] ustawy z dnia 15 grudnia 2000 r. o spółdzielniach mieszkaniowych, organami tych spółdzielni są także zebrania grup członkowskich. Zasady podziału członków na grupy członkowskie i zasady działania tych zebrań określa statut. Przepisy art. 35 § 4[1]–5 stosuje się odpowiednio.</p></content>
+                </paragraph>
+                <paragraph eId="art_59__par_2">
+                  <num>§ 2.</num>
+                  <content><p>Do uprawnień zebrań grup członkowskich należy:</p></content>
+                  <list eId="art_59__par_2__lst">
+                    <point eId="art_59__par_2__pkt_1">
+                      <num>1)</num>
+                      <content><p>wybieranie i odwoływanie przedstawicieli na zebranie przedstawicieli;</p></content>
+                    </point>
+                    <point eId="art_59__par_2__pkt_2">
+                      <num>2)</num>
+                      <content><p>wybieranie i odwoływanie członków rady spółdzielni, jeśli statut tak stanowi;</p></content>
+                    </point>
+                    <point eId="art_59__par_2__pkt_3">
+                      <num>3)</num>
+                      <content><p>rozpatrywanie spraw, które mają być przedmiotem obrad najbliższego zebrania przedstawicieli, i zgłaszanie swoich wniosków w tych sprawach;</p></content>
+                    </point>
+                    <point eId="art_59__par_2__pkt_4">
+                      <num>4)</num>
+                      <content><p>rozpatrywanie okresowych sprawozdań rady i zarządu;</p></content>
+                    </point>
+                    <point eId="art_59__par_2__pkt_5">
+                      <num>5)</num>
+                      <content><p>wyrażanie swojej opinii i zgłaszanie do właściwych organów spółdzielni wniosków w sprawach spółdzielni, a zwłaszcza we wspólnych sprawach członków wchodzących w skład zebrania grupy.</p></content>
+                    </point>
+                  </list>
+                </paragraph>
+                <paragraph eId="art_59__par_3">
+                  <num>§ 3.</num>
+                  <content><p>Statut może również określać inne zadania i uprawnienia zebrań grup członkowskich.</p></content>
+                </paragraph>
+              </article>
+            </hcontainer>
           </hcontainer>
         </hcontainer>
       </part>
