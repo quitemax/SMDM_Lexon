@@ -1,0 +1,29 @@
+id: R-PS-0034
+norm_type: CONDITION
+title: "Przedawnienie roszczeń o wypłatę udziałów, nadwyżki i wkładów"
+source:
+  act: "Prawo spółdzielcze"
+  article: "29"
+  paragraph: "1, 3"
+  normalized_ref: "PS-ART-029"
+validity:
+  from: "2026-03-23"
+  to: null
+subject: "Osoba"
+holder: "były Członek"
+statement: >-
+  Roszczenia o wypłatę udziałów, udziału w nadwyżce bilansowej oraz z
+  tytułu zwrotu wkładów albo ich równowartości pieniężnej ulegają
+  przedawnieniu z upływem trzech lat.
+deadline:
+  duration: 3
+  unit: YEARS
+  start_event: "roszczenie stało się wymagalne (patrz R-PS-0028, PS-ART-027 §1)"
+  type: STATUTORY
+exceptions:
+  - id: "R-PS-0034-E1"
+    text: "Przepis nie ma zastosowania do roszczeń o zwrot nieruchomości."
+    source: "PS-ART-029 §3"
+formalization_status: DIRECT
+note: "§2 tego artykułu jest uchylony (brak treści do formalizacji) - patrz normalized/akoma-ntoso, status=repealed na poziomie paragrafu."
+tests: []

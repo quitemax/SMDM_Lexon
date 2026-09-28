@@ -1,0 +1,25 @@
+id: R-PS-0033
+norm_type: OBLIGATION
+title: "Przedłużona odpowiedzialność za pokrycie strat po ustaniu członkostwa"
+source:
+  act: "Prawo spółdzielcze"
+  article: "28"
+  normalized_ref: "PS-ART-028"
+validity:
+  from: "2026-03-23"
+  to: null
+subject: "Osoba"
+holder: "były Członek"
+statement: >-
+  W razie otwarcia likwidacji w ciągu sześciu miesięcy lub wszczęcia
+  postępowania upadłościowego w ciągu roku od dnia, w którym członek
+  przestał należeć do spółdzielni, obowiązany jest on wobec spółdzielni
+  do uczestniczenia w pokrywaniu jej strat tak, jak gdyby był nadal
+  członkiem.
+conditions:
+  - "otwarcie likwidacji w ciągu 6 miesięcy od ustania członkostwa, ALBO"
+  - "wszczęcie postępowania upadłościowego w ciągu roku od ustania członkostwa"
+effect: "Zakres odpowiedzialności = R-PS-0018 O2 (do wysokości zadeklarowanych udziałów), mimo że członkostwo już ustało."
+formalization_status: DIRECT
+note: "Dwa różne terminy dla dwóch różnych przesłanek (6 miesięcy dla likwidacji, rok dla upadłości) - nie jeden `deadline`, tylko dwa warunki w `conditions`, żeby nie sztucznie spłaszczyć struktury 'ALBO' do jednego terminu (AGENTS.md sekcja 56)."
+tests: []

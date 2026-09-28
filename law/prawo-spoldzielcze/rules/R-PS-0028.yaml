@@ -1,0 +1,19 @@
+id: R-PS-0028
+norm_type: RIGHT
+title: "Prawo rozporządzania roszczeniami o wypłatę udziałów i zwrot wkładów"
+source:
+  act: "Prawo spółdzielcze"
+  article: "27"
+  paragraph: "1"
+  normalized_ref: "PS-ART-027"
+validity:
+  from: "2026-03-23"
+  to: null
+subject: "Osoba"
+holder: "Członek"
+statement: >-
+  Członek może rozporządzać swoimi roszczeniami do spółdzielni o wypłatę
+  udziałów oraz o zwrot wkładów lub o wypłatę ich równowartości ze
+  skutecznością od dnia, w którym roszczenia te stały się wymagalne.
+formalization_status: DIRECT
+tests: []

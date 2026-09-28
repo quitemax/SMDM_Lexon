@@ -1,0 +1,30 @@
+id: R-PS-0030
+norm_type: CONDITION
+title: "Egzekucja z wkładów członka wobec bezskuteczności egzekucji z innego majątku"
+source:
+  act: "Prawo spółdzielcze"
+  article: "27"
+  paragraph: "3"
+  normalized_ref: "PS-ART-027"
+validity:
+  from: "2026-03-23"
+  to: null
+subject: "Osoba"
+statement: >-
+  Jeżeli egzekucja z innego majątku członka okaże się bezskuteczna, a
+  przepis szczególny nie stanowi inaczej, wierzyciel członka może
+  skierować egzekucję do wniesionych przez członka wkładów.
+conditions:
+  - "egzekucja z innego majątku członka okazała się bezskuteczna"
+  - "przepis szczególny nie stanowi inaczej (odesłanie otwarte)"
+effect: >-
+  Roszczenie członka o zwrot wkładów lub ich równowartości staje się
+  wymagalne po upływie terminu poniżej, chyba że wymagalność nastąpiła
+  wcześniej na podstawie innych przepisów.
+deadline:
+  duration: 6
+  unit: MONTHS
+  start_event: "zajęcie wkładów przez wierzyciela członka"
+  type: STATUTORY
+formalization_status: DIRECT
+tests: []

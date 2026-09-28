@@ -1,0 +1,21 @@
+id: R-PS-0031
+norm_type: POWER
+title: "Prawo pierwszeństwa spółdzielni do nabycia zajętych wkładów będących środkami produkcji"
+source:
+  act: "Prawo spółdzielcze"
+  article: "27"
+  paragraph: "4"
+  normalized_ref: "PS-ART-027"
+validity:
+  from: "2026-03-23"
+  to: null
+subject: "Spółdzielnia"
+statement: >-
+  W razie zajęcia przez wierzyciela członka wkładów stanowiących środki
+  produkcji, spółdzielni służy prawo pierwszeństwa ich nabycia w
+  postępowaniu egzekucyjnym.
+conditions:
+  - "wkłady zajęte przez wierzyciela członka stanowią środki produkcji (patrz R-PS-0030, PS-ART-027 §3)"
+formalization_status: DIRECT
+note: "POWER, nie RIGHT - to kompetencja do podjęcia czynności w konkretnym postępowaniu egzekucyjnym (nabycie z pierwszeństwem), nie uprawnienie stale przysługujące (AGENTS.md sekcja 20: POWER != RIGHT)."
+tests: []
