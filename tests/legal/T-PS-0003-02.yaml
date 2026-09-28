@@ -1,0 +1,11 @@
+id: T-PS-0003-02
+rule: R-PS-0003
+title: "Deklaracja złożona z naruszeniem wymaganej formy jest nieważna"
+category: NEGATIVE
+status: SPECIFIED
+given:
+  - "applicant złożył deklarację w formie ustnej (nie papierowej, elektronicznej ani dokumentowej)"
+when: "przebieg procedury R-PS-0003, krok 1"
+then:
+  result: "Membership.status pozostaje null (nie DECLARED)"
+  because: "warunek `void_if` kroku 1 zachodzi - deklaracja nieważna pod rygorem nieważności (PS-ART-016 §1), zdarzenie DeclarationSubmitted nie następuje"

@@ -58,4 +58,4 @@ scope_note: >-
   spółdzielni w praktyce tylko do przypadku właściciela lokalu, który nie
   jest jeszcze członkiem (analogicznie, ale to odrębna podstawa - USM, nie
   Art. 16-17 wprost).
-tests: []
+tests: ["T-PS-0003-01", "T-PS-0003-02", "T-PS-0003-03", "T-PS-0003-04"]

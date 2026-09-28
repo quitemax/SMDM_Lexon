@@ -1,0 +1,24 @@
+id: T-PS-0003-04
+rule: R-PS-0003
+title: "Termin miesiąca na rozstrzygnięcie (krok 2) - granica"
+category: BOUNDARY
+status: SPECIFIED
+cases:
+  - label: "dzień przed upływem terminu"
+    given: ["DeclarationSubmitted nastąpiło; do końca terminu 1 miesiąca (STATUTORY_DEFAULT) zostaje 1 dzień; statut nie zmienił terminu"]
+    when: "sprawdzenie, czy admitting_body może jeszcze skutecznie podjąć uchwałę z kroku 2"
+    then:
+      result: true
+      because: "termin jeszcze nie upłynął"
+  - label: "dzień upływu terminu"
+    given: ["DeclarationSubmitted nastąpiło; dokładnie 1 miesiąc temu; statut nie zmienił terminu"]
+    when: "sprawdzenie, czy admitting_body może jeszcze skutecznie podjąć uchwałę z kroku 2"
+    then:
+      result: true
+      because: "termin upływa tego dnia - jeszcze w jego granicach"
+  - label: "dzień po upływie terminu"
+    given: ["DeclarationSubmitted nastąpiło; ponad 1 miesiąc temu; statut nie zmienił terminu"]
+    when: "sprawdzenie, czy admitting_body może jeszcze skutecznie podjąć uchwałę z kroku 2"
+    then:
+      result: "UNKNOWN"
+      because: "PS-ART-017 §3 nie precyzuje sankcji za przekroczenie tego terminu (w odróżnieniu od np. terminów sądowych w R-PS-0016) - reguła nie rozstrzyga tego wprost, nie zgadujemy skutku (AGENTS.md sekcja 50)"

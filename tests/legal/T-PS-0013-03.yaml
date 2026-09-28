@@ -1,0 +1,24 @@
+id: T-PS-0013-03
+rule: R-PS-0013
+title: "Termin 30 dni na zgłoszenie do sądu rejestrowego - granica"
+category: BOUNDARY
+status: SPECIFIED
+cases:
+  - label: "dzień 29 od uchwały"
+    given: ["uchwała z kroku 1 podjęta 29 dni temu", "zarzad jeszcze nie zgłosił uchwały do sądu rejestrowego"]
+    when: "sprawdzenie, czy termin z kroku 2 (30 dni) jeszcze nie upłynął"
+    then:
+      result: true
+      because: "29 < 30, termin jeszcze nie upłynął"
+  - label: "dzień 30 od uchwały"
+    given: ["uchwała z kroku 1 podjęta 30 dni temu", "zarzad jeszcze nie zgłosił uchwały do sądu rejestrowego"]
+    when: "sprawdzenie, czy termin z kroku 2 (30 dni) jeszcze nie upłynął"
+    then:
+      result: true
+      because: "termin upływa tego dnia - jeszcze w jego granicach"
+  - label: "dzień 31 od uchwały"
+    given: ["uchwała z kroku 1 podjęta 31 dni temu", "zarzad jeszcze nie zgłosił uchwały do sądu rejestrowego"]
+    when: "sprawdzenie, czy termin z kroku 2 (30 dni) jeszcze nie upłynął"
+    then:
+      result: false
+      because: "31 > 30, termin STATUTORY (nie STATUTORY_DEFAULT) przekroczony - PS-ART-012A §2 nie precyzuje sankcji za przekroczenie, więc dalszy skutek (np. czy zgłoszenie po terminie jest jeszcze skuteczne) jest UNKNOWN, nie zgadywany tutaj (AGENTS.md sekcja 50)"

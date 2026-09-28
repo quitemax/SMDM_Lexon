@@ -1,0 +1,11 @@
+id: T-PS-0013-02
+rule: R-PS-0013
+title: "Uchwała o zmianie statutu bez większości 2/3 nie jest ważnie podjęta"
+category: NEGATIVE
+status: SPECIFIED
+given:
+  - "walne_zgromadzenie głosowało nad zmianą statutu z wynikiem 55% za (poniżej wymaganych 2/3)"
+when: "przebieg procedury R-PS-0013, krok 1"
+then:
+  result: false
+  because: "`required_majority: 2/3 głosów` niespełnione (PS-ART-012A §1) - krok 1 nie kończy się skutecznie podjętą uchwałą, kroki 2-3 nie następują"

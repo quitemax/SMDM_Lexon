@@ -1,0 +1,12 @@
+id: T-PS-0012-02
+rule: R-PS-0012
+title: "9 osób fizycznych nie może uchwalić statutu - próg niespełniony"
+category: NEGATIVE
+status: SPECIFIED
+given:
+  - "9 founders, wszyscy osoby fizyczne"
+  - "brak podstawy do zastosowania obniżonych progów (nie jest to spółdzielnia produkcji rolnej ani wyłącznie osoby prawne)"
+when: "przebieg procedury R-PS-0012, krok 1"
+then:
+  result: false
+  because: "`precondition` kroku 1 (próg minimalny z founder_count_thresholds) niespełniony - 9 < 10 dla przypadku ogólnego"

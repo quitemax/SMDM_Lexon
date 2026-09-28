@@ -35,5 +35,5 @@ steps:
     postcondition: "Statut.registered_in_krs = true"
     source: "PS-ART-012A §3"
 formalization_status: DIRECT
-tests: []
+tests: ["T-PS-0013-01", "T-PS-0013-02", "T-PS-0013-03"]
 note: "Krótsza i prostsza procedura niż R-PS-0003/R-PS-0016 - brak rozgałęzień, jeden jasny termin ustawowy (30 dni), brak odwołań. Dobry kontrastowy przykład 'łatwej' procedury obok dwóch złożonych z Art. 15-28."

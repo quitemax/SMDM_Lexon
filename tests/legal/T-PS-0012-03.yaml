@@ -1,0 +1,18 @@
+id: T-PS-0012-03
+rule: R-PS-0012
+title: "Próg ogólny dla założycieli-osób fizycznych (10) - granica"
+category: BOUNDARY
+status: SPECIFIED
+cases:
+  - label: "n = minimum - 1 (9)"
+    given: ["9 founders, osoby fizyczne, przypadek ogólny"]
+    when: "sprawdzenie `precondition` kroku 1"
+    then:
+      result: false
+      because: "9 < 10"
+  - label: "n = minimum (10)"
+    given: ["10 founders, osoby fizyczne, przypadek ogólny"]
+    when: "sprawdzenie `precondition` kroku 1"
+    then:
+      result: true
+      because: "10 >= 10"

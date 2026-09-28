@@ -1,0 +1,12 @@
+id: T-PS-0003-01
+rule: R-PS-0003
+title: "Ścieżka przyjęcia: prawidłowa deklaracja, uchwała o przyjęciu w terminie"
+category: POSITIVE
+status: SPECIFIED
+given:
+  - "applicant złożył deklarację w formie wymaganej przez PS-ART-016 §1-2 (void_if kroku 1 nie zachodzi)"
+  - "admitting_body podjął uchwałę o przyjęciu przed upływem terminu z kroku 2"
+when: "przebieg procedury R-PS-0003, kroki 1-2"
+then:
+  result: "Membership.status = ACTIVE"
+  because: "krok 1 (DECLARED) i krok 2 (uchwała pozytywna w terminie) zakończone zgodnie z opisem - triggers_event MemberAdmitted"

@@ -1,0 +1,12 @@
+id: T-PS-0003-03
+rule: R-PS-0003
+title: "Ścieżka odmowy: uchwała odmowna wymaga uzasadnienia w zawiadomieniu"
+category: POSITIVE
+status: SPECIFIED
+given:
+  - "applicant złożył prawidłową deklarację (krok 1 zakończony, DECLARED)"
+  - "admitting_body podjął uchwałę o odmowie przyjęcia w terminie z kroku 2"
+when: "przebieg procedury R-PS-0003, kroki 2-3"
+then:
+  result: "Membership.status = REJECTED; zawiadomienie z kroku 3 musi zawierać uzasadnienie"
+  because: "krok 2 kończy się odmową (triggers_event AdmissionRejected); `condition` kroku 3 wymaga uzasadnienia właśnie w tym przypadku (PS-ART-017 §3)"

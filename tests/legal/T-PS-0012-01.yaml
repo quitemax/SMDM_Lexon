@@ -1,0 +1,14 @@
+id: T-PS-0012-01
+rule: R-PS-0012
+title: "Założenie spółdzielni przez 10 osób fizycznych, pełna ścieżka do rejestracji"
+category: POSITIVE
+status: SPECIFIED
+given:
+  - "10 founders, wszyscy osoby fizyczne (spełniony próg ogólny)"
+  - "statut uchwalony i podpisany przez wszystkich 10 (krok 1)"
+  - "wybrano organy albo komisję organizacyjną (krok 2)"
+  - "wystąpiono o wpis do KRS i wpis nastąpił (krok 3)"
+when: "przebieg procedury R-PS-0012, kroki 1-4"
+then:
+  result: "Spółdzielnia.legal_personality_acquired = true; Membership.status = ACTIVE dla wszystkich 10 założycieli"
+  because: "krok 4 następuje równocześnie z uzyskaniem osobowości prawnej dla każdego założyciela, który podpisał statut (PS-ART-011 §1, PS-ART-017 §1 zdanie pierwsze) - triggers_event CooperativeRegistered"
