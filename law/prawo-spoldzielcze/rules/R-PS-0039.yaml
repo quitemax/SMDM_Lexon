@@ -1,0 +1,31 @@
+id: R-PS-0039
+norm_type: STRUCTURAL
+title: "Zawieszenie biegu przedawnienia i terminów zawitych na czas postępowania wewnątrzspółdzielczego"
+source:
+  act: "Prawo spółdzielcze"
+  article: "32"
+  paragraph: "2"
+  normalized_ref: "PS-ART-032"
+validity:
+  from: "2026-03-23"
+  to: null
+subject: "Osoba"
+holder: "Członek"
+condition: "członek wniósł odwołanie w postępowaniu wewnątrzspółdzielczym (R-PS-0038)"
+statement: >-
+  W wypadku wniesienia przez członka odwołania w postępowaniu
+  wewnątrzspółdzielczym bieg przedawnienia i terminów zawitych ulega
+  zawieszeniu do dnia zakończenia tego postępowania, jednakże przez
+  okres nie dłuższy niż rok od dnia, w którym organ odwoławczy powinien
+  rozpatrzyć odwołanie.
+effect: >-
+  Dotyczy m.in. terminu przedawnienia z R-PS-0034 (3 lata) - jeżeli w
+  tym czasie toczy się postępowanie wewnątrzspółdzielcze, jego biegu nie
+  liczy się (z limitem maksymalnie roku).
+formalization_status: DIRECT
+references:
+  - target: R-PS-0038
+    type: DEPENDS_ON
+  - target: R-PS-0034
+    type: MODIFIES
+tests: []

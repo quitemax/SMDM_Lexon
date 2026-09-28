@@ -1,0 +1,27 @@
+id: R-PS-0035
+norm_type: OBLIGATION
+title: "Obowiązek prowadzenia rejestru członków"
+source:
+  act: "Prawo spółdzielcze"
+  article: "30"
+  normalized_ref: "PS-ART-030"
+validity:
+  from: "2026-03-23"
+  to: null
+subject: "Zarząd"
+statement: >-
+  Zarząd spółdzielni prowadzi rejestr członków.
+items:
+  - id: O1
+    text: "imiona i nazwiska oraz miejsce zamieszkania członków (dla osób prawnych: nazwa i siedziba)"
+  - id: O2
+    text: "wysokość zadeklarowanych i wniesionych udziałów"
+  - id: O3
+    text: "wysokość wniesionych wkładów, ich rodzaj, jeżeli są to wkłady niepieniężne (patrz R-PS-0021, PS-ART-020 §2)"
+  - id: O4
+    text: "zmiany tych danych"
+  - id: O5
+    text: "datę przyjęcia w poczet członków, datę wypowiedzenia członkostwa i jego ustania"
+residual_clause: "Rejestr zawiera również inne dane przewidziane w statucie - odesłanie otwarte, nie rozstrzygane tutaj."
+formalization_status: DIRECT
+tests: []

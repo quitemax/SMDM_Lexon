@@ -1,0 +1,21 @@
+id: R-PS-0037
+norm_type: OBLIGATION
+title: "Obowiązek wydania odpisu statutu i regulaminów na żądanie członka"
+source:
+  act: "Prawo spółdzielcze"
+  article: "31"
+  normalized_ref: "PS-ART-031"
+validity:
+  from: "2026-03-23"
+  to: null
+subject: "Zarząd"
+condition: "żądanie zgłoszone przez członka"
+statement: >-
+  Zarząd spółdzielni powinien wydać każdemu członkowi na jego żądanie
+  odpis statutu oraz regulaminów wydanych na podstawie tego statutu.
+formalization_status: DIRECT
+note: "Odpowiada wprost prawu R3 z R-PS-0004 ('otrzymania odpisu statutu i regulaminów...', Art. 18 §2) - tamta reguła niesie UPRAWNIENIE członka, ta niesie odpowiadający mu OBOWIĄZEK Zarządu (AGENTS.md sekcja 14: odesłanie jawne, nie domyślne)."
+references:
+  - target: R-PS-0004
+    type: CORRESPONDS_TO
+tests: []

@@ -1,0 +1,26 @@
+id: R-PS-0038
+norm_type: PERMISSION
+title: "Statutowa możliwość wprowadzenia postępowania wewnątrzspółdzielczego"
+source:
+  act: "Prawo spółdzielcze"
+  article: "32"
+  paragraph: "1"
+  normalized_ref: "PS-ART-032"
+validity:
+  from: "2026-03-23"
+  to: null
+subject: "Statut"
+holder: "Spółdzielnia (za pośrednictwem statutu)"
+statement: >-
+  Statut może stanowić, że w określonych w nim sprawach między członkiem
+  a spółdzielnią, członkowi przysługuje prawo odwołania się od uchwały
+  organu spółdzielni do innego wskazanego w statucie organu spółdzielni
+  w postępowaniu wewnątrzspółdzielczym.
+required_content_if_exercised:
+  - id: R1
+    text: "zasady i tryb postępowania wewnątrzspółdzielczego"
+  - id: R2
+    text: "w szczególności terminy wniesienia i rozpatrzenia odwołania"
+formalization_status: DIRECT
+note: "Struktura identyczna z R-PS-0021 (PS-ART-020 §2) - dozwolenie dla statutu, z wymaganą treścią TYLKO jeśli statut z niego skorzysta. Skutki takiego postępowania (zawieszenie terminów, brak ograniczenia drogi sądowej) są w R-PS-0039/R-PS-0040 - te stosuje się niezależnie od tego, czy statut faktycznie wprowadził tę instytucję."
+tests: []

@@ -1,0 +1,25 @@
+id: R-PS-0036
+norm_type: RIGHT
+title: "Prawo wglądu do rejestru członków"
+source:
+  act: "Prawo spółdzielcze"
+  article: "30"
+  normalized_ref: "PS-ART-030"
+validity:
+  from: "2026-03-23"
+  to: null
+subject: "Osoba"
+statement: >-
+  Członek spółdzielni, jego małżonek i wierzyciel członka lub
+  spółdzielni ma prawo przeglądać rejestr członków.
+holders:
+  - "Członek"
+  - "małżonek członka"
+  - "wierzyciel członka"
+  - "wierzyciel spółdzielni"
+formalization_status: DIRECT
+note: "Cztery kategorie uprawnionych, nie jedna - stąd `holders` (lista), a nie pojedyncze pole `holder` jak w większości reguł tego fragmentu. Rejestr, którego dotyczy to prawo, jest przedmiotem obowiązku R-PS-0035 z tego samego artykułu."
+references:
+  - target: R-PS-0035
+    type: RELATED_TO
+tests: []

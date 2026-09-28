@@ -1,0 +1,25 @@
+id: R-PS-0040
+norm_type: PROHIBITION
+title: "Zakaz ograniczenia drogi sądowej przez postępowanie wewnątrzspółdzielcze"
+source:
+  act: "Prawo spółdzielcze"
+  article: "32"
+  paragraph: "3"
+  normalized_ref: "PS-ART-032"
+validity:
+  from: "2026-03-23"
+  to: null
+subject: "Statut"
+holder: "Spółdzielnia (za pośrednictwem statutu)"
+statement: >-
+  Postanowienia statutu o postępowaniu wewnątrzspółdzielczym nie mogą
+  ograniczać dochodzenia przez członków ich praw na drodze sądowej.
+effect: >-
+  W wypadku zaskarżenia przez członka uchwały równocześnie w
+  postępowaniu wewnątrzspółdzielczym i sądowym, postępowanie
+  wewnątrzspółdzielcze ulega umorzeniu - droga sądowa ma pierwszeństwo.
+formalization_status: DIRECT
+references:
+  - target: R-PS-0038
+    type: LIMITS
+tests: []
