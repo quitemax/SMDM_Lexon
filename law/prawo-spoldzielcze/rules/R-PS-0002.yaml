@@ -6,6 +6,9 @@ source:
   article: "15"
   paragraph: "1, 5"
   normalized_ref: "PS-ART-015"
+validity:
+  from: "2026-03-23"
+  to: null
 subject: "Spółdzielnia"
 statement: >-
   Spółdzielnia liczy co najmniej dziesięciu członków, chyba że statut wymaga

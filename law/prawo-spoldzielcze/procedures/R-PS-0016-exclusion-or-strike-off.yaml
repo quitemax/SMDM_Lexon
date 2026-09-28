@@ -6,6 +6,9 @@ source:
   act: "Prawo spółdzielcze"
   article: "24"
   normalized_ref: "PS-ART-024"
+validity:
+  from: "2026-03-23"
+  to: null
 actors:
   member: "Członek"
   competent_body: "RadaNadzorcza | WalneZgromadzenie (który z nich, wskazuje statut - PS-ART-024 §4)"
@@ -14,6 +17,7 @@ grounds:
     condition: "wina umyślna LUB rażące niedbalstwo (C-PS-0001), skutkujące tym, że dalsze pozostawanie w spółdzielni nie da się pogodzić z postanowieniami statutu LUB dobrymi obyczajami (C-PS-0002)"
     source: "PS-ART-024 §2"
     open_textured: ["C-PS-0001", "C-PS-0002"]
+    strength: DEFEASIBLE
   wykreślenie:
     condition: "niewykonywanie obowiązków statutowych z przyczyn przez członka niezawinionych"
     source: "PS-ART-024 §3"
@@ -93,4 +97,5 @@ scope_note: >-
   skreślone, a ustanie członkostwa przebiega wyłącznie wg USM (utrata prawa
   do lokalu, USM Art. 24[1], 26). Nie oznacza to błędu w tej formalizacji -
   to legalny, choć w tym konkretnym przypadku martwy, przepis ustawy ogólnej.
+note: "`strength: DEFEASIBLE` na `grounds.wykluczenie` (ADR-0002) - tylko ta podstawa zależy od pojęć OPEN_TEXTURED (C-PS-0001, C-PS-0002); `grounds.wykreślenie` zostaje bez tego pola, bo jej przesłanka nie jest tak oznaczona w tym pliku."
 tests: []

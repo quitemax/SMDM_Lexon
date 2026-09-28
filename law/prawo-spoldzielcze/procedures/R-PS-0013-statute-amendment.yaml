@@ -6,6 +6,9 @@ source:
   act: "Prawo spółdzielcze"
   article: "12a"
   normalized_ref: "PS-ART-012A"
+validity:
+  from: "2026-03-23"
+  to: null
 actors:
   walne_zgromadzenie: "WalneZgromadzenie"
   zarzad: "Zarząd"

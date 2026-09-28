@@ -6,6 +6,9 @@ source:
   act: "Prawo spółdzielcze"
   article: ["6", "7", "11"]
   normalized_ref: ["PS-ART-006", "PS-ART-007", "PS-ART-011"]
+validity:
+  from: "2026-03-23"
+  to: null
 actors:
   founders: "List<Osoba> (założyciele)"
 steps:

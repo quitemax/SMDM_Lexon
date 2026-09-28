@@ -5,6 +5,9 @@ source:
   act: "Prawo spółdzielcze"
   article: "2"
   normalized_ref: "PS-ART-002"
+validity:
+  from: "2026-03-23"
+  to: null
 subject: "Spółdzielnia"
 statement: "Spółdzielnia prowadzi działalność na podstawie niniejszej ustawy, innych ustaw oraz zarejestrowanego statutu."
 legal_basis_hierarchy:

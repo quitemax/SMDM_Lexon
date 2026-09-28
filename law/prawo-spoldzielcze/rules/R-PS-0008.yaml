@@ -6,6 +6,9 @@ source:
   article: "1"
   paragraph: "2"
   normalized_ref: "PS-ART-001"
+validity:
+  from: "2026-03-23"
+  to: null
 subject: "Spółdzielnia"
 statement: "Spółdzielnia może prowadzić działalność społeczną i oświatowo-kulturalną na rzecz swoich członków i ich środowiska."
 beneficiaries:

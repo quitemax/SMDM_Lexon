@@ -6,6 +6,9 @@ source:
   article: "15"
   paragraph: "2, 3, 4"
   normalized_ref: "PS-ART-015"
+validity:
+  from: "2026-03-23"
+  to: null
 subject: "Osoba"
 statement: >-
   Członkiem spółdzielni może być: (a) osoba fizyczna o pełnej zdolności do

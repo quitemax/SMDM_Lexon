@@ -5,6 +5,9 @@ source:
   act: "Prawo spółdzielcze"
   article: "14"
   normalized_ref: "PS-ART-014"
+validity:
+  from: "2026-03-23"
+  to: null
 subject: "Spółdzielnia"
 statement: "Ogłoszenia spółdzielcze przewidziane w przepisach prawa publikuje się w „Monitorze Spółdzielczym”, wydawanym przez Krajową Radę Spółdzielczą."
 exceptions:

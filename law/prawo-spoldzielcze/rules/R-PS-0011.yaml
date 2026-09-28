@@ -6,6 +6,9 @@ source:
   article: "5"
   paragraph: "1"
   normalized_ref: "PS-ART-005"
+validity:
+  from: "2026-03-23"
+  to: null
 subject: "Statut"
 holder: "Spółdzielnia (za pośrednictwem statutu)"
 statement: "Statut spółdzielni powinien określać:"

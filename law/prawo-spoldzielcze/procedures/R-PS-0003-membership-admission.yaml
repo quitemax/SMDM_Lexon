@@ -6,6 +6,9 @@ source:
   act: "Prawo spółdzielcze"
   article: ["16", "17"]
   normalized_ref: ["PS-ART-016", "PS-ART-017"]
+validity:
+  from: "2026-03-23"
+  to: null
 actors:
   applicant: "Osoba"
   admitting_body: "organ wskazany w statucie (Art. 17 §4 nie przesądza który - domyślnie brak, nie zakładamy Zarządu)"

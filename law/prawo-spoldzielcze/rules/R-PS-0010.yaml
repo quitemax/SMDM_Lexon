@@ -5,6 +5,9 @@ source:
   act: "Prawo spółdzielcze"
   article: "3"
   normalized_ref: "PS-ART-003"
+validity:
+  from: "2026-03-23"
+  to: null
 subject: "Spółdzielnia"
 statement: "Majątek spółdzielni jest prywatną własnością jej członków."
 formalization_status: DIRECT
