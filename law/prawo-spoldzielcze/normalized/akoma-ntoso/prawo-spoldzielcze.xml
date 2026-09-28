@@ -35,7 +35,7 @@
           <lexon:sourceCommit>7fcaed372cbe56f58c3ee4aa1d5fb6eee15b83ee</lexon:sourceCommit>
           <lexon:dzU>Dz.U. 2026 poz. 521</lexon:dzU>
           <lexon:textType>tekst jednolity</lexon:textType>
-          <lexon:coverage>Art. 1-267d - Część I, II i IIA w całości (przepisy wspólne, spółdzielnie produkcji rolnej/kółek rolniczych/pracy, związki spółdzielcze i Krajowa Rada Spółdzielcza, przepisy karne). Tylko Część III (zmiany w przepisach, przepisy przejściowe i końcowe, Art. 268-281) jeszcze nie skonwertowana - ostatnia część ustawy.</lexon:coverage>
+          <lexon:coverage>KOMPLETNA - cała ustawa, Art. 1-281, 249 artykułów, Część I, II, IIA, III w całości. Zakończono 2026-09-28.</lexon:coverage>
           <lexon:eliStatus>CONSTRUCTED - wzorzec URI zgodny ze standardowym schematem polskiego ELI (https://eli.gov.pl/eli/DU/{rok}/{pozycja}), NIE zweryfikowany wywołaniem na żywo względem eli.gov.pl/isap.sejm.gov.pl w tej sesji. Numer pozycji Dziennika Ustaw z pierwotnego uchwalenia (1982 r., przed ujednoliceniem) jest UNKNOWN - nieustalony w naszych źródłach, dlatego FRBRWork ponownie używa pozycji tekstu jednolitego (2026 poz. 521) jako zastępczego kotwiczenia identyfikatora, co jest uproszczeniem do skorygowania, jeśli oryginalny numer zostanie kiedyś potwierdzony.</lexon:eliStatus>
           <lexon:mappingNote>Mapowanie struktury polskiej ustawy na elementy Akoma Ntoso jest własną decyzją projektową (brak potwierdzonego oficjalnego polskiego profilu AKN w naszych źródłach): Część→part, Tytuł→hcontainer[name=tytul], Dział→hcontainer[name=dzial], Artykuł→article, §→paragraph, punkt→point (w list). Patrz normalized/akoma-ntoso/README.md.</lexon:mappingNote>
           <lexon:citationKey pattern="PS-ART-{numer}">Klucz cytowania używany w law/prawo-spoldzielcze/rules,procedures,ontology (np. "PS-ART-015") odpowiada 1:1 elementowi eId="art_{numer}" w tym pliku (np. eId="art_15"). Patrz docs/dsl.md.</lexon:citationKey>
@@ -3514,6 +3514,91 @@
             <content><p>Jeżeli sprawca działa nieumyślnie, podlega grzywnie, karze ograniczenia wolności albo pozbawienia wolności do roku.</p></content>
           </paragraph>
         </article>
+      </part>
+
+      <part eId="czesc_III">
+        <num>Część III</num>
+        <heading>Zmiany w przepisach obowiązujących oraz przepisy przejściowe i końcowe</heading>
+
+        <hcontainer name="rozdzial" eId="czesc_III__rozdz_1">
+          <num>Rozdział 1</num>
+          <heading>Zmiany w przepisach obowiązujących</heading>
+
+          <article eId="art_268" status="omitted">
+            <num>Art. 268.</num>
+            <content><p>(pominięty)</p></content>
+          </article>
+
+          <article eId="art_269" status="omitted">
+            <num>Art. 269.</num>
+            <content><p>(pominięty)</p></content>
+          </article>
+
+          <article eId="art_270" status="omitted">
+            <num>Art. 270.</num>
+            <content><p>(pominięty)</p></content>
+          </article>
+        </hcontainer>
+
+        <hcontainer name="rozdzial" eId="czesc_III__rozdz_2">
+          <num>Rozdział 2</num>
+          <heading>Przepisy przejściowe i końcowe</heading>
+
+          <article eId="art_271" status="omitted">
+            <num>Art. 271.</num>
+            <content><p>(pominięty)</p></content>
+          </article>
+
+          <article eId="art_272" status="omitted">
+            <num>Art. 272.</num>
+            <content><p>(pominięty)</p></content>
+          </article>
+
+          <article eId="art_273" status="omitted">
+            <num>Art. 273.</num>
+            <content><p>(pominięty)</p></content>
+          </article>
+
+          <article eId="art_274" status="repealed">
+            <num>Art. 274.</num>
+            <content><p>(uchylony)</p></content>
+          </article>
+
+          <article eId="art_275" status="repealed">
+            <num>Art. 275.</num>
+            <content><p>(uchylony)</p></content>
+          </article>
+
+          <article eId="art_276" status="omitted">
+            <num>Art. 276.</num>
+            <content><p>(pominięty)</p></content>
+          </article>
+
+          <article eId="art_277" status="omitted">
+            <num>Art. 277.</num>
+            <content><p>(pominięty)</p></content>
+          </article>
+
+          <article eId="art_278" status="omitted">
+            <num>Art. 278.</num>
+            <content><p>(pominięty)</p></content>
+          </article>
+
+          <article eId="art_279" status="omitted">
+            <num>Art. 279.</num>
+            <content><p>(pominięty)</p></content>
+          </article>
+
+          <article eId="art_280">
+            <num>Art. 280.</num>
+            <content><p>Traci moc ustawa z dnia 17 lutego 1961 r. o spółdzielniach i ich związkach (Dz. U. poz. 61 oraz z 1974 r. poz. 281).</p></content>
+          </article>
+
+          <article eId="art_281">
+            <num>Art. 281.</num>
+            <content><p>Ustawa wchodzi w życie z dniem 1 stycznia 1983 r.</p></content>
+          </article>
+        </hcontainer>
       </part>
     </body>
   </act>

@@ -5,21 +5,14 @@
 > tu są rozbite na konkretne, sprawdzalne zadania osadzone w realnym materiale
 > źródłowym z `external/SMDM_Knowledge_Base`.
 
-Status ogólny: normalizacja w formacie Akoma Ntoso XML
-(`normalized/akoma-ntoso/prawo-spoldzielcze.xml`, patrz
-`docs/decisions/ADR-0001-akoma-ntoso-eli.md`) — aktualny zasięg zawsze w
-`lexon:coverage` tego pliku (jedno źródło prawdy, nie duplikowane tu, bo
-przy tempie "po kilka działów naraz" ten opis szybko się rozjeżdżał).
-**Reguły/procedury sformalizowane tylko dla Art. 1-3, 5-7, 11, 12a,
-14-18, 24** (Art. 4, 8-10, 12, 13, 33, 34 uchylone) — cała reszta
-znormalizowanego materiału (Działy IV, VII-IX, XI-XIII, Tytuł II Dział I)
-jest **wyłącznie znormalizowana, bez żadnych reguł**. **Żadna reguła nie
-ma jeszcze testu.**
-
-**Decyzja (2026-09-28):** dokończyć normalizację całej ustawy (249
-artykułów), nie tylko Tytułu I - mimo że Tytuł II/Część II-III nie
-dotyczą bezpośrednio spółdzielni mieszkaniowej. Tempo: kilka działów
-naraz (ostatnio trzy).
+Status ogólny: **normalizacja kompletna — cała ustawa, 249 artykułów**,
+w formacie Akoma Ntoso XML (`normalized/akoma-ntoso/prawo-spoldzielcze.xml`,
+patrz `docs/decisions/ADR-0001-akoma-ntoso-eli.md` i sekcję "NORMALIZACJA
+KOMPLETNA" niżej). **Reguły/procedury sformalizowane tylko dla Art. 1-3,
+5-7, 11, 12a, 14-18, 24** (Art. 4, 8-10, 12, 13, 33, 34 uchylone) — to
+mały fragment całości; cała reszta znormalizowanego materiału jest
+**wyłącznie znormalizowana, bez żadnych reguł**. **Żadna reguła nie ma
+jeszcze testu.**
 
 **Zwrot architektoniczny (2026-09-28):** patrz `docs/LEXON_CONTEXT.md` i
 `docs/decisions/ADR-0001-akoma-ntoso-eli.md`. Warstwa dokumentowa
@@ -345,6 +338,42 @@ usuniętymi linkami/poprawnie wydzielonymi przypisami — 0 rzeczywistych
 rozbieżności. Łączne pokrycie: 235 artykułów. **Zostaje już tylko Część
 III** (Art. 268-281, zmiany w przepisach i przepisy przejściowe/końcowe)
 — ostatnia część całej ustawy.
+
+## NORMALIZACJA KOMPLETNA (2026-09-28)
+
+Dodano Część III (Art. 268-281, 14 artykułów: Rozdział 1 — Zmiany w
+przepisach obowiązujących, w większości `status="omitted"` bo to
+jednorazowe nowelizacje innych ustaw bez własnej treści w tekście
+jednolitym; Rozdział 2 — Przepisy przejściowe i końcowe, kończące się
+uchyleniem poprzedniej ustawy z 1961 r. i datą wejścia w życie
+1983-01-01). Zweryfikowano skryptem: **14 jednostek tekstu, 14
+identycznych, 0 różnic** — najprostszy, bezbłędny fragment całej
+konwersji.
+
+**Cała ustawa Prawo spółdzielcze jest teraz w jednym pliku Akoma Ntoso
+XML: 249 artykułów, Część I-III (w tym IIA), zweryfikowanych 1:1 wobec
+źródła partiami, z 0 rzeczywistymi rozbieżnościami treści w żadnej z
+nich.** Po drodze znaleziono i jawnie zachowano (nie pominięto) 7
+przypisów niosących realną treść prawną, w tym jeden przypadek
+(Art. 108a) gdzie uchylenie przepisu samo zostało uchylone wyrokiem
+Trybunału Konstytucyjnego. Jedna niepewność jawnie oznaczona jako
+UNKNOWN zamiast zgadywana (Art. 125 §1 pkt 2).
+
+**Co dalej, świadomie odłożone:**
+
+- Reguły/procedury (Phase 2) sformalizowane są wciąż tylko dla
+  fragmentu Art. 1-24 (patrz status ogólny na początku pliku) — cała
+  reszta (Działy IV, VII-XIII, Tytuł II, Część II, IIA, III) jest
+  wyłącznie znormalizowana, zero reguł. To naturalny priorytet na
+  kolejny krok, razem z testami (nikt jeszcze nie istnieje w `tests/`).
+- Walidacja względem oficjalnego schematu XSD Akoma Ntoso 3.0 — nadal
+  tylko dobra forma XML, nie pełna zgodność ze schematem (brak
+  narzędzia w tym środowisku).
+- ELI URI nadal CONSTRUCTED, nie zweryfikowane na żywo.
+- Formalizacja Ustawy o spółdzielniach mieszkaniowych (OBS-0001) —
+  wciąż nierozpoczęta, a to ona, nie Prawo spółdzielcze, jest
+  faktycznie kluczowa dla realnej spółdzielni mieszkaniowej z
+  Knowledge Base.
 
 ------------------------------------------------------------------------
 

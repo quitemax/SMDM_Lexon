@@ -10,13 +10,9 @@ Tekst źródłowy ustawy w formacie [Akoma Ntoso](http://www.akomantoso.org/)
 
 `prawo-spoldzielcze.xml` — **jeden plik na cały akt** (zgodnie z typową
 praktyką AKN, w odróżnieniu od poprzedniego podejścia "jeden plik na
-artykuł"). Cały Tytuł I (Art. 1-137, przepisy wspólne) jest kompletny;
-konwersja kontynuowana do końca ustawy na życzenie użytkownika (decyzja
-2026-09-28, patrz ROADMAP.md) mimo że Tytuł II i dalsze części nie
-dotyczą bezpośrednio spółdzielni mieszkaniowej. Aktualny zasięg: patrz
-`lexon:coverage` w `<meta><proprietary>` pliku XML (aktualizowany na
-bieżąco, nie duplikowany tutaj, żeby uniknąć rozjazdu dwóch źródeł
-prawdy o tym samym).
+artykuł"). **Konwersja kompletna: cała ustawa, Art. 1-281, 249
+artykułów** (Część I, II, IIA, III), zakończona 2026-09-28 — patrz
+`lexon:coverage` w `<meta><proprietary>` pliku XML.
 
 Weryfikacja tekstu (wszystkie partie zweryfikowane skryptem, 0 rzeczywistych
 rozbieżności treści):
@@ -118,6 +114,17 @@ rozbieżności treści):
   Kolejny przypis znaleziony: **Art. 259a §3** (`authorialNote`, marker
   `7)`) — „Sąd Wojewódzki” z 1982 r. to dziś „Sąd Okręgowy” (reforma
   sądownictwa z 1999 r.).
+- **Część III — Zmiany w przepisach obowiązujących oraz przepisy
+  przejściowe i końcowe** (Art. 268-281, 14 artykułów; **kończy całą
+  ustawę**): 1:1 przeciwko źródłu — 14 jednostek tekstu, **14
+  identycznych, 0 różnic** (najprostszy fragment - bez odesłań
+  krzyżowych). W większości `status="omitted"` (`(pominięty)`) - te
+  artykuły nowelizowały inne ustawy jednorazowo i nie mają już własnej
+  treści w tekście jednolitym. Art. 280 uchyla poprzednią ustawę o
+  spółdzielniach z 1961 r., Art. 281 określa wejście w życie
+  (1983-01-01).
+
+**Konwersja zakończona 2026-09-28: cała ustawa, 249 artykułów.**
 
 ## Decyzje mapowania (własne, nie zweryfikowane wobec oficjalnego polskiego profilu AKN)
 
@@ -170,11 +177,10 @@ uchwalenia (1982 r.) jest `UNKNOWN` (nieustalony w naszych źródłach — nie
 zgadywany), więc `FRBRWork` tymczasowo ponownie używa pozycji tekstu
 jednolitego (2026 poz. 521) jako zastępczego zakotwiczenia identyfikatora.
 
-## Czego tu nie ma (jeszcze)
+## Czego tu nie ma
 
-- **Tylko Część III** (zmiany w przepisach obowiązujących, przepisy
-  przejściowe i końcowe, Art. 268-281) — ostatnia część ustawy, w toku
-  konwersji. Część I, II, IIA są już kompletne.
+Normalizacja jest **kompletna** (cała ustawa). Jedyna świadoma luka:
+
 - Walidacja względem oficjalnego schematu XSD Akoma Ntoso 3.0 — zrobiono
   tylko walidację dobrej formy XML (`xml.etree.ElementTree`) i ręczną
   weryfikację 1:1 przeciwko poprzedniej wersji YAML. Brak zainstalowanego
