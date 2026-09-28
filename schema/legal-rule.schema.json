@@ -1,0 +1,94 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/quitemax/SMDM_Lexon/schema/legal-rule.schema.json",
+  "title": "LEXON legal rule / procedure",
+  "description": "Wspolny rdzen dla law/<akt>/rules/*.yaml i law/<akt>/procedures/*.yaml. Patrz docs/decisions/ADR-0002-unified-rule-schema.md i docs/dsl.md. Pola specyficzne dla norm_type nie sa tu w pelni wyliczone (AGENTS.md sekcja 56 - nie splaszczaj roznic semantycznych) - schemat wymusza rdzen, nie kazde mozliwe pole.",
+  "type": "object",
+  "required": ["id", "norm_type", "title", "source", "validity", "formalization_status", "tests"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^R-PS-[0-9]{4}$"
+    },
+    "norm_type": {
+      "type": "string",
+      "enum": [
+        "DEFINITION",
+        "CONDITION",
+        "RIGHT",
+        "OBLIGATION",
+        "PROHIBITION",
+        "PERMISSION",
+        "POWER",
+        "COMPETENCE",
+        "STRUCTURAL",
+        "PROCEDURE"
+      ]
+    },
+    "title": { "type": "string", "minLength": 1 },
+    "source": {
+      "type": "object",
+      "required": ["act", "normalized_ref"],
+      "properties": {
+        "act": { "type": "string", "minLength": 1 },
+        "article": { "$ref": "#/$defs/stringOrStringArray" },
+        "paragraph": { "type": "string" },
+        "normalized_ref": { "$ref": "#/$defs/stringOrStringArray" }
+      }
+    },
+    "validity": {
+      "type": "object",
+      "description": "Czasowa stosowalnosc normy, nie samej formalizacji (AGENTS.md sekcja 23). Domyslnie = consolidated_text_as_of z law/<akt>/source/README.md, dopoki nie odnotowano nowelizacji.",
+      "required": ["from", "to"],
+      "properties": {
+        "from": { "type": "string", "format": "date" },
+        "to": { "type": ["string", "null"], "format": "date" }
+      }
+    },
+    "formalization_status": {
+      "type": "string",
+      "enum": ["DIRECT", "STRUCTURAL", "INFERRED", "INTERPRETATIVE", "UNCERTAIN", "CONTESTED"]
+    },
+    "strength": {
+      "type": "string",
+      "description": "LegalRuleML-inspirowane (StrictStrength/DefeasibleStrength). Stosowac tylko gdy regula lub jej fragment zalezy od pojecia OPEN_TEXTURED z concepts/ - patrz ADR-0002 pkt 3.",
+      "enum": ["STRICT", "DEFEASIBLE"]
+    },
+    "overridden_by": {
+      "type": "array",
+      "description": "LegalRuleML Override. Wypelniac tylko dla udokumentowanego CONFLICT (AGENTS.md sekcja 31), nie zgadywac - patrz ADR-0002 pkt 4.",
+      "items": { "type": "string", "pattern": "^R-PS-[0-9]{4}$" }
+    },
+    "subject": { "type": "string" },
+    "holder": { "type": "string" },
+    "tests": { "type": "array" },
+    "note": { "type": "string" }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": { "norm_type": { "const": "PROCEDURE" } }
+      },
+      "then": {
+        "required": ["name", "actors", "steps"],
+        "properties": {
+          "name": { "type": "string", "minLength": 1 },
+          "actors": { "type": "object" },
+          "steps": { "type": "array", "minItems": 1 }
+        }
+      },
+      "else": {
+        "required": ["subject"]
+      }
+    }
+  ],
+  "$defs": {
+    "stringOrStringArray": {
+      "anyOf": [
+        { "type": "string" },
+        { "type": "array", "items": { "type": "string" }, "minItems": 1 }
+      ]
+    }
+  },
+  "additionalProperties": true
+}
