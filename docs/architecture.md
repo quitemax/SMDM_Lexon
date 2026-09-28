@@ -42,8 +42,11 @@ nie tylko plan. Aktualizować przy każdej zmianie warstwy.
                            ↓
 ┌─────────────────────────────────────────────────────────┐
 │ 3. SILNIK WYKONAWCZY (engine/) - NIEROZPOCZĘTY (Phase 3) │
-│    Kandydaci na backend: własny evaluator (Python) albo   │
-│    Catala - do oceny małym spike'em przed decyzją.        │
+│    Backend: własny evaluator (Python) - decyzja ADR-0003  │
+│    po spike'u na R-PS-0003 (Catala odrzucona: brak         │
+│    natywnego event sourcingu/stanu w czasie, kluczowego    │
+│    dla naszego modelu; wzorzec label/exception zapożyczony│
+│    jako inspiracja dla strength/overridden_by z ADR-0002). │
 └──────────────────────────┬────────────────────────────────┘
                            ↓
 ┌─────────────────────────────────────────────────────────┐

@@ -46,17 +46,28 @@ Ustalenia i decyzje:
    przy akcie — to mechanizm specyficzny dla Prawa spółdzielczego,
    wyparty w praktyce przez USM dla SM (OBS-0001). Uzasadnienie pełne:
    `docs/architecture.md`.
-5. **Zaplanowane, po punkcie 2:** przed Phase 3 (silnik) zrobić mały
-   spike porównawczy — ręcznie przepisać jedną gotową procedurę (kandydat:
-   `R-PS-0003`) do składni Catala, sprawdzić dopasowanie, zanim
-   zdecydujemy między własnym evaluatorem a Catalą jako backendem.
+5. **ZROBIONE (2026-09-28):** spike porównawczy — `R-PS-0003` ręcznie
+   przepisany do składni Catala (`docs/spikes/R-PS-0003-membership-admission.catala_en`,
+   nieskompilowany — brak toolchainu OCaml w tym środowisku, jawnie
+   odnotowane). Decyzja: `docs/decisions/ADR-0003-execution-backend.md`
+   (ACCEPTED) — **własny evaluator Python, nie Catala.** Deontyka/
+   terminy w Catali dobrze pasują, ale kluczowy element naszego modelu
+   (event sourcing, stan w czasie, `ontology/states/`+`events/`) nie ma
+   w Catali natywnego odpowiednika — `scope` jest czystą funkcją
+   input→output. Wzorzec `label`/`exception` zapożyczony jako
+   inspiracja dla `strength`/`overridden_by` (ADR-0002).
 6. **Świadomie odłożone (niski priorytet):** ocena LKIF jako inspiracji
    ontologicznej — nasz słownik (RIGHT/OBLIGATION/PROHIBITION/PERMISSION/
    POWER) już jest blisko, bez formalnej analizy.
 
 Kolejność ustalona z użytkownikiem: **dokumentacja (zrobione) → encje
-(zrobione) → schemat/LegalRuleML (zrobione, 2026-09-28) → na końcu spike
-Catala (następny krok).**
+(zrobione) → schemat/LegalRuleML (zrobione, 2026-09-28) → spike Catala
+(zrobione, 2026-09-28).** Cała ustalona sekwencja zamknięta. Następny
+krok do ustalenia z użytkownikiem: albo Phase 3 (silnik, `engine/`) na
+bazie ADR-0003, albo powrót do pisania reguł dla kolejnych artykułów wg
+nowego schematu (ADR-0002), albo formalizacja USM (odłożona, ale
+zidentyfikowana w OBS-0001 jako faktycznie rządząca realną
+spółdzielnią mieszkaniową).
 
 **Zwrot architektoniczny (2026-09-28):** patrz `docs/LEXON_CONTEXT.md` i
 `docs/decisions/ADR-0001-akoma-ntoso-eli.md`. Warstwa dokumentowa

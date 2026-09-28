@@ -1,0 +1,152 @@
+> SPIKE — nie kod produkcyjny. Ręczne przepisanie
+> `law/prawo-spoldzielcze/procedures/R-PS-0003-membership-admission.yaml`
+> (Prawo spółdzielcze, PS-ART-016, PS-ART-017) do składni Catala, w celu
+> oceny Catali jako kandydata na backend wykonawczy Phase 3 — patrz
+> `docs/decisions/ADR-0003-execution-backend.md` dla pełnego kontekstu
+> i wniosków.
+>
+> **UWAGA (AGENTS.md sekcja 51): ten plik NIE został sprawdzony
+> kompilatorem Catala.** W tym środowisku nie jest zainstalowany
+> OCaml/opam/catala (zweryfikowano: `which catala`/`opam`/`ocaml`
+> — brak), a instalacja całego toolchainu OCaml wyłącznie dla jednego
+> pliku-spike'a byłaby nieproporcjonalna do celu (AGENTS.md sekcja 59).
+> Składnia poniżej jest oparta na `book.catala-lang.org` (sekcje 2-1,
+> 2-2, 4-2, 5-1, 5-2, 5-3) i cytatach z niej — ale bez `catala
+> typecheck` może zawierać drobne błędy składniowe. Traktować jako
+> materiał do przeglądu, nie jako zweryfikowany kod.
+>
+> Katala wspiera zlokalizowane słowa kluczowe tylko dla angielskiego
+> (`.catala_en`) i francuskiego (`.catala_fr`) — nie ma polskiej
+> lokalizacji. Stąd słowa kluczowe (`declaration`, `scope`,
+> `definition`, `under condition`...) są po angielsku, a identyfikatory
+> domenowe (`Deklaracja`, `termin_rozstrzygniecia`...) po polsku, żeby
+> zachować możliwie blisko tekstu ustawy tam, gdzie to możliwe.
+
+Ustawa przewiduje dwuetapową procedurę: złożenie deklaracji
+członkowskiej pod rygorem nieważności co do formy (PS-ART-016 §1, §2),
+a następnie rozstrzygnięcie przez organ wskazany w statucie w terminie
+miesiąca, chyba że statut przewiduje inny termin (PS-ART-017 §3), z
+obowiązkiem pisemnego zawiadomienia zainteresowanego w terminie dwóch
+tygodni od uchwały, zawierającego uzasadnienie w przypadku odmowy
+(PS-ART-017 §3 zdanie drugie).
+
+## Typy
+
+Deklaracja może przybrać jedną z trzech form przewidzianych ustawą
+(PS-ART-016 §1, §2 — odpowiednik `properties[0].type` w
+`ontology/entities/deklaracja.yaml`).
+
+```catala
+declaration enumeration FormaDeklaracji:
+  -- Papierowa
+  -- Elektroniczna
+  -- Dokumentowa
+```
+
+Organ właściwy podejmuje jedną z dwóch decyzji (PS-ART-017 §3 —
+odpowiednik `postcondition` kroku `resolve_admission` w oryginalnym
+YAML: `Membership.status = ACTIVE (przyjęcie) | REJECTED (odmowa)`).
+
+```catala
+declaration enumeration DecyzjaOPrzyjeciu:
+  -- Przyjecie
+  -- Odmowa
+```
+
+Deklaracja członkowska jako struktura danych — odpowiednik
+`ontology/entities/deklaracja.yaml`, zawężony tu do pól potrzebnych do
+tej reguły (nie kopiujemy całej encji).
+
+```catala
+declaration structure Deklaracja:
+  data forma content FormaDeklaracji
+  data data_zlozenia content date
+  data zachowano_wymagana_forme content boolean
+```
+
+## Zakres (`scope`)
+
+**Główne ustalenie tego spike'u**, nie przypadkowe uproszczenie: Catala
+`scope` jest czystą funkcją danych wejściowych na wyjściowe. Nie ma w
+Catali natywnego odpowiednika "wyemituj zdarzenie"
+(`ontology/events/*.yaml`) ani mutowalnego stanu w czasie
+(`ontology/states/membership_status.yaml`, event sourcing per
+AGENTS.md sekcja 25) — modelujemy tu więc tylko *rozstrzygnięcie i
+terminy* (to, co ustawa nakazuje/zakazuje/wymaga), nie *przejścia
+stanu członkostwa* (to, co się faktycznie dzieje w czasie z konkretnym
+kandydatem). W pełnej integracji Catala-jako-backend, ten `scope`
+byłby wywoływany jako czysta funkcja z kodu hosta (np. Python/OCaml),
+który dopiero emitowałby zdarzenia na podstawie jej wyniku — Catala
+sama tego nie robi i nie ma do tego konstruktu.
+
+`termin_rozstrzygniecia_ze_statutu` jest tu inputem, nie stałą
+`1 month` — PS-ART-017 §4 pozwala statutowi przewidzieć inny termin
+(`overridable_by_statute: true` w oryginalnym YAML). W pełnej
+implementacji byłby to wynik wywołania osobnego `scope`
+reprezentującego statut, z `1 month` jako
+`definition ... under condition statut_nie_okresla_terminu` — nie
+modelujemy tego tu, żeby nie zgadywać składni wywołań między-zakresowych
+(`scope calls`), której nie zdążyliśmy wystarczająco zweryfikować na
+potrzeby tego spike'u.
+
+```catala
+declaration scope PrzyjecieDoSpoldzielni:
+  input deklaracja content Deklaracja
+  input termin_rozstrzygniecia_ze_statutu content duration
+  internal termin_rozstrzygniecia content date
+  context decyzja content DecyzjaOPrzyjeciu
+  context data_decyzji content date
+  output uzasadnienie_wymagane content boolean
+  output termin_zawiadomienia content date
+```
+
+## Reguły
+
+Deklaracja złożona z naruszeniem wymaganej formy jest nieważna pod
+rygorem nieważności (PS-ART-016 §1 — odpowiednik `void_if` w
+oryginalnym YAML). Modelowane jako `assertion` na poziomie zakresu, bo
+dotyczy warunku wstępnego całej procedury, nie definicji jednej
+konkretnej zmiennej wyjściowej.
+
+```catala
+scope PrzyjecieDoSpoldzielni:
+  assertion deklaracja.zachowano_wymagana_forme
+```
+
+Termin miesiąca na rozstrzygnięcie liczony od złożenia deklaracji
+(PS-ART-017 §3), z uwzględnieniem ewentualnego terminu statutowego
+przekazanego jako input (patrz uwaga wyżej).
+
+```catala
+scope PrzyjecieDoSpoldzielni:
+  definition termin_rozstrzygniecia equals
+    deklaracja.data_zlozenia + termin_rozstrzygniecia_ze_statutu
+```
+
+Uzasadnienie jest wymagane wyłącznie przy odmowie (PS-ART-017 §3
+zdanie drugie). Dwa przypadki tej samej zmiennej pod wzajemnie
+wyłączającymi się warunkami — bez `label`/`exception`, bo warunki są
+komplementarne (dokładnie jeden zachodzi), nie hierarchiczne (jeden nie
+ma pierwszeństwa przed drugim, w odróżnieniu od np. `strength:
+DEFEASIBLE` w `R-PS-0005`/`R-PS-0016` z ADR-0002, gdzie `label`/
+`exception` byłby właściwym odwzorowaniem).
+
+```catala
+scope PrzyjecieDoSpoldzielni:
+  definition uzasadnienie_wymagane under condition
+    decyzja = Odmowa
+  consequence equals true
+
+  definition uzasadnienie_wymagane under condition
+    decyzja = Przyjecie
+  consequence equals false
+```
+
+Termin dwóch tygodni na zawiadomienie zainteresowanego liczony od
+uchwały (PS-ART-017 §3 zdanie pierwsze).
+
+```catala
+scope PrzyjecieDoSpoldzielni:
+  definition termin_zawiadomienia equals
+    data_decyzji + 2 week
+```
