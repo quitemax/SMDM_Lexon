@@ -10,8 +10,8 @@ Tekst źródłowy ustawy w formacie [Akoma Ntoso](http://www.akomantoso.org/)
 
 `prawo-spoldzielcze.xml` — **jeden plik na cały akt** (zgodnie z typową
 praktyką AKN, w odróżnieniu od poprzedniego podejścia "jeden plik na
-artykuł"), obejmujący **Art. 1–102** (Dział I–IX w całości — Tytuł I do
-końca Działu IX, Łączenie się spółdzielni).
+artykuł"), obejmujący **Art. 1–112** (Dział I–XI w całości — Tytuł I do
+końca Działu XI, Podział spółdzielni).
 
 Weryfikacja tekstu (wszystkie partie zweryfikowane skryptem, 0 rzeczywistych
 rozbieżności treści):
@@ -41,6 +41,23 @@ rozbieżności treści):
   (bez `§`) — zachowane verbatim jako `<num>1.</num>` itd., nie
   ujednolicone do `§ 1.` (AGENTS.md sekcja 30: nie "naprawiaj" tekstu
   źródłowego nawet dla spójności notacji).
+- Art. 103-112 (Dział X — uchylony w całości, bez artykułów; Dział XI —
+  Podział spółdzielni): 1:1 przeciwko źródłu — 28 jednostek tekstu, 23
+  identycznych, 5 różniących się tym samym wzorcem usuniętego linku
+  Markdown. **Znalezisko:** Art. 108a niesie w źródle przypis `[2)]`
+  przy numerze artykułu - to nie link, tylko marker przypisu. Treść
+  przypisu (sekcja "Przypisy" na końcu pliku źródłowego) mówi, że artykuł
+  był uchylony od 2003-01-15, ale **to uchylenie utraciło moc 2005-04-28
+  na mocy wyroku Trybunału Konstytucyjnego (sygn. K 42/02)** - czyli
+  artykuł od tamtej pory znów obowiązuje. To realny, znaczący przykład
+  złożonej historii legislacyjnej (temporalność, o której mówi
+  `docs/LEXON_CONTEXT.md` sekcja 10), więc **zachowany jawnie**, nie
+  pominięty - jako `<lexon:note marker="2)" type="legislative-history">`
+  dołączony do `<article eId="art_108a">`, w naszej przestrzeni nazw (AKN
+  nie ma oczywistego kanonicznego miejsca na przypis przywiązany do całego
+  artykułu, a nie do fragmentu tekstu - `authorialNote` jest elementem
+  inline). Sprawdzone: to jedyny taki przypis w całej dotąd
+  skonwertowanej części ustawy (Art. 1-112).
 
 ## Decyzje mapowania (własne, nie zweryfikowane wobec oficjalnego polskiego profilu AKN)
 
@@ -62,6 +79,7 @@ istniejącego standardu:
 | (pominięty)     | atrybut `status="omitted"` (Art. 83) | Odróżnione od "uchylony" - to inne pojęcie (numer pominięty w numeracji, nie przepis, który obowiązywał i został uchylony). Wartość własna, `status` w AKN jest słownikiem otwartym. |
 | dział w całości uchylony (Dział V, VI) | `<hcontainer status="repealed">` bez żadnych `<article>` | Wierne odwzorowanie źródła - w tekście źródłowym Art. 60-66 nie istnieją nawet jako pojedyncze jednostki "(uchylony)" (inaczej niż np. Art. 4, 8, 9...) - tekst przechodzi wprost z Art. 59 (koniec Działu IV) do nagłówków "Dział V. (uchylony)" / "Dział VI. (uchylony)" bez treści, po czym Dział VII zaczyna się od Art. 67. Luka w numeracji (60-66) jest więc odwzorowana na poziomie działu, nie artykułu - zgodnie z tym, jak faktycznie wygląda źródło, a nie wg naszej własnej konwencji z innych działów. |
 | ustęp numerowany bez `§` (Art. 93b: `1.`/`2.`/`3.`/`4.`) | `<paragraph>` z `<num>1.</num>` (bez `§`) | To nadal strukturalnie ten sam poziom co `§`, ale zapisany w źródle inną notacją (styl "ust." typowy dla nowszych, unijno-implementacyjnych przepisów) - zachowane verbatim zamiast ujednolicone do `§ N.`, żeby nie "poprawiać" tekstu źródłowego (AGENTS.md sekcja 30). |
+| przypis dołączony do całego artykułu (Art. 108a: `[2)]`) | `<lexon:note marker="..." type="legislative-history">` (nasza przestrzeń nazw) | AKN ma `authorialNote` dla przypisów w treści tekstu (inline), ale nie oczywisty kanoniczny element na przypis dotyczący całego artykułu jako takiego. Zamiast zgadywać/naciągać AKN, użyto już istniejącej własnej przestrzeni `lexon:` (ta sama, co w `<meta><proprietary>`), z jawnym `type` opisującym charakter przypisu. |
 
 `eId` używa schematu `art_{numer}[__par_{numer}[__pkt_{numer}]]`, np.
 `art_24__par_10__pkt_2`.
@@ -91,10 +109,9 @@ jednolitego (2026 poz. 521) jako zastępczego zakotwiczenia identyfikatora.
 
 ## Czego tu nie ma (jeszcze)
 
-- Art. 103 i dalej (Dział X — uchylony, XI — Podział spółdzielni, XII —
-  Likwidacja, XIII — Upadłość, i dalej Tytuł II oraz Część II, III) — do
-  dodania jako kolejne `<hcontainer name="dzial">` w tym samym pliku,
-  dział po dziale.
+- Art. 113 i dalej (Dział XII — Likwidacja, XIII — Upadłość, i dalej
+  Tytuł II oraz Część II, III) — do dodania jako kolejne
+  `<hcontainer name="dzial">` w tym samym pliku, dział po dziale.
 - Walidacja względem oficjalnego schematu XSD Akoma Ntoso 3.0 — zrobiono
   tylko walidację dobrej formy XML (`xml.etree.ElementTree`) i ręczną
   weryfikację 1:1 przeciwko poprzedniej wersji YAML. Brak zainstalowanego

@@ -5,21 +5,20 @@
 > tu są rozbite na konkretne, sprawdzalne zadania osadzone w realnym materiale
 > źródłowym z `external/SMDM_Knowledge_Base`.
 
-Status ogólny: **Art. 1-102 znormalizowane w całości** (Dział I-IX), w
+Status ogólny: **Art. 1-112 znormalizowane w całości** (Dział I-XI), w
 formacie Akoma Ntoso XML (`normalized/akoma-ntoso/prawo-spoldzielcze.xml`)
 — patrz `docs/decisions/ADR-0001-akoma-ntoso-eli.md`. **Reguły/procedury
 sformalizowane tylko dla Art. 1-3, 5-7, 11, 12a, 14-18, 24** (Art. 4, 8-10,
-12, 13, 33, 34 uchylone) — Działy IV, VII, VIII, IX są na razie
+12, 13, 33, 34 uchylone) — Działy IV, VII, VIII, IX, XI są na razie
 **wyłącznie znormalizowane, bez żadnych reguł**. Brakuje też reguł dla
 Art. 6 §2a (poza zakresem SM), 19-23, 25-32. **Żadna reguła nie ma jeszcze
 testu** — to następna, ogólna zaległość (patrz `tests/` w strukturze
 repo, wciąż puste).
 
-**Ustalone tempo (2026-09-28):** normalizacja idzie dział po dziale
-(ostatnio dwa działy naraz na życzenie), zanim wrócimy do pisania reguł.
-Następny w kolejce: Dział X (uchylony - szybki krok) i Dział XI (Podział
-spółdzielni, Art. 103 i dalej) - do dodania jako rozszerzenie tego samego
-pliku XML.
+**Ustalone tempo:** normalizacja idzie po dwa działy naraz, zanim wrócimy
+do pisania reguł. Następny w kolejce: Dział XII (Likwidacja spółdzielni)
+i Dział XIII (Upadłość spółdzielni, Art. 113 i dalej) - do dodania jako
+rozszerzenie tego samego pliku XML.
 
 **Zwrot architektoniczny (2026-09-28):** patrz `docs/LEXON_CONTEXT.md` i
 `docs/decisions/ADR-0001-akoma-ntoso-eli.md`. Warstwa dokumentowa
@@ -259,6 +258,23 @@ Zweryfikowano skryptem przeciwko źródłu: 52 jednostki tekstu, 50
 identycznych, 2 różniące się usuniętym linkiem Markdown — 0 rzeczywistych
 rozbieżności. Reguły dla obu działów jeszcze nie napisane. Łączne pokrycie
 normalizacyjne: Art. 1-102 (Dział I-IX), 103 artykuły w pliku XML.
+
+**Aktualizacja — Dział X, XI dodane (2026-09-28):** rozszerzono plik XML
+o Art. 103-112: Dział X (uchylony w całości, bez artykułów — jak Dział V,
+VI wcześniej) i Dział XI — Podział spółdzielni (Art. 108, 108a, 108b,
+109-112). **Znalezisko warte odnotowania:** Art. 108a niesie w źródle
+przypis `[2)]` mówiący, że artykuł był uchylony od 2003-01-15, ale **to
+uchylenie utraciło moc 2005-04-28 na mocy wyroku Trybunału
+Konstytucyjnego (K 42/02)** — od tamtej pory znów obowiązuje. Zamiast
+pominąć ten przypis (jak inne linki Markdown, które świadomie usuwamy),
+zachowano go jawnie jako `<lexon:note marker="2)" type="legislative-history">`
+przy `art_108a` — pierwszy w tej ustawie realny przykład złożonej
+temporalności/historii legislacyjnej pojedynczego przepisu, o której mówi
+`docs/LEXON_CONTEXT.md` sekcja 10. Zweryfikowano skryptem: 28 jednostek
+tekstu, 23 identyczne, 5 różniących się usuniętym linkiem Markdown — 0
+rzeczywistych rozbieżności treści. Reguły dla Działu XI jeszcze nie
+napisane. Łączne pokrycie normalizacyjne: Art. 1-112 (Dział I-XI), 110
+artykułów w pliku XML.
 
 ------------------------------------------------------------------------
 

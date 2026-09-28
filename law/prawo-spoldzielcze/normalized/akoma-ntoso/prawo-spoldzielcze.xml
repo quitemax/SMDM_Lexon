@@ -35,7 +35,7 @@
           <lexon:sourceCommit>7fcaed372cbe56f58c3ee4aa1d5fb6eee15b83ee</lexon:sourceCommit>
           <lexon:dzU>Dz.U. 2026 poz. 521</lexon:dzU>
           <lexon:textType>tekst jednolity</lexon:textType>
-          <lexon:coverage>Art. 1-102 (Dział I-IX w całości - Dział V, VI w pełni uchylone bez treści). Art. 103 i dalej (Dział X - uchylony - i Dział XI Podział spółdzielni i kolejne) jeszcze nie skonwertowane.</lexon:coverage>
+          <lexon:coverage>Art. 1-112 (Dział I-XI w całości - Dział V, VI, X w pełni uchylone bez treści). Art. 113 i dalej (Dział XII Likwidacja spółdzielni i kolejne) jeszcze nie skonwertowane.</lexon:coverage>
           <lexon:eliStatus>CONSTRUCTED - wzorzec URI zgodny ze standardowym schematem polskiego ELI (https://eli.gov.pl/eli/DU/{rok}/{pozycja}), NIE zweryfikowany wywołaniem na żywo względem eli.gov.pl/isap.sejm.gov.pl w tej sesji. Numer pozycji Dziennika Ustaw z pierwotnego uchwalenia (1982 r., przed ujednoliceniem) jest UNKNOWN - nieustalony w naszych źródłach, dlatego FRBRWork ponownie używa pozycji tekstu jednolitego (2026 poz. 521) jako zastępczego kotwiczenia identyfikatora, co jest uproszczeniem do skorygowania, jeśli oryginalny numer zostanie kiedyś potwierdzony.</lexon:eliStatus>
           <lexon:mappingNote>Mapowanie struktury polskiej ustawy na elementy Akoma Ntoso jest własną decyzją projektową (brak potwierdzonego oficjalnego polskiego profilu AKN w naszych źródłach): Część→part, Tytuł→hcontainer[name=tytul], Dział→hcontainer[name=dzial], Artykuł→article, §→paragraph, punkt→point (w list). Patrz normalized/akoma-ntoso/README.md.</lexon:mappingNote>
           <lexon:citationKey pattern="PS-ART-{numer}">Klucz cytowania używany w law/prawo-spoldzielcze/rules,procedures,ontology (np. "PS-ART-015") odpowiada 1:1 elementowi eId="art_{numer}" w tym pliku (np. eId="art_15"). Patrz docs/dsl.md.</lexon:citationKey>
@@ -1715,6 +1715,152 @@
                 <num>§ 3.</num>
                 <content><p>Jeżeli uchwały walnych zgromadzeń o połączeniu tak stanowią, po wpisie połączenia do Krajowego Rejestru Sądowego spółdzielnia dokonuje niezwłocznie wyborów rady i zarządu.</p></content>
               </paragraph>
+            </article>
+          </hcontainer>
+
+          <hcontainer name="dzial" eId="czesc_I__tyt_I__dzial_X" status="repealed">
+            <num>Dział X</num>
+            <heading>(uchylony)</heading>
+          </hcontainer>
+
+          <hcontainer name="dzial" eId="czesc_I__tyt_I__dzial_XI">
+            <num>Dział XI</num>
+            <heading>Podział spółdzielni</heading>
+
+            <article eId="art_108">
+              <num>Art. 108.</num>
+              <paragraph eId="art_108__par_1">
+                <num>§ 1.</num>
+                <content><p>Spółdzielnia może podzielić się na podstawie uchwały walnego zgromadzenia podjętej zwykłą większością głosów w ten sposób, że z jej wydzielonej części zostaje utworzona nowa spółdzielnia.</p></content>
+              </paragraph>
+              <paragraph eId="art_108__par_2">
+                <num>§ 2.</num>
+                <content><p>Uchwała o podziale spółdzielni powinna zawierać:</p></content>
+                <list eId="art_108__par_2__lst">
+                  <point eId="art_108__par_2__pkt_1">
+                    <num>1)</num>
+                    <content><p>oznaczenie dotychczasowej spółdzielni i powstającej w wyniku podziału;</p></content>
+                  </point>
+                  <point eId="art_108__par_2__pkt_2">
+                    <num>2)</num>
+                    <content><p>listę członków lub określenie grup członków przechodzących do powstającej spółdzielni;</p></content>
+                  </point>
+                  <point eId="art_108__par_2__pkt_3">
+                    <num>3)</num>
+                    <content><p>zatwierdzenie sprawozdania finansowego spółdzielni i planu podziału składników majątkowych oraz praw i zobowiązań;</p></content>
+                  </point>
+                  <point eId="art_108__par_2__pkt_4">
+                    <num>4)</num>
+                    <content><p>datę podziału spółdzielni.</p></content>
+                  </point>
+                </list>
+              </paragraph>
+            </article>
+
+            <article eId="art_108a">
+              <num>Art. 108a.</num>
+              <lexon:note xmlns:lexon="https://github.com/quitemax/SMDM_Lexon/ns/lexon-meta/1.0" marker="2)" type="legislative-history">Uchylony przez art. 3 pkt 2 ustawy z dnia 19 grudnia 2002 r. o zmianie ustawy o spółdzielniach mieszkaniowych oraz niektórych innych ustaw (Dz. U. poz. 2058), która weszła w życie z dniem 15 stycznia 2003 r.; uchylenie utraciło moc z dniem 28 kwietnia 2005 r. na podstawie wyroku Trybunału Konstytucyjnego z dnia 20 kwietnia 2005 r. sygn. akt K 42/02 (Dz. U. poz. 643).</lexon:note>
+              <paragraph eId="art_108a__par_1">
+                <num>§ 1.</num>
+                <content><p>Członkowie spółdzielni, których prawa i obowiązki majątkowe są związane z wyodrębnioną organizacyjnie jednostką spółdzielni albo z częścią majątku spółdzielni, która nadaje się do takiego wyodrębnienia, mogą na podstawie uchwały podjętej większością głosów tych członków wystąpić do zarządu spółdzielni z żądaniem zwołania walnego zgromadzenia w celu podjęcia uchwały o podziale spółdzielni w ten sposób, że z tej jednostki organizacyjnej albo części majątku zostanie utworzona nowa spółdzielnia. W zakresie reprezentacji tych członków stosuje się odpowiednio przepisy o zakładaniu spółdzielni.</p></content>
+              </paragraph>
+              <paragraph eId="art_108a__par_2">
+                <num>§ 2.</num>
+                <content><p>Zarząd spółdzielni jest obowiązany niezwłocznie przygotować dokumenty niezbędne do podjęcia przez walne zgromadzenie uchwały o podziale oraz udostępnić je członkom żądającym podziału.</p></content>
+              </paragraph>
+              <paragraph eId="art_108a__par_3">
+                <num>§ 3.</num>
+                <content><p>Walne zgromadzenie może podjąć uchwałę odmawiającą podziału tylko ze względu na ważne interesy gospodarcze dotychczasowej spółdzielni lub istotne interesy jej członków.</p></content>
+              </paragraph>
+              <paragraph eId="art_108a__par_4">
+                <num>§ 4.</num>
+                <content><p>W razie podjęcia przez walne zgromadzenie uchwały odmawiającej podziału spółdzielni albo uchwały o podziale naruszającej istotne interesy członków występujących z żądaniem podziału, członkowie, którzy wystąpili z takim żądaniem, mogą w terminie sześciu tygodni od dnia odbycia walnego zgromadzenia wystąpić do sądu o wydanie orzeczenia zastępującego uchwałę o podziale.</p></content>
+              </paragraph>
+              <paragraph eId="art_108a__par_5">
+                <num>§ 5.</num>
+                <content><p>Przepis § 4 stosuje się odpowiednio w razie nierozpatrzenia przez walne zgromadzenie zgłoszonego przez członków żądania w terminie trzech miesięcy od dnia jego doręczenia.</p></content>
+              </paragraph>
+              <paragraph eId="art_108a__par_6">
+                <num>§ 6.</num>
+                <content><p>W razie podjęcia przez walne zgromadzenie uchwały o podziale niezawierającej wszystkich składników treści tej uchwały określonych w art. 108 § 2, członkowie zgłaszający żądanie podziału mogą wystąpić do zarządu spółdzielni z żądaniem zwołania walnego zgromadzenia w celu podjęcia uzupełniającej uchwały o podziale. Przepisy § 4 i 5 stosuje się odpowiednio.</p></content>
+              </paragraph>
+              <paragraph eId="art_108a__par_7">
+                <num>§ 7.</num>
+                <content><p>Przepisy § 2–6 stosuje się odpowiednio w wypadku, gdy z żądaniem podziału występuje organ spółdzielni powołany do reprezentowania członków, których prawa i obowiązki majątkowe są związane z wyodrębnioną organizacyjnie jednostką spółdzielni.</p></content>
+              </paragraph>
+              <paragraph eId="art_108a__par_8">
+                <num>§ 8.</num>
+                <content><p>Uchwała walnego zgromadzenia o podziale spółdzielni zawierająca wszystkie składniki treści określone w art. 108 § 2 oraz prawomocne orzeczenie sądu zastępujące taką uchwałę stanowią podstawę do dokonania stosownych wpisów w rejestrze i w księdze wieczystej.</p></content>
+              </paragraph>
+            </article>
+
+            <article eId="art_108b">
+              <num>Art. 108b.</num>
+              <paragraph eId="art_108b__par_1">
+                <num>§ 1.</num>
+                <content><p>Członkowie spółdzielni, których prawa i obowiązki majątkowe są związane z wyodrębnioną organizacyjnie jednostką spółdzielni albo z częścią majątku spółdzielni, która nadaje się do takiego wyodrębnienia, mogą przyjąć uchwałę większością głosów tych członków, o podziale w spółdzielni w ten sposób, że z tej jednostki organizacyjnej albo części majątku zostanie utworzona nowa spółdzielnia. W zakresie reprezentacji tych członków stosuje się odpowiednio przepisy o zakładaniu spółdzielni.</p></content>
+              </paragraph>
+              <paragraph eId="art_108b__par_2">
+                <num>§ 2.</num>
+                <content><p>Zarząd dotychczasowej spółdzielni jest obowiązany niezwłocznie, jednak niedłużej niż w ciągu 60 dni, przygotować dokumenty niezbędne do dokonania podziału, o którym mowa w § 1, oraz udostępnić je członkom żądającym podziału.</p></content>
+              </paragraph>
+              <paragraph eId="art_108b__par_3">
+                <num>§ 3.</num>
+                <content><p>Walne zgromadzenie dotychczasowej spółdzielni niepóźniej niż w ciągu trzech miesięcy od dnia doręczenia zarządowi spółdzielni żądania zwołania walnego zgromadzenia w celu podjęcia uchwały o podziale spółdzielni, o której mowa w § 1, podejmuje uchwałę o podziale lub odmawiającą podziału. Uchwała odmawiająca podziału spółdzielni może być podjęta tylko ze względu na ważne interesy gospodarcze dotychczasowej spółdzielni lub istotne interesy jej członków.</p></content>
+              </paragraph>
+              <paragraph eId="art_108b__par_4">
+                <num>§ 4.</num>
+                <content><p>W razie niepodjęcia przez walne zgromadzenie dotychczasowej spółdzielni, w terminie określonym w § 3, uchwały o podziale spółdzielni, lub w razie podjęcia uchwały odmawiającej podziału, reprezentanci członków, którzy podjęli uchwałę, o której mowa w § 1, mogą w terminie sześciu tygodni od dnia odbycia walnego zgromadzenia, wystąpić do sądu o wydanie orzeczenia zastępującego uchwałę walnego zgromadzenia, o której mowa w § 3.</p></content>
+              </paragraph>
+              <paragraph eId="art_108b__par_5">
+                <num>§ 5.</num>
+                <content><p>Uchwała walnego zgromadzenia o podziale spółdzielni spełniająca wymagania określone w art. 108 § 2 lub prawomocne orzeczenie sądu zastępujące taką uchwałę stanowią podstawę do dokonania wpisów do Krajowego Rejestru Sądowego i do księgi wieczystej.</p></content>
+              </paragraph>
+              <paragraph eId="art_108b__par_6">
+                <num>§ 6.</num>
+                <content><p>Koszty postępowania sądowego o wydanie orzeczenia, o którym mowa w § 4, ponoszą solidarnie członkowie wnoszący o podział spółdzielni oraz dotychczasowa spółdzielnia.</p></content>
+              </paragraph>
+            </article>
+
+            <article eId="art_109">
+              <num>Art. 109.</num>
+              <paragraph eId="art_109__par_1">
+                <num>§ 1.</num>
+                <content><p>Niezwłocznie po podjęciu przez walne zgromadzenie uchwały o podziale spółdzielni zebranie członków przechodzących do powstającej spółdzielni, a jeżeli uchwałę o podziale spółdzielni podjęło zebranie przedstawicieli – zebranie tych przedstawicieli, którzy przechodzą jako członkowie do powstającej spółdzielni:</p></content>
+                <list eId="art_109__par_1__lst">
+                  <point eId="art_109__par_1__pkt_1">
+                    <num>1)</num>
+                    <content><p>uchwala statut powstającej spółdzielni; statut ten nie może uszczuplać nabytych praw majątkowych członków;</p></content>
+                  </point>
+                  <point eId="art_109__par_1__pkt_2">
+                    <num>2)</num>
+                    <content><p>dokonuje wyboru tych organów spółdzielni, do których wyboru powołane jest, według przyjętego statutu, walne zgromadzenie.</p></content>
+                  </point>
+                </list>
+              </paragraph>
+              <paragraph eId="art_109__par_2">
+                <num>§ 2.</num>
+                <content><p>Podjęcie uchwał, o których mowa w paragrafie poprzedzającym, wymaga zwykłej większości głosów.</p></content>
+              </paragraph>
+              <paragraph eId="art_109__par_3">
+                <num>§ 3.</num>
+                <content><p>Jeżeli liczba członków przechodzących do powstającej spółdzielni jest mniejsza od liczby członków uprawniającej według statutu dotychczasowej spółdzielni do zastąpienia walnego zgromadzenia przez zebranie przedstawicieli, uchwały, o których mowa w § 1, podejmuje w ciągu miesiąca od dnia podjęcia uchwały o podziale spółdzielni zebranie członków przechodzących do powstającej spółdzielni. Zebranie to zwołuje zarząd dotychczasowej spółdzielni, powiadamiając pisemnie zainteresowanych członków o terminie zebrania i porządku jego obrad.</p></content>
+              </paragraph>
+            </article>
+
+            <article eId="art_110">
+              <num>Art. 110.</num>
+              <content><p>Zarząd spółdzielni powstającej jest obowiązany w terminie czternastu dni od dnia jego wyboru wystąpić z wnioskiem o wpisanie spółdzielni do Krajowego Rejestru Sądowego, a zarząd spółdzielni dotychczasowej – z wnioskiem o dokonanie w tym rejestrze wpisu o jej podziale. Przepis art. 7 stosuje się odpowiednio.</p></content>
+            </article>
+
+            <article eId="art_111">
+              <num>Art. 111.</num>
+              <content><p>Wskutek podziału spółdzielni na powstającą spółdzielnię przechodzą z chwilą jej zarejestrowania wynikające z planu podziału składniki majątkowe oraz prawa i zobowiązania. W tym też zakresie wierzyciele i dłużnicy dotychczasowej spółdzielni stają się wierzycielami i dłużnikami powstającej spółdzielni. Jednakże za zobowiązania powstałe przed podziałem spółdzielni spółdzielnia dotychczasowa i nowo powstała odpowiadają solidarnie.</p></content>
+            </article>
+
+            <article eId="art_112">
+              <num>Art. 112.</num>
+              <content><p>Do podziału spółdzielni stosuje się odpowiednio przepisy art. 98 § 1 i art. 100.</p></content>
             </article>
           </hcontainer>
         </hcontainer>
