@@ -5,11 +5,17 @@
 > tu są rozbite na konkretne, sprawdzalne zadania osadzone w realnym materiale
 > źródłowym z `external/SMDM_Knowledge_Base`.
 
-Status ogólny: **Art. 1-28 znormalizowane w całości; reguły/procedury
-sformalizowane dla Art. 1-3, 5-7, 11, 12a, 14-18, 24 (Art. 4, 8-10, 12, 13
-uchylone).** Brakuje jeszcze reguł dla Art. 6 §2a (poza zakresem SM), 19-23,
-25-28. **Żadna reguła nie ma jeszcze testu** — to następna, ogólna
-zaległość (patrz `tests/` w strukturze repo, wciąż puste).
+Status ogólny: **Art. 1-34 znormalizowane w całości** (cały Dział I, II, III
+- koniec Tytułu I przed Działem IV). **Reguły/procedury sformalizowane dla
+Art. 1-3, 5-7, 11, 12a, 14-18, 24** (Art. 4, 8-10, 12, 13, 33, 34 uchylone).
+Brakuje jeszcze reguł dla Art. 6 §2a (poza zakresem SM), 19-23, 25-32.
+**Żadna reguła nie ma jeszcze testu** — to następna, ogólna zaległość
+(patrz `tests/` w strukturze repo, wciąż puste).
+
+**Ustalone tempo (2026-09-28):** normalizacja idzie teraz dział po dziale
+(jeden Dział na raz), zanim wrócimy do pisania reguł, żeby nie mieszać
+dwóch rodzajów pracy naraz. Następny w kolejce: Dział IV (Organy
+spółdzielni, Art. 35 i dalej) - patrz sekcja niżej.
 
 ------------------------------------------------------------------------
 
@@ -116,8 +122,44 @@ sformalizowany Dział III.
 - Testy (GIVEN/WHEN/THEN) dla nowych reguł/procedur — jeszcze żadna reguła
   w całym repo (Art. 1-28) nie ma testu; to zaległość ogólna, nie tylko
   tego kroku.
-- Normalizacja Działu IV i dalszych (Organy spółdzielni, Art. 29 i dalej) —
-  możliwy naturalny kolejny krok "do tyłu do przodu", ale nie ustalony.
+- ~~Normalizacja Działu IV i dalszych (Organy spółdzielni, Art. 29 i dalej)~~
+  — **błędne założenie, poprawione niżej: Dział III sięga do Art. 34, nie
+  kończy się na Art. 28. Dział IV zaczyna się dopiero od Art. 35.**
+
+------------------------------------------------------------------------
+
+## Dokończenie normalizacji: Art. 29-34 (koniec Działu III)
+
+**Odkrycie (2026-09-28):** przy przeglądaniu spisu treści dodanego przez
+najnowszy commit Knowledge Base okazało się, że Dział III ("Członkowie, ich
+prawa i obowiązki") w rzeczywistości obejmuje Art. 15-**34**, nie 15-28 jak
+błędnie założono przy wyborze pierwszego fragmentu. Brakujące 6 artykułów
+(29-34) to wciąż ten sam dział, więc — zgodnie z ustalonym tempem "dział po
+dziale" — dociągnięto ich normalizację, zanim przejdziemy do Działu IV.
+
+**Zrobione:**
+
+- [x] Znormalizowano Art. 29-34 (6 plików, w tym Art. 33-34 uchylone i
+      Art. 29 §2 uchylony na poziomie paragrafu) w
+      `law/prawo-spoldzielcze/normalized/`. Dział III jest teraz w pełni
+      znormalizowany (Art. 15-34), tak jak Dział I i II wcześniej.
+- [x] Walidacja YAML — OK (37 plików razem w `normalized/`).
+
+**Zawartość, do wykorzystania przy pisaniu reguł (nie zrobione jeszcze):**
+
+- Art. 29 — przedawnienie roszczeń o wypłatę udziałów/nadwyżki/wkładów (3
+  lata), wyjątek dla roszczeń o zwrot nieruchomości. DEADLINE dla reguł
+  już sformalizowanych (Art. 25-28), ale jeszcze niesformalizowanych.
+- Art. 30 — obowiązek Zarządu prowadzenia rejestru członków. Odpowiada
+  niemal dosłownie statutowemu § 11 realnej spółdzielni mieszkaniowej.
+- Art. 31 — obowiązek Zarządu wydania odpisu statutu/regulaminów na
+  żądanie członka. **To druga strona prawa już sformalizowanego jako
+  R-PS-0004 item R3** (Art. 18 §2 pkt 3) - kandydat do połączenia przy
+  formalizacji reguł.
+- Art. 32 — fakultatywna podstawa "postępowania wewnątrzspółdzielczego", do
+  którego już odsyła sformalizowana procedura R-PS-0016 (Art. 24 §8-§9).
+  Kolejny przykład normy złożonej z kilku artykułów (AGENTS.md sekcja 13).
+- Art. 33, 34 — uchylone, brak treści.
 
 ------------------------------------------------------------------------
 

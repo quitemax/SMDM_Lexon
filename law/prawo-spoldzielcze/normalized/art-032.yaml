@@ -1,0 +1,20 @@
+id: PS-ART-032
+act: "Prawo spółdzielcze"
+source:
+  dz_u: "Dz.U. 2026 poz. 521"
+  consolidated_text_as_of: "2026-03-23"
+structure:
+  part: "Część I. Spółdzielnie"
+  title: "Tytuł I. Przepisy wspólne"
+  division: "Dział III. Członkowie, ich prawa i obowiązki"
+article: "32"
+paragraphs:
+  - number: "1"
+    text: "Statut może stanowić, że w określonych w nim sprawach między członkiem a spółdzielnią, członkowi przysługuje prawo odwołania się od uchwały organu spółdzielni do innego wskazanego w statucie organu spółdzielni w postępowaniu wewnątrzspółdzielczym. W tym wypadku statut powinien określać zasady i tryb postępowania wewnątrzspółdzielczego, a w szczególności terminy wniesienia i rozpatrzenia odwołania."
+  - number: "2"
+    text: "W wypadku wniesienia przez członka odwołania w postępowaniu wewnątrzspółdzielczym bieg przedawnienia i terminów zawitych ulega zawieszeniu do dnia zakończenia tego postępowania, jednakże przez okres nie dłuższy niż rok od dnia, w którym organ odwoławczy powinien rozpatrzyć odwołanie."
+  - number: "3"
+    text: "Postanowienia statutu o postępowaniu wewnątrzspółdzielczym nie mogą ograniczać dochodzenia przez członków ich praw na drodze sądowej. W wypadku zaskarżenia przez członka uchwały w postępowaniu wewnątrzspółdzielczym i sądowym, postępowanie wewnątrzspółdzielcze ulega umorzeniu."
+layer: normalized_source_text
+verbatim: true
+note: "Segmentacja źródłowa, bez interpretacji semantycznej. §1 to ramowa (fakultatywna - 'statut może') podstawa dla 'postępowania wewnątrzspółdzielczego', do którego już odsyłają PS-ART-024 §8/§9 (już sformalizowane w procedures/R-PS-0016, tam jako element rozgałęzienia odwołania). Ten artykuł jest generyczną podstawą tego mechanizmu, PS-ART-024 jednym z jego zastosowań - kolejny przykład normy budowanej z kilku artykułów (AGENTS.md sekcja 13)."

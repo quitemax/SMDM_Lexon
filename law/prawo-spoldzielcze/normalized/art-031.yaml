@@ -1,0 +1,16 @@
+id: PS-ART-031
+act: "Prawo spółdzielcze"
+source:
+  dz_u: "Dz.U. 2026 poz. 521"
+  consolidated_text_as_of: "2026-03-23"
+structure:
+  part: "Część I. Spółdzielnie"
+  title: "Tytuł I. Przepisy wspólne"
+  division: "Dział III. Członkowie, ich prawa i obowiązki"
+article: "31"
+paragraphs:
+  - number: null
+    text: "Zarząd spółdzielni powinien wydać każdemu członkowi na jego żądanie odpis statutu oraz regulaminów wydanych na podstawie tego statutu."
+layer: normalized_source_text
+verbatim: true
+note: "Segmentacja źródłowa, bez interpretacji semantycznej. To operacyjny odpowiednik prawa członka z PS-ART-018 §2 pkt 3 (już sformalizowanego jako R-PS-0004, item R3: 'otrzymania odpisu statutu i regulaminów') - Art. 18 formułuje to jako RIGHT członka, Art. 31 jako OBLIGATION Zarządu. Dwie strony tej samej normy, w dwóch różnych artykułach (patrz AGENTS.md sekcja 13: nie zakładaj jedna reguła = jeden artykuł) - do połączenia przy formalizacji reguł dla tego Działu."
