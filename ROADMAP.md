@@ -5,25 +5,21 @@
 > tu są rozbite na konkretne, sprawdzalne zadania osadzone w realnym materiale
 > źródłowym z `external/SMDM_Knowledge_Base`.
 
-Status ogólny: **Art. 1-137 znormalizowane w całości — CAŁY TYTUŁ I**
-(Dział I-XIII, wszystkie przepisy wspólne dla każdej spółdzielni), w
-formacie Akoma Ntoso XML (`normalized/akoma-ntoso/prawo-spoldzielcze.xml`)
-— patrz `docs/decisions/ADR-0001-akoma-ntoso-eli.md`. **Reguły/procedury
-sformalizowane tylko dla Art. 1-3, 5-7, 11, 12a, 14-18, 24** (Art. 4, 8-10,
-12, 13, 33, 34 uchylone) — Działy IV, VII, VIII, IX, XI, XII, XIII są na
-razie **wyłącznie znormalizowane, bez żadnych reguł**. Brakuje też reguł
-dla Art. 6 §2a (poza zakresem SM), 19-23, 25-32. **Żadna reguła nie ma
-jeszcze testu** — to następna, ogólna zaległość (patrz `tests/` w
-strukturze repo, wciąż puste).
+Status ogólny: normalizacja w formacie Akoma Ntoso XML
+(`normalized/akoma-ntoso/prawo-spoldzielcze.xml`, patrz
+`docs/decisions/ADR-0001-akoma-ntoso-eli.md`) — aktualny zasięg zawsze w
+`lexon:coverage` tego pliku (jedno źródło prawdy, nie duplikowane tu, bo
+przy tempie "po kilka działów naraz" ten opis szybko się rozjeżdżał).
+**Reguły/procedury sformalizowane tylko dla Art. 1-3, 5-7, 11, 12a,
+14-18, 24** (Art. 4, 8-10, 12, 13, 33, 34 uchylone) — cała reszta
+znormalizowanego materiału (Działy IV, VII-IX, XI-XIII, Tytuł II Dział I)
+jest **wyłącznie znormalizowana, bez żadnych reguł**. **Żadna reguła nie
+ma jeszcze testu.**
 
-**Normalizacja Tytułu I zakończona.** Tytuł II (Art. 138 i dalej:
-spółdzielnie produkcji rolnej, kółek rolniczych, pracy) jest celowo poza
-zakresem — nierelewantny dla spółdzielni mieszkaniowej, tak jak ustalono
-przy wyborze pierwszego fragmentu (ROADMAP.md, sekcja "Decyzja..."). To
-naturalny punkt, żeby zdecydować, co dalej: normalizować Część II/III
-(związki spółdzielcze, KRS, przepisy przejściowe — też raczej
-nierelewantne dla SM), czy wrócić do pisania reguł dla już
-znormalizowanych Działów IV-XIII.
+**Decyzja (2026-09-28):** dokończyć normalizację całej ustawy (249
+artykułów), nie tylko Tytułu I - mimo że Tytuł II/Część II-III nie
+dotyczą bezpośrednio spółdzielni mieszkaniowej. Tempo: kilka działów
+naraz (ostatnio trzy).
 
 **Zwrot architektoniczny (2026-09-28):** patrz `docs/LEXON_CONTEXT.md` i
 `docs/decisions/ADR-0001-akoma-ntoso-eli.md`. Warstwa dokumentowa
@@ -302,9 +298,25 @@ ręcznie) — 0 rzeczywistych rozbieżności treści.
 
 **To domyka normalizację całego Tytułu I (Art. 1-137)** — wszystkich
 przepisów wspólnych dla każdej spółdzielni. Łączne pokrycie: 135
-artykułów w pliku XML. Tytuł II (spółdzielnie produkcji rolnej/kółek
-rolniczych/pracy) i Część II-III świadomie poza zakresem - patrz decyzja
-o wyborze fragmentu na początku tego pliku.
+artykułów w pliku XML.
+
+**Decyzja (2026-09-28, ten sam dzień): dokończyć normalizację całej
+ustawy**, nie zatrzymywać się na Tytule I. Tempo: kilka działów naraz
+(zaczęto od trzech).
+
+**Aktualizacja — Tytuł II, Dział I dodany (2026-09-28):** rozszerzono
+plik XML o Art. 138-172 i 178 (Dział I — Spółdzielnie produkcji rolnej),
+37 artykułów. Wprowadza nowy poziom hierarchii **Oddział** (poniżej
+Rozdziału - `<hcontainer name="oddzial">`, 5 oddziałów w Rozdziale 1:
+Przedmiot działalności i członkostwo, Wkłady gruntowe i pieniężne, Praca,
+Dochodzenie i ochrona roszczeń z tytułu pracy, Fundusze i podział
+dochodu). Rozdział 2 i 4 w całości uchylone (bez artykułów, jak
+Dział V/VI/X) - stąd luka w numeracji Art. 173-177. Zweryfikowano
+skryptem: 68 jednostek tekstu, 64 identyczne, 4 różniące się usuniętymi
+linkami Markdown — 0 rzeczywistych rozbieżności. Reguły nie napisane
+(Tytuł II jest agrarny, nie planujemy dla niego Phase 2). Łączne
+pokrycie: 172 artykuły. Dalej: Dział II (Spółdzielnie kółek rolniczych)
+i Dział III (Spółdzielnie pracy) tego samego Tytułu.
 
 ------------------------------------------------------------------------
 

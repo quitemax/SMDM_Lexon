@@ -7,10 +7,11 @@ semantycznej — czysta segmentacja.
 poprzednie ad-hoc pliki YAML (jeden na artykuł) — decyzja udokumentowana w
 `docs/decisions/ADR-0001-akoma-ntoso-eli.md` i `docs/LEXON_CONTEXT.md`.
 
-Zawiera Art. 1–137 — **cały Tytuł I** (Dział I–XIII). Klucz cytowania `PS-ART-NNN`
-używany w `../rules/`, `../procedures/`, `../ontology/` nie zmienił się —
-odpowiada `eId="art_{numer}"` w `akoma-ntoso/prawo-spoldzielcze.xml` (patrz
-`docs/dsl.md`).
+Aktualny zasięg: patrz `lexon:coverage` w `<meta><proprietary>`
+`akoma-ntoso/prawo-spoldzielcze.xml` (jedno źródło prawdy, nie
+duplikowane tutaj). Klucz cytowania `PS-ART-NNN` używany w `../rules/`,
+`../procedures/`, `../ontology/` nie zmienił się — odpowiada
+`eId="art_{numer}"` w tym pliku (patrz `docs/dsl.md`).
 
 Źródło i przypięta wersja: `../source/README.md` (Dz.U. 2026 poz. 521,
 stan na 2026-03-23).

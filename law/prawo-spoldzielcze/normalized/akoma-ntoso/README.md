@@ -10,11 +10,13 @@ Tekst źródłowy ustawy w formacie [Akoma Ntoso](http://www.akomantoso.org/)
 
 `prawo-spoldzielcze.xml` — **jeden plik na cały akt** (zgodnie z typową
 praktyką AKN, w odróżnieniu od poprzedniego podejścia "jeden plik na
-artykuł"), obejmujący **Art. 1–137 — cały Tytuł I** (Część I. Spółdzielnie,
-Przepisy wspólne, Dział I-XIII). Tytuł II (przepisy szczególne dla
-spółdzielni produkcji rolnej/kółek rolniczych/pracy) i dalsze części
-ustawy nie są jeszcze skonwertowane - i nie muszą być, żeby formalizować
-spółdzielnię mieszkaniową (patrz ROADMAP.md, uzasadnienie zakresu).
+artykuł"). Cały Tytuł I (Art. 1-137, przepisy wspólne) jest kompletny;
+konwersja kontynuowana do końca ustawy na życzenie użytkownika (decyzja
+2026-09-28, patrz ROADMAP.md) mimo że Tytuł II i dalsze części nie
+dotyczą bezpośrednio spółdzielni mieszkaniowej. Aktualny zasięg: patrz
+`lexon:coverage` w `<meta><proprietary>` pliku XML (aktualizowany na
+bieżąco, nie duplikowany tutaj, żeby uniknąć rozjazdu dwóch źródeł
+prawdy o tym samym).
 
 Weryfikacja tekstu (wszystkie partie zweryfikowane skryptem, 0 rzeczywistych
 rozbieżności treści):
@@ -85,6 +87,15 @@ rozbieżności treści):
     domysłu), a niepewność opisana w `lexon:note` (marker `3)`, ten sam
     przypis co dot. uchylenia części tego odesłania) atrybutem `note`
     (AGENTS.md sekcja 50: nie zgaduj).
+- **Tytuł II, Dział I — Spółdzielnie produkcji rolnej** (Art. 138-172,
+  178; pierwsza część poza Tytułem I, konwertowana na życzenie mimo
+  nierelewancji dla SM): 1:1 przeciwko źródłu — 68 jednostek tekstu, 64
+  identycznych, 4 różniące się usuniętymi linkami Markdown — 0
+  rzeczywistych rozbieżności. Wprowadza nowy poziom hierarchii:
+  **Oddział** (poniżej Rozdziału) - `<hcontainer name="oddzial">`, patrz
+  tabela mapowania niżej. Rozdział 2 i 4 tego działu są w całości
+  uchylone (bez artykułów, jak Dział V/VI/X wcześniej) - stąd luka w
+  numeracji Art. 173-177.
 
 ## Decyzje mapowania (własne, nie zweryfikowane wobec oficjalnego polskiego profilu AKN)
 
@@ -99,6 +110,8 @@ istniejącego standardu:
 | Część           | `<part>`                          | kanoniczny element hierarchiczny AKN |
 | Tytuł           | `<hcontainer name="tytul">`       | AKN nie ma jednoznacznie potwierdzonego, bezpiecznego kanonicznego elementu hierarchicznego dla tego poziomu — użyto generycznego `hcontainer`, który standard wprost przewiduje dla struktur specyficznych dla jurysdykcji |
 | Dział           | `<hcontainer name="dzial">`       | jw. |
+| Rozdział        | `<hcontainer name="rozdzial">`    | jw. (używane od Działu IV) |
+| Oddział         | `<hcontainer name="oddzial">`     | jw. (używane od Tytułu II, Dział I, Rozdział 1 - poziom poniżej Rozdziału) |
 | Artykuł         | `<article>`                       | kanoniczny |
 | §               | `<paragraph>`                     | kanoniczny |
 | punkt (1), 2)…) | `<point>` w `<list>`               | kanoniczny |
@@ -137,12 +150,9 @@ jednolitego (2026 poz. 521) jako zastępczego zakotwiczenia identyfikatora.
 
 ## Czego tu nie ma (jeszcze)
 
-- Tytuł II (Art. 138 i dalej: spółdzielnie produkcji rolnej, kółek
-  rolniczych, pracy) i Część II, III (związki spółdzielcze, Krajowa Rada
-  Spółdzielcza, przepisy przejściowe/zmieniające inne ustawy) —
-  **celowo nierozpoczęte**: nierelewantne dla spółdzielni mieszkaniowej
-  (patrz ROADMAP.md, decyzja o zakresie). Cały Tytuł I (Art. 1-137,
-  przepisy wspólne dla każdej spółdzielni) jest już kompletny.
+- Reszta Tytułu II (Dział II - Spółdzielnie kółek rolniczych, Dział III -
+  Spółdzielnie pracy) i Część II, III — w toku konwersji, patrz
+  `lexon:coverage` w pliku XML po aktualny zasięg.
 - Walidacja względem oficjalnego schematu XSD Akoma Ntoso 3.0 — zrobiono
   tylko walidację dobrej formy XML (`xml.etree.ElementTree`) i ręczną
   weryfikację 1:1 przeciwko poprzedniej wersji YAML. Brak zainstalowanego
