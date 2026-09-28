@@ -1,6 +1,8 @@
 # Wersjonowanie prawa
 
-STATUS: DRAFT — opisuje stan faktyczny, w tym jawnie brakujący element.
+STATUS: DRAFT — opisuje stan faktyczny. Poziom reguły (walidacja pola
+`validity`) zbudowany 2026-09-28; `AS_OF`/event sourcing nadal
+NIEROZPOCZĘTE (Phase 3, patrz niżej).
 
 ## Poziom aktu (zbudowane, działa)
 
@@ -20,7 +22,7 @@ odnotowujemy, czy to zmiana kosmetyczna (jak dotąd 2x — dodanie spisu
 treści/linków) czy merytoryczna (jeszcze nie wystąpiło) — patrz commity
 "Update SMDM_Knowledge_Base submodule".
 
-## Poziom reguły (ZAPLANOWANE, ale **nie zbudowane**)
+## Poziom reguły (zbudowane od 2026-09-28)
 
 AGENTS.md sekcja 23 dokumentuje wzorzec:
 
@@ -30,10 +32,16 @@ validity:
   to: null
 ```
 
-**Fakt (zmierzony, nie szacowany): 0 z 15 plików w `rules/`+`procedures/`
-ma to pole.** To jest jawnie odnotowany dług, do naprawienia przy
-redesignie schematu (ADR-0002) — nie przeoczenie, które ma zostać
-przemilczane.
+**Fakt (zmierzony, nie szacowany): 15/15 plików w `rules/`+`procedures/`
+ma to pole** — retrofit wykonany przy ADR-0002
+(`docs/decisions/ADR-0002-unified-rule-schema.md`), wymuszony teraz przez
+`schema/legal-rule.schema.json` (walidacja: `py schema/validate_rules.py`).
+Wszystkie 15 mają `from: "2026-03-23"` (ten sam `consolidated_text_as_of`
+co poziom aktu) i `to: null` — żadna z formalizowanych jednostek nie ma
+udokumentowanej nowelizacji ani daty wygaśnięcia. To wartość odziedziczona
+z aktu, nie odrębnie zbadana per-artykuł — jeśli kiedyś okaże się, że
+konkretny artykuł miał inną datę wejścia w życie niż konsolidacja całego
+tekstu, trzeba to skorygować per plik, a nie zgadywać teraz.
 
 ## Zapytania `AS_OF` (NIEROZPOCZĘTE)
 

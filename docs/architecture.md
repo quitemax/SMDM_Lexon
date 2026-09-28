@@ -33,11 +33,11 @@ nie tylko plan. Aktualizować przy każdej zmianie warstwy.
 │    1-3, 5-7, 11, 12a, 14-18, 24. Reszta 249 artykułów -   │
 │    wyłącznie znormalizowana (warstwa 1), zero semantyki.  │
 │                                                            │
-│    UWAGA: schemat plików w rules/procedures/ jest         │
-│    obecnie ad-hoc (różne pola w różnych plikach) - patrz  │
-│    docs/decisions/ADR-0002 (w przygotowaniu) po redesign  │
-│    do jednolitego, wymuszonego schematu inspirowanego     │
-│    LegalRuleML.                                           │
+│    Schemat plików w rules/procedures/: STRUCTURAL,        │
+│    wymuszony od 2026-09-28 (schema/legal-rule.schema.json,│
+│    ADR-0002-unified-rule-schema.md, ACCEPTED) - wspólny   │
+│    rdzeń + validity + slownictwo LegalRuleML (strength/   │
+│    overridden_by) bez przejmowania formatu XML.           │
 └──────────────────────────┬────────────────────────────────┘
                            ↓
 ┌─────────────────────────────────────────────────────────┐
@@ -63,8 +63,10 @@ LEXON LANGUAGE + LEXON AST + LEXON SEMANTIC IR
 
 Obecna Warstwa 2 (`ontology/`, `rules/`, `procedures/`, `concepts/`) jest
 najbliżej "LEXON LANGUAGE" w wersji roboczej — czytelnej dla człowieka,
-ale **bez wymuszonego AST/IR**. To jest świadomie zidentyfikowany dług,
-nie przeoczenie — patrz ADR-0002.
+z **wymuszonym rdzeniem schematu** od ADR-0002 (`rules/`/`procedures/`),
+ale wciąż bez pełnego AST/IR (to jest Phase 3, `engine/parser/`) i wciąż
+bez schematu dla `ontology/`/`concepts/`/`interpretations/` (poza
+zakresem ADR-0002 — patrz jego Context).
 
 ## Warstwa 2, rozdzielenie: `model/` vs `law/<akt>/ontology/`
 

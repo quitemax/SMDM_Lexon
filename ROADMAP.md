@@ -21,15 +21,22 @@ Ustalenia i decyzje:
 
 1. **Zero błędów integralności** (martwe referencje, kolizje ID,
    osierocone encje/pojęcia) — fundament jest solidny.
-2. **Brak wymuszonego schematu** `rules/`/`procedures/` — każdy plik ma
-   inny zestaw pól. To jest właściwy powód, dla którego pisanie testów
-   "na samym YAML" nie ma sensu — potrzeba najpierw jednolitego,
-   wymuszonego Legal IR. **Decyzja: zaprojektować go, inspirując się
-   realnie przeczytanym LegalRuleML** (deontyka, defeasibility,
-   temporalność, provenance), ale zapisywać nadal w przyjaznym YAML, nie
-   w XML LegalRuleML. Priorytet: zrobić to jako **następny krok**.
-3. **0/15 reguł/procedur ma pole `validity`** mimo że AGENTS.md sekcja 23
-   je dokumentuje — do naprawienia przy retrofit do nowego schematu.
+2. **ZROBIONE (2026-09-28):** brak wymuszonego schematu `rules/`/
+   `procedures/` — każdy plik miał inny zestaw pól. Naprawione:
+   `docs/decisions/ADR-0002-unified-rule-schema.md` (ACCEPTED),
+   `schema/legal-rule.schema.json` (JSON Schema 2020-12, rdzeń wspólny +
+   pola zależne od `norm_type`), `schema/validate_rules.py` (walidator:
+   schemat + duplikaty ID + rozwiązywalność `normalized_ref`/`subject`/
+   `holder`/`actors`). Zaczerpnięte z realnie przeczytanego OASIS
+   LegalRuleML Core Spec v1.0: `strength` (STRICT/DEFEASIBLE) i
+   `overridden_by` — bez przejmowania formatu XML. Wszystkie 15 plików
+   przechodzą walidację (0 ERROR, 0 WARNING).
+3. **ZROBIONE (2026-09-28):** 0/15 reguł/procedur miało pole `validity`
+   mimo że AGENTS.md sekcja 23 je dokumentuje. Retrofit: 15/15 ma teraz
+   `validity.from: "2026-03-23"` (= `consolidated_text_as_of` aktu),
+   `validity.to: null`. Dodatkowo `strength: DEFEASIBLE` na `R-PS-0005`
+   (cała reguła) i `R-PS-0016.grounds.wykluczenie` (tylko ta podstawa) —
+   jedyne dwa miejsca w 15 plikach zależne od pojęć `OPEN_TEXTURED`.
 4. **Decyzja podjęta i wykonana:** encje/relacje współdzielone z
    przyszłymi aktami (Osoba, Spółdzielnia, Członek, Zarząd,
    RadaNadzorcza, WalneZgromadzenie, Statut, MEMBER_OF, ORGAN_OF,
@@ -48,15 +55,17 @@ Ustalenia i decyzje:
    POWER) już jest blisko, bez formalnej analizy.
 
 Kolejność ustalona z użytkownikiem: **dokumentacja (zrobione) → encje
-(zrobione) → schemat/LegalRuleML (teraz) → na końcu spike Catala.**
+(zrobione) → schemat/LegalRuleML (zrobione, 2026-09-28) → na końcu spike
+Catala (następny krok).**
 
 **Zwrot architektoniczny (2026-09-28):** patrz `docs/LEXON_CONTEXT.md` i
 `docs/decisions/ADR-0001-akoma-ntoso-eli.md`. Warstwa dokumentowa
 (`normalized/`) przeszła z ad-hoc YAML na Akoma Ntoso + wzorzec ELI, żeby
 nie wymyślać od nowa istniejących standardów. Warstwa semantyczna
-(`ontology/`, `rules/`, `procedures/`, `concepts/`) na razie **bez zmian**
-- to osobna, nierozstrzygnięta jeszcze decyzja (LegalRuleML jako możliwy
-przyszły punkt odniesienia, nie przyjęty).
+(`rules/`, `procedures/`) dostała analogiczny, mniejszy zwrot tego samego
+dnia: wymuszony schemat inspirowany OASIS LegalRuleML (słownictwo, nie
+format XML) — patrz `docs/decisions/ADR-0002-unified-rule-schema.md`.
+`ontology/`/`concepts/`/`interpretations/` poza zakresem tej decyzji.
 
 ------------------------------------------------------------------------
 

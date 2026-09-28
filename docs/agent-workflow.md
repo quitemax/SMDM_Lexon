@@ -43,10 +43,15 @@ i `ROADMAP.md`) — nie jest to hipotetyczny proces.
    `R-PS-0011` ↔ `R-PS-0003`/`R-PS-0016`, `R-PS-0031` ↔ statut realnej
    spółdzielni → `OBS-0001`). Nie formalizować w izolacji.
 6. Nadać `id` z właściwej sekwencji (`docs/dsl.md`), `source.normalized_ref`,
-   `formalization_status`.
-7. **Nie pominięte, ale jeszcze nie wykonane systematycznie:** krok
-   walidacji schematu i pisania testu — patrz `docs/architecture.md` o
-   ADR-0002 (redesign schematu) jako warunku wstępnym.
+   `formalization_status`, `validity` (domyślnie `consolidated_text_as_of`
+   z `law/<akt>/source/README.md`, chyba że wiadomo inaczej).
+7. **Zbudowane od 2026-09-28:** uruchomić `py schema/validate_rules.py`
+   przed commitem — 0 `ERROR` jest warunkiem koniecznym (schemat,
+   `docs/decisions/ADR-0002-unified-rule-schema.md`); `WARNING` przeczytać
+   i albo poprawić, albo potwierdzić, że odzwierciedla prawdziwą
+   nieostrość źródła (nie zgadywać, żeby uciszyć ostrzeżenie). Pisanie
+   testu (`T-PS-NNNN-MM`) — wciąż nie wykonane systematycznie, plan:
+   po ustabilizowaniu schematu.
 
 ## Co odróżnia "zrobione" od "wygląda zrobione"
 

@@ -1,10 +1,11 @@
 # Model prawny
 
 STATUS: DRAFT — przykłady z faktycznie zbudowanego modelu, nie
-hipotetyczne. Schemat pól (jakie klucze YAML) jest obecnie ad-hoc — patrz
-ADR-0002 po redesign do jednolitego schematu. To, co poniżej opisuje,
-jest stabilne: *jakie kategorie pojęć rozróżniamy*, nie *jak dokładnie są
-zapisane*.
+hipotetyczne. Schemat pól `rules/`/`procedures/` jest od 2026-09-28
+STRUCTURAL i wymuszony — patrz `docs/decisions/ADR-0002-unified-rule-schema.md`
+i `schema/legal-rule.schema.json` (`ontology/`/`concepts/` nadal ad-hoc,
+poza zakresem tej decyzji). To, co poniżej opisuje, jest stabilne: *jakie
+kategorie pojęć rozróżniamy*, nie *jak dokładnie są zapisane*.
 
 ## Entity
 

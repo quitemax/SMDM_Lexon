@@ -46,7 +46,10 @@ PS-ART-024   -> art_24
 Każdy skrypt walidujący (jak te używane przy weryfikacji normalizacji)
 musi to uwzględnić — sprawdzone empirycznie: naiwne dopełnienie zerami po
 stronie `eId` daje fałszywe alarmy o "martwych referencjach", które nie
-są prawdziwe.
+są prawdziwe. Ta reguła jest teraz też zaimplementowana (nie tylko
+opisana) w `schema/validate_rules.py` (`normalized_ref_to_eid`), które
+uruchamiane jest przy każdej walidacji `rules/`/`procedures/` — patrz
+`docs/decisions/ADR-0002-unified-rule-schema.md`.
 
 ## Wiele źródeł na jedną regułę
 
