@@ -1,0 +1,23 @@
+id: R-PS-0024
+norm_type: STRUCTURAL
+title: "Skutek śmierci członka albo ustania osoby prawnej dla rejestru członków"
+source:
+  act: "Prawo spółdzielcze"
+  article: "25"
+  paragraph: "1"
+  normalized_ref: "PS-ART-025"
+validity:
+  from: "2026-03-23"
+  to: null
+subject: "Osoba"
+holder: "Członek"
+statement: >-
+  Członka zmarłego skreśla się z rejestru członków spółdzielni ze
+  skutkiem od dnia, w którym nastąpiła śmierć. Osobę prawną będącą
+  członkiem spółdzielni skreśla się z rejestru członków ze skutkiem od
+  dnia jej ustania.
+effect: "Membership.status: ACTIVE -> DECEASED, ze skutkiem retroaktywnym do dnia śmierci/ustania, nie do dnia wpisu skreślenia."
+triggers_event: "MemberDied"
+formalization_status: DIRECT
+note: "Zdarzenie MemberDied już istnieje (ontology/events/member_died.yaml, source PS-ART-025 §1, §2, DIRECT) - ta reguła jest RULE, którego skutek to zdarzenie niesie jako triggers_transition; sama norma (co prawo nakazuje zrobić z rejestrem, i od jakiej daty liczy skutek) nie miała dotąd własnego pliku (AGENTS.md sekcja 18)."
+tests: []

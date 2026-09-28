@@ -1,0 +1,20 @@
+id: R-PS-0026
+norm_type: OBLIGATION
+title: "Wypłata udziału byłego członka"
+source:
+  act: "Prawo spółdzielcze"
+  article: "26"
+  paragraph: "1"
+  normalized_ref: "PS-ART-026"
+validity:
+  from: "2026-03-23"
+  to: null
+subject: "Spółdzielnia"
+statement: >-
+  Udział byłego członka wypłaca się na podstawie zatwierdzonego
+  sprawozdania finansowego za rok, w którym członek przestał należeć do
+  spółdzielni.
+residual_clause: "Sposób i terminy wypłaty określa statut - odesłanie otwarte, nie rozstrzygane tutaj."
+formalization_status: DIRECT
+note: "'Były członek' nie jest osobną encją w ontology/ - to Osoba, dla której MembershipStatus przeszedł z ACTIVE do stanu końcowego (WITHDRAWN/EXCLUDED/STRUCK_OFF/DECEASED). Nie tworzymy nowej encji dla tego pojęcia (AGENTS.md sekcja 15) - wystarcza referencja do stanu."
+tests: []

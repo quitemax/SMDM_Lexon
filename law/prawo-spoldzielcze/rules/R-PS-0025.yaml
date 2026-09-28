@@ -1,0 +1,25 @@
+id: R-PS-0025
+norm_type: OBLIGATION
+title: "Wspólny pełnomocnik lub zarządca sądowy przy wielu spadkobiercach"
+source:
+  act: "Prawo spółdzielcze"
+  article: "25"
+  paragraph: "2"
+  normalized_ref: "PS-ART-025"
+validity:
+  from: "2026-03-23"
+  to: null
+subject: "Osoba"
+condition: "heir_count > 1 (MemberDied.payload, patrz ontology/events/member_died.yaml)"
+statement: >-
+  Jeżeli zmarły członek pozostawił więcej niż jednego spadkobiercę,
+  spadkobiercy powinni w celu wykonywania przechodzących na nich praw
+  majątkowych zmarłego ustanowić wspólnego pełnomocnika lub wskazać
+  zarządcę ustanowionego przez sąd przy odpowiednim zastosowaniu
+  przepisów Kodeksu cywilnego o zarządzie rzeczą wspólną.
+formalization_status: DIRECT
+note: "Prawa majątkowe, o których mowa, to w szczególności dziedziczone udziały z R-PS-0015 (PS-ART-016A) - ta reguła określa TRYB ich wykonywania przez wielu spadkobierców, nie samo prawo do nich. Odesłanie do Kodeksu cywilnego (przepisy o zarządzie rzeczą wspólną) pozostaje poza zakresem tego projektu (poza Prawem spółdzielczym) - nie formalizowane, tylko odnotowane (AGENTS.md sekcja 15, nie modelować ponad potrzebę)."
+references:
+  - target: R-PS-0015
+    type: RELATED_TO
+tests: []

@@ -1,0 +1,27 @@
+id: R-PS-0020
+norm_type: OBLIGATION
+title: "Obowiązek zadeklarowania co najmniej jednego udziału"
+source:
+  act: "Prawo spółdzielcze"
+  article: "20"
+  paragraph: "1"
+  normalized_ref: "PS-ART-020"
+validity:
+  from: "2026-03-23"
+  to: null
+subject: "Osoba"
+holder: "Członek"
+statement: >-
+  Członek spółdzielni obowiązany jest zadeklarować jeden udział, jeżeli
+  statut nie zobowiązuje członków do zadeklarowania większej ilości
+  udziałów.
+conditions:
+  - "declared_shares_count >= 1 (domyślnie dokładnie 1), chyba że statut wymaga więcej - odesłanie otwarte co do konkretnej liczby"
+effect: >-
+  Wartość domyślna dla `ontology/entities/czlonek.yaml` właściwości
+  `declared_shares_count` ("Domyślnie 1, chyba że statut wymaga więcej") -
+  ten plik dotąd zakładał tę wartość bez odrębnej reguły źródłowej; teraz
+  ją niesie.
+formalization_status: DIRECT
+note: "Wzorzec 'wartość domyślna, odwracana przez statut' analogiczny do R-PS-0002 (minimalna liczba członków, domyślnie 10)."
+tests: []

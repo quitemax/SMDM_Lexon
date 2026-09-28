@@ -1,0 +1,29 @@
+id: R-PS-0017
+norm_type: PROHIBITION
+title: "Zakaz odmowy przyjęcia spadkobierców dziedziczących udziały"
+source:
+  act: "Prawo spółdzielcze"
+  article: "16a"
+  normalized_ref: "PS-ART-016A"
+validity:
+  from: "2026-03-23"
+  to: null
+subject: "Spółdzielnia"
+statement: >-
+  Spółdzielnia nie może odmówić przyjęcia w poczet członków spadkobierców
+  dziedziczących udziały, jeżeli odpowiadają oni wymogom określonym w
+  statucie.
+conditions:
+  - "spadkobierca odpowiada wymogom określonym w statucie (odesłanie otwarte, jak w R-PS-0001)"
+effect: >-
+  Ogranicza swobodę organu przyjmującego z R-PS-0003/PS-ART-017 - dla
+  spadkobierców spełniających warunki statutu, przyjęcie nie jest
+  dyskrecjonalne, jest obowiązkowe.
+formalization_status: DIRECT
+note: "To jest konkretyzacja wyjątku od ogólnej dyskrecjonalności organu przyjmującego z procedures/R-PS-0003-membership-admission.yaml - patrz AGENTS.md sekcja 14 (odesłania między przepisami muszą być jawne). Powiązane: R-PS-0015 (dziedziczenie udziałów, warunek 'jest członkiem LUB złożył deklarację' który tu jest przesłanką)."
+references:
+  - target: R-PS-0003
+    type: LIMITS
+  - target: R-PS-0015
+    type: DEPENDS_ON
+tests: []

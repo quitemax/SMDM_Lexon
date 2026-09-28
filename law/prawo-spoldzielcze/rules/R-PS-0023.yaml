@@ -1,0 +1,24 @@
+id: R-PS-0023
+norm_type: RIGHT
+title: "Prawo wystąpienia ze spółdzielni za wypowiedzeniem"
+source:
+  act: "Prawo spółdzielcze"
+  article: "22"
+  normalized_ref: "PS-ART-022"
+validity:
+  from: "2026-03-23"
+  to: null
+subject: "Osoba"
+holder: "Członek"
+condition: "Membership.status = ACTIVE"
+statement: "Członek spółdzielni może wystąpić z niej za wypowiedzeniem."
+conditions:
+  - "wypowiedzenie musi być dokonane na piśmie pod rygorem nieważności (void_if: forma inna niż pisemna)"
+effect: >-
+  Termin i okres wypowiedzenia określa statut (odesłanie otwarte). Za
+  datę wystąpienia uważa się następny dzień po upływie okresu
+  wypowiedzenia.
+triggers_event: "MemberResigned"
+formalization_status: DIRECT
+note: "Zdarzenie MemberResigned już istnieje w ontology/events/member_resigned.yaml (source: PS-ART-022, DIRECT) - ta reguła domyka brakującą do tej pory RULE dla tego zdarzenia (AGENTS.md sekcja 18: EVENT != RULE, zdarzenie było, norma która je wywołuje nie miała jeszcze własnego pliku)."
+tests: []

@@ -1,0 +1,26 @@
+id: R-PS-0015
+norm_type: CONDITION
+title: "Dziedziczenie udziałów przez spadkobiercę"
+source:
+  act: "Prawo spółdzielcze"
+  article: "16a"
+  normalized_ref: "PS-ART-016A"
+validity:
+  from: "2026-03-23"
+  to: null
+subject: "Osoba"
+statement: >-
+  Spadkobierca zmarłego członka dziedziczy jego udziały, jeżeli sam jest
+  członkiem spółdzielni lub złożył deklarację przystąpienia do niej.
+conditions:
+  - "spadkobierca jest członkiem spółdzielni, LUB"
+  - "spadkobierca złożył deklarację przystąpienia do spółdzielni (patrz R-PS-0003, PS-ART-016)"
+effect: >-
+  Jeżeli spadkobierców jest więcej niż jeden, powinni wskazać jednego
+  spośród siebie, który uzyskuje prawo do udziałów, chyba że podzielą
+  udziały między tych spadkobierców, którzy złożyli deklarację
+  przystąpienia do spółdzielni - w takim wypadku tylko oni otrzymują
+  część udziałów, nie wszyscy spadkobiercy.
+formalization_status: DIRECT
+note: "Odpowiada relacji ontology/relations/inherits_shares_from.yaml (INHERITS_SHARES_FROM) - ta reguła niesie normatywną treść, relacja niesie tylko fakt strukturalny (AGENTS.md sekcja 16 vs 19 - relacja to nie reguła). Powiązane: R-PS-0017 (zakaz odmowy przyjęcia spadkobierców), R-PS-0025 (wspólny pełnomocnik/zarządca przy >1 spadkobiercy, PS-ART-025 §2)."
+tests: []

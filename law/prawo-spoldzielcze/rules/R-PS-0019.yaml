@@ -1,0 +1,26 @@
+id: R-PS-0019
+norm_type: STRUCTURAL
+title: "Brak osobistej odpowiedzialności członka za zobowiązania spółdzielni"
+source:
+  act: "Prawo spółdzielcze"
+  article: "19"
+  paragraph: "3"
+  normalized_ref: "PS-ART-019"
+validity:
+  from: "2026-03-23"
+  to: null
+subject: "Osoba"
+holder: "Członek"
+statement: >-
+  Członek spółdzielni nie odpowiada wobec wierzycieli spółdzielni za jej
+  zobowiązania.
+effect: >-
+  Odpowiedzialność członka wobec samej spółdzielni jest ograniczona do
+  zadeklarowanych udziałów (R-PS-0018, O2) - ten przepis dodaje, że
+  wierzyciele spółdzielni (osoby trzecie) nie mają żadnego bezpośredniego
+  roszczenia do członka z tego tytułu. Charakterystyka konstytutywna formy
+  spółdzielczej, analogiczna do R-PS-0010 (majątek jako własność członków,
+  Art. 3) - obie normy wspólnie odróżniają odpowiedzialność w spółdzielni
+  od np. spółki cywilnej.
+formalization_status: DIRECT
+tests: []

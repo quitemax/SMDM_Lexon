@@ -1,0 +1,22 @@
+id: R-PS-0018
+norm_type: OBLIGATION
+title: "Obowiązki finansowe członka wobec spółdzielni"
+source:
+  act: "Prawo spółdzielcze"
+  article: "19"
+  paragraph: "1, 2"
+  normalized_ref: "PS-ART-019"
+validity:
+  from: "2026-03-23"
+  to: null
+subject: "Osoba"
+holder: "Członek"
+condition: "Membership.status = ACTIVE"
+items:
+  - id: O1
+    text: "wniesienie wpisowego oraz zadeklarowanych udziałów stosownie do postanowień statutu"
+  - id: O2
+    text: "uczestniczenie w pokrywaniu strat spółdzielni do wysokości zadeklarowanych udziałów"
+    note: "Ta granica ('do wysokości zadeklarowanych udziałów') jest podstawą R-PS-0019 (brak odpowiedzialności osobistej) i R-PS-0033 (Art. 28, przedłużona odpowiedzialność po ustaniu członkostwa)."
+formalization_status: DIRECT
+tests: []

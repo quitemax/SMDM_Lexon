@@ -1,0 +1,25 @@
+id: R-PS-0022
+norm_type: PROHIBITION
+title: "Zakaz żądania zwrotu wpłat na udziały przed ustaniem członkostwa"
+source:
+  act: "Prawo spółdzielcze"
+  article: "21"
+  normalized_ref: "PS-ART-021"
+validity:
+  from: "2026-03-23"
+  to: null
+subject: "Osoba"
+holder: "Członek"
+statement: >-
+  Członek spółdzielni nie może przed ustaniem członkostwa żądać zwrotu
+  wpłat dokonanych na udziały.
+exceptions:
+  - id: "R-PS-0022-E1"
+    text: "Nie dotyczy wpłat przekraczających ilość udziałów, których zadeklarowania wymaga statut obowiązujący w chwili żądania zwrotu."
+    source: "PS-ART-021"
+conditions:
+  - "zwrot (nawet po ustaniu członkostwa albo w ramach wyjątku E1) nie może nastąpić przed zatwierdzeniem sprawozdania finansowego za rok, w którym członek wystąpił z żądaniem"
+  - "zwrot nie może nastąpić w wypadku, gdy udziały członka zostały przeznaczone na pokrycie strat spółdzielni (R-PS-0018 O2, PS-ART-019 §2)"
+residual_clause: "Sposób i termin zwrotu określa statut - odesłanie otwarte, nie rozstrzygane tutaj."
+formalization_status: DIRECT
+tests: []

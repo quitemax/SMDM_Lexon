@@ -1,0 +1,22 @@
+id: R-PS-0027
+norm_type: PROHIBITION
+title: "Brak prawa byłego członka do funduszu zasobowego i innego majątku spółdzielni"
+source:
+  act: "Prawo spółdzielcze"
+  article: "26"
+  paragraph: "2"
+  normalized_ref: "PS-ART-026"
+validity:
+  from: "2026-03-23"
+  to: null
+subject: "Osoba"
+statement: >-
+  Byłemu członkowi nie przysługuje prawo do funduszu zasobowego oraz do
+  innego majątku spółdzielni.
+exceptions:
+  - id: "R-PS-0027-E1"
+    text: "Z zastrzeżeniem art. 125 §5a."
+    source: "PS-ART-026 §2, odesłanie do PS-ART-125"
+formalization_status: DIRECT
+note: "Art. 125 jest poza obecnym zakresem formalizacji (Dział III, Art. 15-34) - wyjątek E1 jest tu zachowany jako relacja (odesłanie), nie skopiowana treść, zgodnie z AGENTS.md sekcja 14 ('nie kopiuj automatycznie treści przepisu, jeżeli można zachować relację'). Do rozwinięcia, gdy/jeśli Art. 125 zostanie sformalizowany."
+tests: []

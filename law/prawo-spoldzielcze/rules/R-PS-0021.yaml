@@ -1,0 +1,31 @@
+id: R-PS-0021
+norm_type: PERMISSION
+title: "Statutowa możliwość wprowadzenia wkładów członkowskich"
+source:
+  act: "Prawo spółdzielcze"
+  article: "20"
+  paragraph: "2"
+  normalized_ref: "PS-ART-020"
+validity:
+  from: "2026-03-23"
+  to: null
+subject: "Statut"
+holder: "Spółdzielnia (za pośrednictwem statutu)"
+statement: >-
+  Statut może przewidywać wnoszenie przez członków wkładów na własność
+  spółdzielni lub do korzystania z nich przez spółdzielnię na podstawie
+  innego stosunku prawnego.
+required_content_if_exercised:
+  - id: R1
+    text: "charakter i zakres przysługującego spółdzielni prawa do wkładów"
+  - id: R2
+    text: "wysokość wkładów oraz ich rodzaj, jeżeli są to wkłady niepieniężne"
+  - id: R3
+    text: "terminy wnoszenia wkładów"
+  - id: R4
+    text: "zasady wyceny i zwrotu w wypadku likwidacji spółdzielni, wystąpienia członka lub ustania członkostwa z innych przyczyn"
+  - id: R5
+    text: "inne wypadki przewidziane w statucie"
+formalization_status: DIRECT
+note: "Struktura analogiczna do R-PS-0011 (wymagana treść statutu, Art. 5 §1) - tam treść jest bezwarunkowo wymagana, tu jest wymagana tylko JEŚLI statut skorzysta z tego dozwolenia (pole `required_content_if_exercised`, nie `items`, żeby zaznaczyć tę różnicę - AGENTS.md sekcja 56, nie spłaszczać różnicy między obowiązkiem i uwarunkowanym obowiązkiem)."
+tests: []
