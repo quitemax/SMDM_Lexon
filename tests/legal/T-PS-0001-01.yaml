@@ -1,0 +1,13 @@
+id: T-PS-0001-01
+rule: R-PS-0001
+title: "Osoba fizyczna z pełną zdolnością do czynności prawnych może być członkiem"
+category: POSITIVE
+status: SPECIFIED
+given:
+  - "osoba.is_legal_person = false"
+  - "osoba.has_full_legal_capacity = true"
+  - "osoba spełnia wymagania statutu"
+when: "sprawdzenie warunku R-PS-0001 dla tej osoby"
+then:
+  result: true
+  because: "spełnione obie przesłanki §2: pełna zdolność do czynności prawnych i wymagania statutu; brak zastosowania wyjątku E1 (nie jest potrzebny)"

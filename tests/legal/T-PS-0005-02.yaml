@@ -1,0 +1,13 @@
+id: T-PS-0005-02
+rule: R-PS-0005
+title: "Odmowa wglądu niedozwolona, gdy żadna przesłanka nie zachodzi"
+category: NEGATIVE
+status: SPECIFIED
+given:
+  - "członek żąda wglądu do umowy spółdzielni z osobą trzecią"
+  - "wgląd nie naruszałby praw osoby trzeciej"
+  - "'uzasadniona obawa...' = FALSE (ustalone przez organ rozpoznający sprawę)"
+when: "sprawdzenie warunku R-PS-0005"
+then:
+  result: false
+  because: "żadna z dwóch przesłanek §3 nie zachodzi - odmowa byłaby bezpodstawna, prawo R3 z R-PS-0004 pozostaje w pełni dostępne"

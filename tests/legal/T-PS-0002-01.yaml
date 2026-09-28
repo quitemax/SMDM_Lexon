@@ -1,0 +1,24 @@
+id: T-PS-0002-01
+rule: R-PS-0002
+title: "Próg minimalnej liczby członków - przypadek ogólny (10)"
+category: BOUNDARY
+status: SPECIFIED
+cases:
+  - label: "n = minimum - 1 (9)"
+    given: ["spółdzielnia.member_count = 9", "brak zastosowania wyjątku E1/E2"]
+    when: "sprawdzenie warunku R-PS-0002"
+    then:
+      result: false
+      because: "9 < 10, próg ogólny §1 niespełniony"
+  - label: "n = minimum (10)"
+    given: ["spółdzielnia.member_count = 10", "brak zastosowania wyjątku E1/E2"]
+    when: "sprawdzenie warunku R-PS-0002"
+    then:
+      result: true
+      because: "10 >= 10, próg ogólny §1 dokładnie spełniony ('co najmniej dziesięciu')"
+  - label: "n = minimum + 1 (11)"
+    given: ["spółdzielnia.member_count = 11", "brak zastosowania wyjątku E1/E2"]
+    when: "sprawdzenie warunku R-PS-0002"
+    then:
+      result: true
+      because: "11 >= 10, próg ogólny §1 spełniony z nadwyżką"

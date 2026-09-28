@@ -29,4 +29,4 @@ items:
     text: "świadczeń spółdzielni w zakresie jej statutowej działalności"
 residual_clause: "Członkowi przysługują również inne prawa określone w ustawie lub w statucie (§4) - odesłanie otwarte, nie rozstrzygane tutaj."
 formalization_status: DIRECT
-tests: []
+tests: ["T-PS-0004-01", "T-PS-0004-02"]

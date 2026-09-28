@@ -1,0 +1,18 @@
+id: T-PS-0002-02
+rule: R-PS-0002
+title: "Próg zniżony dla spółdzielni produkcji rolnej (wyjątek E1, 5)"
+category: BOUNDARY
+status: SPECIFIED
+cases:
+  - label: "n = minimum - 1 (4)"
+    given: ["spółdzielnia.member_count = 4", "spółdzielnia jest spółdzielnią produkcji rolnej (wyjątek E1)"]
+    when: "sprawdzenie warunku R-PS-0002"
+    then:
+      result: false
+      because: "4 < 5, próg zniżony §1 wyjątek E1 niespełniony"
+  - label: "n = minimum (5)"
+    given: ["spółdzielnia.member_count = 5", "spółdzielnia jest spółdzielnią produkcji rolnej (wyjątek E1)"]
+    when: "sprawdzenie warunku R-PS-0002"
+    then:
+      result: true
+      because: "5 >= 5, próg zniżony §1 wyjątek E1 spełniony"

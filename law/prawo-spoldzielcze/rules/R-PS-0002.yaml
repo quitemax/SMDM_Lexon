@@ -24,5 +24,5 @@ exceptions:
     source: "PS-ART-015 §5"
 effect: "Warunek bytu spółdzielni jako takiej, nie warunek pojedynczej czynności przyjęcia/wykluczenia - poza zakresem eventów z ontology/events/ (te dotyczą pojedynczego członka)."
 formalization_status: DIRECT
-tests: []
+tests: ["T-PS-0002-01", "T-PS-0002-02", "T-PS-0002-03"]
 note: "Ta reguła dotyczy Spółdzielni jako całości (agregat), nie pojedynczego Członka - inny SUBJECT niż większość pozostałych reguł w tym fragmencie."

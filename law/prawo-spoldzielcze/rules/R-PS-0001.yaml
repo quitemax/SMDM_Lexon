@@ -23,4 +23,4 @@ exceptions:
     source: "PS-ART-015 §3"
 effect: "Osoba spełniająca warunki jest zdolna do uzyskania członkostwa (nie oznacza to automatycznego jego powstania - do tego potrzebna jest procedura z R-PS-0003)."
 formalization_status: DIRECT
-tests: []
+tests: ["T-PS-0001-01", "T-PS-0001-02", "T-PS-0001-03"]

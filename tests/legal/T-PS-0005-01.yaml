@@ -1,0 +1,12 @@
+id: T-PS-0005-01
+rule: R-PS-0005
+title: "Odmowa wglądu dozwolona, gdy zachodzi uzasadniona obawa szkody"
+category: POSITIVE
+status: SPECIFIED
+given:
+  - "członek żąda wglądu do umowy spółdzielni z osobą trzecią"
+  - "'uzasadniona obawa, że członek wykorzysta informacje w celach sprzecznych z interesem spółdzielni i wyrządzi jej przez to znaczną szkodę' = TRUE (ustalone przez organ rozpoznający sprawę - to pojęcie OPEN_TEXTURED, nie boolowska funkcja, patrz AGENTS.md sekcja 9)"
+when: "sprawdzenie warunku R-PS-0005"
+then:
+  result: true
+  because: "spełniona jedna z dwóch alternatywnych przesłanek §3; odmowa musi być na piśmie (procedure_on_refusal)"

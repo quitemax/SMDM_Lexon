@@ -1,0 +1,13 @@
+id: T-PS-0001-02
+rule: R-PS-0001
+title: "Osoba fizyczna bez pełnej zdolności do czynności prawnych, statut nie dopuszcza wyjątku"
+category: NEGATIVE
+status: SPECIFIED
+given:
+  - "osoba.is_legal_person = false"
+  - "osoba.has_full_legal_capacity = false"
+  - "statut nie dopuszcza wyjątku z §3 (nie zawiera odpowiedniego postanowienia)"
+when: "sprawdzenie warunku R-PS-0001 dla tej osoby"
+then:
+  result: false
+  because: "warunek podstawowy §2 (pełna zdolność) niespełniony, a wyjątek E1 wymaga wyraźnego postanowienia statutu, którego tu nie ma"

@@ -1,0 +1,11 @@
+id: T-PS-0004-01
+rule: R-PS-0004
+title: "Aktywny członek posiada prawa z Art. 18"
+category: POSITIVE
+status: SPECIFIED
+given:
+  - "Membership.status = ACTIVE"
+when: "zapytanie o prawa członka (items R1-R6)"
+then:
+  result: true
+  because: "warunek `condition: Membership.status = ACTIVE` spełniony - wszystkie prawa R1-R6 przysługują (R3 może być ograniczone przez R-PS-0005, ale to nie zmienia faktu, że prawo R3 istnieje)"

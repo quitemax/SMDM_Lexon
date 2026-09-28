@@ -1,0 +1,11 @@
+id: T-PS-0004-02
+rule: R-PS-0004
+title: "Osoba, której członkostwo ustało, nie posiada praw z Art. 18"
+category: NEGATIVE
+status: SPECIFIED
+given:
+  - "Membership.status = WITHDRAWN"
+when: "zapytanie o prawa członka (items R1-R6)"
+then:
+  result: false
+  because: "warunek `condition: Membership.status = ACTIVE` niespełniony - przykład wzorcowy z AGENTS.md sekcja 27 (member.status = TERMINATED -> right X NOT available), tu z konkretnym stanem WITHDRAWN z ontology/states/membership_status.yaml"

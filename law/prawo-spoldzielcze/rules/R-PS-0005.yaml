@@ -26,4 +26,4 @@ procedure_on_refusal:
   - "Członek może złożyć wniosek do sądu rejestrowego o zobowiązanie spółdzielni do udostępnienia umów, w terminie 7 dni od doręczenia odmowy na piśmie."
 formalization_status: INTERPRETATIVE
 note: "Trzy przesłanki oznaczone jako open_textured_terms wymagają oceny okoliczności faktycznych - nie są tu (i nie powinny być) sprowadzone do prostego warunku boolowskiego. Odpowiadające im CONCEPT jeszcze nie utworzone w concepts/ - do zrobienia, gdy ta reguła będzie testowana (nie blokuje reszty Phase 2). `strength: DEFEASIBLE` dodane w ADR-0002 - wniosek (dozwolona odmowa) jest obalalny, bo zależy od oceny przesłanek nieostrych, nie jest to zwykły wyjątek enumerowany wprost w tekście."
-tests: []
+tests: ["T-PS-0005-01", "T-PS-0005-02"]

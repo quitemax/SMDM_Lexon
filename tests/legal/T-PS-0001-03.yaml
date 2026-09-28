@@ -1,0 +1,13 @@
+id: T-PS-0001-03
+rule: R-PS-0001
+title: "Osoba o ograniczonej zdolności do czynności prawnych, statut dopuszcza wyjątek E1"
+category: POSITIVE
+status: SPECIFIED
+given:
+  - "osoba.is_legal_person = false"
+  - "osoba.has_full_legal_capacity = false"
+  - "statut dopuszcza członkostwo osób o ograniczonej zdolności do czynności prawnych (wyjątek R-PS-0001-E1)"
+when: "sprawdzenie warunku R-PS-0001 dla tej osoby"
+then:
+  result: true
+  because: "wyjątek E1 (PS-ART-015 §3) zastępuje warunek podstawowy §2, gdy statut go przewiduje; taka osoba może być członkiem, ale nie organu spółdzielni i bierze udział w walnym zgromadzeniu przez przedstawiciela ustawowego"
