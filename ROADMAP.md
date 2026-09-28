@@ -5,20 +5,21 @@
 > tu są rozbite na konkretne, sprawdzalne zadania osadzone w realnym materiale
 > źródłowym z `external/SMDM_Knowledge_Base`.
 
-Status ogólny: **Art. 1-90 znormalizowane w całości** (Dział I-VII), w
+Status ogólny: **Art. 1-102 znormalizowane w całości** (Dział I-IX), w
 formacie Akoma Ntoso XML (`normalized/akoma-ntoso/prawo-spoldzielcze.xml`)
 — patrz `docs/decisions/ADR-0001-akoma-ntoso-eli.md`. **Reguły/procedury
 sformalizowane tylko dla Art. 1-3, 5-7, 11, 12a, 14-18, 24** (Art. 4, 8-10,
-12, 13, 33, 34 uchylone) — Dział IV (organy) i Dział VII (gospodarka) są
-na razie **wyłącznie znormalizowane, bez żadnych reguł**. Brakuje też
-reguł dla Art. 6 §2a (poza zakresem SM), 19-23, 25-32. **Żadna reguła nie
-ma jeszcze testu** — to następna, ogólna zaległość (patrz `tests/` w
-strukturze repo, wciąż puste).
+12, 13, 33, 34 uchylone) — Działy IV, VII, VIII, IX są na razie
+**wyłącznie znormalizowane, bez żadnych reguł**. Brakuje też reguł dla
+Art. 6 §2a (poza zakresem SM), 19-23, 25-32. **Żadna reguła nie ma jeszcze
+testu** — to następna, ogólna zaległość (patrz `tests/` w strukturze
+repo, wciąż puste).
 
-**Ustalone tempo (2026-09-28):** normalizacja idzie dział po dziale (jeden
-Dział na raz), zanim wrócimy do pisania reguł. Następny w kolejce: Dział
-VIII (Lustracja, Art. 91 i dalej) - do dodania jako rozszerzenie tego
-samego pliku XML.
+**Ustalone tempo (2026-09-28):** normalizacja idzie dział po dziale
+(ostatnio dwa działy naraz na życzenie), zanim wrócimy do pisania reguł.
+Następny w kolejce: Dział X (uchylony - szybki krok) i Dział XI (Podział
+spółdzielni, Art. 103 i dalej) - do dodania jako rozszerzenie tego samego
+pliku XML.
 
 **Zwrot architektoniczny (2026-09-28):** patrz `docs/LEXON_CONTEXT.md` i
 `docs/decisions/ADR-0001-akoma-ntoso-eli.md`. Warstwa dokumentowa
@@ -245,6 +246,19 @@ Zweryfikowano skryptem przeciwko źródłu: 36 jednostek tekstu, 35
 identycznych, 1 różniąca się tym samym wzorcem usuniętego linku Markdown
 — 0 rzeczywistych rozbieżności. Reguły dla Działu VII jeszcze nie
 napisane.
+
+**Aktualizacja — Dział VIII, IX dodane (2026-09-28, na życzenie: dwa
+działy naraz):** rozszerzono plik XML o Art. 91-102: Dział VIII — Lustracja
+(Art. 91-95, w tym 93a/93b/93c dodane nowelizacją o RODO/ministrze
+właściwym ds. budownictwa) i Dział IX — Łączenie się spółdzielni
+(Art. 96-102). Nowość: **Art. 93b numeruje ustępy jako gołe `1.`/`2.`/
+`3.`/`4.` (bez `§`)** — zachowane verbatim, nowy wiersz w tabeli mapowania
+w `akoma-ntoso/README.md`. Dział VIII kontynuuje notację `§ N[M]` dla
+wstawionych paragrafów (`§ 1[1]`, `§ 1[2]`, `§ 2[1]`, `§ 4[1]`).
+Zweryfikowano skryptem przeciwko źródłu: 52 jednostki tekstu, 50
+identycznych, 2 różniące się usuniętym linkiem Markdown — 0 rzeczywistych
+rozbieżności. Reguły dla obu działów jeszcze nie napisane. Łączne pokrycie
+normalizacyjne: Art. 1-102 (Dział I-IX), 103 artykuły w pliku XML.
 
 ------------------------------------------------------------------------
 
