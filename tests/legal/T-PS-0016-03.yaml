@@ -1,0 +1,13 @@
+id: T-PS-0016-03
+rule: R-PS-0016
+title: "Uchwała podjęta bez wysłuchania członka narusza krok obowiązkowy"
+category: NEGATIVE
+status: SPECIFIED
+given:
+  - "Membership.status = ACTIVE"
+  - "podstawa z `grounds.wykluczenie` spełniona"
+  - "competent_body podjął uchwałę o wykluczeniu bez wysłuchania wyjaśnień członka (krok 1 pominięty)"
+when: "sprawdzenie, czy krok 1 (`mandatory: true`) został zachowany"
+then:
+  result: false
+  because: "PS-ART-024 §4 zdanie 2 czyni wysłuchanie obowiązkowym niezależnie od tego, czy podstawa materialna zachodzi - uchwała podjęta z tym naruszeniem jest wadliwa proceduralnie, co stwarza podstawę do skutecznego zaskarżenia w kroku 4, niezależnie od zasadności `grounds`"

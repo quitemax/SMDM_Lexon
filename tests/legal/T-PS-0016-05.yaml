@@ -1,0 +1,24 @@
+id: T-PS-0016-05
+rule: R-PS-0016
+title: "Termin 6 tygodni na zaskarżenie do sądu uchwały RadyNadzorczej - granica"
+category: BOUNDARY
+status: SPECIFIED
+cases:
+  - label: "tydzień 5, dzień 6 (przed upływem)"
+    given: ["doręczenie uchwały RadyNadzorczej z uzasadnieniem nastąpiło 41 dni temu (< 6 tygodni = 42 dni)", "member nie zaskarżył jeszcze do sądu"]
+    when: "sprawdzenie, czy termin zaskarżenia z kroku 4 (ścieżka 'zaskarżenie do sądu') jeszcze nie upłynął"
+    then:
+      result: true
+      because: "41 < 42 dni, termin jeszcze biegnie"
+  - label: "dzień upływu terminu (42 dni)"
+    given: ["doręczenie nastąpiło dokładnie 42 dni temu (6 tygodni)", "member nie zaskarżył jeszcze do sądu"]
+    when: "sprawdzenie, czy termin zaskarżenia jeszcze nie upłynął"
+    then:
+      result: true
+      because: "termin upływa tego dnia - jeszcze w jego granicach"
+  - label: "dzień po upływie terminu (43 dni)"
+    given: ["doręczenie nastąpiło 43 dni temu", "member nie zaskarżył do sądu", "member też nie wniósł odwołania do WalnegoZgromadzenia przed upływem tego terminu"]
+    when: "sprawdzenie skuteczności wykluczenia w kroku 5"
+    then:
+      result: "Membership.status = EXCLUDED"
+      because: "spełniona pierwsza przesłanka `conditions_any_of` - bezskuteczny upływ terminu zaskarżenia do sądu, i member nie skorzystał z alternatywnej ścieżki odwołania do WalnegoZgromadzenia przed jego upływem"

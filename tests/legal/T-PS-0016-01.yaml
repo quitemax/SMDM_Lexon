@@ -1,0 +1,16 @@
+id: T-PS-0016-01
+rule: R-PS-0016
+title: "Wykluczenie staje się skuteczne po bezskutecznym upływie terminu zaskarżenia"
+category: POSITIVE
+status: SPECIFIED
+given:
+  - "Membership.status = ACTIVE"
+  - "'wina umyślna lub rażące niedbalstwo, niezgodne z dobrymi obyczajami' = TRUE (ustalone przez competent_body - pojęcia OPEN_TEXTURED C-PS-0001/C-PS-0002, patrz grounds.wykluczenie.strength = DEFEASIBLE)"
+  - "competent_body = RadaNadzorcza"
+  - "member wysłuchany przed uchwałą (krok 1 wykonany)"
+  - "uchwała o wykluczeniu podjęta i doręczona z uzasadnieniem (kroki 2-3)"
+  - "member nie zaskarżył uchwały do sądu ani nie odwołał się do WalnegoZgromadzenia w żadnym z dostępnych terminów (krok 4 niewykorzystany)"
+when: "przebieg procedury R-PS-0016, kroki 1-5"
+then:
+  result: "Membership.status = EXCLUDED"
+  because: "spełniona pierwsza z czterech przesłanek `conditions_any_of` kroku 5 - bezskuteczny upływ terminu zaskarżenia, triggers_event ExclusionBecameEffective"

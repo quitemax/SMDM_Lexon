@@ -1,0 +1,13 @@
+id: T-PS-0016-02
+rule: R-PS-0016
+title: "Brak jakiejkolwiek podstawy z `grounds` - wykluczenie/wykreślenie niedopuszczalne"
+category: NEGATIVE
+status: SPECIFIED
+given:
+  - "Membership.status = ACTIVE"
+  - "'wina umyślna lub rażące niedbalstwo...' = FALSE"
+  - "brak niewykonywania obowiązków statutowych (podstawa wykreślenia również niespełniona)"
+when: "przebieg procedury R-PS-0016, `precondition` kroku 2"
+then:
+  result: false
+  because: "żadna z dwóch podstaw w `grounds` (wykluczenie, wykreślenie) nie zachodzi - `precondition` kroku 2 niespełniony, uchwała nie może być ważnie podjęta"

@@ -1,0 +1,14 @@
+id: T-PS-0016-04
+rule: R-PS-0016
+title: "Prawomocne uchylenie uchwały przez sąd - wykluczenie nigdy nie stało się skuteczne"
+category: POSITIVE
+status: SPECIFIED
+given:
+  - "Membership.status = PENDING_EXCLUSION (po krokach 1-3)"
+  - "competent_body = RadaNadzorcza"
+  - "member zaskarżył uchwałę do sądu w terminie 6 tygodni (krok 4, ścieżka 'zaskarżenie do sądu')"
+  - "sąd prawomocnie uchylił uchwałę RadyNadzorczej"
+when: "przebieg procedury R-PS-0016, krok 5"
+then:
+  result: "Membership.status = ACTIVE"
+  because: "żadna z czterech przesłanek `conditions_any_of` nie zachodzi (powództwo nie zostało oddalone, zostało uwzględnione) - stosuje się `else`: triggers_event ExclusionOverturned. Oznaczone w regule jako INFERRED (wnioskowanie a contrario z §10), nie DIRECT - ustawa nie nazywa tego skutku wprost"

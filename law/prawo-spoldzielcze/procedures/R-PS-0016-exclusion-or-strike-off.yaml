@@ -98,4 +98,4 @@ scope_note: >-
   do lokalu, USM Art. 24[1], 26). Nie oznacza to błędu w tej formalizacji -
   to legalny, choć w tym konkretnym przypadku martwy, przepis ustawy ogólnej.
 note: "`strength: DEFEASIBLE` na `grounds.wykluczenie` (ADR-0002) - tylko ta podstawa zależy od pojęć OPEN_TEXTURED (C-PS-0001, C-PS-0002); `grounds.wykreślenie` zostaje bez tego pola, bo jej przesłanka nie jest tak oznaczona w tym pliku."
-tests: []
+tests: ["T-PS-0016-01", "T-PS-0016-02", "T-PS-0016-03", "T-PS-0016-04", "T-PS-0016-05"]
