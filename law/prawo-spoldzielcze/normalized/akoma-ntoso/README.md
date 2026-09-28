@@ -105,6 +105,19 @@ rozbieżności treści):
   treści. Od teraz aktualny zasięg dokumentowany wyłącznie w
   `lexon:coverage` (patrz sekcja "Zawartość" wyżej) - nie duplikowany tu
   za każdym razem.
+- **Część II — Związki spółdzielcze i Krajowa Rada Spółdzielcza** (Art.
+  240-267, 41 artykułów) **i Część IIA — Przepisy karne** (Art. 267a-267d,
+  4 artykuły): 1:1 przeciwko źródłu (metoda porównania poprawiona, żeby
+  nie liczyć podwójnie zagnieżdżonych `<p>` wewnątrz `authorialNote`) —
+  104 jednostki tekstu, 95 wprost identycznych, 9 różniących się
+  usuniętymi linkami/poprawnie wydzielonymi przypisami — 0 rzeczywistych
+  rozbieżności treści. **Część IIA w źródle nie ma standardowego
+  nagłówka Markdown** (`CZĘŚĆ IIA PRZEPISY KARNE` jako zwykły tekst, bez
+  `## `) — potraktowana mimo to jako pełnoprawna `<part>`, zgodnie z
+  rzeczywistą funkcją w akcie, nie z niedoskonałością konwersji źródła.
+  Kolejny przypis znaleziony: **Art. 259a §3** (`authorialNote`, marker
+  `7)`) — „Sąd Wojewódzki” z 1982 r. to dziś „Sąd Okręgowy” (reforma
+  sądownictwa z 1999 r.).
 
 ## Decyzje mapowania (własne, nie zweryfikowane wobec oficjalnego polskiego profilu AKN)
 
@@ -159,10 +172,9 @@ jednolitego (2026 poz. 521) jako zastępczego zakotwiczenia identyfikatora.
 
 ## Czego tu nie ma (jeszcze)
 
-- Część II (Związki spółdzielcze, Krajowa Rada Spółdzielcza) i Część III
-  (zmiany w przepisach, przepisy przejściowe) — w toku konwersji, patrz
-  `lexon:coverage` w pliku XML po aktualny zasięg. Cały Tytuł I i II
-  (Część I w całości) jest już kompletny.
+- **Tylko Część III** (zmiany w przepisach obowiązujących, przepisy
+  przejściowe i końcowe, Art. 268-281) — ostatnia część ustawy, w toku
+  konwersji. Część I, II, IIA są już kompletne.
 - Walidacja względem oficjalnego schematu XSD Akoma Ntoso 3.0 — zrobiono
   tylko walidację dobrej formy XML (`xml.etree.ElementTree`) i ręczną
   weryfikację 1:1 przeciwko poprzedniej wersji YAML. Brak zainstalowanego

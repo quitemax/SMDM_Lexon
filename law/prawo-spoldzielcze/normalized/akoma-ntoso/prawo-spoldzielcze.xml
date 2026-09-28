@@ -35,7 +35,7 @@
           <lexon:sourceCommit>7fcaed372cbe56f58c3ee4aa1d5fb6eee15b83ee</lexon:sourceCommit>
           <lexon:dzU>Dz.U. 2026 poz. 521</lexon:dzU>
           <lexon:textType>tekst jednolity</lexon:textType>
-          <lexon:coverage>Art. 1-203 - CAŁY TYTUŁ I I II (Część I w całości: przepisy wspólne + spółdzielnie produkcji rolnej/kółek rolniczych/pracy). Część II (Związki spółdzielcze i Krajowa Rada Spółdzielcza) i Część III (zmiany w przepisach, przepisy przejściowe) jeszcze nie skonwertowane.</lexon:coverage>
+          <lexon:coverage>Art. 1-267d - Część I, II i IIA w całości (przepisy wspólne, spółdzielnie produkcji rolnej/kółek rolniczych/pracy, związki spółdzielcze i Krajowa Rada Spółdzielcza, przepisy karne). Tylko Część III (zmiany w przepisach, przepisy przejściowe i końcowe, Art. 268-281) jeszcze nie skonwertowana - ostatnia część ustawy.</lexon:coverage>
           <lexon:eliStatus>CONSTRUCTED - wzorzec URI zgodny ze standardowym schematem polskiego ELI (https://eli.gov.pl/eli/DU/{rok}/{pozycja}), NIE zweryfikowany wywołaniem na żywo względem eli.gov.pl/isap.sejm.gov.pl w tej sesji. Numer pozycji Dziennika Ustaw z pierwotnego uchwalenia (1982 r., przed ujednoliceniem) jest UNKNOWN - nieustalony w naszych źródłach, dlatego FRBRWork ponownie używa pozycji tekstu jednolitego (2026 poz. 521) jako zastępczego kotwiczenia identyfikatora, co jest uproszczeniem do skorygowania, jeśli oryginalny numer zostanie kiedyś potwierdzony.</lexon:eliStatus>
           <lexon:mappingNote>Mapowanie struktury polskiej ustawy na elementy Akoma Ntoso jest własną decyzją projektową (brak potwierdzonego oficjalnego polskiego profilu AKN w naszych źródłach): Część→part, Tytuł→hcontainer[name=tytul], Dział→hcontainer[name=dzial], Artykuł→article, §→paragraph, punkt→point (w list). Patrz normalized/akoma-ntoso/README.md.</lexon:mappingNote>
           <lexon:citationKey pattern="PS-ART-{numer}">Klucz cytowania używany w law/prawo-spoldzielcze/rules,procedures,ontology (np. "PS-ART-015") odpowiada 1:1 elementowi eId="art_{numer}" w tym pliku (np. eId="art_15"). Patrz docs/dsl.md.</lexon:citationKey>
@@ -2990,6 +2990,530 @@
             </article>
           </hcontainer>
         </hcontainer>
+      </part>
+
+      <part eId="czesc_II">
+        <num>Część II</num>
+        <heading>Związki spółdzielcze i Krajowa Rada Spółdzielcza</heading>
+
+        <hcontainer name="tytul" eId="czesc_II__tyt_I">
+          <num>Tytuł I</num>
+          <heading>Związki spółdzielcze</heading>
+
+          <article eId="art_240">
+            <num>Art. 240.</num>
+            <paragraph eId="art_240__par_1">
+              <num>§ 1.</num>
+              <content><p>Spółdzielnie mogą zakładać związki rewizyjne i przystępować do takich związków. Liczba założycieli związku rewizyjnego nie może być mniejsza niż dziesięć.</p></content>
+            </paragraph>
+            <paragraph eId="art_240__par_2">
+              <num>§ 2.</num>
+              <content><p>Celem związku rewizyjnego jest zapewnienie zrzeszonym w nim spółdzielniom pomocy w ich działalności statutowej.</p></content>
+            </paragraph>
+            <paragraph eId="art_240__par_3">
+              <num>§ 3.</num>
+              <content><p>Do zadań związku rewizyjnego należy:</p></content>
+              <list eId="art_240__par_3__lst">
+                <point eId="art_240__par_3__pkt_1">
+                  <num>1)</num>
+                  <content><p>przeprowadzanie lustracji zrzeszonych spółdzielni;</p></content>
+                </point>
+                <point eId="art_240__par_3__pkt_2">
+                  <num>2)</num>
+                  <content><p>prowadzenie na rzecz zrzeszonych spółdzielni działalności instruktażowej, doradczej, kulturalno-oświatowej, szkoleniowej i wydawniczej;</p></content>
+                </point>
+                <point eId="art_240__par_3__pkt_3">
+                  <num>3)</num>
+                  <content><p>reprezentowanie interesów zrzeszonych spółdzielni wobec organów administracji państwowej i organów samorządu terytorialnego;</p></content>
+                </point>
+                <point eId="art_240__par_3__pkt_4">
+                  <num>4)</num>
+                  <content><p>reprezentowanie zrzeszonych spółdzielni za granicą;</p></content>
+                </point>
+                <point eId="art_240__par_3__pkt_5">
+                  <num>5)</num>
+                  <content><p>inicjowanie i rozwijanie współpracy między spółdzielniami oraz współdziałanie z placówkami naukowo-badawczymi;</p></content>
+                </point>
+                <point eId="art_240__par_3__pkt_6">
+                  <num>6)</num>
+                  <content><p>wykonywanie innych zadań przewidzianych w niniejszej ustawie oraz statucie.</p></content>
+                </point>
+              </list>
+            </paragraph>
+            <paragraph eId="art_240__par_4">
+              <num>§ 4.</num>
+              <content><p>Związek rewizyjny nabywa osobowość prawną z chwilą wpisania do Krajowego Rejestru Sądowego i działa na podstawie niniejszej ustawy oraz statutu, który powinien w szczególności określać:</p></content>
+              <list eId="art_240__par_4__lst">
+                <point eId="art_240__par_4__pkt_1">
+                  <num>1)</num>
+                  <content><p>nazwę i siedzibę związku;</p></content>
+                </point>
+                <point eId="art_240__par_4__pkt_2">
+                  <num>2)</num>
+                  <content><p>cel i przedmiot działania związku;</p></content>
+                </point>
+                <point eId="art_240__par_4__pkt_3">
+                  <num>3)</num>
+                  <content><p>zasady i tryb przyjmowania, wykreślania, wykluczania członków oraz wypowiadania członkostwa;</p></content>
+                </point>
+                <point eId="art_240__par_4__pkt_4">
+                  <num>4)</num>
+                  <content><p>zasady i tryb wyboru organów związku oraz ich zadania i kompetencje;</p></content>
+                </point>
+                <point eId="art_240__par_4__pkt_5">
+                  <num>5)</num>
+                  <content><p>zasady i tryb wyznaczania lustratorów.</p></content>
+                </point>
+              </list>
+            </paragraph>
+            <paragraph eId="art_240__par_5">
+              <num>§ 5.</num>
+              <content><p>Statut związku nie może zastrzegać dla organów związku uprawnień stanowiących i nadzorczych wobec zrzeszonych spółdzielni, z wyjątkiem określonych w niniejszej ustawie.</p></content>
+            </paragraph>
+          </article>
+
+          <article eId="art_240a" status="repealed">
+            <num>Art. 240a.</num>
+            <content><p>(uchylony)</p></content>
+          </article>
+
+          <article eId="art_241">
+            <num>Art. 241.</num>
+            <content><p>Krajowa Rada Spółdzielcza prowadzi rejestr związków rewizyjnych. Zasady prowadzenia rejestru i dane w nim uwidocznione określa Krajowa Rada Spółdzielcza.</p></content>
+          </article>
+
+          <article eId="art_242">
+            <num>Art. 242.</num>
+            <paragraph eId="art_242__par_1">
+              <num>§ 1.</num>
+              <content><p>Związek rewizyjny ulega likwidacji:</p></content>
+              <list eId="art_242__par_1__lst">
+                <point eId="art_242__par_1__pkt_1">
+                  <num>1)</num>
+                  <content><p>wskutek zmniejszenia się liczby członków, poniżej wskazanej w statucie lub w ustawie;</p></content>
+                </point>
+                <point eId="art_242__par_1__pkt_2">
+                  <num>2)</num>
+                  <content><p>na mocy uchwały ogólnego zebrania przedstawicieli (zjazdu) podjętej zwykłą większością głosów;</p></content>
+                </point>
+                <point eId="art_242__par_1__pkt_3">
+                  <num>3)</num>
+                  <content><p>na podstawie orzeczenia sądu wydanego na wniosek Krajowej Rady Spółdzielczej, w wypadku gdy związek swoją działalnością rażąco narusza prawo lub postanowienia statutu.</p></content>
+                </point>
+              </list>
+            </paragraph>
+            <paragraph eId="art_242__par_2">
+              <num>§ 2.</num>
+              <content><p>W wypadku określonym w § 1 pkt 1 i 2 zarząd związku rewizyjnego niezwłocznie zawiadamia sąd rejestrowy, Krajową Radę Spółdzielczą i wyznacza likwidatora. Likwidatorem może być członek ostatniego zarządu.</p></content>
+            </paragraph>
+            <paragraph eId="art_242__par_3">
+              <num>§ 3.</num>
+              <content><p>Wniosek Krajowej Rady Spółdzielczej, o którym mowa w § 1 pkt 3, powinien zawierać wskazanie likwidatora związku rewizyjnego.</p></content>
+            </paragraph>
+          </article>
+
+          <article eId="art_243">
+            <num>Art. 243.</num>
+            <paragraph eId="art_243__par_1">
+              <num>§ 1.</num>
+              <content><p>Spółdzielnie mogą zakładać związki gospodarcze i przystępować do takich związków.</p></content>
+            </paragraph>
+            <paragraph eId="art_243__par_2">
+              <num>§ 2.</num>
+              <content><p>Celem tych związków jest prowadzenie działalności gospodarczej na rzecz lub w interesie zrzeszonych spółdzielni.</p></content>
+            </paragraph>
+            <paragraph eId="art_243__par_3">
+              <num>§ 3.</num>
+              <content><p>Do związków gospodarczych stosuje się odpowiednio przepisy dotyczące spółdzielni, których członkami zgodnie ze statutem są wyłącznie osoby prawne, oraz art. 241.</p></content>
+            </paragraph>
+          </article>
+
+          <article eId="art_244" status="repealed">
+            <num>Art. 244.</num>
+            <content><p>(uchylony)</p></content>
+          </article>
+
+          <article eId="art_245" status="repealed">
+            <num>Art. 245.</num>
+            <content><p>(uchylony)</p></content>
+          </article>
+
+          <article eId="art_246" status="repealed">
+            <num>Art. 246.</num>
+            <content><p>(uchylony)</p></content>
+          </article>
+
+          <article eId="art_247" status="repealed">
+            <num>Art. 247.</num>
+            <content><p>(uchylony)</p></content>
+          </article>
+
+          <article eId="art_248" status="repealed">
+            <num>Art. 248.</num>
+            <content><p>(uchylony)</p></content>
+          </article>
+
+          <article eId="art_249" status="repealed">
+            <num>Art. 249.</num>
+            <content><p>(uchylony)</p></content>
+          </article>
+
+          <article eId="art_250" status="repealed">
+            <num>Art. 250.</num>
+            <content><p>(uchylony)</p></content>
+          </article>
+
+          <article eId="art_251" status="repealed">
+            <num>Art. 251.</num>
+            <content><p>(uchylony)</p></content>
+          </article>
+
+          <article eId="art_252" status="repealed">
+            <num>Art. 252.</num>
+            <content><p>(uchylony)</p></content>
+          </article>
+
+          <article eId="art_253" status="repealed">
+            <num>Art. 253.</num>
+            <content><p>(uchylony)</p></content>
+          </article>
+
+          <article eId="art_254" status="repealed">
+            <num>Art. 254.</num>
+            <content><p>(uchylony)</p></content>
+          </article>
+
+          <article eId="art_255" status="repealed">
+            <num>Art. 255.</num>
+            <content><p>(uchylony)</p></content>
+          </article>
+
+          <article eId="art_256" status="repealed">
+            <num>Art. 256.</num>
+            <content><p>(uchylony)</p></content>
+          </article>
+
+          <article eId="art_257">
+            <num>Art. 257.</num>
+            <paragraph eId="art_257__par_1">
+              <num>§ 1.</num>
+              <content><p>W sprawach nieuregulowanych w niniejszym tytule stosuje się odpowiednio przepisy części I, z wyjątkiem art. 24 § 4 i 6–9, art. 32 i 33<authorialNote marker="6)"><p>Uchylony przez art. 3 pkt 4 ustawy z dnia 3 czerwca 2005 r. o zmianie ustawy o spółdzielniach mieszkaniowych oraz niektórych innych ustaw (Dz. U. poz. 1024), która weszła w życie z dniem 22 lipca 2005 r.</p></authorialNote>, a w odniesieniu do związków rewizyjnych także art. 67, 75–78 oraz przepisów ustawy dotyczących udziałów i wkładów. Przepisy art. 42 stosuje się odpowiednio również do uchwał rady związku.</p></content>
+            </paragraph>
+            <paragraph eId="art_257__par_2">
+              <num>§ 2.</num>
+              <content><p>Lustrację związków spółdzielczych, na podstawie przepisów określonych w art. 91–93, przeprowadza Krajowa Rada Spółdzielcza.</p></content>
+            </paragraph>
+          </article>
+
+          <article eId="art_257a">
+            <num>Art. 257a.</num>
+            <paragraph eId="art_257a__par_1">
+              <num>1.</num>
+              <content><p>Podatnik podatku rolnego, będący osobą fizyczną, oraz podatnik podatku rolnego będący rolniczą spółdzielnią produkcyjną może wnioskować do właściwego organu podatkowego o przekazanie przez ten organ 1,5 % podatku rolnego obliczonego zgodnie z odrębnymi przepisami na rzecz związku rewizyjnego zrzeszającego rolnicze spółdzielnie produkcyjne wybranego przez tego podatnika spośród związków rewizyjnych zrzeszających rolnicze spółdzielnie produkcyjne wpisanych na listę, o której mowa w art. 257b ust. 1, jeżeli ten związek spełnia następujące warunki:</p></content>
+              <list eId="art_257a__par_1__lst">
+                <point eId="art_257a__par_1__pkt_1">
+                  <num>1)</num>
+                  <content><p>został wpisany do Krajowego Rejestru Sądowego co najmniej 6 lat przed dniem 1 stycznia danego roku podatkowego;</p></content>
+                </point>
+                <point eId="art_257a__par_1__pkt_2">
+                  <num>2)</num>
+                  <content><p>ma na dzień 1 stycznia danego roku podatkowego członkowskie rolnicze spółdzielnie produkcyjne co najmniej w 10 województwach i w co najmniej 3 powiatach w każdym z tych województw, a łączna liczba członków tych spółdzielni wynosi co najmniej 1500 osób.</p></content>
+                </point>
+              </list>
+            </paragraph>
+            <paragraph eId="art_257a__par_2">
+              <num>2.</num>
+              <content><p>Otrzymane przez związek rewizyjny zrzeszający rolnicze spółdzielnie produkcyjne środki finansowe pochodzące z 1,5 % podatku rolnego mogą być wykorzystane wyłącznie na działalność statutową tego związku.</p></content>
+            </paragraph>
+            <paragraph eId="art_257a__par_3">
+              <num>3.</num>
+              <content><p>Do gospodarki środkami, o których mowa w ust. 2, stosuje się odpowiednio przepisy ustawy z dnia 27 sierpnia 2009 r. o finansach publicznych (Dz. U. z 2025 r. poz. 1483, 1844 i 1846).</p></content>
+            </paragraph>
+          </article>
+
+          <article eId="art_257b">
+            <num>Art. 257b.</num>
+            <paragraph eId="art_257b__par_1">
+              <num>1.</num>
+              <content><p>Minister właściwy do spraw rolnictwa sporządza co roku listę związków rewizyjnych zrzeszających rolnicze spółdzielnie produkcyjne spełniających warunki określone w art. 257a ust. 1, zwaną dalej „listą”, i umieszcza ją na stronie internetowej urzędu obsługującego tego ministra w terminie do ostatniego dnia lutego danego roku podatkowego.</p></content>
+            </paragraph>
+            <paragraph eId="art_257b__par_2">
+              <num>2.</num>
+              <content><p>Wpisu związku rewizyjnego zrzeszającego rolnicze spółdzielnie produkcyjne na listę dokonuje się na wniosek danego związku rewizyjnego zrzeszającego rolnicze spółdzielnie produkcyjne złożony do ministra właściwego do spraw rolnictwa w terminie do dnia 31 grudnia roku poprzedzającego rok podatkowy.</p></content>
+            </paragraph>
+            <paragraph eId="art_257b__par_3">
+              <num>3.</num>
+              <content><p>Wniosek, o którym mowa w ust. 2, zawiera:</p></content>
+              <list eId="art_257b__par_3__lst">
+                <point eId="art_257b__par_3__pkt_1">
+                  <num>1)</num>
+                  <content><p>nazwę związku rewizyjnego zrzeszającego rolnicze spółdzielnie produkcyjne oraz jego siedzibę i adres;</p></content>
+                </point>
+                <point eId="art_257b__par_3__pkt_2">
+                  <num>2)</num>
+                  <content><p>numer wpisu związku rewizyjnego zrzeszającego rolnicze spółdzielnie produkcyjne w Krajowym Rejestrze Sądowym;</p></content>
+                </point>
+                <point eId="art_257b__par_3__pkt_3">
+                  <num>3)</num>
+                  <content><p>numer rachunku bankowego związku rewizyjnego zrzeszającego rolnicze spółdzielnie produkcyjne albo rachunku tego związku w spółdzielczej kasie oszczędnościowo-kredytowej;</p></content>
+                </point>
+                <point eId="art_257b__par_3__pkt_4">
+                  <num>4)</num>
+                  <content><p>podpis osoby albo osób uprawnionych do reprezentowania związku rewizyjnego zrzeszającego rolnicze spółdzielnie produkcyjne.</p></content>
+                </point>
+              </list>
+            </paragraph>
+            <paragraph eId="art_257b__par_4">
+              <num>4.</num>
+              <content><p>Do wniosku, o którym mowa w ust. 2, dołącza się dokumenty potwierdzające spełnienie warunków określonych w art. 257a ust. 1, w tym co najmniej:</p></content>
+              <list eId="art_257b__par_4__lst">
+                <point eId="art_257b__par_4__pkt_1">
+                  <num>1)</num>
+                  <content><p>listę członkowskich rolniczych spółdzielni produkcyjnych, z podziałem na województwa i powiaty, zawierającą nazwę, siedzibę i adres oraz numer wpisu do Krajowego Rejestru Sądowego, wraz z dokumentami, z których wynika, że dana rolnicza spółdzielnia produkcyjna jest członkiem związku rewizyjnego zrzeszającego rolnicze spółdzielnie produkcyjne;</p></content>
+                </point>
+                <point eId="art_257b__par_4__pkt_2">
+                  <num>2)</num>
+                  <content><p>deklaracje członkowskie rolniczych spółdzielni produkcyjnych będących członkami związku rewizyjnego zrzeszającego rolnicze spółdzielnie produkcyjne;</p></content>
+                </point>
+                <point eId="art_257b__par_4__pkt_3">
+                  <num>3)</num>
+                  <content><p>listę członków każdej rolniczej spółdzielni produkcyjnej, z podziałem na województwa i powiaty, zawierającą:</p></content>
+                  <list eId="art_257b__par_4__pkt_3__lst">
+                    <point eId="art_257b__par_4__pkt_3__lit_a">
+                      <num>a)</num>
+                      <content><p>imię i nazwisko oraz numer PESEL osoby będącej członkiem tej spółdzielni,</p></content>
+                    </point>
+                    <point eId="art_257b__par_4__pkt_3__lit_b">
+                      <num>b)</num>
+                      <content><p>miejsce zamieszkania osoby będącej członkiem tej spółdzielni i jej adres.</p></content>
+                    </point>
+                  </list>
+                </point>
+              </list>
+            </paragraph>
+            <paragraph eId="art_257b__par_5">
+              <num>5.</num>
+              <content><p>Związek rewizyjny zrzeszający rolnicze spółdzielnie produkcyjne jest wpisywany na listę, jeżeli spełnia warunki określone w art. 257a ust. 1.</p></content>
+            </paragraph>
+            <paragraph eId="art_257b__par_6">
+              <num>6.</num>
+              <content><p>Lista zawiera:</p></content>
+              <list eId="art_257b__par_6__lst">
+                <point eId="art_257b__par_6__pkt_1">
+                  <num>1)</num>
+                  <content><p>nazwę związku rewizyjnego zrzeszającego rolnicze spółdzielnie produkcyjne oraz jego siedzibę i adres;</p></content>
+                </point>
+                <point eId="art_257b__par_6__pkt_2">
+                  <num>2)</num>
+                  <content><p>numer wpisu związku rewizyjnego zrzeszającego rolnicze spółdzielnie produkcyjne w Krajowym Rejestrze Sądowym;</p></content>
+                </point>
+                <point eId="art_257b__par_6__pkt_3">
+                  <num>3)</num>
+                  <content><p>numer rachunku bankowego związku rewizyjnego zrzeszającego rolnicze spółdzielnie produkcyjne albo rachunku tego związku w spółdzielczej kasie oszczędnościowo-kredytowej.</p></content>
+                </point>
+              </list>
+            </paragraph>
+          </article>
+        </hcontainer>
+
+        <hcontainer name="tytul" eId="czesc_II__tyt_II">
+          <num>Tytuł II</num>
+          <heading>Krajowy Samorząd Spółdzielczy</heading>
+
+          <article eId="art_258">
+            <num>Art. 258.</num>
+            <paragraph eId="art_258__par_1">
+              <num>§ 1.</num>
+              <content><p>Najwyższym organem samorządu spółdzielczego jest Kongres Spółdzielczości zwoływany co 4 lata.</p></content>
+            </paragraph>
+            <paragraph eId="art_258__par_2">
+              <num>§ 2.</num>
+              <content><p>Kongres Spółdzielczości zwołuje Krajowa Rada Spółdzielcza, która określa liczbę, zasady i tryb wyboru delegatów na Kongres.</p></content>
+            </paragraph>
+          </article>
+
+          <article eId="art_258a">
+            <num>Art. 258a.</num>
+            <content><p>Kongres Spółdzielczości dokonuje oceny stanu spółdzielczości w Rzeczypospolitej Polskiej oraz warunków i możliwości jej rozwoju, uchwala statut Krajowej Rady Spółdzielczej, zasady finansowania jej działalności przez organizacje spółdzielcze, dokonuje wyboru członków Rady oraz określa zasady odwoływania jej członków.</p></content>
+          </article>
+
+          <article eId="art_259">
+            <num>Art. 259.</num>
+            <paragraph eId="art_259__par_1">
+              <num>§ 1.</num>
+              <content><p>Naczelnym organem samorządu spółdzielczego jest Krajowa Rada Spółdzielcza.</p></content>
+            </paragraph>
+            <paragraph eId="art_259__par_2">
+              <num>§ 2.</num>
+              <content><p>Do zadań Rady należy:</p></content>
+              <list eId="art_259__par_2__lst">
+                <point eId="art_259__par_2__pkt_1">
+                  <num>1)</num>
+                  <content><p>reprezentowanie polskiego ruchu spółdzielczego w kraju i za granicą;</p></content>
+                </point>
+                <point eId="art_259__par_2__pkt_2">
+                  <num>2)</num>
+                  <content><p>współdziałanie z naczelnymi organami państwowymi w sprawach dotyczących ruchu spółdzielczego;</p></content>
+                </point>
+                <point eId="art_259__par_2__pkt_3">
+                  <num>3)</num>
+                  <content><p>inicjowanie i opiniowanie aktów prawnych dotyczących spółdzielczości i mających dla niej istotne znaczenie;</p></content>
+                </point>
+                <point eId="art_259__par_2__pkt_4">
+                  <num>4)</num>
+                  <content><p>badanie i ocena form, warunków, kierunków oraz wyników działalności ruchu spółdzielczego i przedstawianie informacji i wniosków naczelnym organom państwowym;</p></content>
+                </point>
+                <point eId="art_259__par_2__pkt_5">
+                  <num>5)</num>
+                  <content><p>organizowanie działalności naukowo-badawczej, szkoleniowej i informacyjnej, propagowanie działalności kulturalno-oświatowej członków, podejmowanie inicjatyw związanych z rozwojem ruchu spółdzielczego w Rzeczypospolitej Polskiej, w tym rozwoju spółdzielczości uczniowskiej, oraz kształtowanie sprzyjających warunków dla rozwoju ruchu spółdzielczego;</p></content>
+                </point>
+                <point eId="art_259__par_2__pkt_6">
+                  <num>6)</num>
+                  <content><p>inicjowanie i rozwijanie współpracy międzyspółdzielczej i szerzenie idei spółdzielczego współdziałania;</p></content>
+                </point>
+                <point eId="art_259__par_2__pkt_7">
+                  <num>7)</num>
+                  <content><p>organizowanie postępowania rozjemczego w sporach między organizacjami spółdzielczymi;</p></content>
+                </point>
+                <point eId="art_259__par_2__pkt_8">
+                  <num>8)</num>
+                  <content><p>współdziałanie ze związkami rewizyjnymi w realizacji zadań wynikających z niniejszej ustawy;</p></content>
+                </point>
+                <point eId="art_259__par_2__pkt_9">
+                  <num>9)</num>
+                  <content><p>wykonywanie innych zadań przewidzianych w niniejszej ustawie i innych ustawach oraz zleconych przez Kongres.</p></content>
+                </point>
+              </list>
+            </paragraph>
+            <paragraph eId="art_259__par_3">
+              <num>§ 3.</num>
+              <content><p>Krajowa Rada Spółdzielcza wykonuje przewidziane w ustawie funkcje związku rewizyjnego w stosunku do spółdzielni niezrzeszonych w takim związku.</p></content>
+            </paragraph>
+          </article>
+
+          <article eId="art_259a">
+            <num>Art. 259a.</num>
+            <paragraph eId="art_259a__par_1">
+              <num>§ 1.</num>
+              <content><p>Krajowa Rada Spółdzielcza posiada osobowość prawną.</p></content>
+            </paragraph>
+            <paragraph eId="art_259a__par_2">
+              <num>§ 2.</num>
+              <content><p>Krajowa Rada Spółdzielcza działa na podstawie statutu, który określa szczegółowe zasady i tryb jej działania.</p></content>
+            </paragraph>
+            <paragraph eId="art_259a__par_3">
+              <num>§ 3.</num>
+              <content><p>Statut i jego zmiany stają się skuteczne po stwierdzeniu przez Sąd Wojewódzki<authorialNote marker="7)"><p>Obecnie Sąd Okręgowy, na podstawie art. 4 ustawy z dnia 18 grudnia 1998 r. o zmianie ustawy – Prawo o ustroju sądów powszechnych (Dz. U. poz. 1064), która weszła w życie z dniem 1 stycznia 1999 r.</p></authorialNote> w Warszawie w postępowaniu nieprocesowym ich zgodności z prawem. W razie stwierdzenia niezgodności Sąd wyznaczy Radzie termin do usunięcia lub zmiany postanowień niezgodnych z prawem.</p></content>
+            </paragraph>
+            <paragraph eId="art_259a__par_4">
+              <num>§ 4.</num>
+              <content><p>Statut podlega ogłoszeniu w Dzienniku Urzędowym Rzeczypospolitej Polskiej „Monitor Polski”.</p></content>
+            </paragraph>
+            <paragraph eId="art_259a__par_5">
+              <num>§ 5.</num>
+              <content><p>W pracach organów Rady mogą uczestniczyć z głosem doradczym przedstawiciele naczelnych organów administracji państwowej oraz przedstawiciele związków rewizyjnych.</p></content>
+            </paragraph>
+          </article>
+
+          <article eId="art_260" status="repealed">
+            <num>Art. 260.</num>
+            <content><p>(uchylony)</p></content>
+          </article>
+
+          <article eId="art_261" status="repealed">
+            <num>Art. 261.</num>
+            <content><p>(uchylony)</p></content>
+          </article>
+
+          <article eId="art_262" status="repealed">
+            <num>Art. 262.</num>
+            <content><p>(uchylony)</p></content>
+          </article>
+
+          <article eId="art_263" status="repealed">
+            <num>Art. 263.</num>
+            <content><p>(uchylony)</p></content>
+          </article>
+
+          <article eId="art_264" status="repealed">
+            <num>Art. 264.</num>
+            <content><p>(uchylony)</p></content>
+          </article>
+
+          <article eId="art_265" status="repealed">
+            <num>Art. 265.</num>
+            <content><p>(uchylony)</p></content>
+          </article>
+
+          <article eId="art_266">
+            <num>Art. 266.</num>
+            <content><p>Wydatki Krajowej Rady Spółdzielczej pokrywa się ze składek organizacji spółdzielczych według zasad określonych przez Kongres oraz z innych dochodów i darowizn.</p></content>
+          </article>
+
+          <article eId="art_266a">
+            <num>Art. 266a.</num>
+            <content><p>Koszty związane z uczestnictwem Krajowej Rady Spółdzielczej w Głównym Komitecie Spółdzielczości Rolniczej (COGECA) są w latach 2015–2020 dofinansowywane na zasadach określonych w przepisach o izbach rolniczych.</p></content>
+          </article>
+
+          <article eId="art_267" status="repealed">
+            <num>Art. 267.</num>
+            <content><p>(uchylony)</p></content>
+          </article>
+        </hcontainer>
+      </part>
+
+      <part eId="czesc_IIA">
+        <num>Część IIA</num>
+        <heading>Przepisy karne</heading>
+
+        <article eId="art_267a" status="repealed">
+          <num>Art. 267a.</num>
+          <content><p>(uchylony)</p></content>
+        </article>
+
+        <article eId="art_267b">
+          <num>Art. 267b.</num>
+          <content><p>Kto, będąc członkiem zarządu spółdzielni albo likwidatorem, nie zgłasza wniosku o upadłość spółdzielni pomimo powstania warunków uzasadniających upadłość spółdzielni, podlega grzywnie, karze ograniczenia wolności albo pozbawienia wolności do roku.</p></content>
+        </article>
+
+        <article eId="art_267c">
+          <num>Art. 267c.</num>
+          <content><p>Kto, będąc członkiem organu spółdzielni albo likwidatorem wbrew przepisom ustawy:</p></content>
+          <list eId="art_267c__lst">
+            <point eId="art_267c__pkt_1">
+              <num>1)</num>
+              <content><p>nie poddaje spółdzielni lustracji,</p></content>
+            </point>
+            <point eId="art_267c__pkt_2">
+              <num>2)</num>
+              <content><p>nie udziela lub udziela niezgodnych ze stanem faktycznym wyjaśnień lustratorowi, nie dopuszcza go do pełnienia obowiązków lub nie przedkłada stosownych dokumentów,</p></content>
+            </point>
+            <point eId="art_267c__pkt_3">
+              <num>3)</num>
+              <content><p>nie udostępnia członkom spółdzielni protokołu lustracji,</p></content>
+            </point>
+            <point eId="art_267c__pkt_4">
+              <num>4)</num>
+              <content><p>nie zwołuje walnego zgromadzenia, zebrania przedstawicieli albo zebrań grup członkowskich poprzedzających zebranie przedstawicieli,</p></content>
+            </point>
+            <point eId="art_267c__pkt_5">
+              <num>5)</num>
+              <content><p>nie przygotowuje w terminie dokumentów dotyczących dokonania podziału w spółdzielni, o którym mowa w art. 108b, podlega grzywnie albo karze ograniczenia wolności.</p></content>
+            </point>
+          </list>
+        </article>
+
+        <article eId="art_267d">
+          <num>Art. 267d.</num>
+          <paragraph eId="art_267d__par_1">
+            <num>§ 1.</num>
+            <content><p>Kto, będąc członkiem organu spółdzielni albo likwidatorem, ogłasza dane nieprawdziwe albo przedstawia je organom spółdzielni, władzom państwowym, członkom spółdzielni lub lustratorowi, podlega grzywnie, karze ograniczenia wolności albo pozbawienia wolności do lat 2.</p></content>
+          </paragraph>
+          <paragraph eId="art_267d__par_2">
+            <num>§ 2.</num>
+            <content><p>Jeżeli sprawca działa nieumyślnie, podlega grzywnie, karze ograniczenia wolności albo pozbawienia wolności do roku.</p></content>
+          </paragraph>
+        </article>
       </part>
     </body>
   </act>

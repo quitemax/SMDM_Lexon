@@ -329,6 +329,23 @@ cały Tytuł II i całą Część I ustawy.** Łączne pokrycie: 197 artykułów
 Dalej: Część II (Związki spółdzielcze, Krajowa Rada Spółdzielcza) i
 Część III (zmiany w przepisach, przepisy przejściowe).
 
+**Aktualizacja — Część II i IIA dodane (2026-09-28):** rozszerzono plik
+XML o Art. 240-267 (Część II — Związki spółdzielcze, Krajowa Rada
+Spółdzielcza, 41 artykułów) i Art. 267a-267d (Część IIA — Przepisy karne,
+4 artykuły). **Część IIA ma w źródle niestandardowy nagłówek** (zwykły
+tekst "CZĘŚĆ IIA PRZEPISY KARNE" bez formatowania Markdown, w
+odróżnieniu od wszystkich innych Części/Tytułów/Działów) — potraktowana
+mimo to jako pełnoprawna `<part>`, bo taka jest jej rzeczywista funkcja w
+akcie. Kolejny (siódmy) przypis znaleziony i zachowany: Art. 259a §3
+(`authorialNote`, marker `7)`) — „Sąd Wojewódzki” z tekstu ustawy to dziś
+„Sąd Okręgowy” po reformie sądownictwa z 1999 r. Zweryfikowano skryptem
+(poprawionym, żeby nie liczyć podwójnie zagnieżdżonych `<p>` wewnątrz
+`authorialNote`): 104 jednostki tekstu, 95 identycznych, 9 różniących się
+usuniętymi linkami/poprawnie wydzielonymi przypisami — 0 rzeczywistych
+rozbieżności. Łączne pokrycie: 235 artykułów. **Zostaje już tylko Część
+III** (Art. 268-281, zmiany w przepisach i przepisy przejściowe/końcowe)
+— ostatnia część całej ustawy.
+
 ------------------------------------------------------------------------
 
 ## Phase 0 — research (w toku)
