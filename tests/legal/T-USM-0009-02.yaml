@@ -1,0 +1,11 @@
+id: T-USM-0009-02
+rule: R-USM-0009
+title: "Jeden uprawniony - reguła rozstrzygania nie ma zastosowania"
+category: NEGATIVE
+status: SPECIFIED
+given:
+  - "spółdzielcze własnościowe prawo do lokalu przysługuje wyłącznie jednej osobie"
+when: "sprawdzenie warunku R-USM-0009"
+then:
+  result: false
+  because: "warunek 'należy do kilku osób' niespełniony - ta osoba jest członkiem bezpośrednio na podstawie R-USM-0005/0006, bez potrzeby rozstrzygania"

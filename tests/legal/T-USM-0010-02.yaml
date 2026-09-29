@@ -1,0 +1,13 @@
+id: T-USM-0010-02
+rule: R-USM-0010
+title: "Członek z jednym tytułem prawnym traci członkostwo po jego utracie - R-USM-0010 nie chroni"
+category: NEGATIVE
+status: SPECIFIED
+given:
+  - "Membership.status = ACTIVE"
+  - "HAS_LOKATORSKIE_PRAWO(osoba, lokal_A) - jedyny tytuł prawny tej osoby w tej spółdzielni"
+  - "spółdzielcze lokatorskie prawo do lokalu_A wygasa (E1 z R-USM-0008)"
+when: "sprawdzenie warunku R-USM-0010"
+then:
+  result: false
+  because: "warunek 'więcej niż jeden tytuł prawny' niespełniony - R-USM-0010 nie ma zastosowania, R-USM-0008 działa bez ograniczenia, Membership.status -> TERMINATED"

@@ -30,4 +30,4 @@ note: "Ta reguła jest warunkiem wstępnym dla ewaluacji R-USM-0008, nie odrębn
 references:
   - target: R-USM-0008
     type: LIMITS
-tests: []
+tests: ["T-USM-0010-01", "T-USM-0010-02"]

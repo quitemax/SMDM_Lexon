@@ -1,0 +1,18 @@
+id: T-USM-0009-03
+rule: R-USM-0009
+title: "Termin 12 miesięcy na wystąpienie do sądu - granica"
+category: BOUNDARY
+status: SPECIFIED
+cases:
+  - label: "11 miesięcy od wyznaczenia terminu (przed upływem)"
+    given: ["spółdzielnia wyznaczyła uprawnionym termin wystąpienia do sądu 11 miesięcy temu", "żaden z uprawnionych jeszcze nie wystąpił do sądu"]
+    when: "sprawdzenie, czy spółdzielnia może już dokonać wyboru"
+    then:
+      result: false
+      because: "termin maksymalny (12 miesięcy) jeszcze nie upłynął - wybór spółdzielni możliwy dopiero po jego bezskutecznym upływie"
+  - label: "dokładnie 12 miesięcy (upływ terminu)"
+    given: ["spółdzielnia wyznaczyła termin dokładnie 12 miesięcy temu", "żaden z uprawnionych nie wystąpił do sądu"]
+    when: "sprawdzenie, czy spółdzielnia może już dokonać wyboru"
+    then:
+      result: true
+      because: "bezskuteczny upływ wyznaczonego terminu (do 12 miesięcy) - spółdzielnia może dokonać wyboru"

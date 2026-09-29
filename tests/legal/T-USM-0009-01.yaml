@@ -1,0 +1,12 @@
+id: T-USM-0009-01
+rule: R-USM-0009
+title: "Kilku uprawnionych do jednego prawa własnościowego - rozstrzyga sąd"
+category: POSITIVE
+status: SPECIFIED
+given:
+  - "spółdzielcze własnościowe prawo do lokalu przysługuje trzem osobom niebędącym małżeństwem"
+  - "wszyscy trzej zgłaszają się jako kandydaci na członka"
+when: "sprawdzenie warunku R-USM-0009"
+then:
+  result: "sąd rozstrzyga w postępowaniu nieprocesowym, który z nich będzie członkiem"
+  because: "spełniona przesłanka §5 zdanie pierwsze i druga - brak wyjątku dla małżonków"

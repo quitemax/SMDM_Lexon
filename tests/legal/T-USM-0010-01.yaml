@@ -1,0 +1,13 @@
+id: T-USM-0010-01
+rule: R-USM-0010
+title: "Członek z dwoma tytułami prawnymi zachowuje członkostwo po utracie jednego z nich"
+category: POSITIVE
+status: SPECIFIED
+given:
+  - "Membership.status = ACTIVE"
+  - "HAS_LOKATORSKIE_PRAWO(osoba, lokal_A) i HAS_ODREBNA_WLASNOSC(osoba, lokal_B) w tej samej spółdzielni"
+  - "spółdzielcze lokatorskie prawo do lokalu_A wygasa (E1 z R-USM-0008)"
+when: "sprawdzenie, czy R-USM-0008 wywołuje MembershipCeased"
+then:
+  result: false
+  because: "R-USM-0010 blokuje MembershipCeased, dopóki osoba ma inny aktywny tytuł prawny (tu: HAS_ODREBNA_WLASNOSC do lokalu_B) - Membership.status pozostaje ACTIVE"

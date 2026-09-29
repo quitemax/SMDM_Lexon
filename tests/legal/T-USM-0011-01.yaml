@@ -1,0 +1,18 @@
+id: T-USM-0011-01
+rule: R-USM-0011
+title: "Termin 3 lat na ustanowienie prawa do lokalu dla założyciela - granica"
+category: BOUNDARY
+status: SPECIFIED
+cases:
+  - label: "2 lata i 364 dni od wpisu do KRS"
+    given: ["założyciel, wpis spółdzielni do KRS 2 lata i 364 dni temu", "spółdzielnia nie ustanowiła jeszcze żadnego prawa do lokalu ani nie zawarła umowy o budowę lokalu na jego rzecz"]
+    when: "sprawdzenie, czy członkostwo założyciela już ustało"
+    then:
+      result: false
+      because: "termin 3 lat jeszcze nie upłynął"
+  - label: "dokładnie 3 lata od wpisu do KRS"
+    given: ["założyciel, wpis spółdzielni do KRS dokładnie 3 lata temu", "spółdzielnia nie ustanowiła żadnego prawa do lokalu ani nie zawarła umowy o budowę lokalu na jego rzecz"]
+    when: "sprawdzenie, czy członkostwo założyciela już ustało"
+    then:
+      result: true
+      because: "termin 3 lat upływa tego dnia - triggers_event MembershipCeased (reason: ZALOZYCIEL_BRAK_PRAWA_W_3_LATA)"

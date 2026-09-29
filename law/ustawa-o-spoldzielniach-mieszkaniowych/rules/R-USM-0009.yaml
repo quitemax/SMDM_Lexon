@@ -30,4 +30,4 @@ deadline:
   overridable_by_statute: false
 formalization_status: DIRECT
 note: "Nie dotyczy spółdzielczego prawa lokatorskiego ani roszczenia o nie - tylko trzech tytułów wyliczonych wprost (własnościowe, odrębna własność, ekspektatywa). Brak analogicznej normy dla prawa lokatorskiego w tym artykule - odnotowane jako fakt tekstu, nie luka do wypełnienia domysłem (AGENTS.md sekcja 50)."
-tests: []
+tests: ["T-USM-0009-01", "T-USM-0009-02", "T-USM-0009-03"]

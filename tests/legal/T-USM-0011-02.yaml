@@ -1,0 +1,12 @@
+id: T-USM-0011-02
+rule: R-USM-0011
+title: "Ustanowienie prawa do lokalu przed upływem 3 lat zapobiega ustaniu członkostwa założyciela"
+category: NEGATIVE
+status: SPECIFIED
+given:
+  - "założyciel, wpis spółdzielni do KRS 2 lata temu"
+  - "spółdzielnia ustanowiła na jego rzecz spółdzielcze lokatorskie prawo do lokalu 6 miesięcy temu (T4 z R-USM-0007)"
+when: "sprawdzenie warunku R-USM-0011"
+then:
+  result: false
+  because: "warunek reguły ('spółdzielnia nie ustanowi prawa w ciągu 3 lat') niespełniony - prawo zostało ustanowione przed upływem terminu; członkostwo tej osoby od tej chwili opiera się już na T4 (R-USM-0007), nie na statusie założyciela, więc R-USM-0011 przestaje mieć znaczenie dla jej dalszego członkostwa"
