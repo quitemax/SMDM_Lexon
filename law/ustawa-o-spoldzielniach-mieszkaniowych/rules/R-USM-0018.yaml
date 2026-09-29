@@ -24,4 +24,4 @@ effect: >-
   stosuje się odpowiednio do właściciela lokalu, który nie był członkiem
   spółdzielni (§4).
 formalization_status: DIRECT
-tests: []
+tests: ["T-USM-0018-01", "T-USM-0018-02"]

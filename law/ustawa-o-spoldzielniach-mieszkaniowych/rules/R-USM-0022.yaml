@@ -34,4 +34,4 @@ references:
     type: RELATED_TO
   - target: R-USM-0016
     type: RELATED_TO
-tests: []
+tests: ["T-USM-0022-01", "T-USM-0022-02"]

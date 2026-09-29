@@ -1,0 +1,12 @@
+id: T-USM-0022-01
+rule: R-USM-0022
+title: "Większość właścicieli podejmuje uchwałę o stosowaniu odpowiednio Art. 27 zamiast pełnej UWL"
+category: POSITIVE
+status: SPECIFIED
+given:
+  - "wyodrębniono własność ostatniego lokalu (R-USM-0021)"
+  - "za uchwałą o odpowiednim stosowaniu Art. 27 opowiedziała się większość liczona wg udziałów w nieruchomości wspólnej"
+when: "sprawdzenie uprawnienia R-USM-0022"
+then:
+  result: true
+  because: "spełniony wymóg większości z §2"

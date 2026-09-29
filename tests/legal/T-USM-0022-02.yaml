@@ -1,0 +1,18 @@
+id: T-USM-0022-02
+rule: R-USM-0022
+title: "Termin 3 miesięcy na podjęcie uchwały o Art. 27 - granica"
+category: BOUNDARY
+status: SPECIFIED
+cases:
+  - label: "2 miesiące i 29 dni od wyodrębnienia ostatniego lokalu"
+    given: ["wyodrębnienie własności ostatniego lokalu nastąpiło 2 miesiące i 29 dni temu", "uchwała jeszcze nie podjęta"]
+    when: "sprawdzenie, czy termin z R-USM-0022 jeszcze nie upłynął"
+    then:
+      result: true
+      because: "termin 3 miesięcy jeszcze nie upłynął"
+  - label: "dokładnie 3 miesiące od wyodrębnienia ostatniego lokalu"
+    given: ["wyodrębnienie nastąpiło dokładnie 3 miesiące temu", "uchwała podjęta tego samego dnia"]
+    when: "sprawdzenie, czy uchwała została podjęta w terminie"
+    then:
+      result: true
+      because: "uchwała podjęta w ostatnim dniu terminu - jeszcze w jego granicach"

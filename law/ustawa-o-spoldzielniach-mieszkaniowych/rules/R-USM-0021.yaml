@@ -34,4 +34,4 @@ note: >-
   nowelizacji. Modelowane tu jako JEDEN obowiązek (nie dwa niezależne),
   bo treść i przesłanka są identyczne - modelowanie dwóch identycznych
   obowiązków sugerowałoby nieistniejącą różnicę semantyczną.
-tests: []
+tests: ["T-USM-0021-01", "T-USM-0021-02"]

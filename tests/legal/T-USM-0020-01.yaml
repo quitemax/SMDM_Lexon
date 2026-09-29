@@ -1,0 +1,13 @@
+id: T-USM-0020-01
+rule: R-USM-0020
+title: "Właściciel lokalu w powstałej wspólnocie uczestniczy w kosztach wspólnego korzystania"
+category: POSITIVE
+status: SPECIFIED
+given:
+  - "HAS_ODREBNA_WLASNOSC(osoba, lokal)"
+  - "wspólnota mieszkaniowa powstała w tej nieruchomości"
+  - "spółdzielnia i właściciele zawarli umowę o wspólne korzystanie z mienia spółdzielni"
+when: "sprawdzenie obowiązku R-USM-0020"
+then:
+  result: true
+  because: "spełnione warunki §6 - obowiązek partycypacji w kosztach eksploatacji i utrzymania mienia przeznaczonego do wspólnego korzystania"

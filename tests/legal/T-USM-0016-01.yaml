@@ -1,0 +1,12 @@
+id: T-USM-0016-01
+rule: R-USM-0016
+title: "Większość właścicieli podejmuje ważną uchwałę o przejściu na reżim UWL"
+category: POSITIVE
+status: SPECIFIED
+given:
+  - "właściciele lokali głosują nad uchwałą o zastosowaniu ustawy o własności lokali"
+  - "za uchwałą opowiedziała się większość liczona według wielkości udziałów w nieruchomości wspólnej"
+when: "sprawdzenie uprawnienia R-USM-0016"
+then:
+  result: true
+  because: "spełniony wymóg większości z §1 - uchwała ważnie podjęta, staje się przesłanką E7 w R-USM-0008"

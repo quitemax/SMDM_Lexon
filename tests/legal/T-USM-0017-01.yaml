@@ -1,0 +1,12 @@
+id: T-USM-0017-01
+rule: R-USM-0017
+title: "Uchwała o przejściu na UWL nie pozbawia członka jego spółdzielczego prawa do lokalu"
+category: POSITIVE
+status: SPECIFIED
+given:
+  - "podjęto uchwałę z R-USM-0016"
+  - "członek ma spółdzielcze lokatorskie prawo do lokalu w tej nieruchomości"
+when: "sprawdzenie skutku R-USM-0017 dla tego prawa"
+then:
+  result: true
+  because: "§2 - uchwała nie narusza przysługujących członkom spółdzielczych praw do lokali; norma ramowa bez własnych przesłanek do sprawdzenia (jak R-PS-0010/0019/0032), stąd brak naturalnego testu NEGATIVE"

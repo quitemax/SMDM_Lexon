@@ -1,0 +1,18 @@
+id: T-USM-0021-02
+rule: R-USM-0021
+title: "Termin 14 dni na zawiadomienie właścicieli - granica"
+category: BOUNDARY
+status: SPECIFIED
+cases:
+  - label: "13 dni od wyodrębnienia ostatniego lokalu (przed upływem)"
+    given: ["wyodrębnienie własności ostatniego lokalu nastąpiło 13 dni temu", "spółdzielnia jeszcze nie wysłała zawiadomienia"]
+    when: "sprawdzenie, czy termin z R-USM-0021 jeszcze nie upłynął"
+    then:
+      result: true
+      because: "13 < 14 dni"
+  - label: "dokładnie 14 dni od wyodrębnienia ostatniego lokalu"
+    given: ["wyodrębnienie nastąpiło dokładnie 14 dni temu", "spółdzielnia wysłała zawiadomienie tego samego dnia"]
+    when: "sprawdzenie, czy zawiadomienie zostało wysłane w terminie"
+    then:
+      result: true
+      because: "zawiadomienie wysłane w ostatnim dniu terminu - jeszcze w jego granicach"

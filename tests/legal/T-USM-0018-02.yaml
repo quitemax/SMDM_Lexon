@@ -1,0 +1,12 @@
+id: T-USM-0018-02
+rule: R-USM-0018
+title: "Osoba niebędąca właścicielem lokalu nie nabywa współwłasności funduszu remontowego z tego przepisu"
+category: NEGATIVE
+status: SPECIFIED
+given:
+  - "HAS_LOKATORSKIE_PRAWO(osoba, lokal), brak HAS_ODREBNA_WLASNOSC"
+  - "członkostwo tej osoby ustaje"
+when: "sprawdzenie uprawnienia R-USM-0018"
+then:
+  result: false
+  because: "§3-4 dotyczą wyłącznie właścicieli lokali (HAS_ODREBNA_WLASNOSC) - osoba z lokatorskim prawem nie mieści się w tej kategorii"

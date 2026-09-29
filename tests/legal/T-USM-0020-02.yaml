@@ -1,0 +1,12 @@
+id: T-USM-0020-02
+rule: R-USM-0020
+title: "Bez powstania wspólnoty mieszkaniowej obowiązek z §6 jeszcze nie powstaje"
+category: NEGATIVE
+status: SPECIFIED
+given:
+  - "HAS_ODREBNA_WLASNOSC(osoba, lokal)"
+  - "wspólnota mieszkaniowa jeszcze nie powstała w tej nieruchomości"
+when: "sprawdzenie obowiązku R-USM-0020"
+then:
+  result: false
+  because: "warunek 'od dnia powstania wspólnoty mieszkaniowej' niespełniony"

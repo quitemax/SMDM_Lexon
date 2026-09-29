@@ -1,0 +1,12 @@
+id: T-USM-0021-01
+rule: R-USM-0021
+title: "Wyodrębnienie ostatniego lokalu uruchamia reżim UWL i obowiązek zawiadomienia"
+category: POSITIVE
+status: SPECIFIED
+given:
+  - "wyodrębniono własność wszystkich lokali w danym budynku"
+  - "wyodrębniono własność ostatniego z nich"
+when: "sprawdzenie skutku R-USM-0021"
+then:
+  result: true
+  because: "spełniony warunek reguły - stosuje się przepisy UWL, spółdzielnia ma obowiązek zawiadomienia właścicieli w terminie 14 dni"

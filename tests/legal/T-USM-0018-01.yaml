@@ -1,0 +1,12 @@
+id: T-USM-0018-01
+rule: R-USM-0018
+title: "Właściciel lokalu staje się współwłaścicielem funduszu remontowego przy ustaniu członkostwa"
+category: POSITIVE
+status: SPECIFIED
+given:
+  - "HAS_ODREBNA_WLASNOSC(osoba, lokal)"
+  - "członkostwo tej osoby ustaje (R-USM-0008)"
+when: "sprawdzenie uprawnienia R-USM-0018"
+then:
+  result: true
+  because: "spełniony warunek 'ustanie członkostwa' - osoba staje się współwłaścicielem funduszu remontowego w wysokości odpowiadającej udziałowi jej lokalu we współwłasności nieruchomości wspólnej"

@@ -27,4 +27,4 @@ note: "POWER, nie RIGHT - to kompetencja większości do ukształtowania reżimu
 references:
   - target: R-USM-0008
     type: RELATED_TO
-tests: []
+tests: ["T-USM-0016-01", "T-USM-0016-02"]

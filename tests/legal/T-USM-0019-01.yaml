@@ -1,0 +1,11 @@
+id: T-USM-0019-01
+rule: R-USM-0019
+title: "Uchwała o przejściu na UWL uruchamia obowiązek rozliczenia funduszu remontowego"
+category: POSITIVE
+status: SPECIFIED
+given:
+  - "podjęto uchwałę z R-USM-0016"
+when: "sprawdzenie obowiązku R-USM-0019"
+then:
+  result: true
+  because: "spełniona pierwsza z dwóch alternatywnych podstaw (§1/R-USM-0016) - spółdzielnia niezwłocznie rozlicza zaewidencjonowane wpływy i wydatki funduszu remontowego"

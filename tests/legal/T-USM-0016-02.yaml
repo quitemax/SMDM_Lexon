@@ -1,0 +1,12 @@
+id: T-USM-0016-02
+rule: R-USM-0016
+title: "Brak wymaganej większości - uchwała nieważna"
+category: NEGATIVE
+status: SPECIFIED
+given:
+  - "właściciele lokali głosują nad uchwałą o zastosowaniu ustawy o własności lokali"
+  - "za uchwałą opowiedziała się mniejszość liczona według wielkości udziałów w nieruchomości wspólnej"
+when: "sprawdzenie uprawnienia R-USM-0016"
+then:
+  result: false
+  because: "wymóg większości z §1 niespełniony - uchwała nie zostaje ważnie podjęta, E7 nie następuje"

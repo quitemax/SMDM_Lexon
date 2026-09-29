@@ -32,4 +32,4 @@ note: >-
   zastępuje spółdzielnię, ale USM-ART-003 §7 nie zawiera tego
   ograniczenia wprost. Nie zgadujemy w żadną stronę (AGENTS.md sekcja
   50) - R-USM-0008 (E7) też tego nie rozstrzyga.
-tests: []
+tests: ["T-USM-0017-01"]

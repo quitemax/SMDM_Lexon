@@ -19,4 +19,4 @@ statement: >-
   osoby zamieszkujące w określonym budynku lub osiedlu.
 formalization_status: DIRECT
 note: "'Wspólnota mieszkaniowa' (pojęcie z ustawy o własności lokali, niesformalizowanej) powstaje jako skutek uboczny R-USM-0016/R-USM-0021 - ten obowiązek jest odrębny od R-USM-0019 (rozliczenie funduszu remontowego) i dotyczy bieżących, nie jednorazowych, kosztów."
-tests: []
+tests: ["T-USM-0020-01", "T-USM-0020-02"]

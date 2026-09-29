@@ -1,0 +1,12 @@
+id: T-USM-0019-02
+rule: R-USM-0019
+title: "Brak uchwały ani wyodrębnienia ostatniego lokalu - obowiązek rozliczenia jeszcze nie powstał"
+category: NEGATIVE
+status: SPECIFIED
+given:
+  - "żadna uchwała z R-USM-0016 nie została podjęta"
+  - "nie wyodrębniono własności ostatniego lokalu (R-USM-0021 nie ma zastosowania)"
+when: "sprawdzenie obowiązku R-USM-0019"
+then:
+  result: false
+  because: "żadna z dwóch alternatywnych podstaw nie zachodzi"
