@@ -1,0 +1,13 @@
+id: T-USM-0008-01
+rule: R-USM-0008
+title: "Wygaśnięcie lokatorskiego prawa powoduje ustanie członkostwa"
+category: POSITIVE
+status: SPECIFIED
+given:
+  - "Membership.status = ACTIVE, jedyna podstawa: HAS_LOKATORSKIE_PRAWO"
+  - "spółdzielcze lokatorskie prawo do lokalu wygasło (E1)"
+  - "brak innego tytułu prawnego (R-USM-0010 nie ma zastosowania)"
+when: "przebieg zdarzenia wg R-USM-0008"
+then:
+  result: "Membership.status = TERMINATED"
+  because: "spełniona przesłanka E1 - triggers_event MembershipCeased, bez decyzji żadnego organu skierowanej przeciwko tej osobie"

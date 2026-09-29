@@ -1,0 +1,12 @@
+id: T-USM-0008-02
+rule: R-USM-0008
+title: "Brak jakiegokolwiek z ośmiu zdarzeń - członkostwo trwa"
+category: NEGATIVE
+status: SPECIFIED
+given:
+  - "Membership.status = ACTIVE"
+  - "żadne z E1-E8 nie zaszło"
+when: "przebieg zdarzenia wg R-USM-0008"
+then:
+  result: "Membership.status pozostaje ACTIVE"
+  because: "żadna z ośmiu przesłanek nie zachodzi - MembershipCeased nie następuje"

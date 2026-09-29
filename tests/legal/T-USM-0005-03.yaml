@@ -1,0 +1,11 @@
+id: T-USM-0005-03
+rule: R-USM-0005
+title: "Oboje małżonkowie ze wspólnym prawem do lokalu są oboje członkami"
+category: POSITIVE
+status: SPECIFIED
+given:
+  - "małżeństwo, prawo odrębnej własności lokalu przysługuje obojgu małżonkom wspólnie"
+when: "sprawdzenie `effect` R-USM-0005 (§2)"
+then:
+  result: "oboje małżonkowie są członkami"
+  because: "§2 czyni wyjątek od zasady 'tylko jedna osoba przy jednym tytule' (R-USM-0009) właśnie dla małżonków ze wspólnym prawem"

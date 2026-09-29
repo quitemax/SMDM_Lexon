@@ -1,0 +1,12 @@
+id: T-USM-0006-01
+rule: R-USM-0006
+title: "Osoba prawna ze spółdzielczym własnościowym prawem jest członkiem"
+category: POSITIVE
+status: SPECIFIED
+given:
+  - "osoba jest osobą prawną"
+  - "HAS_WLASNOSCIOWE_PRAWO(osoba, lokal)"
+when: "sprawdzenie warunku C1 (§3)"
+then:
+  result: true
+  because: "spełniona pierwsza z alternatywnych przesłanek §3 dla osób prawnych"

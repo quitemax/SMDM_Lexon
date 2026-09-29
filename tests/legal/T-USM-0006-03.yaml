@@ -1,0 +1,12 @@
+id: T-USM-0006-03
+rule: R-USM-0006
+title: "Właściciel lokalu niebędący członkiem ma roszczenie o przyjęcie, na zasadach odpowiedniego stosowania PS Art. 16"
+category: POSITIVE
+status: SPECIFIED
+given:
+  - "HAS_ODREBNA_WLASNOSC(osoba, lokal)"
+  - "osoba nie jest jeszcze członkiem spółdzielni"
+when: "sprawdzenie uprawnienia C2 (§3[1])"
+then:
+  result: true
+  because: "§3[1] przyznaje właścicielowi lokalu niebędącemu członkiem roszczenie o przyjęcie w poczet członków, z odpowiednim stosowaniem PS Art. 16 (deklaracja) - patrz też wyjątek E1 w R-USM-0003"

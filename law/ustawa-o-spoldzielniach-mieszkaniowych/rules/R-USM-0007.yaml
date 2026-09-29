@@ -45,4 +45,4 @@ references:
     type: RELATED_TO
   - target: R-PS-0003
     type: SUPERSEDES
-tests: []
+tests: ["T-USM-0007-01", "T-USM-0007-02", "T-USM-0007-03"]

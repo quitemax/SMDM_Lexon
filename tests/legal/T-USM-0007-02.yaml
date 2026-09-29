@@ -1,0 +1,12 @@
+id: T-USM-0007-02
+rule: R-USM-0007
+title: "Brak jakiegokolwiek z siedmiu zdarzeń - członkostwo nie powstaje"
+category: NEGATIVE
+status: SPECIFIED
+given:
+  - "Membership.status = null"
+  - "żadne z T1-T7 nie zaszło (osoba np. dopiero ubiega się o lokal, bez jeszcze nabytego roszczenia ani umowy)"
+when: "przebieg zdarzenia wg R-USM-0007"
+then:
+  result: "Membership.status pozostaje null"
+  because: "żadna z siedmiu przesłanek nie zachodzi - MembershipArose nie następuje"

@@ -58,4 +58,4 @@ references:
     type: LIMITED_BY
   - target: R-PS-0016
     type: SUPERSEDES
-tests: []
+tests: ["T-USM-0008-01", "T-USM-0008-02", "T-USM-0008-03"]

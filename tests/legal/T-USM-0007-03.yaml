@@ -1,0 +1,12 @@
+id: T-USM-0007-03
+rule: R-USM-0007
+title: "Wpis spółdzielni do KRS powoduje powstanie członkostwa założycieli"
+category: POSITIVE
+status: SPECIFIED
+given:
+  - "osoba jest założycielem spółdzielni, która podpisała statut"
+  - "spółdzielnia zostaje wpisana do Krajowego Rejestru Sądowego"
+when: "przebieg zdarzenia wg R-USM-0007"
+then:
+  result: "Membership.status = ACTIVE"
+  because: "spełniona przesłanka T7 - ten sam moment, co CooperativeRegistered w law/prawo-spoldzielcze/ontology/events/cooperative_registered.yaml (PS Art. 11 §1, PS Art. 17 §1 zdanie pierwsze), ale tu z osobnej podstawy ustawowej (USM), nie z PS wprost"

@@ -1,0 +1,13 @@
+id: T-USM-0005-02
+rule: R-USM-0005
+title: "Osoba fizyczna bez żadnego tytułu prawnego i bez statusu założyciela nie jest członkiem"
+category: NEGATIVE
+status: SPECIFIED
+given:
+  - "osoba jest osobą fizyczną"
+  - "brak HAS_LOKATORSKIE_PRAWO, HAS_WLASNOSCIOWE_PRAWO, HAS_ROSZCZENIE_O_LOKATORSKIE_PRAWO, HAS_EKSPEKTATYWA_WLASNOSCI"
+  - "osoba nie jest założycielem spółdzielni"
+when: "sprawdzenie warunku R-USM-0005"
+then:
+  result: false
+  because: "żadna z pięciu alternatywnych przesłanek (§1 pkt 1-4, §1 pkt 5) nie zachodzi"

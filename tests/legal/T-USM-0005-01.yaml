@@ -1,0 +1,12 @@
+id: T-USM-0005-01
+rule: R-USM-0005
+title: "Osoba fizyczna ze spółdzielczym lokatorskim prawem jest członkiem"
+category: POSITIVE
+status: SPECIFIED
+given:
+  - "osoba jest osobą fizyczną"
+  - "HAS_LOKATORSKIE_PRAWO(osoba, lokal)"
+when: "sprawdzenie warunku R-USM-0005"
+then:
+  result: true
+  because: "spełniona pierwsza z czterech alternatywnych przesłanek §1 - zdolność do czynności prawnych nie jest tu wymagana, w odróżnieniu od R-PS-0001"

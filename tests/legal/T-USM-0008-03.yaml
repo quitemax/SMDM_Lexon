@@ -1,0 +1,13 @@
+id: T-USM-0008-03
+rule: R-USM-0008
+title: "Uchwała większości właścicieli o przejściu na reżim UWL kończy członkostwo (via Art. 24[1])"
+category: POSITIVE
+status: SPECIFIED
+given:
+  - "Membership.status = ACTIVE, właściciel lokalu (HAS_ODREBNA_WLASNOSC)"
+  - "większość właścicieli lokali w budynku podjęła uchwałę z USM-ART-024[1] §1 o zastosowaniu ustawy o własności lokali"
+  - "brak innego tytułu prawnego w tej spółdzielni (R-USM-0010 nie ma zastosowania)"
+when: "przebieg zdarzenia wg R-USM-0008"
+then:
+  result: "Membership.status = TERMINATED"
+  because: "spełniona przesłanka E7 (USM-ART-003 §7 w związku z USM-ART-024[1] §1) - to odesłanie, nie samodzielny przepis o ustaniu członkostwa w Art. 24[1] samym w sobie (patrz `note` reguły i KOREKTA w OBS-0001)"

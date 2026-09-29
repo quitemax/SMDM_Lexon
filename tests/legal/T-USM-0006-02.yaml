@@ -1,0 +1,12 @@
+id: T-USM-0006-02
+rule: R-USM-0006
+title: "Osobie prawnej nie może przysługiwać spółdzielcze lokatorskie prawo do lokalu"
+category: NEGATIVE
+status: SPECIFIED
+given:
+  - "osoba jest osobą prawną"
+  - "próba ustanowienia HAS_LOKATORSKIE_PRAWO(osoba, lokal) na jej rzecz"
+when: "sprawdzenie dopuszczalności wg C1 (§3 zdanie drugie)"
+then:
+  result: false
+  because: "§3 zdanie drugie wprost wyklucza spółdzielcze lokatorskie prawo dla osób prawnych - to jedyny z czterech tytułów z R-USM-0005 zastrzeżony wyłącznie dla osób fizycznych"
