@@ -19,22 +19,25 @@ plików w `tests/legal/`, GIVEN/WHEN/THEN, `status: SPECIFIED` (nie
 wykonane - `engine/evaluator/` wciąż puste, ADR-0003). Szczegóły w
 sekcji "Testy dla Dział III" niżej.
 
-**USM (Ustawa o spółdzielniach mieszkaniowych) - rozpoczęta (2026-09-29):**
-drugi akt w `law/`. Fragment (Art. 1, 2, 3, 15, 24[1], 26) znormalizowany
-w AKN, 11 reguł (`R-USM-0001..0011`) formalizuje Art. 1-3 - w tym
-`R-USM-0007`/`R-USM-0008`, które **rozwiązują `OBS-0001`** (status
-RESOLVED - patrz `law/prawo-spoldzielcze/interpretations/OBS-0001-lex-specialis-usm-membership.md`):
+**USM (Ustawa o spółdzielniach mieszkaniowych) - fragment KOMPLETNY
+(2026-09-29):** drugi akt w `law/`. Fragment (Art. 1, 2, 3, 15, 24[1],
+26) znormalizowany w AKN, **22 reguły** (`R-USM-0001..0022`) formalizują
+całą znormalizowaną treść - w tym `R-USM-0007`/`R-USM-0008`, które
+**rozwiązują `OBS-0001`** (status RESOLVED - patrz
+`law/prawo-spoldzielcze/interpretations/OBS-0001-lex-specialis-usm-membership.md`):
 członkostwo w spółdzielni mieszkaniowej powstaje/ustaje ex lege wraz z
 tytułem prawnym do lokalu, nie przez deklarację+uchwałę ani
 wykluczenie/wykreślenie z Prawa spółdzielczego - to teraz jawny,
 sprawdzalny graf odesłań (`disapplies`/`references`) między regułami
-USM i PS, nie tylko obserwacja. Żadna reguła USM nie ma jeszcze testu.
-Szczegóły: sekcja "Formalizacja USM: start" niżej.
+USM i PS, nie tylko obserwacja. **Wszystkie 22 reguły USM mają testy**
+(29 plików w `tests/legal/`). Szczegóły: sekcja "Formalizacja USM:
+start" i "Formalizacja USM: dokończenie fragmentu" niżej.
 
 **Kolejność ustalona z użytkownikiem (2026-09-29):** dokończyć pisanie
 reguł (Dział III — ZROBIONE) → testy (ZROBIONE) → formalizacja USM
-(**w toku** - Art. 1-3 zrobione, Art. 15/24[1]/26 własna treść i testy
-pozostają) → Phase 3 (silnik, `engine/`, na bazie ADR-0003).
+(**ZROBIONE dla wybranego fragmentu** - Art. 1, 2, 3, 15, 24[1], 26,
+razem z testami) → Phase 3 (silnik, `engine/`, na bazie ADR-0003,
+**następny krok**).
 
 **Przystanek analityczny (2026-09-28):** przed powrotem do pisania reguł
 zrobiono audyt repo (skrypty walidujące, nie wrażenia) — patrz
@@ -742,17 +745,55 @@ fragmencie Art. 15–28.
   prefiksu aktu), `normalized_ref_to_eid` nie obsługiwał wzorca
   `USM-ART-024-1` (dodano).
 
-**Świadomie poza zakresem tego kroku:**
+**Odłożone na tym etapie (domknięte niżej, ten sam dzień):** Art. 15,
+24[1], 26 własna treść, i testy USM - patrz "Formalizacja USM:
+dokończenie fragmentu".
 
-- Art. 15, 24[1], 26 - znormalizowane i cytowane przez Art. 3, ale ich
-  WŁASNA treść (np. Art. 24[1] §2-6 - rozliczenie funduszu remontowego,
-  Art. 26 §1-3 - terminy zawiadomień, uchwała o przejściu na reżim UWL)
-  nie ma jeszcze własnych reguł.
-- Żadna reguła USM nie ma testu (`T-USM-*` jeszcze nie istnieje) -
-  naturalny następny krok w ramach kontynuacji formalizacji USM, zanim
-  przejdziemy do Phase 3.
-- Reszta ustawy (Art. 4-14, 8[1]-8[3], 9[1]-14, 16-17[19], 18-23, 25,
-  27-27[4], 28-55) - nieznormalizowana, do rozszerzenia w miarę potrzeby.
+------------------------------------------------------------------------
+
+## Formalizacja USM: dokończenie fragmentu (2026-09-29)
+
+**Decyzja użytkownika:** dokończyć USM przed rozpoczęciem Phase 3 -
+"finish up before phase 3 starts". Dwa zadania: własna treść Art.
+15/24[1]/26 (nie tylko to, co Art. 3 cytuje), i testy dla wszystkich
+reguł USM.
+
+**Zrobione:**
+
+- 11 nowych reguł (`R-USM-0012..0022`): Art. 15 §2/2[1]/4/6/7
+  (roszczenia osób bliskich po śmierci uprawnionego, termin roczny,
+  wypłata wartości rynkowej, roszczenie o przyjęcie) - świadomie
+  pominięte §3/§5 (zależą całkowicie od niesformalizowanego Art. 10);
+  Art. 24[1] §1-6 (uchwała o przejściu na reżim UWL, brak naruszenia
+  praw spółdzielczych, współwłasność funduszu remontowego, rozliczenie,
+  koszty wspólnego korzystania); Art. 26 §1-4 (wyodrębnienie ostatniego
+  lokalu, uchwała o odpowiednim stosowaniu Art. 27 zamiast pełnej UWL).
+- Dwie **UNCERTAIN**, celowo nierozstrzygnięte kwestie znalezione przy
+  czytaniu (nie zgadywane): `R-USM-0014` (Art. 15 §6) - tekst mówi o
+  wypłacie "osobie uprawnionej" nawet w gałęzi "brak uprawnionych osób",
+  bez wskazania komu wtedy; `R-USM-0017` (Art. 24[1] §2) - USM-ART-003
+  §7 nie precyzuje, czy przesłanka E7 (R-USM-0008) kończy członkostwo
+  wszystkich członków w danej nieruchomości, czy tylko właścicieli
+  lokali (którzy jedyni głosują nad uchwałą).
+- Jedna **OBSERVATION**: Art. 26 §1 zdanie drugie i §3 są w tekście
+  źródłowym identyczne (ten sam obowiązek zawiadomienia w 14 dni,
+  zapisany dwukrotnie) - zmodelowane jako jeden obowiązek
+  (`R-USM-0021`), nie dwa, żeby nie sugerować nieistniejącej różnicy;
+  odnotowane, nie "naprawione" (AGENTS.md sekcja 30).
+- Testy dla wszystkich 22 reguł USM (`R-USM-0001..0022`) - 29 plików w
+  `tests/legal/`, ten sam wzorzec co dla Dział III PS (POSITIVE/
+  NEGATIVE/BOUNDARY, `status: SPECIFIED`).
+- `py schema/validate_rules.py`: 0 błędów, 0 ostrzeżeń na **62 plikach**
+  (40 PS + 22 USM). `py schema/validate_tests.py`: 0 błędów, 0
+  ostrzeżeń, 0 reguł bez testu na **140 plikach testowych**.
+
+**Świadomie poza zakresem (niezmienione):** reszta ustawy (Art. 4-14,
+8[1]-8[3], 9[1]-14, 16-17[19], 18-23, 25, 27-27[4], 28-55) -
+nieznormalizowana, do rozszerzenia w miarę potrzeby, nie teraz.
+
+Cała ustalona sekwencja (dokumentacja → encje → schemat → spike Catala
+→ reguły → testy → USM) jest zamknięta. **Następny krok: Phase 3**
+(silnik, `engine/`, na bazie ADR-0003).
 
 ------------------------------------------------------------------------
 
