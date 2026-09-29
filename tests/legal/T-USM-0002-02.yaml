@@ -1,0 +1,12 @@
+id: T-USM-0002-02
+rule: R-USM-0002
+title: "Właściciel lokalu będący członkiem może wystąpić za wypowiedzeniem mimo wyłączenia PS Art. 22"
+category: NEGATIVE
+status: SPECIFIED
+given:
+  - "członek jest właścicielem lokalu (HAS_ODREBNA_WLASNOSC)"
+  - "członek składa wypowiedzenie członkostwa"
+when: "sprawdzenie, czy R-USM-0002 blokuje to wypowiedzenie"
+then:
+  result: false
+  because: "`effect` reguły przyznaje węższe, zastępcze prawo wypowiedzenia właśnie właścicielowi lokalu będącemu członkiem (i założycielowi) - zakaz z §8 dotyczy ogólnego prawa z R-PS-0023, nie tego zastępczego prawa"

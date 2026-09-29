@@ -1,0 +1,11 @@
+id: T-USM-0001-01
+rule: R-USM-0001
+title: "Sprawa nieuregulowana w USM podlega Prawu spółdzielczemu"
+category: POSITIVE
+status: SPECIFIED
+given:
+  - "spółdzielnia mieszkaniowa rozstrzyga kwestię wymaganej treści statutu (PS Art. 5, R-PS-0011) - USM nie reguluje tej kwestii odmiennie"
+when: "sprawdzenie, czy R-PS-0011 stosuje się do tej spółdzielni"
+then:
+  result: true
+  because: "USM-ART-001 §7: w zakresie nieuregulowanym w USM stosuje się PS; treść statutu nie jest objęta wyłączeniami z §8/§9 (R-USM-0002/0003)"

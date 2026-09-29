@@ -1,0 +1,12 @@
+id: T-USM-0003-01
+rule: R-USM-0003
+title: "PS przepisy o wpisowym i udziałach nie stosują się do typowego członka spółdzielni mieszkaniowej"
+category: POSITIVE
+status: SPECIFIED
+given:
+  - "członek jest członkiem na podstawie spółdzielczego lokatorskiego prawa do lokalu (HAS_LOKATORSKIE_PRAWO)"
+  - "spółdzielnia próbuje zastosować R-PS-0018 (obowiązek wniesienia wpisowego i udziałów)"
+when: "sprawdzenie zakazu R-USM-0003"
+then:
+  result: true
+  because: "USM-ART-001 §9 wyłącza przepisy PS o udziałach i wpisowym; ten członek nie mieści się w wyjątku E1 (nie jest właścicielem lokalu niebędącym jeszcze członkiem)"

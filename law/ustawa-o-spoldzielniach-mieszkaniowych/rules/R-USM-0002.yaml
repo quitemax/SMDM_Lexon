@@ -34,4 +34,4 @@ references:
     type: DISAPPLIES
   - target: R-PS-0023
     type: LIMITS
-tests: []
+tests: ["T-USM-0002-01", "T-USM-0002-02", "T-USM-0002-03"]

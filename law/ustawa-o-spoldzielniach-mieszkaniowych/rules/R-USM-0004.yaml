@@ -29,4 +29,4 @@ items:
     source: "USM-ART-002 §5"
 formalization_status: DIRECT
 note: "`subject: Lokal` odzwierciedla D1-D3 (większość pozycji); D4 (osoba bliska) jest definicją niezwiązaną z Lokal, zgrupowaną tu tylko dlatego, że ustawa sama grupuje wszystkie cztery w jednym artykule definicyjnym - nie rozbite na osobne pliki, bo żadna z nich nie jest samodzielną normą (AGENTS.md sekcja 12 dotyczy norm, nie czystej terminologii)."
-tests: []
+tests: ["T-USM-0004-01", "T-USM-0004-02"]

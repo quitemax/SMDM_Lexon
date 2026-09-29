@@ -1,0 +1,13 @@
+id: T-USM-0002-03
+rule: R-USM-0002
+title: "Zwykły członek (lokatorskie prawo, nie właściciel ani założyciel) nie ma nawet zastępczego prawa wypowiedzenia"
+category: NEGATIVE
+status: SPECIFIED
+given:
+  - "członek ma spółdzielcze lokatorskie prawo do lokalu (HAS_LOKATORSKIE_PRAWO)"
+  - "członek nie jest założycielem ani właścicielem lokalu"
+  - "członek chce wystąpić ze spółdzielni za wypowiedzeniem"
+when: "sprawdzenie, czy przysługuje mu prawo wypowiedzenia z `effect` R-USM-0002"
+then:
+  result: false
+  because: "zastępcze prawo z §8 zdanie drugie przysługuje tylko założycielom i właścicielom lokali będącym członkami - ten członek nie należy do żadnej z tych dwóch kategorii; jego członkostwo może ustać tylko przez zdarzenia z R-USM-0008 (np. zbycie/wygaśnięcie prawa), nie przez wypowiedzenie"

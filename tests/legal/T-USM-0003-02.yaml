@@ -1,0 +1,12 @@
+id: T-USM-0003-02
+rule: R-USM-0003
+title: "Wyjątek E1: właściciel lokalu niebędący jeszcze członkiem podlega obowiązkowi deklaracji z PS Art. 16"
+category: NEGATIVE
+status: SPECIFIED
+given:
+  - "osoba jest właścicielem lokalu (HAS_ODREBNA_WLASNOSC), ale nie jest jeszcze członkiem spółdzielni"
+  - "spółdzielnia stosuje wobec niej wymóg złożenia deklaracji (PS Art. 16, część R-PS-0003 kroku 1)"
+when: "sprawdzenie zakazu R-USM-0003 wobec tego wymogu"
+then:
+  result: false
+  because: "wyjątek E1 (USM-ART-003 §3[1], R-USM-0006 item C2) przywraca odpowiednie stosowanie PS Art. 16 właśnie dla tego przypadku - zakaz z §9 nie działa tutaj"

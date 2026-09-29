@@ -1,0 +1,11 @@
+id: T-USM-0004-02
+rule: R-USM-0004
+title: "Pomieszczenie niebędące samodzielnym lokalem ani pracownią twórcy nie jest Lokalem w rozumieniu D1"
+category: NEGATIVE
+status: SPECIFIED
+given:
+  - "pomieszczenie jest zwykłą komórką lokatorską/piwnicą, nie samodzielnym lokalem mieszkalnym ani lokalem o innym przeznaczeniu, ani pracownią twórcy"
+when: "kwalifikacja obiektu wg definicji D1 (USM-ART-002 §1-2)"
+then:
+  result: false
+  because: "nie spełnia żadnego z elementów wyliczonych w D1 - to typowe pomieszczenie przynależne do lokalu, nie osobny Lokal w rozumieniu ustawy (rozróżnienie nieujęte wprost w Art. 2, ale wynika z zamkniętego wyliczenia kategorii)"

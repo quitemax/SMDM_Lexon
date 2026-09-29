@@ -1,0 +1,11 @@
+id: T-USM-0001-02
+rule: R-USM-0001
+title: "Sprawa objęta wyłączeniem z §8/§9 nie podlega Prawu spółdzielczemu mimo reguły rezydualnej"
+category: NEGATIVE
+status: SPECIFIED
+given:
+  - "spółdzielnia mieszkaniowa rozstrzyga kwestię obowiązku wniesienia wpisowego (PS Art. 19, R-PS-0018)"
+when: "sprawdzenie, czy R-PS-0018 stosuje się do tej spółdzielni na podstawie reguły rezydualnej R-USM-0001"
+then:
+  result: false
+  because: "zastrzeżenie 'z zastrzeżeniem ust. 8 i 9' wyłącza tę kwestię z reguły rezydualnej - patrz R-USM-0003, ta kwestia jest wprost wyłączona, nie 'nieuregulowana'"

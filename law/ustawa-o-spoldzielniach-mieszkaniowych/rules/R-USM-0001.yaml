@@ -27,4 +27,4 @@ references:
     type: LIMITED_BY
   - target: R-USM-0003
     type: LIMITED_BY
-tests: []
+tests: ["T-USM-0001-01", "T-USM-0001-02"]

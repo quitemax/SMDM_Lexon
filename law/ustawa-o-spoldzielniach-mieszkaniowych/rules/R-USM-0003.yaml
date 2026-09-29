@@ -47,4 +47,4 @@ note: >-
   §3 tego samego artykułu PS - nie zgadujemy w żadną stronę (AGENTS.md
   sekcja 50), stąd R-PS-0019 NIE jest tu wymieniony w `disapplies` ani
   jako stosujący się wprost.
-tests: []
+tests: ["T-USM-0003-01", "T-USM-0003-02"]

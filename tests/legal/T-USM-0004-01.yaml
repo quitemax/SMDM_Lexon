@@ -1,0 +1,11 @@
+id: T-USM-0004-01
+rule: R-USM-0004
+title: "Dom jednorodzinny podlega przepisom o lokalach mimo odrębnej nazwy"
+category: POSITIVE
+status: SPECIFIED
+given:
+  - "obiekt jest domem mieszkalnym przeznaczonym do zaspokojenia potrzeb mieszkaniowych"
+when: "kwalifikacja obiektu wg definicji D2 (USM-ART-002 §3)"
+then:
+  result: "traktowany jak Lokal - stosują się do niego przepisy ustawy dotyczące lokali"
+  because: "D2 wprost nakazuje stosowanie przepisów o lokalach do domów jednorodzinnych, mimo że to odrębna kategoria nazewnicza od D1 (lokal)"

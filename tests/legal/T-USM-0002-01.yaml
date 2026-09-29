@@ -1,0 +1,11 @@
+id: T-USM-0002-01
+rule: R-USM-0002
+title: "PS Art. 24 (wykluczenie/wykreślenie) nie stosuje się do spółdzielni mieszkaniowej"
+category: POSITIVE
+status: SPECIFIED
+given:
+  - "spółdzielnia mieszkaniowa chce zastosować procedurę wykluczenia z PS Art. 24 (R-PS-0016) wobec członka"
+when: "sprawdzenie zakazu R-USM-0002"
+then:
+  result: true
+  because: "USM-ART-001 §8 wyłącza stosowanie przepisów PS o wykluczeniu/wykreśleniu wprost i bezwarunkowo dla wszystkich spółdzielni mieszkaniowych"
