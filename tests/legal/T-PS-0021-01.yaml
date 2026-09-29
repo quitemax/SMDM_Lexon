@@ -1,0 +1,12 @@
+id: T-PS-0021-01
+rule: R-PS-0021
+title: "Statut wprowadzający wkłady z pełną wymaganą treścią"
+category: POSITIVE
+status: SPECIFIED
+given:
+  - "statut przewiduje wnoszenie wkładów przez członków"
+  - "statut zawiera postanowienia odpowiadające pozycjom R1-R5 (`required_content_if_exercised`)"
+when: "sprawdzenie wymaganej treści statutu wg R-PS-0021"
+then:
+  result: true
+  because: "statut skorzystał z dozwolenia z §2 i zawiera całą wymaganą przy tym treść"

@@ -1,0 +1,12 @@
+id: T-PS-0020-01
+rule: R-PS-0020
+title: "Domyślnie jeden udział wystarcza, gdy statut nie stanowi inaczej"
+category: POSITIVE
+status: SPECIFIED
+given:
+  - "statut nie zobowiązuje członków do zadeklarowania więcej niż jednego udziału"
+  - "członek zadeklarował 1 udział"
+when: "sprawdzenie warunku R-PS-0020 (declared_shares_count >= wymagane minimum)"
+then:
+  result: true
+  because: "wartość domyślna (1) nie jest podwyższona przez statut - warunek spełniony"

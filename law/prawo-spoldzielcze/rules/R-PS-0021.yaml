@@ -28,4 +28,4 @@ required_content_if_exercised:
     text: "inne wypadki przewidziane w statucie"
 formalization_status: DIRECT
 note: "Struktura analogiczna do R-PS-0011 (wymagana treść statutu, Art. 5 §1) - tam treść jest bezwarunkowo wymagana, tu jest wymagana tylko JEŚLI statut skorzysta z tego dozwolenia (pole `required_content_if_exercised`, nie `items`, żeby zaznaczyć tę różnicę - AGENTS.md sekcja 56, nie spłaszczać różnicy między obowiązkiem i uwarunkowanym obowiązkiem)."
-tests: []
+tests: ["T-PS-0021-01", "T-PS-0021-02"]

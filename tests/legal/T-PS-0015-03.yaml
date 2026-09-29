@@ -1,0 +1,13 @@
+id: T-PS-0015-03
+rule: R-PS-0015
+title: "Wielu spadkobierców - podział udziałów tylko między tych, którzy złożyli deklarację"
+category: POSITIVE
+status: SPECIFIED
+given:
+  - "MemberDied nastąpiło, zmarły miał trzech spadkobierców"
+  - "dwóch spadkobierców złożyło deklarację przystąpienia do spółdzielni, jeden nie złożył i nie wskazano go jako wspólnego pełnomocnika"
+  - "spadkobiercy nie wskazali jednego uprawnionego spośród siebie"
+when: "sprawdzenie podziału udziałów wg `effect` reguły R-PS-0015"
+then:
+  result: "udziały dzielone tylko między dwóch spadkobierców, którzy złożyli deklarację"
+  because: "brak wskazania jednego uprawnionego aktywuje alternatywę z `effect' - podział wyłącznie między tych, którzy złożyli deklarację przystąpienia; trzeci spadkobierca nie otrzymuje części udziałów z tego tytułu"

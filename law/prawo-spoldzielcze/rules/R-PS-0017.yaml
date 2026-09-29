@@ -26,4 +26,4 @@ references:
     type: LIMITS
   - target: R-PS-0015
     type: DEPENDS_ON
-tests: []
+tests: ["T-PS-0017-01", "T-PS-0017-02"]

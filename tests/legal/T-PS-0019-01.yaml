@@ -1,0 +1,12 @@
+id: T-PS-0019-01
+rule: R-PS-0019
+title: "Członek nie odpowiada wobec wierzycieli spółdzielni za jej zobowiązania"
+category: POSITIVE
+status: SPECIFIED
+given:
+  - "Membership.status = ACTIVE"
+  - "wierzyciel spółdzielni dochodzi zapłaty zobowiązania spółdzielni"
+when: "sprawdzenie, czy wierzyciel spółdzielni może dochodzić zaspokojenia od tego członka"
+then:
+  result: false
+  because: "PS-ART-019 §3 stanowi to bezwarunkowo dla każdego członka - norma ramowa bez własnych przesłanek do sprawdzenia (jak R-PS-0010), stąd brak naturalnego testu NEGATIVE dla tej reguły w izolacji"

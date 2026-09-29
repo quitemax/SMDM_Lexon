@@ -24,4 +24,4 @@ effect: >-
   ją niesie.
 formalization_status: DIRECT
 note: "Wzorzec 'wartość domyślna, odwracana przez statut' analogiczny do R-PS-0002 (minimalna liczba członków, domyślnie 10)."
-tests: []
+tests: ["T-PS-0020-01", "T-PS-0020-02"]

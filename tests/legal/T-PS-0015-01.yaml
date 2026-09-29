@@ -1,0 +1,12 @@
+id: T-PS-0015-01
+rule: R-PS-0015
+title: "Spadkobierca będący już członkiem dziedziczy udziały zmarłego"
+category: POSITIVE
+status: SPECIFIED
+given:
+  - "MemberDied nastąpiło dla zmarłego członka"
+  - "jedyny spadkobierca jest już członkiem spółdzielni"
+when: "sprawdzenie warunku R-PS-0015"
+then:
+  result: true
+  because: "spełniona pierwsza z dwóch alternatywnych przesłanek - spadkobierca jest członkiem spółdzielni"

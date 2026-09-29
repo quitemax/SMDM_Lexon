@@ -1,0 +1,12 @@
+id: T-PS-0020-02
+rule: R-PS-0020
+title: "Statut wymagający większej liczby udziałów podwyższa obowiązek nad wartość domyślną"
+category: NEGATIVE
+status: SPECIFIED
+given:
+  - "statut zobowiązuje członków do zadeklarowania co najmniej 3 udziałów"
+  - "członek zadeklarował 1 udział"
+when: "sprawdzenie warunku R-PS-0020 (declared_shares_count >= wymagane minimum)"
+then:
+  result: false
+  because: "statut podwyższył wymóg z wartości domyślnej (1) do 3 - zadeklarowanie tylko jednego udziału nie wystarcza"

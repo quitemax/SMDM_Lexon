@@ -1,0 +1,13 @@
+id: T-PS-0015-02
+rule: R-PS-0015
+title: "Spadkobierca niebędący członkiem i nieskładający deklaracji nie dziedziczy udziałów"
+category: NEGATIVE
+status: SPECIFIED
+given:
+  - "MemberDied nastąpiło dla zmarłego członka"
+  - "jedyny spadkobierca nie jest członkiem spółdzielni"
+  - "spadkobierca nie złożył deklaracji przystąpienia (DeclarationSubmitted nie nastąpiło)"
+when: "sprawdzenie warunku R-PS-0015"
+then:
+  result: false
+  because: "żadna z dwóch alternatywnych przesłanek nie zachodzi - udziały nie przechodzą na tego spadkobiercę na podstawie tego artykułu (mogą wejść do spadku na zasadach ogólnych, co jest poza zakresem tej reguły)"

@@ -1,0 +1,12 @@
+id: T-PS-0017-02
+rule: R-PS-0017
+title: "Spadkobierca niespełniający wymogów statutu może zostać odmówiony"
+category: NEGATIVE
+status: SPECIFIED
+given:
+  - "spadkobierca dziedziczy udziały wg R-PS-0015"
+  - "spadkobierca nie odpowiada wymogom określonym w statucie (np. brak wymaganych statutem kwalifikacji)"
+when: "sprawdzenie, czy zakaz z R-PS-0017 chroni tego spadkobiercę"
+then:
+  result: false
+  because: "warunek zastosowania zakazu ('odpowiada wymogom statutu') niespełniony - zwykła dyskrecjonalność organu przyjmującego z R-PS-0003 wraca do zastosowania"

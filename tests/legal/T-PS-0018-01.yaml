@@ -1,0 +1,11 @@
+id: T-PS-0018-01
+rule: R-PS-0018
+title: "Aktywny członek jest obowiązany do wniesienia wpisowego/udziałów i pokrywania strat"
+category: POSITIVE
+status: SPECIFIED
+given:
+  - "Membership.status = ACTIVE"
+when: "zapytanie o obowiązki finansowe członka (items O1-O2)"
+then:
+  result: true
+  because: "warunek `condition: Membership.status = ACTIVE` spełniony"

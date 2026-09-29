@@ -1,0 +1,11 @@
+id: T-PS-0018-02
+rule: R-PS-0018
+title: "Osoba, której członkostwo nie powstało, nie ma obowiązków z Art. 19 §1-2"
+category: NEGATIVE
+status: SPECIFIED
+given:
+  - "Membership.status = null (deklaracja jeszcze nie złożona albo odmówiono przyjęcia)"
+when: "zapytanie o obowiązki finansowe członka (items O1-O2)"
+then:
+  result: false
+  because: "warunek `condition: Membership.status = ACTIVE` niespełniony - obowiązki z Art. 19 dotyczą wyłącznie osób, które już są członkami"

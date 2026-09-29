@@ -23,4 +23,4 @@ effect: >-
   część udziałów, nie wszyscy spadkobiercy.
 formalization_status: DIRECT
 note: "Odpowiada relacji ontology/relations/inherits_shares_from.yaml (INHERITS_SHARES_FROM) - ta reguła niesie normatywną treść, relacja niesie tylko fakt strukturalny (AGENTS.md sekcja 16 vs 19 - relacja to nie reguła). Powiązane: R-PS-0017 (zakaz odmowy przyjęcia spadkobierców), R-PS-0025 (wspólny pełnomocnik/zarządca przy >1 spadkobiercy, PS-ART-025 §2)."
-tests: []
+tests: ["T-PS-0015-01", "T-PS-0015-02", "T-PS-0015-03"]

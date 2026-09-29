@@ -19,4 +19,4 @@ items:
     text: "uczestniczenie w pokrywaniu strat spółdzielni do wysokości zadeklarowanych udziałów"
     note: "Ta granica ('do wysokości zadeklarowanych udziałów') jest podstawą R-PS-0019 (brak odpowiedzialności osobistej) i R-PS-0033 (Art. 28, przedłużona odpowiedzialność po ustaniu członkostwa)."
 formalization_status: DIRECT
-tests: []
+tests: ["T-PS-0018-01", "T-PS-0018-02"]

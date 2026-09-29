@@ -1,0 +1,12 @@
+id: T-PS-0017-01
+rule: R-PS-0017
+title: "Spadkobierca spełniający wymogi statutu musi zostać przyjęty"
+category: POSITIVE
+status: SPECIFIED
+given:
+  - "spadkobierca dziedziczy udziały wg R-PS-0015"
+  - "spadkobierca odpowiada wymogom określonym w statucie"
+when: "sprawdzenie, czy admitting_body może odmówić przyjęcia tego spadkobiercy"
+then:
+  result: false
+  because: "zakaz z R-PS-0017 wyłącza dyskrecjonalność organu przyjmującego z R-PS-0003 - przyjęcie jest obowiązkowe"

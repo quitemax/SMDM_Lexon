@@ -1,0 +1,12 @@
+id: T-PS-0021-02
+rule: R-PS-0021
+title: "Statut wprowadzający wkłady bez wymaganej treści (brak zasad wyceny i zwrotu)"
+category: NEGATIVE
+status: SPECIFIED
+given:
+  - "statut przewiduje wnoszenie wkładów przez członków"
+  - "statut nie zawiera zasad wyceny i zwrotu wkładów w wypadku likwidacji/wystąpienia (pozycja R4)"
+when: "sprawdzenie wymaganej treści statutu wg R-PS-0021"
+then:
+  result: false
+  because: "statut skorzystał z dozwolenia z §2, ale nie zawiera całej wymaganej przy tym treści - pozycja R4 nieobecna"
