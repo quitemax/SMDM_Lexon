@@ -17,4 +17,4 @@ conditions:
   - "Membership.status != ACTIVE (ustanie członkostwa - dowolna przyczyna z ontology/states/membership_status.yaml)"
 formalization_status: DIRECT
 note: "'Wierzyciel członka' nie jest osobną encją - Osoba w roli podmiotu trzeciego wobec relacji MEMBER_OF, nie modelowana szerzej niż potrzebne tu (AGENTS.md sekcja 15)."
-tests: []
+tests: ["T-PS-0029-01", "T-PS-0029-02"]

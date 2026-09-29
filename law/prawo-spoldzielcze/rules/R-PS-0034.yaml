@@ -26,4 +26,4 @@ exceptions:
     source: "PS-ART-029 §3"
 formalization_status: DIRECT
 note: "§2 tego artykułu jest uchylony (brak treści do formalizacji) - patrz normalized/akoma-ntoso, status=repealed na poziomie paragrafu."
-tests: []
+tests: ["T-PS-0034-01", "T-PS-0034-02"]

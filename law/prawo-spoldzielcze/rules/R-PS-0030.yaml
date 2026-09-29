@@ -27,4 +27,4 @@ deadline:
   start_event: "zajęcie wkładów przez wierzyciela członka"
   type: STATUTORY
 formalization_status: DIRECT
-tests: []
+tests: ["T-PS-0030-01", "T-PS-0030-02", "T-PS-0030-03"]

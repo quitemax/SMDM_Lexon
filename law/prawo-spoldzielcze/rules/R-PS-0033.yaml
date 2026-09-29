@@ -22,4 +22,4 @@ conditions:
 effect: "Zakres odpowiedzialności = R-PS-0018 O2 (do wysokości zadeklarowanych udziałów), mimo że członkostwo już ustało."
 formalization_status: DIRECT
 note: "Dwa różne terminy dla dwóch różnych przesłanek (6 miesięcy dla likwidacji, rok dla upadłości) - nie jeden `deadline`, tylko dwa warunki w `conditions`, żeby nie sztucznie spłaszczyć struktury 'ALBO' do jednego terminu (AGENTS.md sekcja 56)."
-tests: []
+tests: ["T-PS-0033-01", "T-PS-0033-02", "T-PS-0033-03"]

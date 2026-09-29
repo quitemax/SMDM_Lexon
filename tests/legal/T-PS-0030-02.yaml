@@ -1,0 +1,11 @@
+id: T-PS-0030-02
+rule: R-PS-0030
+title: "Egzekucja z wkładów niedozwolona, gdy egzekucja z innego majątku jeszcze nie okazała się bezskuteczna"
+category: NEGATIVE
+status: SPECIFIED
+given:
+  - "wierzyciel członka nie podjął jeszcze egzekucji z innego majątku członka"
+when: "sprawdzenie warunku R-PS-0030"
+then:
+  result: false
+  because: "pierwsza `conditions` (bezskuteczność egzekucji z innego majątku) niespełniona - subsydiarność egzekucji z wkładów"

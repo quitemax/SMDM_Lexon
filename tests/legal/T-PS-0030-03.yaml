@@ -1,0 +1,18 @@
+id: T-PS-0030-03
+rule: R-PS-0030
+title: "Termin wymagalności roszczenia o zwrot wkładów - 6 miesięcy od zajęcia"
+category: BOUNDARY
+status: SPECIFIED
+cases:
+  - label: "5 miesięcy i 29 dni od zajęcia"
+    given: ["zajęcie wkładów nastąpiło 5 miesięcy i 29 dni temu", "wymagalność nie nastąpiła wcześniej na innej podstawie"]
+    when: "sprawdzenie, czy roszczenie o zwrot wkładów jest już wymagalne"
+    then:
+      result: false
+      because: "termin 6 miesięcy jeszcze nie upłynął"
+  - label: "dokładnie 6 miesięcy od zajęcia"
+    given: ["zajęcie wkładów nastąpiło dokładnie 6 miesięcy temu", "wymagalność nie nastąpiła wcześniej na innej podstawie"]
+    when: "sprawdzenie, czy roszczenie o zwrot wkładów jest już wymagalne"
+    then:
+      result: true
+      because: "termin upływa tego dnia - roszczenie staje się wymagalne"

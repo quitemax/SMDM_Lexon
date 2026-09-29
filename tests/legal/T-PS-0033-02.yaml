@@ -1,0 +1,12 @@
+id: T-PS-0033-02
+rule: R-PS-0033
+title: "Upadłość wszczęta w ciągu roku od ustania członkostwa przedłuża odpowiedzialność"
+category: POSITIVE
+status: SPECIFIED
+given:
+  - "Membership.status = WITHDRAWN od 2026-01-01"
+  - "postępowanie upadłościowe wszczęte 2026-10-01 (9 miesięcy po ustaniu - po terminie dla likwidacji, ale w terminie dla upadłości)"
+when: "sprawdzenie warunku R-PS-0033"
+then:
+  result: true
+  because: "spełniona druga z dwóch alternatywnych `conditions` - wszczęcie postępowania upadłościowego w ciągu roku od ustania członkostwa, niezależnie od tego, że termin dla likwidacji (6 miesięcy) już minął"

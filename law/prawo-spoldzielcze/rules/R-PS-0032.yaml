@@ -15,4 +15,4 @@ statement: >-
   podlegają zajęciu na rzecz wierzycieli spółdzielni.
 formalization_status: DIRECT
 note: "Uzupełnia R-PS-0019 (brak odpowiedzialności członka wobec wierzycieli spółdzielni) z drugiej strony - tu chroniona jest wierzytelność SPÓŁDZIELNI wobec członka (o wpłatę udziałów) przed zajęciem przez wierzycieli SPÓŁDZIELNI, nie przed zajęciem przez wierzycieli członka (to R-PS-0029/0030)."
-tests: []
+tests: ["T-PS-0032-01"]

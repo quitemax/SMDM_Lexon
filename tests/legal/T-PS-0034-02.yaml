@@ -1,0 +1,12 @@
+id: T-PS-0034-02
+rule: R-PS-0034
+title: "Roszczenie o zwrot nieruchomości nie ulega temu przedawnieniu"
+category: NEGATIVE
+status: SPECIFIED
+given:
+  - "roszczenie dotyczy zwrotu nieruchomości"
+  - "od wymagalności minęło ponad 3 lata"
+when: "sprawdzenie, czy roszczenie jest przedawnione na podstawie R-PS-0034"
+then:
+  result: false
+  because: "wyjątek E1 (PS-ART-029 §3) wyłącza roszczenia o zwrot nieruchomości spod tego 3-letniego terminu przedawnienia - nie znaczy to, że takie roszczenie nigdy się nie przedawnia, tylko że nie na tej podstawie (inny, niesformalizowany tu termin może mieć zastosowanie)"

@@ -1,0 +1,12 @@
+id: T-PS-0028-02
+rule: R-PS-0028
+title: "Rozporządzenie roszczeniem przed jego wymagalnością nie jest skuteczne od wcześniejszej daty"
+category: NEGATIVE
+status: SPECIFIED
+given:
+  - "roszczenie członka o wypłatę udziałów stanie się wymagalne 2026-06-01"
+  - "członek próbuje rozporządzić tym roszczeniem 2026-05-01, ze skutecznością od tej daty"
+when: "sprawdzenie skuteczności rozporządzenia wg R-PS-0028 od żądanej daty"
+then:
+  result: false
+  because: "R-PS-0028 wiąże skuteczność rozporządzenia z dniem wymagalności roszczenia - roszczenie jeszcze niewymagalne 2026-05-01"

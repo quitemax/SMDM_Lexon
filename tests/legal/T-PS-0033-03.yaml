@@ -1,0 +1,13 @@
+id: T-PS-0033-03
+rule: R-PS-0033
+title: "Ani likwidacja ani upadłość w terminie - brak przedłużonej odpowiedzialności"
+category: NEGATIVE
+status: SPECIFIED
+given:
+  - "Membership.status = WITHDRAWN od 2026-01-01"
+  - "likwidacja spółdzielni otwarta dopiero 2026-08-01 (7 miesięcy po ustaniu - po terminie 6 miesięcy)"
+  - "brak postępowania upadłościowego w ciągu roku od ustania"
+when: "sprawdzenie warunku R-PS-0033"
+then:
+  result: false
+  because: "żadna z dwóch alternatywnych `conditions` nie zachodzi w swoim terminie - były członek nie odpowiada już za straty"

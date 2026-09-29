@@ -1,0 +1,11 @@
+id: T-PS-0031-02
+rule: R-PS-0031
+title: "Brak pierwszeństwa, gdy zajęte wkłady nie są środkami produkcji"
+category: NEGATIVE
+status: SPECIFIED
+given:
+  - "wierzyciel członka zajął wkłady pieniężne członka (nie środki produkcji)"
+when: "sprawdzenie uprawnienia R-PS-0031 w postępowaniu egzekucyjnym"
+then:
+  result: false
+  because: "`conditions` reguły (wkłady stanowią środki produkcji) niespełniony - PS-ART-027 §4 nie przyznaje pierwszeństwa dla innych rodzajów wkładów"

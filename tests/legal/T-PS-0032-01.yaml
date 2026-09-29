@@ -1,0 +1,11 @@
+id: T-PS-0032-01
+rule: R-PS-0032
+title: "Wierzytelność spółdzielni z tytułu wpłat na udziały nie podlega zajęciu przez jej wierzycieli"
+category: POSITIVE
+status: SPECIFIED
+given:
+  - "wierzyciel spółdzielni próbuje zająć wierzytelność spółdzielni wobec członka z tytułu wpłat na udziały"
+when: "sprawdzenie zakazu R-PS-0032"
+then:
+  result: false
+  because: "PS-ART-027 §5 stanowi to bezwarunkowo - norma ramowa bez własnych przesłanek do sprawdzenia (jak R-PS-0010, R-PS-0019), stąd brak naturalnego testu NEGATIVE w izolacji"

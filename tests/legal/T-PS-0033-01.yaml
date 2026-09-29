@@ -1,0 +1,12 @@
+id: T-PS-0033-01
+rule: R-PS-0033
+title: "Likwidacja otwarta w ciągu 6 miesięcy od ustania członkostwa przedłuża odpowiedzialność"
+category: POSITIVE
+status: SPECIFIED
+given:
+  - "Membership.status = WITHDRAWN od 2026-01-01"
+  - "likwidacja spółdzielni otwarta 2026-05-01 (4 miesiące po ustaniu)"
+when: "sprawdzenie warunku R-PS-0033"
+then:
+  result: true
+  because: "spełniona pierwsza z dwóch alternatywnych `conditions` - likwidacja otwarta w ciągu 6 miesięcy od ustania członkostwa"

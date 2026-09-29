@@ -1,0 +1,12 @@
+id: T-PS-0028-01
+rule: R-PS-0028
+title: "Członek może rozporządzać roszczeniem od dnia jego wymagalności"
+category: POSITIVE
+status: SPECIFIED
+given:
+  - "roszczenie członka o wypłatę udziałów stało się wymagalne 2026-06-01"
+  - "członek rozporządza tym roszczeniem (np. przelewa je) 2026-06-15"
+when: "sprawdzenie skuteczności rozporządzenia wg R-PS-0028"
+then:
+  result: true
+  because: "rozporządzenie nastąpiło po dniu wymagalności (2026-06-01) - skuteczne od tego dnia"

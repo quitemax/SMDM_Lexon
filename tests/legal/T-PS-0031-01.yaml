@@ -1,0 +1,11 @@
+id: T-PS-0031-01
+rule: R-PS-0031
+title: "Spółdzielnia ma pierwszeństwo nabycia zajętych wkładów będących środkami produkcji"
+category: POSITIVE
+status: SPECIFIED
+given:
+  - "wierzyciel członka zajął wkłady członka stanowiące środki produkcji (patrz R-PS-0030)"
+when: "sprawdzenie uprawnienia R-PS-0031 w postępowaniu egzekucyjnym"
+then:
+  result: true
+  because: "`conditions` reguły (wkłady stanowią środki produkcji) spełniony"

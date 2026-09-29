@@ -1,0 +1,12 @@
+id: T-PS-0030-01
+rule: R-PS-0030
+title: "Egzekucja z wkładów dozwolona po bezskutecznej egzekucji z innego majątku"
+category: POSITIVE
+status: SPECIFIED
+given:
+  - "egzekucja wierzyciela członka z innego majątku członka okazała się bezskuteczna"
+  - "brak przepisu szczególnego stanowiącego inaczej"
+when: "sprawdzenie warunku R-PS-0030"
+then:
+  result: true
+  because: "obie `conditions` spełnione - wierzyciel może skierować egzekucję do wkładów; roszczenie o zwrot wkładów staje się wymagalne po terminie z `deadline` (6 miesięcy od zajęcia)"

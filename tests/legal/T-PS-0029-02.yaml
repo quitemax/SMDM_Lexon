@@ -1,0 +1,11 @@
+id: T-PS-0029-02
+rule: R-PS-0029
+title: "Wierzyciel członka nie może się zaspokoić z udziałów, gdy członkostwo trwa"
+category: NEGATIVE
+status: SPECIFIED
+given:
+  - "Membership.status = ACTIVE"
+when: "sprawdzenie warunku R-PS-0029"
+then:
+  result: false
+  because: "`conditions: Membership.status != ACTIVE` niespełniony - członkostwo jeszcze trwa"

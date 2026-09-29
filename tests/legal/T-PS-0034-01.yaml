@@ -1,0 +1,18 @@
+id: T-PS-0034-01
+rule: R-PS-0034
+title: "Przedawnienie roszczenia o wypłatę udziałów - granica 3 lat"
+category: BOUNDARY
+status: SPECIFIED
+cases:
+  - label: "2 lata i 364 dni od wymagalności"
+    given: ["roszczenie o wypłatę udziałów stało się wymagalne 2 lata i 364 dni temu", "roszczenie nie dotyczy zwrotu nieruchomości"]
+    when: "sprawdzenie, czy roszczenie jest już przedawnione"
+    then:
+      result: false
+      because: "termin 3 lat jeszcze nie upłynął"
+  - label: "dokładnie 3 lata od wymagalności"
+    given: ["roszczenie stało się wymagalne dokładnie 3 lata temu", "roszczenie nie dotyczy zwrotu nieruchomości"]
+    when: "sprawdzenie, czy roszczenie jest już przedawnione"
+    then:
+      result: true
+      because: "termin upływa tego dnia - roszczenie ulega przedawnieniu z upływem trzech lat"

@@ -1,0 +1,11 @@
+id: T-PS-0029-01
+rule: R-PS-0029
+title: "Wierzyciel członka może zaspokoić się z udziałów po ustaniu członkostwa"
+category: POSITIVE
+status: SPECIFIED
+given:
+  - "Membership.status = WITHDRAWN"
+when: "sprawdzenie warunku R-PS-0029"
+then:
+  result: true
+  because: "`conditions: Membership.status != ACTIVE` spełniony"

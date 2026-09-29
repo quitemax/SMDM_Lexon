@@ -18,4 +18,4 @@ conditions:
   - "wkłady zajęte przez wierzyciela członka stanowią środki produkcji (patrz R-PS-0030, PS-ART-027 §3)"
 formalization_status: DIRECT
 note: "POWER, nie RIGHT - to kompetencja do podjęcia czynności w konkretnym postępowaniu egzekucyjnym (nabycie z pierwszeństwem), nie uprawnienie stale przysługujące (AGENTS.md sekcja 20: POWER != RIGHT)."
-tests: []
+tests: ["T-PS-0031-01", "T-PS-0031-02"]

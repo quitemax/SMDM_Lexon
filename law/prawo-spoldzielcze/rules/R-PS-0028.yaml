@@ -16,4 +16,4 @@ statement: >-
   udziałów oraz o zwrot wkładów lub o wypłatę ich równowartości ze
   skutecznością od dnia, w którym roszczenia te stały się wymagalne.
 formalization_status: DIRECT
-tests: []
+tests: ["T-PS-0028-01", "T-PS-0028-02"]
