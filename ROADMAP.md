@@ -19,10 +19,22 @@ plików w `tests/legal/`, GIVEN/WHEN/THEN, `status: SPECIFIED` (nie
 wykonane - `engine/evaluator/` wciąż puste, ADR-0003). Szczegóły w
 sekcji "Testy dla Dział III" niżej.
 
+**USM (Ustawa o spółdzielniach mieszkaniowych) - rozpoczęta (2026-09-29):**
+drugi akt w `law/`. Fragment (Art. 1, 2, 3, 15, 24[1], 26) znormalizowany
+w AKN, 11 reguł (`R-USM-0001..0011`) formalizuje Art. 1-3 - w tym
+`R-USM-0007`/`R-USM-0008`, które **rozwiązują `OBS-0001`** (status
+RESOLVED - patrz `law/prawo-spoldzielcze/interpretations/OBS-0001-lex-specialis-usm-membership.md`):
+członkostwo w spółdzielni mieszkaniowej powstaje/ustaje ex lege wraz z
+tytułem prawnym do lokalu, nie przez deklarację+uchwałę ani
+wykluczenie/wykreślenie z Prawa spółdzielczego - to teraz jawny,
+sprawdzalny graf odesłań (`disapplies`/`references`) między regułami
+USM i PS, nie tylko obserwacja. Żadna reguła USM nie ma jeszcze testu.
+Szczegóły: sekcja "Formalizacja USM: start" niżej.
+
 **Kolejność ustalona z użytkownikiem (2026-09-29):** dokończyć pisanie
 reguł (Dział III — ZROBIONE) → testy (ZROBIONE) → formalizacja USM
-(Ustawa o spółdzielniach mieszkaniowych, następny krok) → Phase 3
-(silnik, `engine/`, na bazie ADR-0003).
+(**w toku** - Art. 1-3 zrobione, Art. 15/24[1]/26 własna treść i testy
+pozostają) → Phase 3 (silnik, `engine/`, na bazie ADR-0003).
 
 **Przystanek analityczny (2026-09-28):** przed powrotem do pisania reguł
 zrobiono audyt repo (skrypty walidujące, nie wrażenia) — patrz
@@ -675,16 +687,72 @@ fragmencie Art. 15–28.
   ustawa zostawia statutowi konkretyzację (organ właściwy do przyjęcia,
   przyczyny wykluczenia, terminy). To osobne zadanie badawcze, nie blokuje
   Phase 1–3, ale warto je zaplanować zaraz po nich.
-- **Nie formalizować na razie** `Ustawa o spółdzielniach mieszkaniowych` ani
-  pozostałych aktów w `przepisy-prawne/md/` — zgodnie z AGENTS.md sekcja 3,
-  jeden mały fragment na raz.
-- **Przyszłe zadanie (po zamknięciu Art. 15-28):** formalizacja Ustawy o
-  spółdzielniach mieszkaniowych Art. 15 (powstanie członkostwa), Art. 24¹
-  ust. 1 i Art. 26 (ustanie członkostwa) jako `law/ustawa-o-spoldzielniach-mieszkaniowych/`,
-  z jawną relacją `lex_specialis` do `R-PS-*` reguł z Art. 16-17 i 24 —
-  patrz `law/prawo-spoldzielcze/interpretations/OBS-0001-lex-specialis-usm-membership.md`.
-  To pierwszy kandydat na test mechanizmu `CONFLICT`/`lex specialis` z
-  PROJECT_CONCEPT.md sekcja 27 na realnym przykładzie, a nie tylko w teorii.
+- ~~Nie formalizować na razie `Ustawa o spółdzielniach mieszkaniowych`...~~
+  — **nieaktualne, patrz sekcja "Formalizacja USM: start" niżej.** Ten
+  wpis też błędnie zakładał, że Art. 15 jest przepisem o powstaniu
+  członkostwa (skorygowane w OBS-0001 KOREKTA - to Art. 3 ust. 3[2]).
+
+------------------------------------------------------------------------
+
+## Formalizacja USM: start (2026-09-29)
+
+**Decyzja użytkownika:** po testach, formalizacja USM jako kolejny krok
+(status ogólny na początku pliku).
+
+**Zrobione:**
+
+- Szkielet katalogu `law/ustawa-o-spoldzielniach-mieszkaniowych/`
+  (source/, normalized/, ontology/, rules/, procedures/, concepts/,
+  interpretations/), analogiczny do `law/prawo-spoldzielcze/`.
+- `source/README.md`: Dz.U. 2026 poz. 889, tekst jednolity, stan na
+  2026-06-10 (inna data niż PS - dwa niezależnie konsolidowane akty).
+- Normalizacja **fragmentu** (nie całej ustawy - 55 artykułów, w tym
+  duże wstawki jak Rozdział 2[1], 19 artykułów): Art. 1, 2, 3, 15,
+  24[1], 26, w Akoma Ntoso. Wybór uzasadniony nie parzystością/rozmiarem,
+  tylko tym, że rozwiązuje `OBS-0001`. Zweryfikowane 1:1 (71/71 jednostek
+  tekstu, 0 rozbieżności). Nowa reguła `eId` dla wstawek bez litery
+  (`Art. 24[1]` -> `art_24_1`) - patrz `normalized/akoma-ntoso/README.md`
+  tego aktu.
+- **Odkrycie przy czytaniu tekstu (nie zgadywane wcześniej):** USM-ART-001
+  §7-9 jest wprost, ustawowym potwierdzeniem lex_specialis - wylicza,
+  których przepisów PS się NIE stosuje (wystąpienie/wykluczenie/
+  wykreślenie w §8; udziały/wpisowe/deklaracja w §9, z wyjątkiem dla
+  Art. 3). To mocniejsza podstawa niż to, co OBS-0001 miało wcześniej
+  (tylko empiryczny dowód z jednego statutu) - **skorygowano OBS-0001**
+  (błędne cytaty "Art. 15"/"Art. 24[1], 26" jako przepisy o powstaniu/
+  ustaniu członkostwa - to w rzeczywistości Art. 3 ust. 3[2]/6/7, Art. 15
+  i 24[1]/26 są tylko cytowane przez Art. 3 dla dwóch szczególnych
+  przypadków).
+- Ontologia: encja `Lokal`, pięć relacji `HAS_*_PRAWO`/`HAS_ROSZCZENIE_*`,
+  własna (nie współdzielona z PS) maszyna stanów `MembershipStatus`
+  (2 stany + null, znacznie prostsza niż PS-owa - bo brak uznania
+  organu na tym poziomie), dwa zdarzenia `MembershipArose`/
+  `MembershipCeased` (po jednym typie z polem enum zamiast 7+9 osobnych
+  typów - te przesłanki są alternatywne, nie sekwencyjne).
+- 11 reguł (`R-USM-0001..0011`) dla Art. 1-3. `R-USM-0007`/`R-USM-0008`
+  (powstanie/ustanie członkostwa) **rozwiązują OBS-0001** - status
+  zmieniony z UNRESOLVED na RESOLVED. `R-PS-0003`/`R-PS-0016`
+  zaktualizowane: `scope_note` cytuje teraz konkretne reguły USM,
+  plus jawne pole `references` w obie strony.
+- `py schema/validate_rules.py`: 0 błędów, 0 ostrzeżeń na 51 plikach
+  (40 PS + 11 USM). Przy okazji naprawiono dwie realne luki w
+  narzędziach, znalezione właśnie dlatego, że to pierwszy drugi akt:
+  `schema/legal-rule.schema.json`/`legal-test.schema.json` miały wzorce
+  ID zahardkodowane na `R-PS-`/`T-PS-` (uogólnione do dowolnego
+  prefiksu aktu), `normalized_ref_to_eid` nie obsługiwał wzorca
+  `USM-ART-024-1` (dodano).
+
+**Świadomie poza zakresem tego kroku:**
+
+- Art. 15, 24[1], 26 - znormalizowane i cytowane przez Art. 3, ale ich
+  WŁASNA treść (np. Art. 24[1] §2-6 - rozliczenie funduszu remontowego,
+  Art. 26 §1-3 - terminy zawiadomień, uchwała o przejściu na reżim UWL)
+  nie ma jeszcze własnych reguł.
+- Żadna reguła USM nie ma testu (`T-USM-*` jeszcze nie istnieje) -
+  naturalny następny krok w ramach kontynuacji formalizacji USM, zanim
+  przejdziemy do Phase 3.
+- Reszta ustawy (Art. 4-14, 8[1]-8[3], 9[1]-14, 16-17[19], 18-23, 25,
+  27-27[4], 28-55) - nieznormalizowana, do rozszerzenia w miarę potrzeby.
 
 ------------------------------------------------------------------------
 
