@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+  <act name="ustawa" contains="singleVersion">
+    <meta>
+      <identification source="#lexon-agent">
+        <FRBRWork>
+          <FRBRthis value="/akn/pl/act/du/2026/889/main"/>
+          <FRBRuri value="https://eli.gov.pl/eli/DU/2026/889"/>
+          <FRBRalias value="Ustawa o spółdzielniach mieszkaniowych" name="skrót"/>
+          <FRBRdate date="2000-12-15" name="Generation"/>
+          <FRBRauthor href="#sejm-rp"/>
+          <FRBRcountry value="pl"/>
+        </FRBRWork>
+        <FRBRExpression>
+          <FRBRthis value="/akn/pl/act/du/2026/889/pol@2026-06-10/main"/>
+          <FRBRuri value="https://eli.gov.pl/eli/DU/2026/889/pol@2026-06-10"/>
+          <FRBRdate date="2026-06-10" name="ConsolidationDate"/>
+          <FRBRauthor href="#sejm-rp"/>
+          <FRBRlanguage language="pol"/>
+        </FRBRExpression>
+        <FRBRManifestation>
+          <FRBRthis value="/akn/pl/act/du/2026/889/pol@2026-06-10/main.xml"/>
+          <FRBRuri value="https://eli.gov.pl/eli/DU/2026/889/pol@2026-06-10/main.xml"/>
+          <FRBRdate date="2026-09-29" name="XMLEncoding"/>
+          <FRBRauthor href="#lexon-agent"/>
+        </FRBRManifestation>
+      </identification>
+      <references source="#lexon-agent">
+        <TLCOrganization eId="sejm-rp" href="https://www.sejm.gov.pl" showAs="Sejm Rzeczypospolitej Polskiej"/>
+        <TLCOrganization eId="lexon-agent" href="https://github.com/quitemax/SMDM_Lexon" showAs="Projekt LEXON (SMDM_Lexon)"/>
+      </references>
+      <proprietary source="#lexon-agent">
+        <lexon:meta xmlns:lexon="https://github.com/quitemax/SMDM_Lexon/ns/lexon-meta/1.0">
+          <lexon:sourceDocument>external/SMDM_Knowledge_Base/przepisy-prawne/md/ustawa-o-spoldzielniach-mieszkaniowych.md</lexon:sourceDocument>
+          <lexon:sourceCommit>7fcaed372cbe56f58c3ee4aa1d5fb6eee15b83ee</lexon:sourceCommit>
+          <lexon:dzU>Dz.U. 2026 poz. 889</lexon:dzU>
+          <lexon:textType>tekst jednolity</lexon:textType>
+          <lexon:coverage>CZĘŚCIOWA - fragment wybrany do rozwiązania OBS-0001 (lex specialis wobec Prawa spółdzielczego w zakresie członkostwa): Art. 1, 2, 3, 15, 24[1], 26. Reszta ustawy (Art. 4-14, Art. 8[1]-8[3], Art. 9[1]-14, Art. 16-Art. 17[19], Art. 18-23, Art. 25, Art. 27-27[4], Art. 28-55) NIE znormalizowana. W odróżnieniu od law/prawo-spoldzielcze/, gdzie normalizacja jest kompletna (cała ustawa), tu luki w numeracji Art. oznaczają "jeszcze nie znormalizowane", NIE "uchylone" - status uchylenia jest oznaczany tylko na jednostkach faktycznie tu obecnych (np. Art. 15 ust. 1).</lexon:coverage>
+          <lexon:eliStatus>CONSTRUCTED - wzorzec URI zgodny ze standardowym schematem polskiego ELI (https://eli.gov.pl/eli/DU/{rok}/{pozycja}), NIE zweryfikowany wywołaniem na żywo względem eli.gov.pl/isap.sejm.gov.pl w tej sesji. Numer pozycji Dziennika Ustaw z pierwotnego uchwalenia (2000 r., przed ujednoliceniem) jest UNKNOWN - nieustalony w naszych źródłach, dlatego FRBRWork ponownie używa pozycji tekstu jednolitego (2026 poz. 889) jako zastępczego kotwiczenia identyfikatora, tak samo jak w law/prawo-spoldzielcze/.</lexon:eliStatus>
+          <lexon:mappingNote>Mapowanie jak w law/prawo-spoldzielcze/ (patrz normalized/akoma-ntoso/README.md tamtego aktu) z dwiema różnicami specyficznymi dla tej ustawy: (1) brak poziomów Część/Tytuł/Dział - tylko Rozdział bezpośrednio pod body; (2) ustępy artykułów są w źródle numerowane bez znaku "§" (gołe "1.", "2."...) - zachowane verbatim jako &lt;num&gt;1.&lt;/num&gt; itd., tak jak już ustalono dla PS-ART-093b. Nowa reguła eId (nie potrzebna dotąd w PS): jednostka wstawiona nowelizacją z numerem w nawiasie kwadratowym BEZ litery (np. "Art. 24[1]", "ust. 3[2]") dostaje eId z podkreślnikiem zamiast nawiasu na tym samym poziomie co numer - "art_24_1", "art_3__par_3_2" - rozszerzenie już istniejącej reguły dla "§ 4[1]" (PS, eId "par_4_1") na poziom artykułu.</lexon:mappingNote>
+          <lexon:citationKey pattern="USM-ART-{numer}[-{wstawka}]">Klucz cytowania dla tej ustawy, analogiczny do PS-ART-NNN (docs/dsl.md). Numer wypełniony zerami do 3 cyfr, wstawka w nawiasie kwadratowym dopisana po myślniku bez zer wiodących: Art. 15 -&gt; USM-ART-015, Art. 24[1] -&gt; USM-ART-024-1. Rozwiązywanie do eId: usuń zera wiodące z numeru, zamień "-" na "_", dodaj prefiks "art_".</lexon:citationKey>
+        </lexon:meta>
+      </proprietary>
+    </meta>
+    <preface>
+      <p>Ustawa z dnia 15 grudnia 2000 r.</p>
+      <p>o spółdzielniach mieszkaniowych</p>
+    </preface>
+    <body>
+
+      <hcontainer name="rozdzial" eId="rozdzial_1">
+        <num>Rozdział 1</num>
+        <heading>Przepisy ogólne</heading>
+
+        <article eId="art_1">
+          <num>Art. 1.</num>
+          <paragraph eId="art_1__par_1">
+            <num>1.</num>
+            <content><p>Celem spółdzielni mieszkaniowej, zwanej dalej „spółdzielnią”, jest zaspokajanie potrzeb mieszkaniowych i innych potrzeb członków oraz ich rodzin, przez dostarczanie członkom samodzielnych lokali mieszkalnych lub domów jednorodzinnych, a także lokali o innym przeznaczeniu.</p></content>
+          </paragraph>
+          <paragraph eId="art_1__par_1_1">
+            <num>1[1].</num>
+            <content><p>Spółdzielnia mieszkaniowa nie może odnosić korzyści majątkowych kosztem swoich członków, w szczególności z tytułu przekształceń praw do lokali.</p></content>
+          </paragraph>
+          <paragraph eId="art_1__par_2">
+            <num>2.</num>
+            <content><p>Przedmiotem działalności spółdzielni może być:</p></content>
+            <list eId="art_1__par_2__lst">
+              <point eId="art_1__par_2__pkt_1">
+                <num>1)</num>
+                <content><p>budowanie lub nabywanie budynków w celu ustanowienia na rzecz członków spółdzielczych lokatorskich praw do znajdujących się w tych budynkach lokali mieszkalnych;</p></content>
+              </point>
+              <point eId="art_1__par_2__pkt_1_1" status="repealed">
+                <num>1[1])</num>
+                <content><p>(uchylony)</p></content>
+              </point>
+              <point eId="art_1__par_2__pkt_2">
+                <num>2)</num>
+                <content><p>budowanie lub nabywanie budynków w celu ustanowienia na rzecz członków odrębnej własności znajdujących się w tych budynkach lokali mieszkalnych lub lokali o innym przeznaczeniu, a także ułamkowego udziału we współwłasności w garażach wielostanowiskowych;</p></content>
+              </point>
+              <point eId="art_1__par_2__pkt_3">
+                <num>3)</num>
+                <content><p>budowanie lub nabywanie domów jednorodzinnych w celu przeniesienia na rzecz członków własności tych domów;</p></content>
+              </point>
+              <point eId="art_1__par_2__pkt_4">
+                <num>4)</num>
+                <content><p>udzielanie pomocy członkom w budowie przez nich budynków mieszkalnych lub domów jednorodzinnych;</p></content>
+              </point>
+              <point eId="art_1__par_2__pkt_5">
+                <num>5)</num>
+                <content><p>budowanie lub nabywanie budynków w celu wynajmowania lub sprzedaży znajdujących się w tych budynkach lokali mieszkalnych lub lokali o innym przeznaczeniu;</p></content>
+              </point>
+              <point eId="art_1__par_2__pkt_6">
+                <num>6)</num>
+                <content><p>wykonywanie działalności jako obywatelska społeczność energetyczna w rozumieniu art. 3 pkt 13f ustawy z dnia 10 kwietnia 1997 r. – Prawo energetyczne (Dz. U. z 2026 r. poz. 43, 516 i 607).</p></content>
+              </point>
+            </list>
+          </paragraph>
+          <paragraph eId="art_1__par_3">
+            <num>3.</num>
+            <content><p>Spółdzielnia ma obowiązek zarządzania nieruchomościami stanowiącymi jej mienie lub nabyte na podstawie ustawy mienie jej członków.</p></content>
+          </paragraph>
+          <paragraph eId="art_1__par_4">
+            <num>4.</num>
+            <content><p>Statut spółdzielni określa, którą działalność spośród wymienionych w ust. 2 i 3, prowadzi spółdzielnia.</p></content>
+          </paragraph>
+          <paragraph eId="art_1__par_5">
+            <num>5.</num>
+            <content><p>Spółdzielnia może zarządzać nieruchomością niestanowiącą jej mienia lub mienia jej członków na podstawie umowy zawartej z właścicielem (współwłaścicielami) tej nieruchomości.</p></content>
+          </paragraph>
+          <paragraph eId="art_1__par_6">
+            <num>6.</num>
+            <content><p>Spółdzielnia może prowadzić również inną działalność gospodarczą na zasadach określonych w odrębnych przepisach i w statucie, jeżeli działalność ta związana jest bezpośrednio z realizacją celu, o którym mowa w ust. 1.</p></content>
+          </paragraph>
+          <paragraph eId="art_1__par_7">
+            <num>7.</num>
+            <content><p>W zakresie nieuregulowanym w ustawie stosuje się przepisy ustawy z dnia 16 września 1982 r. – Prawo spółdzielcze (Dz. U. z 2026 r. poz. 521), z zastrzeżeniem ust. 8 i 9.</p></content>
+          </paragraph>
+          <paragraph eId="art_1__par_8">
+            <num>8.</num>
+            <content><p>Przepisów ustawy wymienionej w ust. 7, dotyczących wystąpienia ze spółdzielni, wykluczenia ze spółdzielni i wykreślenia z rejestru członków spółdzielni, nie stosuje się. Osoba będąca założycielem spółdzielni oraz właściciel lokalu będący członkiem spółdzielni może wystąpić z niej za wypowiedzeniem.</p></content>
+          </paragraph>
+          <paragraph eId="art_1__par_9">
+            <num>9.</num>
+            <content><p>Nie stosuje się przepisów ustawy wymienionej w ust. 7 dotyczących udziałów i wpisowego, a także przepisów dotyczących obowiązku złożenia deklaracji w celu przyjęcia w poczet członków spółdzielni, z zastrzeżeniem art. 3.</p></content>
+          </paragraph>
+        </article>
+
+        <article eId="art_2">
+          <num>Art. 2.</num>
+          <paragraph eId="art_2__par_1">
+            <num>1.</num>
+            <content><p>Lokalem w rozumieniu ustawy jest samodzielny lokal mieszkalny, a także lokal o innym przeznaczeniu, o których mowa w przepisach ustawy z dnia 24 czerwca 1994 r. o własności lokali (Dz. U. z 2026 r. poz. 232).</p></content>
+          </paragraph>
+          <paragraph eId="art_2__par_2">
+            <num>2.</num>
+            <content><p>Lokalem mieszkalnym w rozumieniu ustawy jest również pracownia twórcy przeznaczona do prowadzenia działalności w dziedzinie kultury i sztuki.</p></content>
+          </paragraph>
+          <paragraph eId="art_2__par_3">
+            <num>3.</num>
+            <content><p>Domem jednorodzinnym w rozumieniu ustawy jest dom mieszkalny, jak również samodzielna część domu bliźniaczego lub szeregowego przeznaczona przede wszystkim do zaspokojenia potrzeb mieszkaniowych. Do domów jednorodzinnych stosuje się przepisy ustawy dotyczące lokali.</p></content>
+          </paragraph>
+          <paragraph eId="art_2__par_4">
+            <num>4.</num>
+            <content><p>Wartością rynkową lokalu w rozumieniu ustawy jest wartość określona na podstawie przepisów działu IV rozdziału 1 ustawy z dnia 21 sierpnia 1997 r. o gospodarce nieruchomościami (Dz. U. z 2026 r. poz. 399).</p></content>
+          </paragraph>
+          <paragraph eId="art_2__par_5">
+            <num>5.</num>
+            <content><p>Osobą bliską w rozumieniu ustawy jest zstępny, wstępny, rodzeństwo, dzieci rodzeństwa, małżonek, osoba przysposabiająca i przysposobiona oraz osoba, która pozostaje faktycznie we wspólnym pożyciu.</p></content>
+          </paragraph>
+        </article>
+
+        <article eId="art_3">
+          <num>Art. 3.</num>
+          <paragraph eId="art_3__par_1">
+            <num>1.</num>
+            <content><p>Członkiem spółdzielni jest osoba fizyczna, choćby nie miała zdolności do czynności prawnych albo miała ograniczoną zdolność do czynności prawnych:</p></content>
+            <list eId="art_3__par_1__lst">
+              <point eId="art_3__par_1__pkt_1">
+                <num>1)</num>
+                <content><p>której przysługuje spółdzielcze lokatorskie prawo do lokalu mieszkalnego;</p></content>
+              </point>
+              <point eId="art_3__par_1__pkt_2">
+                <num>2)</num>
+                <content><p>której przysługuje spółdzielcze własnościowe prawo do lokalu;</p></content>
+              </point>
+              <point eId="art_3__par_1__pkt_3">
+                <num>3)</num>
+                <content><p>której przysługuje roszczenie o ustanowienie spółdzielczego lokatorskiego prawa do lokalu mieszkalnego;</p></content>
+              </point>
+              <point eId="art_3__par_1__pkt_4">
+                <num>4)</num>
+                <content><p>której przysługuje roszczenie o ustanowienie odrębnej własności lokalu, zwane dalej „ekspektatywą własności”; lub</p></content>
+              </point>
+              <point eId="art_3__par_1__pkt_5">
+                <num>5)</num>
+                <content><p>będąca założycielem spółdzielni, z zastrzeżeniem ust. 9.</p></content>
+              </point>
+            </list>
+          </paragraph>
+          <paragraph eId="art_3__par_2">
+            <num>2.</num>
+            <content><p>Członkami spółdzielni są oboje małżonkowie, jeżeli prawo do lokalu przysługuje im wspólnie, albo jeżeli wspólnie ubiegają się o zawarcie umowy o ustanowienie spółdzielczego lokatorskiego prawa do lokalu mieszkalnego albo prawa odrębnej własności lokalu.</p></content>
+          </paragraph>
+          <paragraph eId="art_3__par_3">
+            <num>3.</num>
+            <content><p>Członkiem spółdzielni jest osoba prawna, której przysługuje spółdzielcze własnościowe prawo do lokalu, ekspektatywa własności lub będąca założycielem spółdzielni, z zastrzeżeniem ust. 9. Osobie tej nie przysługuje spółdzielcze lokatorskie prawo do lokalu mieszkalnego.</p></content>
+          </paragraph>
+          <paragraph eId="art_3__par_3_1">
+            <num>3[1].</num>
+            <content><p>Członkiem spółdzielni może być osoba, która nabyła prawo odrębnej własności lokalu. Właścicielowi lokalu, który nie jest członkiem spółdzielni, przysługuje roszczenie o przyjęcie w poczet członków spółdzielni. Przepis art. 16 ustawy z dnia 16 września 1982 r. – Prawo spółdzielcze stosuje się odpowiednio. Osoba, która nabyła prawo odrębnej własności lokalu, zachowuje członkostwo w spółdzielni.</p></content>
+          </paragraph>
+          <paragraph eId="art_3__par_3_2">
+            <num>3[2].</num>
+            <content><p>Członkostwo w spółdzielni powstaje z chwilą:</p></content>
+            <list eId="art_3__par_3_2__lst">
+              <point eId="art_3__par_3_2__pkt_1">
+                <num>1)</num>
+                <content><p>nabycia roszczenia o ustanowienie spółdzielczego lokatorskiego prawa do lokalu mieszkalnego;</p></content>
+              </point>
+              <point eId="art_3__par_3_2__pkt_2">
+                <num>2)</num>
+                <content><p>nabycia ekspektatywy własności;</p></content>
+              </point>
+              <point eId="art_3__par_3_2__pkt_3">
+                <num>3)</num>
+                <content><p>zawarcia umowy nabycia spółdzielczego własnościowego prawa do lokalu;</p></content>
+              </point>
+              <point eId="art_3__par_3_2__pkt_4">
+                <num>4)</num>
+                <content><p>zawarcia umowy o ustanowienie spółdzielczego lokatorskiego prawa do lokalu mieszkalnego, jeżeli członkostwo nie zostało nabyte wcześniej;</p></content>
+              </point>
+              <point eId="art_3__par_3_2__pkt_5">
+                <num>5)</num>
+                <content><p>upływu terminu jednego roku, o którym mowa w art. 15 ust. 4, w przypadkach przewidzianych w art. 15 ust. 2 i 3, jeżeli przed upływem tego terminu jedna z osób, o których mowa w art. 15 ust. 2 lub 3, złożyła pisemne zapewnienie o gotowości zawarcia umowy o ustanowienie spółdzielczego lokatorskiego prawa do lokalu mieszkalnego, z zastrzeżeniem pkt 6;</p></content>
+              </point>
+              <point eId="art_3__par_3_2__pkt_6">
+                <num>6)</num>
+                <content><p>prawomocnego rozstrzygnięcia przez sąd w postępowaniu nieprocesowym lub wyboru dokonanego przez spółdzielnię, o których mowa w art. 15 ust. 4, w przypadkach przewidzianych w art. 15 ust. 2 i 3, jeżeli pisemne zapewnienie o gotowości zawarcia umowy o ustanowienie spółdzielczego lokatorskiego prawa do lokalu mieszkalnego zgłosiła więcej niż jedna osoba;</p></content>
+              </point>
+              <point eId="art_3__par_3_2__pkt_7">
+                <num>7)</num>
+                <content><p>wpisania spółdzielni do Krajowego Rejestru Sądowego w przypadku osób będących założycielami spółdzielni.</p></content>
+              </point>
+            </list>
+          </paragraph>
+          <paragraph eId="art_3__par_3_3">
+            <num>3[3].</num>
+            <content><p>Przepisy ust. 1 i 3 stosuje się odpowiednio do osób, którym przysługuje prawo do miejsca postojowego w garażu wielostanowiskowym lub garażu wolnostojącego, o których mowa w art. 17[19], lub do ułamkowego udziału we współwłasności garażu wielostanowiskowego, o którym mowa w art. 27[1].</p></content>
+          </paragraph>
+          <paragraph eId="art_3__par_3_4">
+            <num>3[4].</num>
+            <content><p>Członkiem spółdzielni może być najemca, o którym mowa w art. 48 ust. 1. Przepisy dotyczące członkostwa właścicieli lokali stosuje się odpowiednio.</p></content>
+          </paragraph>
+          <paragraph eId="art_3__par_4" status="repealed">
+            <num>4.</num>
+            <content><p>(uchylony)</p></content>
+          </paragraph>
+          <paragraph eId="art_3__par_5">
+            <num>5.</num>
+            <content><p>Jeżeli spółdzielcze własnościowe prawo do lokalu, prawo odrębnej własności lokalu albo ekspektatywa własności należy do kilku osób, członkiem spółdzielni może być tylko jedna z nich, chyba że przysługuje ono wspólnie małżonkom. W przypadku zgłoszenia się kilku uprawnionych rozstrzyga sąd w postępowaniu nieprocesowym. Po bezskutecznym upływie wyznaczonego przez spółdzielnię terminu wystąpienia do sądu, niedłuższego niż 12 miesięcy, wyboru dokonuje spółdzielnia. Do czasu rozstrzygnięcia, o którym mowa w zdaniu drugim, lub wyboru, o którym mowa w zdaniu trzecim, osoby, którym przysługuje spółdzielcze własnościowe prawo do lokalu, prawo odrębnej własności lokalu albo ekspektatywa własności, mogą wyznaczyć spośród siebie pełnomocnika w celu wykonywania uprawnień wynikających z członkostwa w spółdzielni.</p></content>
+          </paragraph>
+          <paragraph eId="art_3__par_6">
+            <num>6.</num>
+            <content><p>Członkostwo w spółdzielni ustaje z chwilą:</p></content>
+            <list eId="art_3__par_6__lst">
+              <point eId="art_3__par_6__pkt_1">
+                <num>1)</num>
+                <content><p>wygaśnięcia spółdzielczego lokatorskiego prawa do lokalu mieszkalnego;</p></content>
+              </point>
+              <point eId="art_3__par_6__pkt_2">
+                <num>2)</num>
+                <content><p>zbycia spółdzielczego własnościowego prawa do lokalu lub udziału w tym prawie;</p></content>
+              </point>
+              <point eId="art_3__par_6__pkt_3">
+                <num>3)</num>
+                <content><p>zbycia prawa odrębnej własności lokalu lub udziału w tym prawie;</p></content>
+              </point>
+              <point eId="art_3__par_6__pkt_4">
+                <num>4)</num>
+                <content><p>zbycia ekspektatywy własności lub udziału w tym prawie;</p></content>
+              </point>
+              <point eId="art_3__par_6__pkt_5">
+                <num>5)</num>
+                <content><p>wygaśnięcia roszczenia o ustanowienie spółdzielczego lokatorskiego prawa do lokalu mieszkalnego;</p></content>
+              </point>
+              <point eId="art_3__par_6__pkt_6">
+                <num>6)</num>
+                <content><p>rozwiązania umowy o budowę lokalu, o której mowa w art. 18.</p></content>
+              </point>
+            </list>
+          </paragraph>
+          <paragraph eId="art_3__par_7">
+            <num>7.</num>
+            <content><p>Członkostwo w spółdzielni ustaje także w przypadkach określonych w art. 24[1] ust. 1 i art. 26. Do osób, które w następstwie tego utraciły członkostwo w spółdzielni, przepisy art. 108b ustawy z dnia 16 września 1982 r. – Prawo spółdzielcze dotyczące członków spółdzielni stosuje się odpowiednio.</p></content>
+          </paragraph>
+          <paragraph eId="art_3__par_8">
+            <num>8.</num>
+            <content><p>Jeżeli członkowi przysługuje w danej spółdzielni więcej niż jeden tytuł prawny do lokalu będący podstawą uzyskania członkostwa, utrata członkostwa następuje dopiero w przypadku utraty wszystkich tytułów prawnych do lokali w ramach tej spółdzielni. Przepis ten stosuje się odpowiednio do członka, który jest stroną umowy lub umów o budowę lokalu lub lokali.</p></content>
+          </paragraph>
+          <paragraph eId="art_3__par_9">
+            <num>9.</num>
+            <content><p>Członkostwo osób będących założycielami spółdzielni ustaje, jeżeli w ciągu trzech lat od chwili wpisania spółdzielni do Krajowego Rejestru Sądowego spółdzielnia nie ustanowi na ich rzecz spółdzielczego lokatorskiego prawa do lokalu mieszkalnego, prawa odrębnej własności lokalu albo nie dojdzie do zawarcia umowy o budowę lokalu.</p></content>
+          </paragraph>
+        </article>
+
+      </hcontainer>
+
+      <hcontainer name="rozdzial" eId="rozdzial_2">
+        <num>Rozdział 2</num>
+        <heading>Spółdzielcze lokatorskie prawo do lokalu mieszkalnego</heading>
+
+        <article eId="art_15">
+          <num>Art. 15.</num>
+          <paragraph eId="art_15__par_1" status="repealed">
+            <num>1.</num>
+            <content><p>(uchylony)</p></content>
+          </paragraph>
+          <paragraph eId="art_15__par_2">
+            <num>2.</num>
+            <content><p>W przypadku wygaśnięcia spółdzielczego lokatorskiego prawa do lokalu mieszkalnego w następstwie śmierci uprawnionego lub w przypadkach, o których mowa w art. 11, roszczenia o zawarcie umowy o ustanowienie spółdzielczego lokatorskiego prawa do lokalu mieszkalnego przysługują jego osobom bliskim.</p></content>
+          </paragraph>
+          <paragraph eId="art_15__par_2_1">
+            <num>2[1].</num>
+            <content><p>Umowy, o których mowa w ust. 2, zawiera się na warunkach określonych w dotychczasowej umowie o ustanowieniu spółdzielczego lokatorskiego prawa do lokalu mieszkalnego.</p></content>
+          </paragraph>
+          <paragraph eId="art_15__par_3">
+            <num>3.</num>
+            <content><p>W przypadku śmierci osoby, o której mowa w art. 10, w okresie oczekiwania na zawarcie umowy o ustanowienie spółdzielczego lokatorskiego prawa do lokalu mieszkalnego osobom, o których mowa w ust. 2, które miały wspólnie z osobą, o której mowa w art. 10, zamieszkać w tym lokalu, przysługują roszczenia o zawarcie umowy zgodnie z postanowieniami umowy o budowę lokalu.</p></content>
+          </paragraph>
+          <paragraph eId="art_15__par_4">
+            <num>4.</num>
+            <content><p>Do zachowania roszczeń, o których mowa w ust. 2 i 3, konieczne jest złożenie w terminie jednego roku pisemnego zapewnienia o gotowości zawarcia umowy o ustanowienie spółdzielczego lokatorskiego prawa do lokalu mieszkalnego. W przypadku zgłoszenia się kilku uprawnionych, rozstrzyga sąd w postępowaniu nieprocesowym, biorąc pod uwagę w szczególności okoliczność, czy osoba uprawniona na podstawie ust. 2 zamieszkiwała z byłym członkiem. Po bezskutecznym upływie wyznaczonego przez spółdzielnię terminu wystąpienia do sądu, wyboru dokonuje spółdzielnia. Jeżeli o roszczeniu rozstrzygał sąd, osoby, które pozostawały w sporze, niezwłocznie zawiadamiają o tym spółdzielnię. Do momentu zawiadomienia spółdzielni o tym, komu przypadło spółdzielcze lokatorskie prawo do lokalu mieszkalnego, osoby te odpowiadają solidarnie za opłaty, o których mowa w art. 4 ust. 1.</p></content>
+          </paragraph>
+          <paragraph eId="art_15__par_5">
+            <num>5.</num>
+            <content><p>Osoba, o której mowa w ust. 3, staje się stroną umowy o budowę lokalu wiążącej osobę, o której mowa w art. 10.</p></content>
+          </paragraph>
+          <paragraph eId="art_15__par_6">
+            <num>6.</num>
+            <content><p>W wypadku wygaśnięcia roszczeń lub braku uprawnionych osób, o których mowa w ust. 3, spółdzielnia wypłaca osobie uprawnionej wartość rynkową tego lokalu ustaloną zgodnie z art. 11 ust. 2[1] i 2[2].</p></content>
+          </paragraph>
+          <paragraph eId="art_15__par_7">
+            <num>7.</num>
+            <content><p>W wypadku ustania członkostwa w okresie poprzedzającym zawarcie umowy o budowę lokalu osobom, o których mowa w ust. 3, przysługują roszczenia o przyjęcie do spółdzielni i zawarcie umowy.</p></content>
+          </paragraph>
+        </article>
+
+      </hcontainer>
+
+      <hcontainer name="rozdzial" eId="rozdzial_3">
+        <num>Rozdział 3</num>
+        <heading>Prawo odrębnej własności lokalu</heading>
+
+        <article eId="art_24_1">
+          <num>Art. 24[1].</num>
+          <paragraph eId="art_24_1__par_1">
+            <num>1.</num>
+            <content><p>Większość właścicieli lokali w budynku lub budynkach położonych w obrębie danej nieruchomości, obliczana według wielkości udziałów w nieruchomości wspólnej, może podjąć uchwałę, że w zakresie ich praw i obowiązków oraz zarządu nieruchomością wspólną będą miały zastosowanie przepisy ustawy z dnia 24 czerwca 1994 r. o własności lokali. Do podjęcia uchwały stosuje się odpowiednio przepisy tej ustawy.</p></content>
+          </paragraph>
+          <paragraph eId="art_24_1__par_2">
+            <num>2.</num>
+            <content><p>Uchwała, o której mowa w ust. 1, nie narusza przysługujących członkom spółdzielni spółdzielczych praw do lokali.</p></content>
+          </paragraph>
+          <paragraph eId="art_24_1__par_3">
+            <num>3.</num>
+            <content><p>Z chwilą ustania członkostwa właściciel lokalu staje się współwłaścicielem środków zgromadzonych na funduszu remontowym, o którym mowa w art. 6 ust. 3, w wysokości odpowiadającej przypadającemu na ten lokal udziałowi we współwłasności nieruchomości wspólnej. Wysokość tego udziału ustala się na podstawie ewidencji i rozliczenia wpływów i wydatków funduszu remontowego, o których mowa w art. 4 ust. 4[1] pkt 2, według stanu na dzień ustania członkostwa.</p></content>
+          </paragraph>
+          <paragraph eId="art_24_1__par_4">
+            <num>4.</num>
+            <content><p>Przepis ust. 3 stosuje się odpowiednio do właściciela lokalu, który nie był członkiem spółdzielni.</p></content>
+          </paragraph>
+          <paragraph eId="art_24_1__par_5">
+            <num>5.</num>
+            <content><p>Spółdzielnia mieszkaniowa w przypadkach, o których mowa w ust. 1 lub w art. 26, niezwłocznie rozlicza z właścicielami lokali zaewidencjonowane wpływy i wydatki funduszu remontowego oraz pozostałe nakłady na remonty nieruchomości.</p></content>
+          </paragraph>
+          <paragraph eId="art_24_1__par_6">
+            <num>6.</num>
+            <content><p>Od dnia powstania wspólnoty mieszkaniowej właściciele lokali są obowiązani uczestniczyć w wydatkach związanych z eksploatacją i utrzymaniem nieruchomości stanowiących mienie spółdzielni, które są przeznaczone do wspólnego korzystania przez osoby zamieszkujące w określonym budynku lub osiedlu na podstawie zawartej ze spółdzielnią umowy.</p></content>
+          </paragraph>
+        </article>
+
+        <article eId="art_26">
+          <num>Art. 26.</num>
+          <paragraph eId="art_26__par_1">
+            <num>1.</num>
+            <content><p>Jeżeli w określonym budynku lub budynkach położonych w obrębie danej nieruchomości została wyodrębniona własność wszystkich lokali, po wyodrębnieniu własności ostatniego lokalu stosuje się przepisy ustawy z dnia 24 czerwca 1994 r. o własności lokali. Spółdzielnia w terminie 14 dni od dnia wyodrębnienia własności ostatniego lokalu w określonym budynku lub budynkach położonych w obrębie danej nieruchomości zawiadamia o tym na piśmie właścicieli lokali w tej nieruchomości.</p></content>
+          </paragraph>
+          <paragraph eId="art_26__par_2">
+            <num>2.</num>
+            <content><p>W terminie 3 miesięcy od dnia wyodrębnienia własności ostatniego lokalu większość właścicieli lokali w budynku lub w budynkach położonych w obrębie danej nieruchomości, obliczana według wielkości udziałów w nieruchomości wspólnej, może podjąć uchwałę, że w zakresie ich praw i obowiązków oraz zarządu nieruchomością wspólną stosuje się odpowiednio art. 27. Do podjęcia uchwały stosuje się odpowiednio przepisy art. 30 ust. 1a, art. 31 i art. 32 ustawy z dnia 24 czerwca 1994 r. o własności lokali.</p></content>
+          </paragraph>
+          <paragraph eId="art_26__par_3">
+            <num>3.</num>
+            <content><p>Spółdzielnia w terminie 14 dni od dnia wyodrębnienia własności ostatniego lokalu w określonym budynku lub budynkach położonych w obrębie danej nieruchomości zawiadamia o tym na piśmie właścicieli lokali w tej nieruchomości.</p></content>
+          </paragraph>
+          <paragraph eId="art_26__par_4">
+            <num>4.</num>
+            <content><p>W przypadku, o którym mowa w ust. 1, stosuje się przepisy art. 24[1] ust. 3 i 4.</p></content>
+          </paragraph>
+        </article>
+
+      </hcontainer>
+
+    </body>
+  </act>
+</akomaNtoso>
