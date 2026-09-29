@@ -9,6 +9,10 @@ affects:
   - "Prawo spółdzielcze, Art. 16a"
   - "Prawo spółdzielcze, Art. 17"
   - "Prawo spółdzielcze, Art. 24"
+  - "Ustawa o spółdzielniach mieszkaniowych, Art. 3"
+  - "Ustawa o spółdzielniach mieszkaniowych, Art. 15"
+  - "Ustawa o spółdzielniach mieszkaniowych, Art. 24[1]"
+  - "Ustawa o spółdzielniach mieszkaniowych, Art. 26"
 discovered_during: "Porównanie Art. 15-28 Prawa spółdzielczego ze statutem realnej spółdzielni mieszkaniowej (ROADMAP.md, Phase 0)"
 ```
 
@@ -67,21 +71,50 @@ Rule (ogólna):
     wykluczenie/wykreślenie
 
 Rule (szczególna, dla spółdzielni mieszkaniowych):
-    Ustawa o spółdzielniach mieszkaniowych, Art. 15 — powstanie
-    członkostwa ex lege wraz z nabyciem prawa do lokalu
-    Ustawa o spółdzielniach mieszkaniowych, Art. 24[1], Art. 26 —
-    ustanie członkostwa
+    Ustawa o spółdzielniach mieszkaniowych, Art. 3 ust. 3[2] —
+    powstanie członkostwa ex lege, siedem odrębnych zdarzeń
+    (nabycie roszczenia o prawo lokatorskie, nabycie ekspektatywy
+    własności, zawarcie umowy o prawo własnościowe/lokatorskie,
+    upływ terminu z Art. 15 ust. 4 w przypadku śmierci uprawnionego,
+    rozstrzygnięcie sądu/wybór spółdzielni w tym samym przypadku,
+    wpis spółdzielni do KRS dla założycieli)
+    Ustawa o spółdzielniach mieszkaniowych, Art. 3 ust. 6-7 — ustanie
+    członkostwa, sześć zdarzeń wprost (wygaśnięcie/zbycie prawa do
+    lokalu, wygaśnięcie roszczenia, rozwiązanie umowy o budowę lokalu)
+    plus dwa dodatkowe przypadki odsyłające do Art. 24[1] ust. 1 i
+    Art. 26 (przejście na reżim ustawy o własności lokali)
 
 Resolution mechanism:
     lex_specialis (ustawa o spółdzielniach mieszkaniowych jest ustawą
     szczególną wobec Prawa spółdzielczego dla spółdzielni mieszkaniowych)
 
 REQUIRES:
-    formalizacja Ustawy o spółdzielniach mieszkaniowych (Art. 15, 24[1], 26),
-    obecnie poza zakresem (patrz AGENTS.md sekcja 3 — jeden akt/fragment
-    naraz). Do czasu tej formalizacji status pozostaje UNRESOLVED, a nie
-    automatycznie rozstrzygnięty.
+    formalizacja Ustawy o spółdzielniach mieszkaniowych (Art. 1-3, 15,
+    24[1], 26), obecnie poza zakresem (patrz AGENTS.md sekcja 3 — jeden
+    akt/fragment naraz). Do czasu tej formalizacji status pozostaje
+    UNRESOLVED, a nie automatycznie rozstrzygnięty.
 ```
+
+**KOREKTA (2026-09-29), przy rozpoczęciu formalizacji USM:** ta
+obserwacja, zapisana przed przeczytaniem pełnego tekstu USM, cytowała
+"Art. 15" jako artykuł, w którym powstaje członkostwo ex lege. Po
+faktycznym przeczytaniu tekstu (`external/SMDM_Knowledge_Base/przepisy-prawne/md/ustawa-o-spoldzielniach-mieszkaniowych.md`)
+okazuje się to nieprecyzyjne: właściwym przepisem jest **Art. 3 ust.
+3[2]** (siedem zdarzeń powodujących powstanie członkostwa). Art. 15
+dotyczy węższej kwestii — roszczeń "osób bliskich" o zawarcie umowy po
+wygaśnięciu spółdzielczego prawa lokatorskiego wskutek śmierci
+uprawnionego — i jest cytowany przez Art. 3 ust. 3[2] pkt 5 tylko jako
+źródło terminu (rok) dla TEGO JEDNEGO z siedmiu przypadków, nie jako
+główny przepis o powstaniu członkostwa. Podobnie, Art. 24[1] i Art. 26
+same w sobie nie stanowią wprost "członkostwo ustaje" — opisują
+mechanizm przejścia zarządu nieruchomością na reżim ustawy o własności
+lokali (uchwała większości właścicieli, wyodrębnienie ostatniego
+lokalu); to **Art. 3 ust. 7** jest przepisem, który czyni z tych
+przejść dodatkowe przesłanki ustania członkostwa. AGENTS.md sekcja 52
+(konflikt dokumentów - zgłosić, nie ukrywać) i sekcja 60 (zgłaszaj
+zauważone nieścisłości) - stąd ta jawna korekta zamiast cichej
+poprawki. Nie zmienia to wniosku CONFLICT/lex_specialis powyżej, tylko
+precyzuje, które artykuły faktycznie go niosą.
 
 ## Co to oznacza dla bieżącej formalizacji Art. 15–28
 
@@ -93,16 +126,20 @@ REQUIRES:
 2. Reguły formalizowane z **Art. 16, 16a, 17, 24** muszą mieć jawną adnotację
    `SCOPE_NOTE` wskazującą na OBS-0001 — że dla spółdzielni mieszkaniowej
    zastosowanie tych przepisów jest **ograniczone/wyparte** przez USM Art.
-   15, 24¹, 26 w zakresie odpowiednio: powstania i ustania członkostwa
-   związanego z prawem do lokalu.
+   3 ust. 3[2]/6/7 (z pomocniczym odesłaniem do Art. 15, 24[1], 26) w
+   zakresie odpowiednio: powstania i ustania członkostwa związanego z
+   prawem do lokalu.
 3. **Nie wolno** formalizować Art. 16–17 lub Art. 24 jako "tej samej"
    procedury, którą w rzeczywistości stosuje ta konkretna spółdzielnia —
    byłoby to sprzeczne z FACT ustalonym powyżej i naruszałoby zasadę
    `SOURCE > MODEL` (AGENTS.md sekcja 1).
-4. Formalizacja USM Art. 15/24¹/26 to osobne, przyszłe zadanie — dodane do
-   `ROADMAP.md`.
+4. Formalizacja USM Art. 1-3, 15, 24[1], 26 - **w toku od 2026-09-29**,
+   `law/ustawa-o-spoldzielniach-mieszkaniowych/`, patrz `ROADMAP.md`.
 
 ## Status
 
-`UNRESOLVED` — brak formalizacji USM. Do rewizji przy formalizacji Ustawy
-o spółdzielniach mieszkaniowych.
+`UNRESOLVED` — FACT strony USM teraz ustalony poprawnie (patrz KOREKTA
+wyżej) i formalizacja w toku (`law/ustawa-o-spoldzielniach-mieszkaniowych/`),
+ale reguły USM jeszcze nie istnieją - status zmieni się na `RESOLVED`
+dopiero, gdy R-USM dla Art. 3 (powstanie/ustanie członkostwa) będą
+gotowe i jawnie powiązane z tym obserwowanym konfliktem.

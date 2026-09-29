@@ -29,7 +29,7 @@ T-<AKT>-NNNN-MM  Test           np. T-PS-0016-01 (MM = numer testu dla reguły)
 
 ```
 PS   Prawo spółdzielcze
-USM  Ustawa o spółdzielniach mieszkaniowych   (nieużywane jeszcze — zarezerwowane)
+USM  Ustawa o spółdzielniach mieszkaniowych   (od 2026-09-29 w użyciu - patrz law/ustawa-o-spoldzielniach-mieszkaniowych/)
 ```
 
 Numeracja `NNNN` jest sekwencyjna w obrębie pary (typ, akt) i **nie** jest
@@ -53,6 +53,13 @@ powyższych ID reguł:
 ```
 
 Przykłady: `PS-ART-015`, `PS-ART-016`, `PS-ART-016A` (Art. 16a).
+
+**Rozszerzenie (2026-09-29, USM):** dla jednostek wstawionych nowelizacją
+z numerem w nawiasie kwadratowym BEZ litery (np. `Art. 24[1]`, częste w
+Ustawie o spółdzielniach mieszkaniowych), klucz dopisuje wstawkę po
+myślniku: `USM-ART-024-1` (Art. 24[1]). Rozwiązywanie do `eId`: usuń
+zera wiodące z numeru, zamień `-` na `_`, dodaj prefiks `art_` →
+`art_24_1`. Patrz `law/ustawa-o-spoldzielniach-mieszkaniowych/normalized/akoma-ntoso/README.md`.
 
 **Aktualizacja (2026-09-28):** format pliku pod tym kluczem zmienił się z
 ad-hoc YAML (jeden plik na artykuł) na **Akoma Ntoso XML** (jeden plik na

@@ -16,4 +16,12 @@ Struktura każdego aktu (patrz PROJECT_CONCEPT.md, sekcja 38):
     interpretations/  jawnie oznaczone interpretacje i konflikty norm
 ```
 
-Pierwszy domenowy eksperyment: `prawo-spoldzielcze/`.
+Pierwszy domenowy eksperyment: `prawo-spoldzielcze/` (kompletnie
+znormalizowany, Dział III w pełni sformalizowany z regułami i testami).
+
+Drugi akt (od 2026-09-29): `ustawa-o-spoldzielniach-mieszkaniowych/` —
+sfragmentowana normalizacja (Art. 1, 2, 3, 15, 24[1], 26), wybrana
+celowo do rozwiązania `OBS-0001` (Prawo spółdzielcze,
+`interpretations/OBS-0001-lex-specialis-usm-membership.md`) - ustalenia,
+że ta ustawa jest lex specialis wobec Prawa spółdzielczego dla
+spółdzielni mieszkaniowych w zakresie powstania/ustania członkostwa.

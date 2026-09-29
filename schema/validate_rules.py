@@ -57,11 +57,17 @@ def load_akn_eids():
 
 
 def normalized_ref_to_eid(ref):
-    m = re.match(r"^PS-ART-0*(\d+)([A-Za-z]*)$", ref)
+    # letter suffix (PS-ART-016A -> art_16a) or hyphen-bracket suffix
+    # (USM-ART-024-1 -> art_24_1) - docs/provenance.md.
+    m = re.match(r"^[A-Z]+-ART-0*(\d+)(?:([A-Za-z]+)|-(\d+))?$", ref)
     if not m:
         return None
-    num, suffix = m.groups()
-    return f"art_{num}{suffix.lower()}"
+    num, letter, bracket = m.groups()
+    if letter:
+        return f"art_{num}{letter.lower()}"
+    if bracket:
+        return f"art_{num}_{bracket}"
+    return f"art_{num}"
 
 
 def as_list(value):

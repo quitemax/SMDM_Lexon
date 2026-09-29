@@ -43,6 +43,15 @@ PS-ART-016A  -> art_16a
 PS-ART-024   -> art_24
 ```
 
+**Rozszerzenie (USM, `USM-ART-NNN`):** ta sama reguła, plus obsługa
+wstawki w nawiasie kwadratowym bez litery (`USM-ART-024-1` ->
+`art_24_1` - myślnik zamienia się na podkreślnik zamiast być usuwany).
+`schema/validate_rules.py` (`normalized_ref_to_eid`) obsługuje **tylko**
+wzorzec `PS-ART-*`/literowy sufiks na razie - do rozszerzenia o wzorzec
+z myślnikiem, gdy reguły USM zaczną z niego korzystać (Art. 24[1] jest
+w obecnym fragmencie normalizacji, ale jeszcze bez własnej reguły -
+patrz `law/ustawa-o-spoldzielniach-mieszkaniowych/rules/`).
+
 Każdy skrypt walidujący (jak te używane przy weryfikacji normalizacji)
 musi to uwzględnić — sprawdzone empirycznie: naiwne dopełnienie zerami po
 stronie `eId` daje fałszywe alarmy o "martwych referencjach", które nie
