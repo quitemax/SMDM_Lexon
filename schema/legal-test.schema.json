@@ -8,11 +8,11 @@
   "properties": {
     "id": {
       "type": "string",
-      "pattern": "^T-PS-[0-9]{4}-[0-9]{2}$"
+      "pattern": "^T-[A-Z]+-[0-9]{4}-[0-9]{2}$"
     },
     "rule": {
       "type": "string",
-      "pattern": "^R-PS-[0-9]{4}$",
+      "pattern": "^R-[A-Z]+-[0-9]{4}$",
       "description": "Reguła/procedura, ktorej dotyczy ten test. Walidator sprawdza, ze taki plik istnieje w rules/ albo procedures/."
     },
     "title": { "type": "string", "minLength": 1 },

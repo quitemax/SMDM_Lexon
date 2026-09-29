@@ -71,7 +71,8 @@ def main():
                 errors.append(f"{rel}: rule '{rule_id}' does not exist in rules/ or procedures/")
             rule_to_tests.setdefault(rule_id, []).append(test_id)
 
-            if test_id and not test_id.startswith(f"T-PS-{rule_id.split('-')[-1]}-"):
+            rule_akt, rule_num = rule_id.split("-")[1], rule_id.split("-")[-1]
+            if test_id and not test_id.startswith(f"T-{rule_akt}-{rule_num}-"):
                 warnings.append(
                     f"{rel}: id '{test_id}' numbering doesn't match rule '{rule_id}' "
                     "(expected prefix T-PS-<same NNNN>-)"

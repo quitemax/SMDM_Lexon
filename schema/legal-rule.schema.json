@@ -8,7 +8,7 @@
   "properties": {
     "id": {
       "type": "string",
-      "pattern": "^R-PS-[0-9]{4}$"
+      "pattern": "^R-[A-Z]+-[0-9]{4}$"
     },
     "norm_type": {
       "type": "string",
@@ -57,7 +57,7 @@
     "overridden_by": {
       "type": "array",
       "description": "LegalRuleML Override. Wypelniac tylko dla udokumentowanego CONFLICT (AGENTS.md sekcja 31), nie zgadywac - patrz ADR-0002 pkt 4.",
-      "items": { "type": "string", "pattern": "^R-PS-[0-9]{4}$" }
+      "items": { "type": "string", "pattern": "^R-[A-Z]+-[0-9]{4}$" }
     },
     "subject": { "type": "string" },
     "holder": { "type": "string" },
