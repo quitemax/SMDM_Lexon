@@ -1,0 +1,31 @@
+id: R-USM-0012
+norm_type: RIGHT
+title: "Roszczenie osób bliskich po wygaśnięciu lokatorskiego prawa wskutek śmierci uprawnionego"
+source:
+  act: "Ustawa o spółdzielniach mieszkaniowych"
+  article: "15"
+  paragraph: "2, 2[1]"
+  normalized_ref: "USM-ART-015"
+validity:
+  from: "2026-06-10"
+  to: null
+subject: "Osoba"
+holder: "Osoba - w roli osoby bliskiej (R-USM-0004 D4)"
+condition: >-
+  wygaśnięcie spółdzielczego lokatorskiego prawa do lokalu mieszkalnego
+  w następstwie śmierci uprawnionego, ALBO w przypadkach z Art. 11
+  (niesformalizowany - odesłanie zachowane jako fakt)
+statement: >-
+  Roszczenia o zawarcie umowy o ustanowienie spółdzielczego lokatorskiego
+  prawa do lokalu mieszkalnego przysługują osobom bliskim zmarłego
+  uprawnionego.
+effect: >-
+  Umowy zawiera się na warunkach określonych w dotychczasowej umowie o
+  ustanowieniu spółdzielczego lokatorskiego prawa do lokalu mieszkalnego
+  (§2[1]).
+formalization_status: DIRECT
+note: "Zawarcie tej umowy jest jednym z siedmiu zdarzeń powodujących powstanie członkostwa (R-USM-0007, T1/T4, gdy roszczenie/umowa dotyczy tej osoby bliskiej). Ta reguła określa PRZESŁANKĘ posiadania takiego roszczenia w tym szczególnym przypadku, nie samo powstanie członkostwa."
+references:
+  - target: R-USM-0007
+    type: RELATED_TO
+tests: ["T-USM-0012-01", "T-USM-0012-02"]

@@ -1,0 +1,37 @@
+id: R-USM-0022
+norm_type: POWER
+title: "Uchwała większości właścicieli o stosowaniu odpowiednio Art. 27 zamiast pełnego reżimu UWL"
+source:
+  act: "Ustawa o spółdzielniach mieszkaniowych"
+  article: "26"
+  paragraph: "2"
+  normalized_ref: "USM-ART-026"
+validity:
+  from: "2026-06-10"
+  to: null
+subject: "Osoba"
+holder: "Osoba - właściciele lokali (HAS_ODREBNA_WLASNOSC) w budynku/budynkach danej nieruchomości"
+condition: "wyodrębniono własność ostatniego lokalu (R-USM-0021)"
+statement: >-
+  Większość właścicieli lokali, obliczana według wielkości udziałów w
+  nieruchomości wspólnej, może podjąć uchwałę, że w zakresie ich praw i
+  obowiązków oraz zarządu nieruchomością wspólną stosuje się odpowiednio
+  Art. 27 USM (zarząd powierzony spółdzielni, niesformalizowany poza tym
+  odesłaniem) zamiast pełnego reżimu ustawy o własności lokali.
+deadline:
+  duration: 3
+  unit: MONTHS
+  start_event: "wyodrębnienie własności ostatniego lokalu"
+  type: STATUTORY
+  overridable_by_statute: false
+effect: >-
+  Do podjęcia uchwały stosuje się odpowiednio przepisy Art. 30 ust. 1a,
+  Art. 31 i Art. 32 ustawy o własności lokali (niesformalizowane).
+formalization_status: DIRECT
+note: "POWER, analogicznie do R-USM-0016 - kompetencja większości ze skutkiem wobec wszystkich właścicieli w danej nieruchomości, nie indywidualne uprawnienie."
+references:
+  - target: R-USM-0021
+    type: RELATED_TO
+  - target: R-USM-0016
+    type: RELATED_TO
+tests: []

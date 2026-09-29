@@ -1,0 +1,27 @@
+id: R-USM-0018
+norm_type: RIGHT
+title: "Współwłasność funduszu remontowego przy ustaniu członkostwa właściciela lokalu"
+source:
+  act: "Ustawa o spółdzielniach mieszkaniowych"
+  article: "24[1]"
+  paragraph: "3, 4"
+  normalized_ref: "USM-ART-024-1"
+validity:
+  from: "2026-06-10"
+  to: null
+subject: "Osoba"
+holder: "Osoba - właściciel lokalu (HAS_ODREBNA_WLASNOSC)"
+condition: "ustanie członkostwa (R-USM-0008)"
+statement: >-
+  Z chwilą ustania członkostwa właściciel lokalu staje się
+  współwłaścicielem środków zgromadzonych na funduszu remontowym (Art.
+  6 ust. 3, niesformalizowany), w wysokości odpowiadającej przypadającemu
+  na jego lokal udziałowi we współwłasności nieruchomości wspólnej.
+effect: >-
+  Wysokość udziału ustala się na podstawie ewidencji i rozliczenia
+  wpływów i wydatków funduszu remontowego (Art. 4 ust. 4[1] pkt 2,
+  niesformalizowany), według stanu na dzień ustania członkostwa. §3
+  stosuje się odpowiednio do właściciela lokalu, który nie był członkiem
+  spółdzielni (§4).
+formalization_status: DIRECT
+tests: []

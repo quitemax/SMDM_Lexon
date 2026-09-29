@@ -1,0 +1,30 @@
+id: R-USM-0016
+norm_type: POWER
+title: "Uchwała większości właścicieli o przejściu na reżim ustawy o własności lokali"
+source:
+  act: "Ustawa o spółdzielniach mieszkaniowych"
+  article: "24[1]"
+  paragraph: "1"
+  normalized_ref: "USM-ART-024-1"
+validity:
+  from: "2026-06-10"
+  to: null
+subject: "Osoba"
+holder: "Osoba - właściciele lokali (HAS_ODREBNA_WLASNOSC) w budynku/budynkach danej nieruchomości"
+statement: >-
+  Większość właścicieli lokali w budynku lub budynkach położonych w
+  obrębie danej nieruchomości, obliczana według wielkości udziałów w
+  nieruchomości wspólnej, może podjąć uchwałę, że w zakresie ich praw i
+  obowiązków oraz zarządu nieruchomością wspólną będą miały zastosowanie
+  przepisy ustawy o własności lokali (UWL, niesformalizowana - odesłanie
+  zachowane jako fakt).
+effect: >-
+  Do podjęcia uchwały stosuje się odpowiednio przepisy UWL. Podjęcie tej
+  uchwały jest przesłanką E7 ustania członkostwa właścicieli lokali w tej
+  nieruchomości (R-USM-0008, w związku z USM-ART-003 §7).
+formalization_status: DIRECT
+note: "POWER, nie RIGHT - to kompetencja większości do ukształtowania reżimu zarządu dla wszystkich właścicieli w danej nieruchomości (skutek wobec osób trzecich, nie tylko wobec siebie), analogicznie do R-PS-0031 (AGENTS.md sekcja 20)."
+references:
+  - target: R-USM-0008
+    type: RELATED_TO
+tests: []

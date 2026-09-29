@@ -1,0 +1,12 @@
+id: T-USM-0015-02
+rule: R-USM-0015
+title: "Umowa o budowę lokalu już zawarta - to roszczenie nie ma zastosowania"
+category: NEGATIVE
+status: SPECIFIED
+given:
+  - "osoba, o której mowa w USM-ART-015 §3, już zawarła umowę o budowę lokalu (R-USM-0012 kontekst)"
+  - "członkostwo tej osoby ustaje"
+when: "sprawdzenie uprawnienia R-USM-0015"
+then:
+  result: false
+  because: "warunek 'ustanie członkostwa w okresie POPRZEDZAJĄCYM zawarcie umowy' niespełniony - umowa już zawarta wcześniej; skutki ustania członkostwa dla stron już zawartej umowy reguluje inny przepis, nie ten"

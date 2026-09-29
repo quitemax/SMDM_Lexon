@@ -1,0 +1,11 @@
+id: T-USM-0012-02
+rule: R-USM-0012
+title: "Wygaśnięcie lokatorskiego prawa z innej przyczyny niż śmierć nie daje roszczenia osobom bliskim"
+category: NEGATIVE
+status: SPECIFIED
+given:
+  - "spółdzielcze lokatorskie prawo do lokalu wygasło z przyczyny innej niż śmierć uprawnionego (np. E5 z R-USM-0008) i poza przypadkami Art. 11"
+when: "sprawdzenie warunku R-USM-0012"
+then:
+  result: false
+  because: "przesłanka §2 (śmierć uprawnionego, albo przypadki Art. 11) nie zachodzi - osoby bliskie nie nabywają na tej podstawie roszczenia o zawarcie umowy"

@@ -1,0 +1,12 @@
+id: T-USM-0014-02
+rule: R-USM-0014
+title: "Roszczenia osób bliskich nadal aktualne - obowiązek wypłaty jeszcze nie powstał"
+category: NEGATIVE
+status: SPECIFIED
+given:
+  - "termin roczny z R-USM-0013 jeszcze biegnie, osoba bliska może jeszcze złożyć zapewnienie gotowości"
+  - "roszczenia z USM-ART-015 §3 nie wygasły, istnieją uprawnione osoby"
+when: "sprawdzenie obowiązku R-USM-0014"
+then:
+  result: false
+  because: "żadna z dwóch alternatywnych przesłanek (wygaśnięcie roszczeń, brak uprawnionych osób) nie zachodzi jeszcze"

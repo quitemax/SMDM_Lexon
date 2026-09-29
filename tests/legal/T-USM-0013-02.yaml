@@ -1,0 +1,11 @@
+id: T-USM-0013-02
+rule: R-USM-0013
+title: "Kilka osób bliskich zgłasza gotowość - rozstrzyga sąd"
+category: POSITIVE
+status: SPECIFIED
+given:
+  - "dwie osoby bliskie złożyły w terminie pisemne zapewnienie gotowości zawarcia umowy"
+when: "sprawdzenie, kto uzyska prawo do zawarcia umowy"
+then:
+  result: "rozstrzyga sąd w postępowaniu nieprocesowym, biorąc pod uwagę w szczególności, czy dana osoba zamieszkiwała z byłym członkiem"
+  because: "pierwsza z `conditions` - zgłosiła się więcej niż jedna uprawniona osoba"

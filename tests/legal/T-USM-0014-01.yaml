@@ -1,0 +1,11 @@
+id: T-USM-0014-01
+rule: R-USM-0014
+title: "Wygaśnięcie roszczeń osób bliskich uruchamia obowiązek wypłaty wartości rynkowej lokalu"
+category: POSITIVE
+status: SPECIFIED
+given:
+  - "roszczenia z USM-ART-015 §3 wygasły (np. żadna osoba bliska nie złożyła zapewnienia w terminie z R-USM-0013)"
+when: "sprawdzenie obowiązku R-USM-0014"
+then:
+  result: true
+  because: "warunek 'wygaśnięcie roszczeń' spełniony - spółdzielnia wypłaca wartość rynkową lokalu ustaloną zgodnie z Art. 11 ust. 2[1] i 2[2] (adresat wypłaty pozostaje ogólnikowy 'osoba uprawniona' - patrz `note` reguły, UNCERTAIN)"

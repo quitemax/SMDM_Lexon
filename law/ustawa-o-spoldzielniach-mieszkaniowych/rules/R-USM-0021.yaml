@@ -1,0 +1,37 @@
+id: R-USM-0021
+norm_type: STRUCTURAL
+title: "Wyodrębnienie własności ostatniego lokalu - reżim UWL i obowiązek zawiadomienia"
+source:
+  act: "Ustawa o spółdzielniach mieszkaniowych"
+  article: "26"
+  paragraph: "1, 3, 4"
+  normalized_ref: "USM-ART-026"
+validity:
+  from: "2026-06-10"
+  to: null
+subject: "Spółdzielnia"
+condition: "w danym budynku/budynkach danej nieruchomości wyodrębniono własność wszystkich lokali"
+statement: >-
+  Po wyodrębnieniu własności ostatniego lokalu stosuje się przepisy
+  ustawy o własności lokali (UWL, niesformalizowana).
+deadline:
+  duration: 14
+  unit: DAYS
+  start_event: "wyodrębnienie własności ostatniego lokalu"
+  type: STATUTORY
+  overridable_by_statute: false
+effect: >-
+  Spółdzielnia zawiadamia o tym na piśmie właścicieli lokali w tej
+  nieruchomości. Stosuje się odpowiednio USM-ART-024[1] §3 i §4
+  (R-USM-0018 - współwłasność funduszu remontowego).
+formalization_status: DIRECT
+note: >-
+  OBSERVATION (AGENTS.md sekcja 30/60, nie "naprawiane"): §1 zdanie
+  drugie i §3 są w tekście źródłowym IDENTYCZNE (ten sam obowiązek
+  zawiadomienia w 14 dni, zapisany dwukrotnie, słowo w słowo). Nie jest
+  to błąd normalizacji (zweryfikowane 1:1 wobec źródła) - to cecha
+  samego tekstu ustawy, potencjalnie redakcyjna redundancja z
+  nowelizacji. Modelowane tu jako JEDEN obowiązek (nie dwa niezależne),
+  bo treść i przesłanka są identyczne - modelowanie dwóch identycznych
+  obowiązków sugerowałoby nieistniejącą różnicę semantyczną.
+tests: []

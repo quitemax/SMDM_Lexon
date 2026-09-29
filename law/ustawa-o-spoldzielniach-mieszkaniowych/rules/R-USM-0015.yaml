@@ -1,0 +1,20 @@
+id: R-USM-0015
+norm_type: RIGHT
+title: "Roszczenie o przyjęcie do spółdzielni przy ustaniu członkostwa przed zawarciem umowy o budowę lokalu"
+source:
+  act: "Ustawa o spółdzielniach mieszkaniowych"
+  article: "15"
+  paragraph: "7"
+  normalized_ref: "USM-ART-015"
+validity:
+  from: "2026-06-10"
+  to: null
+subject: "Osoba"
+holder: "Osoba, o której mowa w USM-ART-015 §3 (R-USM-0012 kontekst)"
+condition: "ustanie członkostwa w okresie poprzedzającym zawarcie umowy o budowę lokalu"
+statement: >-
+  Osobom, o których mowa w §3, przysługują roszczenia o przyjęcie do
+  spółdzielni i zawarcie umowy.
+formalization_status: DIRECT
+note: "Zależy od USM-ART-015 §3 (krąg osób, które miały wspólnie z osobą z Art. 10 zamieszkać w lokalu w okresie oczekiwania na umowę) - Art. 10 jest poza obecnym zasięgiem normalizacji, więc krąg uprawnionych z §3 jest tu tylko odesłaniem, nie w pełni rozwiniętym (AGENTS.md sekcja 14)."
+tests: ["T-USM-0015-01", "T-USM-0015-02"]

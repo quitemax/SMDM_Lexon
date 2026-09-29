@@ -1,0 +1,22 @@
+id: R-USM-0020
+norm_type: OBLIGATION
+title: "Udział właścicieli lokali w kosztach wspólnego korzystania od powstania wspólnoty mieszkaniowej"
+source:
+  act: "Ustawa o spółdzielniach mieszkaniowych"
+  article: "24[1]"
+  paragraph: "6"
+  normalized_ref: "USM-ART-024-1"
+validity:
+  from: "2026-06-10"
+  to: null
+subject: "Osoba"
+holder: "Osoba - właściciel lokalu (HAS_ODREBNA_WLASNOSC)"
+condition: "od dnia powstania wspólnoty mieszkaniowej, na podstawie umowy zawartej ze spółdzielnią"
+statement: >-
+  Właściciele lokali są obowiązani uczestniczyć w wydatkach związanych z
+  eksploatacją i utrzymaniem nieruchomości stanowiących mienie
+  spółdzielni, które są przeznaczone do wspólnego korzystania przez
+  osoby zamieszkujące w określonym budynku lub osiedlu.
+formalization_status: DIRECT
+note: "'Wspólnota mieszkaniowa' (pojęcie z ustawy o własności lokali, niesformalizowanej) powstaje jako skutek uboczny R-USM-0016/R-USM-0021 - ten obowiązek jest odrębny od R-USM-0019 (rozliczenie funduszu remontowego) i dotyczy bieżących, nie jednorazowych, kosztów."
+tests: []

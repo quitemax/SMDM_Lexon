@@ -1,0 +1,24 @@
+id: R-USM-0019
+norm_type: OBLIGATION
+title: "Rozliczenie funduszu remontowego przy przejściu na reżim UWL"
+source:
+  act: "Ustawa o spółdzielniach mieszkaniowych"
+  article: "24[1]"
+  paragraph: "5"
+  normalized_ref: "USM-ART-024-1"
+validity:
+  from: "2026-06-10"
+  to: null
+subject: "Spółdzielnia"
+condition: "zaszedł przypadek z R-USM-0016 (§1, uchwała większości) LUB z R-USM-0021 (USM-ART-026, wyodrębnienie ostatniego lokalu)"
+statement: >-
+  Spółdzielnia mieszkaniowa niezwłocznie rozlicza z właścicielami lokali
+  zaewidencjonowane wpływy i wydatki funduszu remontowego oraz pozostałe
+  nakłady na remonty nieruchomości.
+formalization_status: DIRECT
+references:
+  - target: R-USM-0016
+    type: RELATED_TO
+  - target: R-USM-0021
+    type: RELATED_TO
+tests: []

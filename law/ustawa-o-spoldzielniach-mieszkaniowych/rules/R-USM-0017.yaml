@@ -1,0 +1,35 @@
+id: R-USM-0017
+norm_type: STRUCTURAL
+title: "Uchwała o przejściu na reżim UWL nie narusza spółdzielczych praw do lokali"
+source:
+  act: "Ustawa o spółdzielniach mieszkaniowych"
+  article: "24[1]"
+  paragraph: "2"
+  normalized_ref: "USM-ART-024-1"
+validity:
+  from: "2026-06-10"
+  to: null
+subject: "Osoba"
+statement: >-
+  Uchwała, o której mowa w R-USM-0016 (§1), nie narusza przysługujących
+  członkom spółdzielni spółdzielczych praw do lokali.
+effect: >-
+  Uchwała zmienia reżim zarządu nieruchomością wspólną, ale sama z
+  siebie nie pozbawia nikogo spółdzielczego lokatorskiego/własnościowego
+  prawa do lokalu ani ekspektatywy - te trwają dalej, niezależnie od
+  uchwały.
+formalization_status: DIRECT
+note: >-
+  Norma ramowa bez własnych przesłanek do sprawdzenia - jak
+  R-PS-0010/0019/0032 (patrz `docs/agent-workflow.md` wzorzec), stąd
+  brak naturalnego testu NEGATIVE.
+
+  UNCERTAIN, celowo nierozstrzygnięte: czy przesłanka E7 w R-USM-0008
+  (ustanie członkostwa wskutek tej uchwały, USM-ART-003 §7) dotyczy
+  WSZYSTKICH członków w danej nieruchomości, czy tylko tych, których
+  tytułem prawnym jest odrębna własność lokalu (HAS_ODREBNA_WLASNOSC) -
+  logicznie tylko oni głosują w tej uchwale i tylko dla nich UWL
+  zastępuje spółdzielnię, ale USM-ART-003 §7 nie zawiera tego
+  ograniczenia wprost. Nie zgadujemy w żadną stronę (AGENTS.md sekcja
+  50) - R-USM-0008 (E7) też tego nie rozstrzyga.
+tests: []

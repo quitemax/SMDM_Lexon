@@ -1,0 +1,39 @@
+id: R-USM-0013
+norm_type: CONDITION
+title: "Zachowanie roszczenia osoby bliskiej - termin, rozstrzygnięcie przy wielu uprawnionych, zawiadomienie"
+source:
+  act: "Ustawa o spółdzielniach mieszkaniowych"
+  article: "15"
+  paragraph: "4"
+  normalized_ref: "USM-ART-015"
+validity:
+  from: "2026-06-10"
+  to: null
+subject: "Osoba"
+holder: "Osoba - w roli osoby bliskiej (R-USM-0012)"
+statement: >-
+  Do zachowania roszczeń z R-USM-0012 (§2) i USM-ART-015 §3 konieczne
+  jest złożenie w terminie jednego roku pisemnego zapewnienia gotowości
+  zawarcia umowy.
+deadline:
+  duration: 1
+  unit: YEARS
+  start_event: "wygaśnięcie lokatorskiego prawa wskutek śmierci uprawnionego (albo zdarzenie z §3)"
+  type: STATUTORY
+  overridable_by_statute: false
+conditions:
+  - "zgłosiła się więcej niż jedna uprawniona osoba -> rozstrzyga sąd w postępowaniu nieprocesowym, biorąc pod uwagę w szczególności, czy osoba uprawniona zamieszkiwała z byłym członkiem"
+  - "bezskuteczny upływ terminu wyznaczonego przez spółdzielnię na wystąpienie do sądu -> wyboru dokonuje spółdzielnia"
+effect: >-
+  Jeżeli o roszczeniu rozstrzygał sąd, osoby pozostające w sporze
+  niezwłocznie zawiadamiają o tym spółdzielnię. Do momentu zawiadomienia
+  spółdzielni, komu przypadło prawo, te osoby odpowiadają solidarnie za
+  opłaty z Art. 4 ust. 1 (niesformalizowany, odesłanie zachowane jako fakt).
+formalization_status: DIRECT
+note: "Struktura analogiczna do R-USM-0009 (sąd/wybór spółdzielni przy wielu uprawnionych), ale to odrębna reguła - inny krąg uprawnionych (osoby bliskie po śmierci, nie współuprawnieni do prawa własnościowego/odrębnej własności/ekspektatywy) i inny termin bazowy (roczny od śmierci, nie 12-miesięczny od wyznaczenia terminu przez spółdzielnię)."
+references:
+  - target: R-USM-0009
+    type: RELATED_TO
+  - target: R-USM-0012
+    type: RELATED_TO
+tests: ["T-USM-0013-01", "T-USM-0013-02"]

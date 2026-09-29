@@ -1,0 +1,12 @@
+id: T-USM-0012-01
+rule: R-USM-0012
+title: "Osoba bliska nabywa roszczenie po śmierci uprawnionego z lokatorskim prawem"
+category: POSITIVE
+status: SPECIFIED
+given:
+  - "uprawniony ze spółdzielczym lokatorskim prawem do lokalu zmarł"
+  - "prawo wygasło wskutek tej śmierci"
+when: "sprawdzenie warunku R-USM-0012"
+then:
+  result: true
+  because: "spełniona przesłanka §2 - roszczenie o zawarcie umowy na warunkach dotychczasowej umowy przysługuje osobom bliskim zmarłego"

@@ -1,0 +1,20 @@
+id: R-USM-0014
+norm_type: OBLIGATION
+title: "Wypłata wartości rynkowej lokalu przy wygaśnięciu roszczeń osób bliskich"
+source:
+  act: "Ustawa o spółdzielniach mieszkaniowych"
+  article: "15"
+  paragraph: "6"
+  normalized_ref: "USM-ART-015"
+validity:
+  from: "2026-06-10"
+  to: null
+subject: "Spółdzielnia"
+condition: "wygaśnięcie roszczeń z USM-ART-015 §3 (R-USM-0012/0013), LUB brak uprawnionych osób"
+statement: >-
+  Spółdzielnia wypłaca osobie uprawnionej wartość rynkową lokalu (R-USM-0004
+  D3), ustaloną zgodnie z Art. 11 ust. 2[1] i 2[2] (niesformalizowany,
+  odesłanie zachowane jako fakt).
+formalization_status: DIRECT
+note: "UNKNOWN, nie rozstrzygane tutaj: tekst mówi o wypłacie 'osobie uprawnionej' nawet w gałęzi 'braku uprawnionych osób' (drugi człon alternatywy) - kto konkretnie jest wtedy adresatem wypłaty nie jest jasne z samego USM-ART-015 §6 w izolacji (być może rozstrzyga to przepis prawa spadkowego albo inny fragment ustawy poza obecnym zasięgiem normalizacji). Nie zgadujemy (AGENTS.md sekcja 50) - `subject`/odbiorca pozostaje ogólnikowy 'osoba uprawniona', zgodnie z tekstem."
+tests: ["T-USM-0014-01", "T-USM-0014-02"]

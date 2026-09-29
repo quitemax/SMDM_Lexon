@@ -1,0 +1,18 @@
+id: T-USM-0013-01
+rule: R-USM-0013
+title: "Termin roczny na zapewnienie gotowości - granica"
+category: BOUNDARY
+status: SPECIFIED
+cases:
+  - label: "364 dni od śmierci uprawnionego (przed upływem)"
+    given: ["śmierć uprawnionego nastąpiła 364 dni temu", "osoba bliska jeszcze nie złożyła pisemnego zapewnienia gotowości"]
+    when: "sprawdzenie, czy roszczenie z R-USM-0012 jest jeszcze zachowane"
+    then:
+      result: true
+      because: "termin roczny jeszcze nie upłynął"
+  - label: "dokładnie rok od śmierci uprawnionego"
+    given: ["śmierć uprawnionego nastąpiła dokładnie rok temu", "osoba bliska złożyła pisemne zapewnienie gotowości tego samego dnia"]
+    when: "sprawdzenie, czy roszczenie z R-USM-0012 jest jeszcze zachowane"
+    then:
+      result: true
+      because: "zapewnienie złożone w ostatnim dniu terminu - jeszcze w jego granicach"

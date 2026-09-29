@@ -1,0 +1,12 @@
+id: T-USM-0015-01
+rule: R-USM-0015
+title: "Ustanie członkostwa przed zawarciem umowy o budowę daje roszczenie o przyjęcie i zawarcie umowy"
+category: POSITIVE
+status: SPECIFIED
+given:
+  - "osoba, o której mowa w USM-ART-015 §3, jeszcze nie zawarła umowy o budowę lokalu"
+  - "członkostwo tej osoby ustało w tym okresie oczekiwania"
+when: "sprawdzenie uprawnienia R-USM-0015"
+then:
+  result: true
+  because: "spełniony warunek - ustanie członkostwa w okresie poprzedzającym zawarcie umowy o budowę lokalu"
