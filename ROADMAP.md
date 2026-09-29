@@ -14,12 +14,15 @@ plus kontekst z Tytułu I (Art. 1-3, 5, 14). Poza Art. 23, 33, 34
 (w całości uchylone) i poza tym działem, cała reszta znormalizowanego
 materiału (Art. 35-281) jest **wyłącznie znormalizowana, bez żadnych
 reguł** — poza zakresem pierwszego wybranego fragmentu (patrz niżej).
-**Żadna reguła nie ma jeszcze testu.**
+**Wszystkie 40 reguł/procedur mają teraz testy (2026-09-29)** — 91
+plików w `tests/legal/`, GIVEN/WHEN/THEN, `status: SPECIFIED` (nie
+wykonane - `engine/evaluator/` wciąż puste, ADR-0003). Szczegóły w
+sekcji "Testy dla Dział III" niżej.
 
 **Kolejność ustalona z użytkownikiem (2026-09-29):** dokończyć pisanie
-reguł (Dział III — ZROBIONE) → formalizacja USM (Ustawa o
-spółdzielniach mieszkaniowych, następny krok) → Phase 3 (silnik,
-`engine/`, na bazie ADR-0003).
+reguł (Dział III — ZROBIONE) → testy (ZROBIONE) → formalizacja USM
+(Ustawa o spółdzielniach mieszkaniowych, następny krok) → Phase 3
+(silnik, `engine/`, na bazie ADR-0003).
 
 **Przystanek analityczny (2026-09-28):** przed powrotem do pisania reguł
 zrobiono audyt repo (skrypty walidujące, nie wrażenia) — patrz
@@ -272,11 +275,47 @@ artykuły w tym dziale (23, 33, 34) są w całości uchylone.
 
 - Art. 26 §2 odsyła do Art. 125 §5a (poza Działem III) - zachowane jako
   nierozwinięte odesłanie w `R-PS-0027`, nie sformalizowane teraz.
-- Testy (`T-PS-*`) - wciąż żadna reguła w całym repo ich nie ma. Zgodnie
-  z wcześniejszą decyzją (Przystanek analityczny, punkt 2) czekają na
-  ustabilizowanie schematu, który teraz jest gotowy - **test-writing to
-  naturalny kandydat na pierwszy krok formalizacji USM albo osobny krok
-  przed nią, do ustalenia z użytkownikiem.**
+
+------------------------------------------------------------------------
+
+## Testy dla Dział III (2026-09-29)
+
+**Decyzja użytkownika:** po dokończeniu reguł - testy, potem USM.
+
+**Zrobione:** `schema/legal-test.schema.json` + `schema/validate_tests.py`
+(patrz `tests/README.md`), a następnie 91 plików `tests/legal/T-PS-NNNN-MM.yaml`
+- co najmniej jeden test (zwykle POSITIVE + NEGATIVE, plus BOUNDARY tam,
+gdzie reguła ma realny próg liczbowy albo termin) dla wszystkich 40
+reguł/procedur w `rules/`+`procedures/`. `py schema/validate_tests.py`:
+0 błędów, 0 ostrzeżeń, 0 reguł bez testu.
+
+Zasady zastosowane konsekwentnie przy pisaniu (nie każda reguła dostała
+mechanicznie tę samą liczbę testów):
+
+- Normy ramowe bez własnych przesłanek (`R-PS-0010`, `R-PS-0019`,
+  `R-PS-0032`) dostały tylko test POSITIVE, z jawną notatką dlaczego
+  wymyślony test NEGATIVE byłby fikcją (AGENTS.md sekcja 8 - nie chować
+  niepewności, w tym przypadku "nie ma czego negować").
+- Pojęcia OPEN_TEXTURED (`R-PS-0005`, `R-PS-0016.grounds.wykluczenie`) -
+  GIVEN traktuje predykat jako już rozstrzygnięty przez organ
+  rozpoznający sprawę, nigdy jako wyliczony ze wzoru (AGENTS.md sekcja 9).
+- Terminy bez ustawowo określonej sankcji za przekroczenie
+  (`R-PS-0003` krok 2, `R-PS-0013` krok 2) - test graniczny zatrzymuje
+  się na "czy termin jeszcze biegnie", `result: "UNKNOWN"` dla stanu po
+  terminie, zamiast zgadywać skutek (AGENTS.md sekcja 50).
+- Wyjątek odsyłający do niesformalizowanego artykułu (`R-PS-0027` E1,
+  Art. 125 §5a) - nie testowany, z wyjaśnieniem wprost w pliku testu.
+- Testy graniczne z kilkoma powiązanymi punktami (np. n = minimum-1/
+  minimum/minimum+1) użyły pola `cases` w jednym pliku zamiast rozbijania
+  na kilka osobnych ID (AGENTS.md sekcja 28 przedstawia je jako jeden
+  zestaw).
+
+Wszystkie testy mają `status: SPECIFIED` - żaden silnik ich nie wykonał
+(`engine/evaluator/` puste, ADR-0003). Wartość już teraz: pisanie ich
+wymusiło dokładniejsze spojrzenie na warunki/wyjątki/granice niż samo
+pisanie reguł - kilka nietrywialnych rozróżnień (np. R-PS-0033 dwa
+niezależne terminy, R-PS-0022 dwie niezależne bramki blokujące zwrot)
+wypłynęło właśnie przy tej pracy.
 
 ------------------------------------------------------------------------
 
