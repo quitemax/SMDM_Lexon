@@ -1,0 +1,13 @@
+id: T-PS-0039-01
+rule: R-PS-0039
+title: "Wniesienie odwołania wewnątrzspółdzielczego zawiesza bieg przedawnienia"
+category: POSITIVE
+status: SPECIFIED
+given:
+  - "statut przewiduje postępowanie wewnątrzspółdzielcze (R-PS-0038 spełniona)"
+  - "członek wniósł odwołanie w tym postępowaniu"
+  - "biegnie termin przedawnienia roszczenia z R-PS-0034 (3 lata)"
+when: "sprawdzenie warunku R-PS-0039"
+then:
+  result: true
+  because: "`condition` spełniony - bieg terminu przedawnienia z R-PS-0034 ulega zawieszeniu do zakończenia postępowania wewnątrzspółdzielczego"

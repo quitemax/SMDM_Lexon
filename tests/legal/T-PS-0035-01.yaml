@@ -1,0 +1,11 @@
+id: T-PS-0035-01
+rule: R-PS-0035
+title: "Rejestr członków zawierający wszystkie wymagane pozycje spełnia Art. 30"
+category: POSITIVE
+status: SPECIFIED
+given:
+  - "rejestr członków prowadzony przez Zarząd zawiera dane odpowiadające pozycjom O1-O5"
+when: "sprawdzenie treści rejestru wg R-PS-0035"
+then:
+  result: true
+  because: "wszystkie pięć pozycji `items` obecne"

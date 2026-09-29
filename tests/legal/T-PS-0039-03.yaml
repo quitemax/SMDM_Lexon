@@ -1,0 +1,18 @@
+id: T-PS-0039-03
+rule: R-PS-0039
+title: "Limit zawieszenia - nie dłużej niż rok od dnia, w którym organ powinien rozpatrzyć odwołanie"
+category: BOUNDARY
+status: SPECIFIED
+cases:
+  - label: "11 miesięcy po dniu, w którym organ powinien rozpatrzyć odwołanie (postępowanie wciąż trwa)"
+    given: ["odwołanie wniesione, nierozpatrzone jeszcze 11 miesięcy po terminie, w którym organ powinien je rozpatrzyć"]
+    when: "sprawdzenie, czy zawieszenie z R-PS-0039 nadal trwa"
+    then:
+      result: true
+      because: "11 miesięcy < roczny limit - zawieszenie nadal trwa"
+  - label: "dokładnie rok po dniu, w którym organ powinien rozpatrzyć odwołanie"
+    given: ["odwołanie wniesione, nierozpatrzone jeszcze dokładnie rok po terminie, w którym organ powinien je rozpatrzyć"]
+    when: "sprawdzenie, czy zawieszenie z R-PS-0039 nadal trwa"
+    then:
+      result: false
+      because: "roczny limit `nie dłużej niż rok` upływa tego dnia - zawieszenie kończy się niezależnie od tego, czy postępowanie wewnątrzspółdzielcze faktycznie się zakończyło"

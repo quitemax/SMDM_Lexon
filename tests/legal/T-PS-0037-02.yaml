@@ -1,0 +1,11 @@
+id: T-PS-0037-02
+rule: R-PS-0037
+title: "Bez żądania członka obowiązek wydania odpisu jeszcze nie aktualny"
+category: NEGATIVE
+status: SPECIFIED
+given:
+  - "żaden członek nie zgłosił żądania wydania odpisu statutu"
+when: "sprawdzenie obowiązku R-PS-0037"
+then:
+  result: false
+  because: "`condition: żądanie zgłoszone przez członka` niespełniony - obowiązek Zarządu z Art. 31 jest aktualizowany dopiero żądaniem, nie istnieje z góry bezwarunkowo"

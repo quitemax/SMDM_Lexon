@@ -22,4 +22,4 @@ formalization_status: DIRECT
 references:
   - target: R-PS-0038
     type: LIMITS
-tests: []
+tests: ["T-PS-0040-01", "T-PS-0040-02", "T-PS-0040-03"]

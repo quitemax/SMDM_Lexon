@@ -1,0 +1,12 @@
+id: T-PS-0035-02
+rule: R-PS-0035
+title: "Rejestr bez dat przyjęcia/ustania członkostwa (O5) nie spełnia Art. 30"
+category: NEGATIVE
+status: SPECIFIED
+given:
+  - "rejestr członków zawiera dane odpowiadające pozycjom O1-O4"
+  - "rejestr nie zawiera dat przyjęcia w poczet członków ani dat wypowiedzenia/ustania członkostwa (O5)"
+when: "sprawdzenie treści rejestru wg R-PS-0035"
+then:
+  result: false
+  because: "pozycja O5 nieobecna - obowiązek z Art. 30 niespełniony w tym zakresie"

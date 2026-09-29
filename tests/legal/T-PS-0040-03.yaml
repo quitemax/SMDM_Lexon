@@ -1,0 +1,11 @@
+id: T-PS-0040-03
+rule: R-PS-0040
+title: "Równoległe zaskarżenie wewnątrzspółdzielcze i sądowe umarza postępowanie wewnątrzspółdzielcze"
+category: POSITIVE
+status: SPECIFIED
+given:
+  - "członek zaskarżył uchwałę organu spółdzielni równocześnie w postępowaniu wewnątrzspółdzielczym (R-PS-0038) i w postępowaniu sądowym"
+when: "sprawdzenie skutku wg `effect` reguły R-PS-0040"
+then:
+  result: "postępowanie wewnątrzspółdzielcze ulega umorzeniu"
+  because: "droga sądowa ma pierwszeństwo - to konkretyzacja zakazu ograniczania drogi sądowej z §3 zdanie pierwsze"

@@ -1,0 +1,11 @@
+id: T-PS-0036-01
+rule: R-PS-0036
+title: "Członek ma prawo przeglądać rejestr członków"
+category: POSITIVE
+status: SPECIFIED
+given:
+  - "osoba żądająca wglądu jest członkiem spółdzielni"
+when: "sprawdzenie uprawnienia R-PS-0036"
+then:
+  result: true
+  because: "Członek jest jedną z czterech kategorii w `holders`"

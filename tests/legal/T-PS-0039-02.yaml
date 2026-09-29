@@ -1,0 +1,12 @@
+id: T-PS-0039-02
+rule: R-PS-0039
+title: "Bez wniesienia odwołania wewnątrzspółdzielczego bieg przedawnienia nie jest zawieszony"
+category: NEGATIVE
+status: SPECIFIED
+given:
+  - "statut przewiduje postępowanie wewnątrzspółdzielcze (R-PS-0038 spełniona)"
+  - "członek nie wniósł żadnego odwołania w tym postępowaniu"
+when: "sprawdzenie warunku R-PS-0039"
+then:
+  result: false
+  because: "`condition` niespełniony - bieg terminu przedawnienia z R-PS-0034 toczy się normalnie, bez zawieszenia"

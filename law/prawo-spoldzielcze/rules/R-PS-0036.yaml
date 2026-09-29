@@ -22,4 +22,4 @@ note: "Cztery kategorie uprawnionych, nie jedna - stąd `holders` (lista), a nie
 references:
   - target: R-PS-0035
     type: RELATED_TO
-tests: []
+tests: ["T-PS-0036-01", "T-PS-0036-02"]

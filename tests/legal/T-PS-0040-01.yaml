@@ -1,0 +1,12 @@
+id: T-PS-0040-01
+rule: R-PS-0040
+title: "Postanowienie statutu ograniczające drogę sądową jest zakazane"
+category: POSITIVE
+status: SPECIFIED
+given:
+  - "statut wprowadza postępowanie wewnątrzspółdzielcze (R-PS-0038)"
+  - "postanowienie statutu próbuje wyłączyć możliwość dochodzenia praw członka na drodze sądowej"
+when: "sprawdzenie zakazu R-PS-0040"
+then:
+  result: true
+  because: "PS-ART-032 §3 zdanie pierwsze zakazuje takiego ograniczenia niezależnie od treści statutu"

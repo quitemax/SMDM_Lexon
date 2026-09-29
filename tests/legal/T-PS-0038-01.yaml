@@ -1,0 +1,12 @@
+id: T-PS-0038-01
+rule: R-PS-0038
+title: "Statut wprowadzający postępowanie wewnątrzspółdzielcze z pełną wymaganą treścią"
+category: POSITIVE
+status: SPECIFIED
+given:
+  - "statut przewiduje postępowanie wewnątrzspółdzielcze dla określonych spraw"
+  - "statut zawiera zasady i tryb tego postępowania oraz terminy wniesienia i rozpatrzenia odwołania (R1-R2)"
+when: "sprawdzenie wymaganej treści statutu wg R-PS-0038"
+then:
+  result: true
+  because: "statut skorzystał z dozwolenia z §1 i zawiera całą wymaganą przy tym treść"

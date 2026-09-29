@@ -18,4 +18,4 @@ note: "Odpowiada wprost prawu R3 z R-PS-0004 ('otrzymania odpisu statutu i regul
 references:
   - target: R-PS-0004
     type: CORRESPONDS_TO
-tests: []
+tests: ["T-PS-0037-01", "T-PS-0037-02"]

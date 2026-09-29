@@ -1,0 +1,11 @@
+id: T-PS-0037-01
+rule: R-PS-0037
+title: "Zarząd musi wydać odpis statutu na żądanie członka"
+category: POSITIVE
+status: SPECIFIED
+given:
+  - "członek zgłasza żądanie wydania odpisu statutu i regulaminów"
+when: "sprawdzenie obowiązku R-PS-0037"
+then:
+  result: true
+  because: "`condition: żądanie zgłoszone przez członka` spełniony - odpowiada prawu R3 z R-PS-0004"

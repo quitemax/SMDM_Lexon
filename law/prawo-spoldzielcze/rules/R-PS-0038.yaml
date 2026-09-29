@@ -23,4 +23,4 @@ required_content_if_exercised:
     text: "w szczególności terminy wniesienia i rozpatrzenia odwołania"
 formalization_status: DIRECT
 note: "Struktura identyczna z R-PS-0021 (PS-ART-020 §2) - dozwolenie dla statutu, z wymaganą treścią TYLKO jeśli statut z niego skorzysta. Skutki takiego postępowania (zawieszenie terminów, brak ograniczenia drogi sądowej) są w R-PS-0039/R-PS-0040 - te stosuje się niezależnie od tego, czy statut faktycznie wprowadził tę instytucję."
-tests: []
+tests: ["T-PS-0038-01", "T-PS-0038-02"]

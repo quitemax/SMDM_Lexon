@@ -1,0 +1,11 @@
+id: T-PS-0036-02
+rule: R-PS-0036
+title: "Osoba trzecia niebędąca w żadnej z czterech kategorii nie ma prawa wglądu"
+category: NEGATIVE
+status: SPECIFIED
+given:
+  - "osoba żądająca wglądu nie jest członkiem, małżonkiem członka, wierzycielem członka ani wierzycielem spółdzielni"
+when: "sprawdzenie uprawnienia R-PS-0036"
+then:
+  result: false
+  because: "żadna z czterech kategorii `holders` nie obejmuje tej osoby - PS-ART-030 nie przyznaje jej tego prawa (co nie wyklucza dostępu na innej podstawie prawnej, poza zakresem tej reguły)"

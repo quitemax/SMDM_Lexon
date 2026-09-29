@@ -1,0 +1,12 @@
+id: T-PS-0038-02
+rule: R-PS-0038
+title: "Statut wprowadzający postępowanie bez terminów wniesienia/rozpatrzenia odwołania"
+category: NEGATIVE
+status: SPECIFIED
+given:
+  - "statut przewiduje postępowanie wewnątrzspółdzielcze dla określonych spraw"
+  - "statut nie określa terminów wniesienia ani rozpatrzenia odwołania (brak pozycji R2)"
+when: "sprawdzenie wymaganej treści statutu wg R-PS-0038"
+then:
+  result: false
+  because: "statut skorzystał z dozwolenia z §1, ale nie zawiera całej wymaganej przy tym treści - pozycja R2 nieobecna"

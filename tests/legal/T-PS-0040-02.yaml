@@ -1,0 +1,12 @@
+id: T-PS-0040-02
+rule: R-PS-0040
+title: "Statut, który nie ogranicza drogi sądowej, nie narusza Art. 32 §3"
+category: NEGATIVE
+status: SPECIFIED
+given:
+  - "statut wprowadza postępowanie wewnątrzspółdzielcze (R-PS-0038)"
+  - "statut nie zawiera żadnego postanowienia ograniczającego dochodzenie praw na drodze sądowej"
+when: "sprawdzenie zakazu R-PS-0040"
+then:
+  result: false
+  because: "brak postanowienia naruszającego zakaz - zwykły, prawidłowo skonstruowany przypadek postępowania wewnątrzspółdzielczego obok drogi sądowej"
