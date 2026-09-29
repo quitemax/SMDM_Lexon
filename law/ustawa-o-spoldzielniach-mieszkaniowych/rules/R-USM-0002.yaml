@@ -1,0 +1,37 @@
+id: R-USM-0002
+norm_type: PROHIBITION
+title: "Wyłączenie przepisów Prawa spółdzielczego o wystąpieniu, wykluczeniu i wykreśleniu"
+source:
+  act: "Ustawa o spółdzielniach mieszkaniowych"
+  article: "1"
+  paragraph: "8"
+  normalized_ref: "USM-ART-001"
+validity:
+  from: "2026-06-10"
+  to: null
+subject: "Spółdzielnia"
+statement: >-
+  Przepisów Prawa spółdzielczego dotyczących wystąpienia ze spółdzielni,
+  wykluczenia ze spółdzielni i wykreślenia z rejestru członków
+  spółdzielni nie stosuje się do spółdzielni mieszkaniowych.
+disapplies:
+  - target: "R-PS-0023"
+    text: "Art. 22 - prawo wystąpienia za wypowiedzeniem (ogólne, dla każdego członka)"
+  - target: "R-PS-0016"
+    text: "Art. 24 - procedura wykluczenia/wykreślenia"
+effect: >-
+  Zamiast ogólnego prawa z R-PS-0023, węższe prawo: osoba będąca
+  założycielem spółdzielni oraz właściciel lokalu będący członkiem
+  spółdzielni może wystąpić z niej za wypowiedzeniem. Zwykły członek,
+  który jest członkiem z tytułu spółdzielczego prawa do lokalu
+  (lokatorskiego albo własnościowego) lub ekspektatywy, nie ma tego
+  prawa - jego członkostwo jest związane z tytułem prawnym do lokalu i
+  ustaje wraz z nim (R-USM-0007/0008), nie przez wypowiedzenie.
+formalization_status: DIRECT
+note: "To jest bezpośrednie potwierdzenie ustawowe (nie tylko empiryczne, statutowe) faktu z OBS-0001: ta konkretna spółdzielnia mieszkaniowa nie ma trybu wykluczenia/wykreślenia w statucie (§§18-24 skreślone) właśnie dlatego, że ustawa go wyłącza dla WSZYSTKICH spółdzielni mieszkaniowych, nie tylko dla tej jednej."
+references:
+  - target: R-PS-0016
+    type: DISAPPLIES
+  - target: R-PS-0023
+    type: LIMITS
+tests: []

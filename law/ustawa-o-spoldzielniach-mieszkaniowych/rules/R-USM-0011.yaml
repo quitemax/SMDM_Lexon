@@ -1,0 +1,34 @@
+id: R-USM-0011
+norm_type: CONDITION
+title: "Ustanie członkostwa założycieli bez ustanowienia prawa do lokalu w 3 lata"
+source:
+  act: "Ustawa o spółdzielniach mieszkaniowych"
+  article: "3"
+  paragraph: "9"
+  normalized_ref: "USM-ART-003"
+validity:
+  from: "2026-06-10"
+  to: null
+subject: "Osoba"
+condition: "osoba jest członkiem na podstawie bycia założycielem spółdzielni (R-USM-0005/0006, T7 w R-USM-0007)"
+statement: >-
+  Członkostwo osób będących założycielami spółdzielni ustaje, jeżeli w
+  ciągu trzech lat od chwili wpisania spółdzielni do Krajowego Rejestru
+  Sądowego spółdzielnia nie ustanowi na ich rzecz spółdzielczego
+  lokatorskiego prawa do lokalu mieszkalnego, prawa odrębnej własności
+  lokalu, albo nie dojdzie do zawarcia umowy o budowę lokalu.
+triggers_event: "MembershipCeased (reason: ZALOZYCIEL_BRAK_PRAWA_W_3_LATA)"
+deadline:
+  duration: 3
+  unit: YEARS
+  start_event: "wpisanie spółdzielni do Krajowego Rejestru Sądowego"
+  type: STATUTORY
+  overridable_by_statute: false
+formalization_status: DIRECT
+note: "Dziewiąta przesłanka MembershipCeased, osobna od ośmiu w R-USM-0008, bo dotyczy wyłącznie podstawy członkostwa 'założyciel' (T7 z R-USM-0007), nie żadnego z czterech tytułów prawnych do lokalu."
+references:
+  - target: R-USM-0007
+    type: RELATED_TO
+  - target: R-USM-0008
+    type: RELATED_TO
+tests: []

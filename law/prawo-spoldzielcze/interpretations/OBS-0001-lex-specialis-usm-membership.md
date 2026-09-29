@@ -123,23 +123,31 @@ precyzuje, które artykuły faktycznie go niosą.
    spółdzielni, w tym rezydualnie dla spółdzielni mieszkaniowych w zakresie,
    którego USM nie reguluje odmiennie (np. Art. 18 prawa/obowiązki, Art.
    19–21 udziały i wpisowe, Art. 25–28 wypłata udziałów, dziedziczenie).
-2. Reguły formalizowane z **Art. 16, 16a, 17, 24** muszą mieć jawną adnotację
-   `SCOPE_NOTE` wskazującą na OBS-0001 — że dla spółdzielni mieszkaniowej
-   zastosowanie tych przepisów jest **ograniczone/wyparte** przez USM Art.
-   3 ust. 3[2]/6/7 (z pomocniczym odesłaniem do Art. 15, 24[1], 26) w
-   zakresie odpowiednio: powstania i ustania członkostwa związanego z
-   prawem do lokalu.
+2. **ZROBIONE (2026-09-29):** `R-PS-0003` i `R-PS-0016` mają teraz
+   `scope_note` wskazujący na OBS-0001 (status RESOLVED) i jawne pole
+   `references` do konkretnych reguł USM (`R-USM-0002`/`R-USM-0006`/
+   `R-USM-0007`/`R-USM-0008`), nie tylko na numery artykułów.
 3. **Nie wolno** formalizować Art. 16–17 lub Art. 24 jako "tej samej"
    procedury, którą w rzeczywistości stosuje ta konkretna spółdzielnia —
    byłoby to sprzeczne z FACT ustalonym powyżej i naruszałoby zasadę
    `SOURCE > MODEL` (AGENTS.md sekcja 1).
-4. Formalizacja USM Art. 1-3, 15, 24[1], 26 - **w toku od 2026-09-29**,
-   `law/ustawa-o-spoldzielniach-mieszkaniowych/`, patrz `ROADMAP.md`.
+4. Formalizacja USM Art. 1-3 - **ZROBIONE (2026-09-29)**,
+   `law/ustawa-o-spoldzielniach-mieszkaniowych/rules/R-USM-0001..0011`.
+   Art. 15, 24[1], 26 znormalizowane (AKN) i cytowane, ale ich własna
+   treść poza to, co Art. 3 potrzebuje, jeszcze nie sformalizowana -
+   patrz `rules/README.md` tego aktu.
 
 ## Status
 
-`UNRESOLVED` — FACT strony USM teraz ustalony poprawnie (patrz KOREKTA
-wyżej) i formalizacja w toku (`law/ustawa-o-spoldzielniach-mieszkaniowych/`),
-ale reguły USM jeszcze nie istnieją - status zmieni się na `RESOLVED`
-dopiero, gdy R-USM dla Art. 3 (powstanie/ustanie członkostwa) będą
-gotowe i jawnie powiązane z tym obserwowanym konfliktem.
+`RESOLVED` (2026-09-29) — FACT strony USM ustalony poprawnie z tekstu
+(patrz KOREKTA wyżej), i rdzeń konfliktu sformalizowany:
+`R-USM-0007`/`R-USM-0008` (powstanie/ustanie członkostwa ex lege) oraz
+`R-USM-0002`/`R-USM-0003` (wyraźne, ustawowe wyłączenie odpowiednich
+przepisów PS) jawnie odsyłają do dysaplikowanych reguł PS
+(`R-PS-0003`, `R-PS-0016`, `R-PS-0018`, `R-PS-0020`, `R-PS-0021`,
+`R-PS-0022`, `R-PS-0023`) i odwrotnie. Mechanizm rozstrzygania
+(lex_specialis) jest teraz wykonalny jako jawna reguła, nie tylko
+obserwacja. Nadal otwarte: Art. 15/24[1]/26 mają własną treść poza to,
+co Art. 3 cytuje (patrz `rules/README.md` USM) - nie blokuje to
+rozwiązania tego konkretnego konfliktu, ale zostaje jako osobny,
+dalszy krok formalizacji USM.

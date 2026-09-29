@@ -1,0 +1,48 @@
+id: R-USM-0007
+norm_type: CONDITION
+title: "Powstanie członkostwa ex lege"
+source:
+  act: "Ustawa o spółdzielniach mieszkaniowych"
+  article: "3"
+  paragraph: "3[2]"
+  normalized_ref: "USM-ART-003"
+validity:
+  from: "2026-06-10"
+  to: null
+subject: "Osoba"
+statement: "Członkostwo w spółdzielni powstaje z chwilą jednego z siedmiu zdarzeń:"
+items:
+  - id: T1
+    text: "nabycia roszczenia o ustanowienie spółdzielczego lokatorskiego prawa do lokalu mieszkalnego"
+  - id: T2
+    text: "nabycia ekspektatywy własności"
+  - id: T3
+    text: "zawarcia umowy nabycia spółdzielczego własnościowego prawa do lokalu"
+  - id: T4
+    text: "zawarcia umowy o ustanowienie spółdzielczego lokatorskiego prawa do lokalu mieszkalnego, jeżeli członkostwo nie zostało nabyte wcześniej"
+  - id: T5
+    text: "upływu terminu jednego roku z Art. 15 ust. 4 (przypadek śmierci uprawnionego, Art. 15 ust. 2-3), jeżeli przed upływem terminu jedna z osób bliskich złożyła pisemne zapewnienie gotowości zawarcia umowy, z zastrzeżeniem T6"
+    source: "USM-ART-003 §3[2] pkt 5, w związku z USM-ART-015"
+  - id: T6
+    text: "prawomocnego rozstrzygnięcia sądu w postępowaniu nieprocesowym albo wyboru dokonanego przez spółdzielnię (Art. 15 ust. 4), gdy więcej niż jedna osoba bliska złożyła takie zapewnienie"
+    source: "USM-ART-003 §3[2] pkt 6, w związku z USM-ART-015"
+  - id: T7
+    text: "wpisania spółdzielni do Krajowego Rejestru Sądowego, dla osób będących założycielami spółdzielni"
+triggers_event: "MembershipArose"
+effect: "Membership.status: null -> ACTIVE (ontology/states/membership_status.yaml)"
+formalization_status: DIRECT
+note: >-
+  To jest reguła, która rozwiązuje OBS-0001 od strony 'powstania
+  członkostwa' - potwierdza wprost, że mechanizm jest ex lege (jedno z
+  siedmiu zdarzeń faktycznych), nie deklaracja + uchwała organu
+  (R-PS-0003/PS Art. 16-17). T5/T6 są jedynym miejscem, gdzie Art. 15
+  (obecny zasięg normalizacji) wchodzi w grę - nie jako główny przepis o
+  powstaniu członkostwa (błędne pierwotne ustalenie OBS-0001, teraz
+  skorygowane), tylko jako źródło terminu dla tego jednego,
+  szczególnego przypadku (śmierć uprawnionego w okresie oczekiwania).
+references:
+  - target: R-USM-0008
+    type: RELATED_TO
+  - target: R-PS-0003
+    type: SUPERSEDES
+tests: []

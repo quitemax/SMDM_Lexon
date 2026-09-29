@@ -90,12 +90,22 @@ steps:
     source: "PS-ART-024 §10"
 formalization_status: STRUCTURAL
 scope_note: >-
-  Patrz law/prawo-spoldzielcze/interpretations/OBS-0001-lex-specialis-usm-membership.md.
-  Ta procedura jest zapisana wiernie wg tekstu ustawy, ale dla realnej
-  spółdzielni mieszkaniowej z Knowledge Base jest NIEUŻYWANA - jej statut ma
-  odpowiadające paragrafy (§§18-24 dot. ustania członkostwa) formalnie
-  skreślone, a ustanie członkostwa przebiega wyłącznie wg USM (utrata prawa
-  do lokalu, USM Art. 24[1], 26). Nie oznacza to błędu w tej formalizacji -
-  to legalny, choć w tym konkretnym przypadku martwy, przepis ustawy ogólnej.
+  Patrz law/prawo-spoldzielcze/interpretations/OBS-0001-lex-specialis-usm-membership.md
+  (status RESOLVED od 2026-09-29, patrz KOREKTA w tym pliku). Ta
+  procedura jest zapisana wiernie wg tekstu ustawy, ale dla realnej
+  spółdzielni mieszkaniowej z Knowledge Base jest NIEUŻYWANA - jej statut
+  ma odpowiadające paragrafy (§§18-24 dot. ustania członkostwa) formalnie
+  skreślone (R-USM-0002 wyjaśnia dlaczego: USM-ART-001 §8 wyłącza
+  stosowanie PS Art. 24 dla WSZYSTKICH spółdzielni mieszkaniowych, nie
+  tylko dla tej jednej), a ustanie członkostwa przebiega wyłącznie wg
+  R-USM-0008 (USM-ART-003 §6-7, osiem zdarzeń, w tym odesłania do
+  USM-ART-024[1]/026). Nie oznacza to błędu w tej formalizacji - to
+  legalny, choć dla spółdzielni mieszkaniowych wyłączony przepis ustawy
+  ogólnej.
 note: "`strength: DEFEASIBLE` na `grounds.wykluczenie` (ADR-0002) - tylko ta podstawa zależy od pojęć OPEN_TEXTURED (C-PS-0001, C-PS-0002); `grounds.wykreślenie` zostaje bez tego pola, bo jej przesłanka nie jest tak oznaczona w tym pliku."
+references:
+  - target: R-USM-0002
+    type: DISAPPLIED_BY
+  - target: R-USM-0008
+    type: RELATED_TO
 tests: ["T-PS-0016-01", "T-PS-0016-02", "T-PS-0016-03", "T-PS-0016-04", "T-PS-0016-05"]

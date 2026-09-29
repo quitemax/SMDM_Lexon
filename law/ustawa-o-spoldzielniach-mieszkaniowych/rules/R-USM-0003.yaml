@@ -1,0 +1,50 @@
+id: R-USM-0003
+norm_type: PROHIBITION
+title: "Wyłączenie przepisów Prawa spółdzielczego o udziałach, wpisowym i deklaracji"
+source:
+  act: "Ustawa o spółdzielniach mieszkaniowych"
+  article: "1"
+  paragraph: "9"
+  normalized_ref: "USM-ART-001"
+validity:
+  from: "2026-06-10"
+  to: null
+subject: "Spółdzielnia"
+statement: >-
+  Nie stosuje się przepisów Prawa spółdzielczego dotyczących udziałów i
+  wpisowego, a także przepisów dotyczących obowiązku złożenia deklaracji
+  w celu przyjęcia w poczet członków spółdzielni.
+exceptions:
+  - id: "R-USM-0003-E1"
+    text: "Z zastrzeżeniem art. 3 (USM-ART-003 §3[1] - dla właściciela lokalu, który nie jest jeszcze członkiem, odpowiednio stosuje się Art. 16 Prawa spółdzielczego, czyli właśnie obowiązek złożenia deklaracji)."
+    source: "USM-ART-001 §9"
+disapplies:
+  - target: "R-PS-0018"
+    text: "Art. 19 §1-2 - obowiązki finansowe (wpisowe, udziały)"
+  - target: "R-PS-0020"
+    text: "Art. 20 §1 - obowiązek zadeklarowania udziału"
+  - target: "R-PS-0021"
+    text: "Art. 20 §2 - wkłady"
+  - target: "R-PS-0022"
+    text: "Art. 21 - zakaz żądania zwrotu wpłat na udziały"
+  - target: "R-PS-0003"
+    text: "Art. 16-17 - procedura przyjęcia przez deklarację + uchwałę (poza wyjątkiem E1)"
+formalization_status: DIRECT
+note: >-
+  Konsekwencja: dla typowego członka spółdzielni mieszkaniowej
+  (lokatorskie/własnościowe prawo, ekspektatywa) NIE ISTNIEJE pojęcie
+  "udziału" w znaczeniu R-PS-0018/0020/0022 - ten blok reguł PS jest
+  martwy dla tej kategorii aktu, nie tylko dla jednego konkretnego
+  statutu. Wyjątek E1 jest jedynym miejscem, gdzie mechanizm deklaracji
+  z PS Art. 16 wraca (dla właściciela lokalu, który nie jest jeszcze
+  członkiem) - dokładnie to, co OBS-0001 ustaliło empirycznie ze
+  statutu realnej spółdzielni, teraz potwierdzone wprost w tekście USM.
+
+  UNCERTAIN, celowo nierozstrzygnięte tutaj: czy `R-PS-0019` (Art. 19
+  §3, brak odpowiedzialności osobistej członka wobec wierzycieli
+  spółdzielni) należy do "przepisów dotyczących udziałów i wpisowego" w
+  rozumieniu tego ustępu. Tekst USM nie precyzuje granicy między §1-2 i
+  §3 tego samego artykułu PS - nie zgadujemy w żadną stronę (AGENTS.md
+  sekcja 50), stąd R-PS-0019 NIE jest tu wymieniony w `disapplies` ani
+  jako stosujący się wprost.
+tests: []

@@ -1,0 +1,38 @@
+id: R-USM-0005
+norm_type: CONDITION
+title: "Kto jest członkiem spółdzielni - osoba fizyczna"
+source:
+  act: "Ustawa o spółdzielniach mieszkaniowych"
+  article: "3"
+  paragraph: "1, 2"
+  normalized_ref: "USM-ART-003"
+validity:
+  from: "2026-06-10"
+  to: null
+subject: "Osoba"
+statement: >-
+  Członkiem spółdzielni jest osoba fizyczna, choćby nie miała zdolności
+  do czynności prawnych albo miała ograniczoną zdolność do czynności
+  prawnych, jeżeli spełnia jeden z czterech warunków, albo jest
+  założycielem.
+conditions:
+  - "HAS_LOKATORSKIE_PRAWO(osoba, lokal), LUB"
+  - "HAS_WLASNOSCIOWE_PRAWO(osoba, lokal), LUB"
+  - "HAS_ROSZCZENIE_O_LOKATORSKIE_PRAWO(osoba, lokal), LUB"
+  - "HAS_EKSPEKTATYWA_WLASNOSCI(osoba, lokal), LUB"
+  - "osoba jest założycielem spółdzielni, z zastrzeżeniem R-USM-0011 (§9 - termin 3 lat)"
+effect: >-
+  Członkami spółdzielni są oboje małżonkowie, jeżeli prawo do lokalu
+  przysługuje im wspólnie, albo jeżeli wspólnie ubiegają się o zawarcie
+  umowy o ustanowienie spółdzielczego lokatorskiego prawa do lokalu
+  mieszkalnego albo prawa odrębnej własności lokalu (§2) - wyjątek od
+  ogólnej zasady R-USM-0009 (tylko jedna osoba może być członkiem przy
+  jednym tytule prawnym).
+formalization_status: DIRECT
+note: "W odróżnieniu od R-PS-0001 (PS Art. 15 §2-4, warunek ogólny 'pełna zdolność do czynności prawnych, chyba że statut dopuści wyjątek'), tu brak zdolności do czynności prawnych NIE jest przeszkodą wprost w tekście ustawy - to jest realna różnica materialna między ogólnym mechanizmem PS a szczególnym USM, nie tylko różnica formy zapisu."
+references:
+  - target: R-USM-0009
+    type: LIMITED_BY
+  - target: R-USM-0011
+    type: LIMITED_BY
+tests: []

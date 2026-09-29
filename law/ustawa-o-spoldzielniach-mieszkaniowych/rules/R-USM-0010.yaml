@@ -1,0 +1,33 @@
+id: R-USM-0010
+norm_type: CONDITION
+title: "Wiele tytułów prawnych jednego członka - utrata dopiero przy utracie wszystkich"
+source:
+  act: "Ustawa o spółdzielniach mieszkaniowych"
+  article: "3"
+  paragraph: "8"
+  normalized_ref: "USM-ART-003"
+validity:
+  from: "2026-06-10"
+  to: null
+subject: "Osoba"
+condition: "członkowi przysługuje w danej spółdzielni więcej niż jeden tytuł prawny do lokalu będący podstawą uzyskania członkostwa (patrz R-USM-0005/0006)"
+statement: >-
+  Jeżeli członkowi przysługuje w danej spółdzielni więcej niż jeden
+  tytuł prawny do lokalu będący podstawą uzyskania członkostwa, utrata
+  członkostwa następuje dopiero w przypadku utraty wszystkich tytułów
+  prawnych do lokali w ramach tej spółdzielni. Przepis ten stosuje się
+  odpowiednio do członka będącego stroną umowy lub umów o budowę lokalu
+  lub lokali.
+effect: >-
+  Ogranicza R-USM-0008 (MembershipCeased) - zdarzenie E1-E6 dotyczące
+  JEDNEGO z kilku tytułów prawnych danej osoby NIE wywołuje
+  MembershipCeased, dopóki osoba ma choć jeden inny aktywny tytuł
+  prawny (HAS_LOKATORSKIE_PRAWO / HAS_WLASNOSCIOWE_PRAWO /
+  HAS_ODREBNA_WLASNOSC / HAS_EKSPEKTATYWA_WLASNOSCI / umowa o budowę
+  lokalu) do innego lokalu w tej samej spółdzielni.
+formalization_status: DIRECT
+note: "Ta reguła jest warunkiem wstępnym dla ewaluacji R-USM-0008, nie odrębnym zdarzeniem - patrz `note` w ontology/events/membership_ceased.yaml (AGENTS.md sekcja 45, unikaj magii - warunek ma być tu jawny, nie zaszyty domyślnie w evencie)."
+references:
+  - target: R-USM-0008
+    type: LIMITS
+tests: []

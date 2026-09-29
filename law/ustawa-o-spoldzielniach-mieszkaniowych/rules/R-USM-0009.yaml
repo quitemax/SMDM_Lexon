@@ -1,0 +1,33 @@
+id: R-USM-0009
+norm_type: CONDITION
+title: "Wielu uprawnionych do jednego tytułu prawnego - tylko jeden członek"
+source:
+  act: "Ustawa o spółdzielniach mieszkaniowych"
+  article: "3"
+  paragraph: "5"
+  normalized_ref: "USM-ART-003"
+validity:
+  from: "2026-06-10"
+  to: null
+subject: "Osoba"
+statement: >-
+  Jeżeli spółdzielcze własnościowe prawo do lokalu, prawo odrębnej
+  własności lokalu albo ekspektatywa własności należy do kilku osób,
+  członkiem spółdzielni może być tylko jedna z nich, chyba że
+  przysługuje ono wspólnie małżonkom (wyjątek - patrz R-USM-0005 §2).
+conditions:
+  - "kilku uprawnionych zgłasza się -> rozstrzyga sąd w postępowaniu nieprocesowym"
+  - "bezskuteczny upływ terminu wyznaczonego przez spółdzielnię na wystąpienie do sądu (max 12 miesięcy) -> wyboru dokonuje spółdzielnia"
+effect: >-
+  Do czasu rozstrzygnięcia sądu albo wyboru spółdzielni, uprawnieni mogą
+  wyznaczyć spośród siebie pełnomocnika do wykonywania uprawnień
+  wynikających z członkostwa.
+deadline:
+  duration: 12
+  unit: MONTHS
+  start_event: "wyznaczenie przez spółdzielnię terminu wystąpienia do sądu"
+  type: STATUTORY
+  overridable_by_statute: false
+formalization_status: DIRECT
+note: "Nie dotyczy spółdzielczego prawa lokatorskiego ani roszczenia o nie - tylko trzech tytułów wyliczonych wprost (własnościowe, odrębna własność, ekspektatywa). Brak analogicznej normy dla prawa lokatorskiego w tym artykule - odnotowane jako fakt tekstu, nie luka do wypełnienia domysłem (AGENTS.md sekcja 50)."
+tests: []

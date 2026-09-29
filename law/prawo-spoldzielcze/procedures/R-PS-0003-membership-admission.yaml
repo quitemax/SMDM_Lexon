@@ -49,13 +49,20 @@ steps:
     source: "PS-ART-017 §3"
 formalization_status: STRUCTURAL
 scope_note: >-
-  Patrz law/prawo-spoldzielcze/interpretations/OBS-0001-lex-specialis-usm-membership.md.
-  Dla spółdzielni mieszkaniowej ta procedura NIE jest głównym trybem
+  Patrz law/prawo-spoldzielcze/interpretations/OBS-0001-lex-specialis-usm-membership.md
+  (status RESOLVED od 2026-09-29, patrz KOREKTA w tym pliku). Dla
+  spółdzielni mieszkaniowej ta procedura NIE jest głównym trybem
   powstania członkostwa - większość przypadków (nabycie prawa do lokalu)
-  przebiega ex lege wg Ustawy o spółdzielniach mieszkaniowych Art. 15, a
+  przebiega ex lege wg R-USM-0007 (USM-ART-003 §3[2], siedem zdarzeń), a
   Zarząd jedynie potwierdza uchwałą deklaratywną już powstałe członkostwo.
   Ta procedura (deklaracja + uchwała konstytutywna) stosuje się w takiej
   spółdzielni w praktyce tylko do przypadku właściciela lokalu, który nie
-  jest jeszcze członkiem (analogicznie, ale to odrębna podstawa - USM, nie
+  jest jeszcze członkiem (R-USM-0006 item C2, odesłanie odpowiednie do
+  Art. 16 tej ustawy - to odrębna podstawa niż T1-T7 w R-USM-0007, nie
   Art. 16-17 wprost).
+references:
+  - target: R-USM-0007
+    type: LIMITED_BY
+  - target: R-USM-0006
+    type: RELATED_TO
 tests: ["T-PS-0003-01", "T-PS-0003-02", "T-PS-0003-03", "T-PS-0003-04"]

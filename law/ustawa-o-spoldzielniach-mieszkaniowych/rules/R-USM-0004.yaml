@@ -1,0 +1,32 @@
+id: R-USM-0004
+norm_type: DEFINITION
+title: "Definicje legalne: lokal, dom jednorodzinny, wartość rynkowa, osoba bliska"
+source:
+  act: "Ustawa o spółdzielniach mieszkaniowych"
+  article: "2"
+  normalized_ref: "USM-ART-002"
+validity:
+  from: "2026-06-10"
+  to: null
+subject: "Lokal"
+items:
+  - id: D1
+    term: "lokal"
+    text: "samodzielny lokal mieszkalny, a także lokal o innym przeznaczeniu, o których mowa w ustawie o własności lokali; również pracownia twórcy przeznaczona do prowadzenia działalności w dziedzinie kultury i sztuki"
+    source: "USM-ART-002 §1, §2"
+  - id: D2
+    term: "dom jednorodzinny"
+    text: "dom mieszkalny, jak również samodzielna część domu bliźniaczego lub szeregowego przeznaczona przede wszystkim do zaspokojenia potrzeb mieszkaniowych; stosuje się do niego przepisy ustawy dotyczące lokali"
+    source: "USM-ART-002 §3"
+  - id: D3
+    term: "wartość rynkowa lokalu"
+    text: "wartość określona na podstawie przepisów działu IV rozdziału 1 ustawy o gospodarce nieruchomościami"
+    source: "USM-ART-002 §4"
+    note: "Ustawa o gospodarce nieruchomościami niesformalizowana w tym projekcie - odesłanie zachowane jako fakt, nie rozwinięte."
+  - id: D4
+    term: "osoba bliska"
+    text: "zstępny, wstępny, rodzeństwo, dzieci rodzeństwa, małżonek, osoba przysposabiająca i przysposobiona oraz osoba, która pozostaje faktycznie we wspólnym pożyciu"
+    source: "USM-ART-002 §5"
+formalization_status: DIRECT
+note: "`subject: Lokal` odzwierciedla D1-D3 (większość pozycji); D4 (osoba bliska) jest definicją niezwiązaną z Lokal, zgrupowaną tu tylko dlatego, że ustawa sama grupuje wszystkie cztery w jednym artykule definicyjnym - nie rozbite na osobne pliki, bo żadna z nich nie jest samodzielną normą (AGENTS.md sekcja 12 dotyczy norm, nie czystej terminologii)."
+tests: []

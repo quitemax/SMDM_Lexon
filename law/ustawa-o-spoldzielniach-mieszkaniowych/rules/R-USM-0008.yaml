@@ -1,0 +1,61 @@
+id: R-USM-0008
+norm_type: CONDITION
+title: "Ustanie członkostwa ex lege"
+source:
+  act: "Ustawa o spółdzielniach mieszkaniowych"
+  article: "3"
+  paragraph: "6, 7"
+  normalized_ref: "USM-ART-003"
+validity:
+  from: "2026-06-10"
+  to: null
+subject: "Osoba"
+condition: "Membership.status = ACTIVE, oraz nie zachodzi wyjątek z R-USM-0010 (wiele tytułów prawnych)"
+statement: "Członkostwo w spółdzielni ustaje z chwilą jednego z ośmiu zdarzeń:"
+items:
+  - id: E1
+    text: "wygaśnięcia spółdzielczego lokatorskiego prawa do lokalu mieszkalnego"
+  - id: E2
+    text: "zbycia spółdzielczego własnościowego prawa do lokalu lub udziału w tym prawie"
+  - id: E3
+    text: "zbycia prawa odrębnej własności lokalu lub udziału w tym prawie"
+  - id: E4
+    text: "zbycia ekspektatywy własności lub udziału w tym prawie"
+  - id: E5
+    text: "wygaśnięcia roszczenia o ustanowienie spółdzielczego lokatorskiego prawa do lokalu mieszkalnego"
+  - id: E6
+    text: "rozwiązania umowy o budowę lokalu (Art. 18, niesformalizowany)"
+  - id: E7
+    text: "podjęcia przez większość właścicieli lokali uchwały o przejściu na reżim ustawy o własności lokali (USM-ART-024[1] §1)"
+    source: "USM-ART-003 §7, w związku z USM-ART-024[1] §1"
+  - id: E8
+    text: "wyodrębnienia własności ostatniego lokalu w budynku/budynkach danej nieruchomości (USM-ART-026)"
+    source: "USM-ART-003 §7, w związku z USM-ART-026"
+triggers_event: "MembershipCeased"
+effect: >-
+  Membership.status: ACTIVE -> TERMINATED (ontology/states/membership_status.yaml).
+  Do osób, które w następstwie tego utraciły członkostwo, przepisy Art.
+  108b Prawa spółdzielczego dotyczące członków spółdzielni stosuje się
+  odpowiednio (niesformalizowany - poza obecnym zasięgiem PS, Dział III
+  kończy się na Art. 34).
+formalization_status: DIRECT
+note: >-
+  To jest reguła, która rozwiązuje OBS-0001 od strony 'ustania
+  członkostwa' - potwierdza, że E7/E8 (odesłania do Art. 24[1]/26) NIE
+  są same w sobie przepisami o ustaniu członkostwa (błędne pierwotne
+  ustalenie OBS-0001, teraz skorygowane) - to Art. 3 §7 samodzielnie
+  czyni z ich przesłanek (uchwała większości, wyodrębnienie ostatniego
+  lokalu) dodatkowe podstawy ustania. W odróżnieniu od R-PS-0016
+  (wykluczenie/wykreślenie z PS Art. 24 - procedura z wysłuchaniem,
+  uchwałą, odwołaniem, terminami sądowymi), żadne z ośmiu zdarzeń tu nie
+  wymaga decyzji organu spółdzielni skierowanej przeciwko konkretnej
+  osobie - to jest fundamentalna różnica mechanizmu, nie tylko inny
+  wykaz przesłanek.
+references:
+  - target: R-USM-0007
+    type: RELATED_TO
+  - target: R-USM-0010
+    type: LIMITED_BY
+  - target: R-PS-0016
+    type: SUPERSEDES
+tests: []

@@ -1,0 +1,34 @@
+id: R-USM-0006
+norm_type: CONDITION
+title: "Kto jest członkiem spółdzielni - osoba prawna, właściciel lokalu, garaż, najemca"
+source:
+  act: "Ustawa o spółdzielniach mieszkaniowych"
+  article: "3"
+  paragraph: "3, 3[1], 3[3], 3[4]"
+  normalized_ref: "USM-ART-003"
+validity:
+  from: "2026-06-10"
+  to: null
+subject: "Osoba"
+statement: "Cztery dodatkowe, odrębne podstawy członkostwa poza R-USM-0005:"
+items:
+  - id: C1
+    text: "osoba prawna jest członkiem, jeżeli HAS_WLASNOSCIOWE_PRAWO lub HAS_EKSPEKTATYWA_WLASNOSCI lub jest założycielem, z zastrzeżeniem R-USM-0011; osobie prawnej nie może przysługiwać spółdzielcze lokatorskie prawo do lokalu mieszkalnego"
+    source: "USM-ART-003 §3"
+  - id: C2
+    text: "osoba, która nabyła prawo odrębnej własności lokalu (HAS_ODREBNA_WLASNOSC), może być członkiem i zachowuje członkostwo, jeśli już je miała; właścicielowi lokalu, który NIE jest członkiem, przysługuje roszczenie o przyjęcie w poczet członków - do tego roszczenia odpowiednio stosuje się PS Art. 16 (R-PS-0003 krok 1, deklaracja)"
+    source: "USM-ART-003 §3[1]"
+  - id: C3
+    text: "przepisy C1 (ust. 1) i C1-osobaprawna (ust. 3) stosuje się odpowiednio do osób uprawnionych do miejsca postojowego w garażu wielostanowiskowym/wolnostojącym (Art. 17[19], niesformalizowany) lub do udziału we współwłasności garażu wielostanowiskowego (Art. 27[1], niesformalizowany)"
+    source: "USM-ART-003 §3[3]"
+  - id: C4
+    text: "najemca, o którym mowa w Art. 48 ust. 1 (niesformalizowany), może być członkiem; przepisy o członkostwie właścicieli lokali stosują się odpowiednio"
+    source: "USM-ART-003 §3[4]"
+formalization_status: DIRECT
+note: "C2 jest jedynym miejscem w Art. 3, gdzie mechanizm z Prawa spółdzielczego (deklaracja, PS Art. 16) wraca - dokładnie wyjątek E1 z R-USM-0003. Art. 17[19], 27[1], 48 są poza obecnym zasięgiem normalizacji (patrz normalized/akoma-ntoso/README.md) - odesłania C3/C4 zachowane jako fakt, nie rozwinięte (AGENTS.md sekcja 14)."
+references:
+  - target: R-USM-0003
+    type: RELATED_TO
+  - target: R-PS-0003
+    type: RELATED_TO
+tests: []
