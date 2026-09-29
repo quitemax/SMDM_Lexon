@@ -1,0 +1,12 @@
+id: T-PS-0024-01
+rule: R-PS-0024
+title: "Skreślenie z rejestru ze skutkiem retroaktywnym do dnia śmierci, nie do dnia wpisu"
+category: POSITIVE
+status: SPECIFIED
+given:
+  - "członek zmarł 2026-01-10"
+  - "wpis skreślenia w rejestrze dokonany dopiero 2026-01-20 (dziesięć dni później)"
+when: "sprawdzenie skutku prawnego skreślenia wg R-PS-0024"
+then:
+  result: "Membership.status = DECEASED ze skutkiem od 2026-01-10"
+  because: "`effect` reguły wyraźnie zaznacza skutek retroaktywny do dnia śmierci, nie do dnia technicznego wpisu skreślenia - to jest istotna nuansa tej reguły, nie tylko formalność"

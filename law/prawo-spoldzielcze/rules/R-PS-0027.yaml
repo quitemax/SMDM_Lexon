@@ -19,4 +19,4 @@ exceptions:
     source: "PS-ART-026 §2, odesłanie do PS-ART-125"
 formalization_status: DIRECT
 note: "Art. 125 jest poza obecnym zakresem formalizacji (Dział III, Art. 15-34) - wyjątek E1 jest tu zachowany jako relacja (odesłanie), nie skopiowana treść, zgodnie z AGENTS.md sekcja 14 ('nie kopiuj automatycznie treści przepisu, jeżeli można zachować relację'). Do rozwinięcia, gdy/jeśli Art. 125 zostanie sformalizowany."
-tests: []
+tests: ["T-PS-0027-01"]

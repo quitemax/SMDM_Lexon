@@ -17,4 +17,4 @@ statement: >-
 residual_clause: "Sposób i terminy wypłaty określa statut - odesłanie otwarte, nie rozstrzygane tutaj."
 formalization_status: DIRECT
 note: "'Były członek' nie jest osobną encją w ontology/ - to Osoba, dla której MembershipStatus przeszedł z ACTIVE do stanu końcowego (WITHDRAWN/EXCLUDED/STRUCK_OFF/DECEASED). Nie tworzymy nowej encji dla tego pojęcia (AGENTS.md sekcja 15) - wystarcza referencja do stanu."
-tests: []
+tests: ["T-PS-0026-01", "T-PS-0026-02"]

@@ -1,0 +1,11 @@
+id: T-PS-0025-01
+rule: R-PS-0025
+title: "Wielu spadkobierców musi ustanowić wspólnego pełnomocnika lub zarządcę"
+category: POSITIVE
+status: SPECIFIED
+given:
+  - "MemberDied.heir_count = 3"
+when: "sprawdzenie warunku R-PS-0025"
+then:
+  result: true
+  because: "`condition: heir_count > 1` spełniony - spadkobiercy muszą ustanowić wspólnego pełnomocnika albo wskazać zarządcę sądowego, żeby wykonywać prawa majątkowe (w tym dziedziczone udziały z R-PS-0015)"

@@ -22,4 +22,4 @@ note: "Prawa majątkowe, o których mowa, to w szczególności dziedziczone udzi
 references:
   - target: R-PS-0015
     type: RELATED_TO
-tests: []
+tests: ["T-PS-0025-01", "T-PS-0025-02"]

@@ -22,4 +22,4 @@ conditions:
   - "zwrot nie może nastąpić w wypadku, gdy udziały członka zostały przeznaczone na pokrycie strat spółdzielni (R-PS-0018 O2, PS-ART-019 §2)"
 residual_clause: "Sposób i termin zwrotu określa statut - odesłanie otwarte, nie rozstrzygane tutaj."
 formalization_status: DIRECT
-tests: []
+tests: ["T-PS-0022-01", "T-PS-0022-02", "T-PS-0022-03"]

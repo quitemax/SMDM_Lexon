@@ -21,4 +21,4 @@ effect: >-
 triggers_event: "MemberResigned"
 formalization_status: DIRECT
 note: "Zdarzenie MemberResigned już istnieje w ontology/events/member_resigned.yaml (source: PS-ART-022, DIRECT) - ta reguła domyka brakującą do tej pory RULE dla tego zdarzenia (AGENTS.md sekcja 18: EVENT != RULE, zdarzenie było, norma która je wywołuje nie miała jeszcze własnego pliku)."
-tests: []
+tests: ["T-PS-0023-01", "T-PS-0023-02"]

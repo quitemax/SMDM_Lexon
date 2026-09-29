@@ -1,0 +1,12 @@
+id: T-PS-0023-01
+rule: R-PS-0023
+title: "Wypowiedzenie na piśmie jest skuteczne"
+category: POSITIVE
+status: SPECIFIED
+given:
+  - "Membership.status = ACTIVE"
+  - "członek składa wypowiedzenie na piśmie"
+when: "sprawdzenie warunku R-PS-0023"
+then:
+  result: true
+  because: "wymóg formy pisemnej zachowany - triggers_event MemberResigned, skuteczność z upływem terminu określonego statutem"

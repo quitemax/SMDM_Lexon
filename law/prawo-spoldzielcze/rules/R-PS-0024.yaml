@@ -20,4 +20,4 @@ effect: "Membership.status: ACTIVE -> DECEASED, ze skutkiem retroaktywnym do dni
 triggers_event: "MemberDied"
 formalization_status: DIRECT
 note: "Zdarzenie MemberDied już istnieje (ontology/events/member_died.yaml, source PS-ART-025 §1, §2, DIRECT) - ta reguła jest RULE, którego skutek to zdarzenie niesie jako triggers_transition; sama norma (co prawo nakazuje zrobić z rejestrem, i od jakiej daty liczy skutek) nie miała dotąd własnego pliku (AGENTS.md sekcja 18)."
-tests: []
+tests: ["T-PS-0024-01"]

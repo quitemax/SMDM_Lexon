@@ -1,0 +1,12 @@
+id: T-PS-0027-01
+rule: R-PS-0027
+title: "Były członek nie ma prawa do funduszu zasobowego"
+category: POSITIVE
+status: SPECIFIED
+given:
+  - "Membership.status = WITHDRAWN"
+  - "były członek żąda udziału w funduszu zasobowym spółdzielni"
+when: "sprawdzenie zakazu R-PS-0027"
+then:
+  result: true
+  because: "PS-ART-026 §2 wyklucza to prawo dla byłego członka. Wyjątek E1 (zastrzeżenie art. 125 §5a) nie jest tu testowany - Art. 125 jest poza obecnym zakresem formalizacji (patrz `note` reguły), więc nie wiadomo, kiedy i jak zmienia ten wynik; testowanie E1 wymagałoby zgadywania treści Art. 125 (AGENTS.md sekcja 50)"

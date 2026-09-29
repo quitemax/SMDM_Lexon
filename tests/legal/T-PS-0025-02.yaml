@@ -1,0 +1,11 @@
+id: T-PS-0025-02
+rule: R-PS-0025
+title: "Jeden spadkobierca nie musi ustanawiać pełnomocnika"
+category: NEGATIVE
+status: SPECIFIED
+given:
+  - "MemberDied.heir_count = 1"
+when: "sprawdzenie warunku R-PS-0025"
+then:
+  result: false
+  because: "`condition: heir_count > 1` niespełniony - jedyny spadkobierca wykonuje przechodzące na niego prawa majątkowe samodzielnie"

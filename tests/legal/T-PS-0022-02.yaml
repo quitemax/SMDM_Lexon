@@ -1,0 +1,13 @@
+id: T-PS-0022-02
+rule: R-PS-0022
+title: "Wpłata przekraczająca wymaganą liczbę udziałów - wyjątek E1"
+category: NEGATIVE
+status: SPECIFIED
+given:
+  - "Membership.status = ACTIVE"
+  - "statut obowiązujący w chwili żądania zwrotu wymaga zadeklarowania 3 udziałów"
+  - "członek wpłacił na 5 udziałów - żąda zwrotu nadwyżki (2 udziały)"
+when: "sprawdzenie zakazu R-PS-0022 dla nadwyżki"
+then:
+  result: false
+  because: "wyjątek E1 zdejmuje zakaz dla wpłat przekraczających wymaganą statutem liczbę udziałów - dotyczy to tylko nadwyżki (2), nie całości wpłaty"

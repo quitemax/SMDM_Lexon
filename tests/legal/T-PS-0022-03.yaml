@@ -1,0 +1,13 @@
+id: T-PS-0022-03
+rule: R-PS-0022
+title: "Zwrot niedozwolony, gdy udziały przeznaczono na pokrycie strat, mimo ustania członkostwa"
+category: NEGATIVE
+status: SPECIFIED
+given:
+  - "Membership.status = WITHDRAWN (członkostwo już ustało)"
+  - "sprawozdanie finansowe za rok wystąpienia zostało zatwierdzone"
+  - "udziały członka zostały przeznaczone na pokrycie strat spółdzielni (R-PS-0018 O2)"
+when: "sprawdzenie warunków zwrotu z R-PS-0022"
+then:
+  result: false
+  because: "druga `conditions` reguły wyklucza zwrot w tym wypadku - przeznaczenie na pokrycie strat blokuje zwrot niezależnie od ustania członkostwa i zatwierdzenia sprawozdania"

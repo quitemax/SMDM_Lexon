@@ -1,0 +1,12 @@
+id: T-PS-0023-02
+rule: R-PS-0023
+title: "Wypowiedzenie ustne jest nieważne"
+category: NEGATIVE
+status: SPECIFIED
+given:
+  - "Membership.status = ACTIVE"
+  - "członek składa wypowiedzenie ustnie, bez formy pisemnej"
+when: "sprawdzenie warunku R-PS-0023"
+then:
+  result: false
+  because: "`conditions` reguły wymaga formy pisemnej pod rygorem nieważności - MemberResigned nie następuje"

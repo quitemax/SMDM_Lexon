@@ -1,0 +1,12 @@
+id: T-PS-0026-02
+rule: R-PS-0026
+title: "Wypłata nie jest jeszcze wymagalna przed zatwierdzeniem sprawozdania finansowego"
+category: NEGATIVE
+status: SPECIFIED
+given:
+  - "Membership.status = WITHDRAWN, ustanie nastąpiło w roku 2026"
+  - "sprawozdanie finansowe spółdzielni za rok 2026 nie zostało jeszcze zatwierdzone"
+when: "sprawdzenie obowiązku wypłaty wg R-PS-0026"
+then:
+  result: false
+  because: "podstawa wypłaty (zatwierdzone sprawozdanie) jeszcze nie istnieje - obowiązek wypłaty jeszcze nie powstał w tym momencie"

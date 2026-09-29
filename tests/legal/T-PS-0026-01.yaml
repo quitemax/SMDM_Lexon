@@ -1,0 +1,12 @@
+id: T-PS-0026-01
+rule: R-PS-0026
+title: "Wypłata udziału po zatwierdzeniu sprawozdania finansowego za rok ustania członkostwa"
+category: POSITIVE
+status: SPECIFIED
+given:
+  - "Membership.status = WITHDRAWN, ustanie nastąpiło w roku 2026"
+  - "sprawozdanie finansowe spółdzielni za rok 2026 zostało zatwierdzone"
+when: "sprawdzenie obowiązku wypłaty wg R-PS-0026"
+then:
+  result: true
+  because: "podstawa wypłaty (zatwierdzone sprawozdanie za rok ustania członkostwa) istnieje"

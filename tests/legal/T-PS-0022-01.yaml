@@ -1,0 +1,13 @@
+id: T-PS-0022-01
+rule: R-PS-0022
+title: "Żądanie zwrotu wpłat na udziały przed ustaniem członkostwa jest zakazane"
+category: POSITIVE
+status: SPECIFIED
+given:
+  - "Membership.status = ACTIVE"
+  - "członek żąda zwrotu wpłat dokonanych na zadeklarowane udziały"
+  - "wpłaty nie przekraczają liczby udziałów wymaganej statutem (wyjątek E1 nie zachodzi)"
+when: "sprawdzenie zakazu R-PS-0022"
+then:
+  result: true
+  because: "zakaz dotyczy właśnie tego przypadku - żądanie przed ustaniem członkostwa, brak zastosowania wyjątku E1"
