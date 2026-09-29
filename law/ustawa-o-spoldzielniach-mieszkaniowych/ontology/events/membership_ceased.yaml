@@ -1,0 +1,17 @@
+event: "MembershipCeased"
+description: "Członkostwo w spółdzielni mieszkaniowej ustało ex lege, wskutek jednego ze zdarzeń wyliczonych w USM-ART-003 §6 (sześć bezpośrednich), §7 (dwa dodatkowe, przez odesłanie do USM-ART-024[1] §1 i USM-ART-026), albo §9 (szczególny przypadek założycieli). Jeden typ zdarzenia z polem `reason`, tym samym uzasadnieniem co MembershipArose (AGENTS.md sekcja 15)."
+payload:
+  - name: person
+    type: "-> Osoba"
+  - name: cooperative
+    type: "-> Spółdzielnia"
+  - name: reason
+    type: "Enum(WYGASNIECIE_LOKATORSKIEGO, ZBYCIE_WLASNOSCIOWEGO, ZBYCIE_ODREBNEJ_WLASNOSCI, ZBYCIE_EKSPEKTATYWY, WYGASNIECIE_ROSZCZENIA_LOKATORSKIEGO, ROZWIAZANIE_UMOWY_O_BUDOWE, PRZEJSCIE_NA_REZIM_UWL_UCHWALA, PRZEJSCIE_NA_REZIM_UWL_OSTATNI_LOKAL, ZALOZYCIEL_BRAK_PRAWA_W_3_LATA)"
+    description: "Odpowiada punktom 1-6 §6, oraz §7 (dwie wartości, dla art. 24[1] §1 i art. 26), oraz §9, w tej kolejności."
+    source: "USM-ART-003 §6 pkt 1-6, §7, §9"
+  - name: date
+    type: Date
+triggers_transition: "ACTIVE -> TERMINATED"
+source: "USM-ART-003 §6, §7, §9"
+formalization_status: DIRECT
+note: "USM-ART-003 §8 (wiele tytułów prawnych - utrata dopiero przy utracie WSZYSTKICH) oznacza, że to zdarzenie nie powinno być wywołane samym zaistnieniem jednej z przesłanek `reason`, jeśli członek ma inny, wciąż aktywny tytuł prawny do innego lokalu w tej samej spółdzielni - patrz R-USM-0010. Modelowanie tego warunku wstępnego zostawione regule, nie zaszyte w samym evencie (AGENTS.md sekcja 45 - unikaj magii, warunek ma być jawny i sprawdzalny)."

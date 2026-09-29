@@ -1,0 +1,6 @@
+relation: "HAS_ODREBNA_WLASNOSC"
+from: "Osoba"
+to: "Lokal"
+description: "Osobie przysługuje prawo odrębnej własności lokalu (pełna własność w rozumieniu ustawy o własności lokali, niesformalizowanej tu - odesłanie zachowane jako relacja). Nie jest samoistną podstawą członkostwa (właściciel lokalu niebędący członkiem ma tylko roszczenie o przyjęcie - USM-ART-003 §3[1]), ale zbycie tego prawa jest jednym z sześciu zdarzeń kończących członkostwo, jeśli członkostwo już istnieje (USM-ART-003 §6 pkt 3)."
+source: "USM-ART-003"
+formalization_status: DIRECT

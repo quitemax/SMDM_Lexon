@@ -1,0 +1,16 @@
+event: "MembershipArose"
+description: "Członkostwo w spółdzielni mieszkaniowej powstało ex lege, wskutek jednego z siedmiu zdarzeń wyliczonych w USM-ART-003 §3[2]. Modelowane jako JEDEN typ zdarzenia z polem `trigger_type` (nie siedem osobnych typów zdarzeń) - w odróżnieniu od PS-owych DeclarationSubmitted/MemberAdmitted (kolejne kroki JEDNEJ procedury), te siedem to wzajemnie alternatywne, samodzielne podstawy tego samego skutku prawnego, nie sekwencja (AGENTS.md sekcja 15 - nie mnożyć bytów ponad potrzebę)."
+payload:
+  - name: person
+    type: "-> Osoba"
+  - name: cooperative
+    type: "-> Spółdzielnia"
+  - name: trigger_type
+    type: "Enum(NABYCIE_ROSZCZENIA_LOKATORSKIE, NABYCIE_EKSPEKTATYWY, UMOWA_WLASNOSCIOWE, UMOWA_LOKATORSKIE, UPLYW_TERMINU_ROCZNEGO_SMIERC, ROZSTRZYGNIECIE_SAD_LUB_WYBOR_SPOLDZIELNI_SMIERC, WPIS_KRS_ZALOZYCIEL)"
+    description: "Odpowiada punktom 1-7 USM-ART-003 §3[2], w tej samej kolejności."
+    source: "USM-ART-003 §3[2] pkt 1-7"
+  - name: date
+    type: Date
+triggers_transition: "null -> ACTIVE"
+source: "USM-ART-003 §3[2]"
+formalization_status: DIRECT

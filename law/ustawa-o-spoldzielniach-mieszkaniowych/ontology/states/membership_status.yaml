@@ -1,0 +1,37 @@
+state: "MembershipStatus"
+description: >-
+  Cykl życia członkostwa w spółdzielni mieszkaniowej wg USM-ART-003.
+  Celowo OSOBNY plik od law/prawo-spoldzielcze/ontology/states/membership_status.yaml
+  - patrz OBS-0001: dla spółdzielni mieszkaniowej członkostwo powstaje i
+  ustaje ex lege wraz z tytułem prawnym do lokalu, nie przez
+  deklarację+uchwałę (PS Art. 16-17) ani wykluczenie/wykreślenie (PS
+  Art. 24) - to inny mechanizm dla tej samej encji Członek (współdzielonej
+  w model/entities/czlonek.yaml).
+entity: "Członek"
+values:
+  - name: null
+    description: "Osoba bez żadnego tytułu prawnego do lokalu w tej spółdzielni ani statusu założyciela - nie jest jeszcze (albo już nie jest) członkiem."
+  - name: ACTIVE
+    description: "Członkostwo istnieje. Brak stanów pośrednich (jak PS-owe DECLARED, PENDING_EXCLUSION) - przejście jest bezpośrednie, bo nie ma tu uznaniowej decyzji żadnego organu (patrz `note` niżej)."
+  - name: TERMINATED
+    description: "Członkostwo ustało - stan końcowy. USM nie rozróżnia 'dlaczego' na poziomie stanu (w odróżnieniu od PS: WITHDRAWN/EXCLUDED/STRUCK_OFF/DECEASED) - przyczyna jest niesiona przez pole `reason` zdarzenia MembershipCeased, nie przez odrębne stany, bo żadna z ośmiu-dziewięciu przyczyn z USM-ART-003 §6/§7/§9 nie ma odrębnych skutków prawnych na poziomie samego stanu członkostwa (w odróżnieniu np. od PS-owego rozróżnienia PENDING_EXCLUSION, które ma znaczenie proceduralne - możliwość odwołania)."
+transitions:
+  - from: null
+    to: ACTIVE
+    event: "MembershipArose"
+    source: "USM-ART-003 §3[2]"
+  - from: ACTIVE
+    to: TERMINATED
+    event: "MembershipCeased"
+    source: "USM-ART-003 §6, §7, §9"
+formalization_status: STRUCTURAL
+note: >-
+  Znacznie prostsza maszyna stanów niż PS-owa (2 stany + null, wobec 9) -
+  to nie uproszczenie niedbałe, tylko wierne odwzorowanie tego, że
+  USM-ART-003 nie przewiduje żadnej procedury z uznaniem organu ani
+  odwołania na tym poziomie (member membership powstaje/ustaje
+  automatycznie z faktem prawnym). Wyjątek do pilnowania: USM-ART-003
+  §8 (wiele tytułów prawnych - utrata dopiero przy utracie wszystkich)
+  wymaga, żeby ewaluator sprawdzał WSZYSTKIE relacje HAS_*_PRAWO danej
+  Osoby, nie tylko jedno zdarzenie w izolacji - modelowane w R-USM-0010,
+  nie w samej maszynie stanów.

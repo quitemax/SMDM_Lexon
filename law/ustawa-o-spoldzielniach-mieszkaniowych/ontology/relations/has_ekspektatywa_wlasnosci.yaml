@@ -1,0 +1,6 @@
+relation: "HAS_EKSPEKTATYWA_WLASNOSCI"
+from: "Osoba"
+to: "Lokal"
+description: "Osobie przysługuje roszczenie o ustanowienie odrębnej własności lokalu ('ekspektatywa własności', legalna definicja skrótowa - USM-ART-003 §1 pkt 4). Jedna z alternatywnych podstaw członkostwa (§1 pkt 4, §3), i jedno z sześciu zdarzeń kończących członkostwo przy zbyciu (§6 pkt 4)."
+source: "USM-ART-003"
+formalization_status: DIRECT

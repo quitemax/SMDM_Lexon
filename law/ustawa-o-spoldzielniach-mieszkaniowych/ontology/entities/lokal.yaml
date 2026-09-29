@@ -1,0 +1,12 @@
+entity: "Lokal"
+description: "Samodzielny lokal mieszkalny, lokal o innym przeznaczeniu, pracownia twórcy (traktowana jak lokal mieszkalny), albo dom jednorodzinny (do którego stosuje się przepisy o lokalach) - USM-ART-002. Encja aktowo-specyficzna (nie w model/), bo jej definicja jest zakotwiczona w tej ustawie (odsyła do ustawy o własności lokali, niesformalizowanej)."
+properties:
+  - name: typ
+    type: "Enum(LOKAL_MIESZKALNY, LOKAL_INNEGO_PRZEZNACZENIA, PRACOWNIA_TWORCY, DOM_JEDNORODZINNY)"
+    description: "Cztery kategorie z USM-ART-002 ust. 1-3. Dom jednorodzinny (w tym samodzielna część domu bliźniaczego/szeregowego) podlega przepisom o lokalach mimo odrębnej nazwy."
+    source: "USM-ART-002 §1, §2, §3"
+  - name: wartosc_rynkowa
+    type: Money
+    description: "Ustalana na podstawie działu IV rozdziału 1 ustawy o gospodarce nieruchomościami (ustawa niesformalizowana w tym projekcie - odesłanie zachowane jako relacja, nie treść, AGENTS.md sekcja 14)."
+    source: "USM-ART-002 §4"
+formalization_status: DIRECT

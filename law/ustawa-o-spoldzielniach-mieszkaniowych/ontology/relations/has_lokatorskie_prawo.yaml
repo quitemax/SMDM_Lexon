@@ -1,0 +1,6 @@
+relation: "HAS_LOKATORSKIE_PRAWO"
+from: "Osoba"
+to: "Lokal"
+description: "Osobie przysługuje spółdzielcze lokatorskie prawo do lokalu mieszkalnego - jedna z czterech alternatywnych podstaw członkostwa osoby fizycznej (USM-ART-003 §1 pkt 1), i jeden z sześciu zdarzeń, których wygaśnięcie kończy członkostwo (USM-ART-003 §6 pkt 1)."
+source: "USM-ART-003"
+formalization_status: DIRECT

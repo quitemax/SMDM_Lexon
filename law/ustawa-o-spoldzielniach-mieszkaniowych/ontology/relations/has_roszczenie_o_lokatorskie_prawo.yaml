@@ -1,0 +1,6 @@
+relation: "HAS_ROSZCZENIE_O_LOKATORSKIE_PRAWO"
+from: "Osoba"
+to: "Lokal"
+description: "Osobie przysługuje roszczenie o ustanowienie spółdzielczego lokatorskiego prawa do lokalu mieszkalnego - odrębne od już posiadania tego prawa (HAS_LOKATORSKIE_PRAWO); jedna z alternatywnych podstaw członkostwa (USM-ART-003 §1 pkt 3), i jedno z sześciu zdarzeń kończących członkostwo przy wygaśnięciu (§6 pkt 5)."
+source: "USM-ART-003"
+formalization_status: DIRECT

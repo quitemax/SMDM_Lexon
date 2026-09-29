@@ -1,0 +1,6 @@
+relation: "HAS_WLASNOSCIOWE_PRAWO"
+from: "Osoba"
+to: "Lokal"
+description: "Osobie (fizycznej lub prawnej) przysługuje spółdzielcze własnościowe prawo do lokalu - jedna z alternatywnych podstaw członkostwa (USM-ART-003 §1 pkt 2, §3), i jedno z sześciu zdarzeń, których zbycie kończy członkostwo (USM-ART-003 §6 pkt 2)."
+source: "USM-ART-003"
+formalization_status: DIRECT
